@@ -4,12 +4,24 @@
     "title": "Circle Area & Circumference",
     "slug": "circle-area",
     "subject": "Geometry",
-    "topics": ["circles", "area", "circumference", "pi"],
+    "topics": [
+      "circles",
+      "area",
+      "circumference",
+      "pi"
+    ],
     "level": "beginner",
     "summary": "The area of a circle is π times the radius squared. The circumference is 2π times the radius.",
     "formulaLatex": "A = \\pi r^2,\\quad C = 2\\pi r",
     "hasDemo": true,
-    "keywords": ["area", "circle", "radius", "circumference", "pi", "A equals pi r squared"],
+    "keywords": [
+      "area",
+      "circle",
+      "radius",
+      "circumference",
+      "pi",
+      "A equals pi r squared"
+    ],
     "href": "lessons/circle-area.html"
   },
   {
@@ -17,12 +29,22 @@
     "title": "Pythagorean Theorem",
     "slug": "pythagorean-theorem",
     "subject": "Geometry",
-    "topics": ["right triangle", "hypotenuse", "distance"],
+    "topics": [
+      "right triangle",
+      "hypotenuse",
+      "distance"
+    ],
     "level": "beginner",
     "summary": "In a right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
     "formulaLatex": "a^2 + b^2 = c^2",
     "hasDemo": true,
-    "keywords": ["pythagoras", "right triangle", "hypotenuse", "sides", "a squared b squared"],
+    "keywords": [
+      "pythagoras",
+      "right triangle",
+      "hypotenuse",
+      "sides",
+      "a squared b squared"
+    ],
     "href": "lessons/pythagorean-theorem.html"
   },
   {
@@ -30,12 +52,23 @@
     "title": "Heron's Formula (Triangle Area)",
     "slug": "heron-formula",
     "subject": "Geometry",
-    "topics": ["triangle", "area", "semiperimeter", "geometry"],
+    "topics": [
+      "triangle",
+      "area",
+      "semiperimeter",
+      "geometry"
+    ],
     "level": "intermediate",
     "summary": "Calculates the area of any triangle from the lengths of its three sides without needing the height.",
     "formulaLatex": "A = \\sqrt{s(s-a)(s-b)(s-c)},\\quad s = \\frac{a+b+c}{2}",
     "hasDemo": false,
-    "keywords": ["heron", "triangle area", "sides", "semiperimeter", "geometry"],
+    "keywords": [
+      "heron",
+      "triangle area",
+      "sides",
+      "semiperimeter",
+      "geometry"
+    ],
     "href": "lessons/pythagorean-theorem.html"
   },
   {
@@ -43,12 +76,23 @@
     "title": "Sphere Volume & Surface Area",
     "slug": "sphere-volume",
     "subject": "Geometry",
-    "topics": ["sphere", "volume", "surface area", "3D"],
+    "topics": [
+      "sphere",
+      "volume",
+      "surface area",
+      "3D"
+    ],
     "level": "intermediate",
     "summary": "The volume of a sphere is (4/3)πr³ and its surface area is 4πr².",
     "formulaLatex": "V = \\frac{4}{3}\\pi r^3,\\quad A = 4\\pi r^2",
     "hasDemo": false,
-    "keywords": ["sphere", "volume", "surface area", "3d geometry", "radius"],
+    "keywords": [
+      "sphere",
+      "volume",
+      "surface area",
+      "3d geometry",
+      "radius"
+    ],
     "href": "lessons/circle-area.html"
   },
   {
@@ -56,12 +100,25 @@
     "title": "Euler's Polyhedron Formula",
     "slug": "euler-polyhedron",
     "subject": "Geometry",
-    "topics": ["polyhedron", "vertices", "edges", "faces", "topology"],
+    "topics": [
+      "polyhedron",
+      "vertices",
+      "edges",
+      "faces",
+      "topology"
+    ],
     "level": "advanced",
     "summary": "For any convex polyhedron, the number of vertices minus edges plus faces always equals 2.",
     "formulaLatex": "V - E + F = 2",
     "hasDemo": false,
-    "keywords": ["euler", "polyhedron", "vertices", "edges", "faces", "convex"],
+    "keywords": [
+      "euler",
+      "polyhedron",
+      "vertices",
+      "edges",
+      "faces",
+      "convex"
+    ],
     "href": "learn.html#geometry"
   },
   {
@@ -69,12 +126,24 @@
     "title": "Quadratic Formula",
     "slug": "quadratic-equation",
     "subject": "Algebra",
-    "topics": ["quadratic", "roots", "parabola", "discriminant"],
+    "topics": [
+      "quadratic",
+      "roots",
+      "parabola",
+      "discriminant"
+    ],
     "level": "intermediate",
     "summary": "Finds the roots of any quadratic equation ax² + bx + c = 0 using the discriminant.",
     "formulaLatex": "x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
     "hasDemo": true,
-    "keywords": ["quadratic", "roots", "parabola", "discriminant", "ax squared", "quadratic formula"],
+    "keywords": [
+      "quadratic",
+      "roots",
+      "parabola",
+      "discriminant",
+      "ax squared",
+      "quadratic formula"
+    ],
     "href": "lessons/quadratic-equation.html"
   },
   {
@@ -82,12 +151,23 @@
     "title": "Binomial Theorem",
     "slug": "binomial-theorem",
     "subject": "Algebra",
-    "topics": ["binomial", "polynomial", "expansion", "combinatorics"],
+    "topics": [
+      "binomial",
+      "polynomial",
+      "expansion",
+      "combinatorics"
+    ],
     "level": "intermediate",
     "summary": "Expands any power of a binomial (a + b)ⁿ using combinatorial coefficients.",
     "formulaLatex": "(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k}b^k",
     "hasDemo": false,
-    "keywords": ["binomial", "expansion", "pascal triangle", "combinations", "powers"],
+    "keywords": [
+      "binomial",
+      "expansion",
+      "pascal triangle",
+      "combinations",
+      "powers"
+    ],
     "href": "learn.html#algebra"
   },
   {
@@ -95,12 +175,22 @@
     "title": "Difference of Squares",
     "slug": "difference-of-squares",
     "subject": "Algebra",
-    "topics": ["factoring", "algebra", "identity", "polynomials"],
+    "topics": [
+      "factoring",
+      "algebra",
+      "identity",
+      "polynomials"
+    ],
     "level": "beginner",
     "summary": "Core algebraic identity stating that a² - b² factors into (a - b)(a + b).",
     "formulaLatex": "a^2 - b^2 = (a - b)(a + b)",
     "hasDemo": false,
-    "keywords": ["difference of squares", "factoring", "identity", "algebraic factoring"],
+    "keywords": [
+      "difference of squares",
+      "factoring",
+      "identity",
+      "algebraic factoring"
+    ],
     "href": "lessons/quadratic-equation.html"
   },
   {
@@ -108,12 +198,23 @@
     "title": "Slope & Linear Equation",
     "slug": "slope-intercept",
     "subject": "Algebra",
-    "topics": ["linear equation", "slope", "line", "coordinate geometry"],
+    "topics": [
+      "linear equation",
+      "slope",
+      "line",
+      "coordinate geometry"
+    ],
     "level": "beginner",
     "summary": "Slope measures rate of change, and slope-intercept form represents any non-vertical straight line.",
     "formulaLatex": "m = \\frac{y_2 - y_1}{x_2 - x_1},\\quad y = mx + c",
     "hasDemo": false,
-    "keywords": ["slope", "gradient", "linear", "line equation", "rate of change"],
+    "keywords": [
+      "slope",
+      "gradient",
+      "linear",
+      "line equation",
+      "rate of change"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -121,12 +222,22 @@
     "title": "Euclidean Distance Formula",
     "slug": "distance-formula",
     "subject": "Algebra",
-    "topics": ["distance", "coordinates", "Cartesian", "geometry"],
+    "topics": [
+      "distance",
+      "coordinates",
+      "Cartesian",
+      "geometry"
+    ],
     "level": "beginner",
     "summary": "Calculates the straight-line distance between two points (x₁, y₁) and (x₂, y₂) in a 2D plane.",
     "formulaLatex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
     "hasDemo": false,
-    "keywords": ["distance formula", "euclidean distance", "coordinates", "pythagoras"],
+    "keywords": [
+      "distance formula",
+      "euclidean distance",
+      "coordinates",
+      "pythagoras"
+    ],
     "href": "lessons/pythagorean-theorem.html"
   },
   {
@@ -134,12 +245,22 @@
     "title": "Midpoint Formula",
     "slug": "midpoint-formula",
     "subject": "Algebra",
-    "topics": ["midpoint", "coordinates", "geometry", "averages"],
+    "topics": [
+      "midpoint",
+      "coordinates",
+      "geometry",
+      "averages"
+    ],
     "level": "beginner",
     "summary": "Finds the exact middle point of a line segment joining two coordinate endpoints.",
     "formulaLatex": "M = \\left(\\frac{x_1 + x_2}{2},\\; \\frac{y_1 + y_2}{2}\\right)",
     "hasDemo": false,
-    "keywords": ["midpoint", "center", "segment", "coordinates"],
+    "keywords": [
+      "midpoint",
+      "center",
+      "segment",
+      "coordinates"
+    ],
     "href": "learn.html#algebra"
   },
   {
@@ -147,12 +268,25 @@
     "title": "Dot Product & Angle Between Vectors",
     "slug": "vector-dot-product",
     "subject": "Linear Algebra",
-    "topics": ["vectors", "dot product", "inner product", "orthogonality", "angle"],
+    "topics": [
+      "vectors",
+      "dot product",
+      "inner product",
+      "orthogonality",
+      "angle"
+    ],
     "level": "beginner",
     "summary": "Computes the inner product of two vectors. Equals zero if and only if the vectors are orthogonal (perpendicular).",
     "formulaLatex": "\\mathbf{u} \\cdot \\mathbf{v} = \\|\\mathbf{u}\\| \\|\\mathbf{v}\\| \\cos\\theta = \\sum_{i=1}^n u_i v_i",
     "hasDemo": false,
-    "keywords": ["dot product", "inner product", "vectors", "orthogonal", "scalar product", "cosine angle"],
+    "keywords": [
+      "dot product",
+      "inner product",
+      "vectors",
+      "orthogonal",
+      "scalar product",
+      "cosine angle"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -160,12 +294,24 @@
     "title": "Vector Cross Product (3D)",
     "slug": "vector-cross-product",
     "subject": "Linear Algebra",
-    "topics": ["cross product", "3D vectors", "normal vector", "torque", "area"],
+    "topics": [
+      "cross product",
+      "3D vectors",
+      "normal vector",
+      "torque",
+      "area"
+    ],
     "level": "intermediate",
     "summary": "Yields a 3D vector perpendicular to both inputs with magnitude equal to the area of the spanned parallelogram.",
     "formulaLatex": "\\mathbf{u} \\times \\mathbf{v} = \\det\\begin{pmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ u_x & u_y & u_z \\\\ v_x & v_y & v_z \\end{pmatrix}",
     "hasDemo": false,
-    "keywords": ["cross product", "vector product", "normal vector", "right hand rule", "torque"],
+    "keywords": [
+      "cross product",
+      "vector product",
+      "normal vector",
+      "right hand rule",
+      "torque"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -173,12 +319,22 @@
     "title": "Orthogonal Vector Projection",
     "slug": "vector-projection",
     "subject": "Linear Algebra",
-    "topics": ["projection", "vectors", "orthogonality", "Gram-Schmidt"],
+    "topics": [
+      "projection",
+      "vectors",
+      "orthogonality",
+      "Gram-Schmidt"
+    ],
     "level": "intermediate",
     "summary": "Decomposes a vector into its component in the direction of another vector and its orthogonal complement.",
     "formulaLatex": "\\operatorname{proj}_{\\mathbf{v}}\\mathbf{u} = \\dfrac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{v}\\|^2}\\mathbf{v}",
     "hasDemo": false,
-    "keywords": ["vector projection", "orthogonal projection", "component", "shadow vector"],
+    "keywords": [
+      "vector projection",
+      "orthogonal projection",
+      "component",
+      "shadow vector"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -186,12 +342,22 @@
     "title": "Matrix Multiplication (AB)",
     "slug": "matrix-multiplication",
     "subject": "Linear Algebra",
-    "topics": ["matrix", "multiplication", "linear transformation", "composition"],
+    "topics": [
+      "matrix",
+      "multiplication",
+      "linear transformation",
+      "composition"
+    ],
     "level": "beginner",
     "summary": "Composes linear transformations by taking dot products between rows of the first matrix and columns of the second.",
     "formulaLatex": "(AB)_{ij} = \\sum_{k=1}^m a_{ik} b_{kj}",
     "hasDemo": false,
-    "keywords": ["matrix multiplication", "matrix product", "linear maps", "composition"],
+    "keywords": [
+      "matrix multiplication",
+      "matrix product",
+      "linear maps",
+      "composition"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -199,12 +365,23 @@
     "title": "Matrix Determinant",
     "slug": "matrix-determinant",
     "subject": "Linear Algebra",
-    "topics": ["determinant", "matrix", "volume scaling", "invertibility"],
+    "topics": [
+      "determinant",
+      "matrix",
+      "volume scaling",
+      "invertibility"
+    ],
     "level": "beginner",
     "summary": "Scalar property measuring how a matrix scales area or volume. A matrix is invertible if and only if det(A) ≠ 0.",
     "formulaLatex": "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
     "hasDemo": false,
-    "keywords": ["determinant", "det", "invertibility", "singular matrix", "area scaling"],
+    "keywords": [
+      "determinant",
+      "det",
+      "invertibility",
+      "singular matrix",
+      "area scaling"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -212,12 +389,22 @@
     "title": "Matrix Inverse (2×2)",
     "slug": "matrix-inverse",
     "subject": "Linear Algebra",
-    "topics": ["inverse", "matrix", "linear systems", "identity"],
+    "topics": [
+      "inverse",
+      "matrix",
+      "linear systems",
+      "identity"
+    ],
     "level": "intermediate",
     "summary": "Calculates the unique inverse matrix A⁻¹ such that AA⁻¹ = I, enabling direct solution of linear systems Ax = b.",
     "formulaLatex": "A^{-1} = \\dfrac{1}{ad - bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
     "hasDemo": false,
-    "keywords": ["matrix inverse", "invertible", "identity matrix", "solve linear system"],
+    "keywords": [
+      "matrix inverse",
+      "invertible",
+      "identity matrix",
+      "solve linear system"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -225,12 +412,23 @@
     "title": "Eigenvalues & Eigenvectors",
     "slug": "eigenvalues-eigenvectors",
     "subject": "Linear Algebra",
-    "topics": ["eigenvalue", "eigenvector", "characteristic equation", "diagonalization"],
+    "topics": [
+      "eigenvalue",
+      "eigenvector",
+      "characteristic equation",
+      "diagonalization"
+    ],
     "level": "advanced",
     "summary": "Finds invariant directional axes where transformation A acts purely as scalar multiplication Av = λv.",
     "formulaLatex": "A\\mathbf{v} = \\lambda\\mathbf{v} \\iff \\det(A - \\lambda I) = 0",
     "hasDemo": false,
-    "keywords": ["eigenvalue", "eigenvector", "characteristic equation", "diagonalization", "spectral theory"],
+    "keywords": [
+      "eigenvalue",
+      "eigenvector",
+      "characteristic equation",
+      "diagonalization",
+      "spectral theory"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -238,12 +436,24 @@
     "title": "Rank-Nullity Theorem",
     "slug": "rank-nullity",
     "subject": "Linear Algebra",
-    "topics": ["rank", "nullity", "kernel", "image", "vector space"],
+    "topics": [
+      "rank",
+      "nullity",
+      "kernel",
+      "image",
+      "vector space"
+    ],
     "level": "advanced",
     "summary": "Fundamental theorem of linear transformations stating that dim(Domain) = rank(T) + nullity(T).",
     "formulaLatex": "\\operatorname{rank}(T) + \\operatorname{nullity}(T) = \\dim(V)",
     "hasDemo": false,
-    "keywords": ["rank nullity", "kernel", "null space", "column space", "dimension theorem"],
+    "keywords": [
+      "rank nullity",
+      "kernel",
+      "null space",
+      "column space",
+      "dimension theorem"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -251,12 +461,22 @@
     "title": "Gram-Schmidt Orthogonalization",
     "slug": "gram-schmidt",
     "subject": "Linear Algebra",
-    "topics": ["Gram Schmidt", "orthonormal basis", "QR decomposition"],
+    "topics": [
+      "Gram Schmidt",
+      "orthonormal basis",
+      "QR decomposition"
+    ],
     "level": "advanced",
     "summary": "Converts an arbitrary linearly independent set of vectors into an orthogonal or orthonormal basis.",
     "formulaLatex": "\\mathbf{u}_k = \\mathbf{v}_k - \\sum_{j=1}^{k-1} \\dfrac{\\mathbf{v}_k \\cdot \\mathbf{u}_j}{\\|\\mathbf{u}_j\\|^2} \\mathbf{u}_j",
     "hasDemo": false,
-    "keywords": ["gram schmidt", "orthonormal", "basis", "qr decomposition", "projection"],
+    "keywords": [
+      "gram schmidt",
+      "orthonormal",
+      "basis",
+      "qr decomposition",
+      "projection"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -264,12 +484,24 @@
     "title": "Singular Value Decomposition (SVD)",
     "slug": "singular-value-decomposition",
     "subject": "Linear Algebra",
-    "topics": ["SVD", "singular values", "factorization", "PCA", "data science"],
+    "topics": [
+      "SVD",
+      "singular values",
+      "factorization",
+      "PCA",
+      "data science"
+    ],
     "level": "advanced",
     "summary": "Factorizes any m×n matrix into orthogonal matrices U, V and singular values Σ. Central to modern data science & PCA.",
     "formulaLatex": "A = U \\Sigma V^T",
     "hasDemo": false,
-    "keywords": ["svd", "singular value decomposition", "pca", "data compression", "matrix factorization"],
+    "keywords": [
+      "svd",
+      "singular value decomposition",
+      "pca",
+      "data compression",
+      "matrix factorization"
+    ],
     "href": "learn.html#linear-algebra"
   },
   {
@@ -277,12 +509,23 @@
     "title": "Gradient of a Scalar Field (∇f)",
     "slug": "gradient-vector",
     "subject": "Calculus",
-    "topics": ["gradient", "multivariable", "partial derivatives", "directional derivative"],
+    "topics": [
+      "gradient",
+      "multivariable",
+      "partial derivatives",
+      "directional derivative"
+    ],
     "level": "intermediate",
     "summary": "Vector field of partial derivatives pointing in the direction of steepest ascent of a multivariable function.",
     "formulaLatex": "\\nabla f = \\left(\\dfrac{\\partial f}{\\partial x},\\; \\dfrac{\\partial f}{\\partial y},\\; \\dfrac{\\partial f}{\\partial z}\\right)",
     "hasDemo": false,
-    "keywords": ["gradient", "nabla", "partial derivative", "steepest descent", "multivariable calculus"],
+    "keywords": [
+      "gradient",
+      "nabla",
+      "partial derivative",
+      "steepest descent",
+      "multivariable calculus"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -290,12 +533,23 @@
     "title": "Divergence of a Vector Field (∇·F)",
     "slug": "divergence-vector-field",
     "subject": "Calculus",
-    "topics": ["divergence", "vector field", "flux", "vector calculus"],
+    "topics": [
+      "divergence",
+      "vector field",
+      "flux",
+      "vector calculus"
+    ],
     "level": "advanced",
     "summary": "Scalar quantity measuring the net outward flux density of a vector field from an infinitesimal volume.",
     "formulaLatex": "\\nabla \\cdot \\mathbf{F} = \\dfrac{\\partial F_x}{\\partial x} + \\dfrac{\\partial F_y}{\\partial y} + \\dfrac{\\partial F_z}{\\partial z}",
     "hasDemo": false,
-    "keywords": ["divergence", "div", "flux", "vector calculus", "fluid flow"],
+    "keywords": [
+      "divergence",
+      "div",
+      "flux",
+      "vector calculus",
+      "fluid flow"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -303,12 +557,23 @@
     "title": "Curl of a Vector Field (∇×F)",
     "slug": "curl-vector-field",
     "subject": "Calculus",
-    "topics": ["curl", "rotation", "circulation", "vector field"],
+    "topics": [
+      "curl",
+      "rotation",
+      "circulation",
+      "vector field"
+    ],
     "level": "advanced",
     "summary": "Vector quantity describing the infinitesimal rotation and circulation of a 3D vector field.",
     "formulaLatex": "\\nabla \\times \\mathbf{F} = \\det\\begin{pmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ F_x & F_y & F_z \\end{pmatrix}",
     "hasDemo": false,
-    "keywords": ["curl", "circulation", "rotation", "vorticity", "vector calculus"],
+    "keywords": [
+      "curl",
+      "circulation",
+      "rotation",
+      "vorticity",
+      "vector calculus"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -316,12 +581,23 @@
     "title": "Green's Theorem in the Plane",
     "slug": "greens-theorem",
     "subject": "Calculus",
-    "topics": ["greens theorem", "line integral", "double integral", "circulation"],
+    "topics": [
+      "greens theorem",
+      "line integral",
+      "double integral",
+      "circulation"
+    ],
     "level": "advanced",
     "summary": "Equates the macroscopic line integral around a simple closed curve to the double integral of 2D curl over the interior.",
     "formulaLatex": "\\oint_{\\partial D} (L\\,dx + M\\,dy) = \\iint_D \\left(\\dfrac{\\partial M}{\\partial x} - \\dfrac{\\partial L}{\\partial y}\\right) dA",
     "hasDemo": false,
-    "keywords": ["greens theorem", "line integral", "double integral", "circulation", "planar flux"],
+    "keywords": [
+      "greens theorem",
+      "line integral",
+      "double integral",
+      "circulation",
+      "planar flux"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -329,12 +605,23 @@
     "title": "Stokes' Theorem",
     "slug": "stokes-theorem",
     "subject": "Calculus",
-    "topics": ["stokes theorem", "surface integral", "curl", "line integral"],
+    "topics": [
+      "stokes theorem",
+      "surface integral",
+      "curl",
+      "line integral"
+    ],
     "level": "advanced",
     "summary": "Relates the surface integral of curl over an oriented surface to the line integral of the vector field along its boundary.",
     "formulaLatex": "\\oint_{\\partial \\Sigma} \\mathbf{F} \\cdot d\\mathbf{r} = \\iint_\\Sigma (\\nabla \\times \\mathbf{F}) \\cdot d\\mathbf{S}",
     "hasDemo": false,
-    "keywords": ["stokes theorem", "surface integral", "curl", "vector calculus", "maxwell equations"],
+    "keywords": [
+      "stokes theorem",
+      "surface integral",
+      "curl",
+      "vector calculus",
+      "maxwell equations"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -342,12 +629,22 @@
     "title": "Gauss's Divergence Theorem",
     "slug": "divergence-theorem",
     "subject": "Calculus",
-    "topics": ["divergence theorem", "Gauss", "flux", "volume integral"],
+    "topics": [
+      "divergence theorem",
+      "Gauss",
+      "flux",
+      "volume integral"
+    ],
     "level": "advanced",
     "summary": "States that the total outward flux of a vector field through a closed boundary surface equals the volume integral of divergence.",
     "formulaLatex": "\\iint_{\\partial V} \\mathbf{F} \\cdot d\\mathbf{S} = \\iiint_V (\\nabla \\cdot \\mathbf{F})\\, dV",
     "hasDemo": false,
-    "keywords": ["divergence theorem", "gauss theorem", "flux integral", "volume integral"],
+    "keywords": [
+      "divergence theorem",
+      "gauss theorem",
+      "flux integral",
+      "volume integral"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -355,12 +652,23 @@
     "title": "First-Order Linear ODE (Integrating Factor)",
     "slug": "first-order-ode",
     "subject": "Calculus",
-    "topics": ["differential equations", "integrating factor", "ODE", "calculus"],
+    "topics": [
+      "differential equations",
+      "integrating factor",
+      "ODE",
+      "calculus"
+    ],
     "level": "intermediate",
     "summary": "Solves y' + P(x)y = Q(x) by multiplying by the integrating factor I(x) = exp(∫ P(x)dx).",
     "formulaLatex": "y' + P(x)y = Q(x) \\implies y(x) = \\dfrac{1}{I(x)}\\left(\\int I(x)Q(x)\\,dx + C\\right)",
     "hasDemo": false,
-    "keywords": ["ode", "differential equations", "integrating factor", "linear ode", "calculus"],
+    "keywords": [
+      "ode",
+      "differential equations",
+      "integrating factor",
+      "linear ode",
+      "calculus"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -368,12 +676,22 @@
     "title": "Laplace Transform",
     "slug": "laplace-transform",
     "subject": "Calculus",
-    "topics": ["Laplace transform", "differential equations", "frequency domain", "control systems"],
+    "topics": [
+      "Laplace transform",
+      "differential equations",
+      "frequency domain",
+      "control systems"
+    ],
     "level": "advanced",
     "summary": "Converts continuous time-domain differential equations into algebraic equations in complex s-space.",
     "formulaLatex": "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^\\infty e^{-st} f(t)\\,dt",
     "hasDemo": false,
-    "keywords": ["laplace transform", "differential equations", "control theory", "transfer function"],
+    "keywords": [
+      "laplace transform",
+      "differential equations",
+      "control theory",
+      "transfer function"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -381,12 +699,23 @@
     "title": "Fourier Series Expansion",
     "slug": "fourier-series",
     "subject": "Calculus",
-    "topics": ["Fourier series", "harmonics", "orthogonality", "signal processing"],
+    "topics": [
+      "Fourier series",
+      "harmonics",
+      "orthogonality",
+      "signal processing"
+    ],
     "level": "advanced",
     "summary": "Represents any piecewise smooth periodic function as an infinite superposition of sines and cosines.",
     "formulaLatex": "f(x) = \\dfrac{a_0}{2} + \\sum_{n=1}^\\infty \\left(a_n\\cos\\dfrac{n\\pi x}{L} + b_n\\sin\\dfrac{n\\pi x}{L}\\right)",
     "hasDemo": false,
-    "keywords": ["fourier series", "harmonic analysis", "signals", "orthogonal functions", "frequency"],
+    "keywords": [
+      "fourier series",
+      "harmonic analysis",
+      "signals",
+      "orthogonal functions",
+      "frequency"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -394,12 +723,23 @@
     "title": "Euler's Formula & Identity",
     "slug": "euler-identity",
     "subject": "Foundations",
-    "topics": ["Euler identity", "complex numbers", "trigonometry", "exponentials"],
+    "topics": [
+      "Euler identity",
+      "complex numbers",
+      "trigonometry",
+      "exponentials"
+    ],
     "level": "intermediate",
     "summary": "Unites exponential growth and circular motion in the complex plane: e^(iθ) = cos θ + i sin θ.",
     "formulaLatex": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta,\\quad e^{i\\pi} + 1 = 0",
     "hasDemo": false,
-    "keywords": ["euler formula", "euler identity", "complex exponentials", "cis theta", "imaginary unit"],
+    "keywords": [
+      "euler formula",
+      "euler identity",
+      "complex exponentials",
+      "cis theta",
+      "imaginary unit"
+    ],
     "href": "lessons/exponents-logarithms.html"
   },
   {
@@ -407,12 +747,22 @@
     "title": "Cauchy-Riemann Equations",
     "slug": "cauchy-riemann",
     "subject": "Calculus",
-    "topics": ["complex analysis", "analytic functions", "holomorphic", "partial derivatives"],
+    "topics": [
+      "complex analysis",
+      "analytic functions",
+      "holomorphic",
+      "partial derivatives"
+    ],
     "level": "advanced",
     "summary": "Fundamental conditions connecting real and imaginary components for a complex function to be complex differentiable.",
     "formulaLatex": "\\dfrac{\\partial u}{\\partial x} = \\dfrac{\\partial v}{\\partial y},\\quad \\dfrac{\\partial u}{\\partial y} = -\\dfrac{\\partial v}{\\partial x}",
     "hasDemo": false,
-    "keywords": ["cauchy riemann", "complex analysis", "holomorphic", "analytic functions"],
+    "keywords": [
+      "cauchy riemann",
+      "complex analysis",
+      "holomorphic",
+      "analytic functions"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -420,12 +770,23 @@
     "title": "GCD & LCM",
     "slug": "gcd-lcm",
     "subject": "Number Theory",
-    "topics": ["GCD", "LCM", "Euclidean algorithm", "divisibility"],
+    "topics": [
+      "GCD",
+      "LCM",
+      "Euclidean algorithm",
+      "divisibility"
+    ],
     "level": "beginner",
     "summary": "The greatest common divisor and least common multiple, computed using the Euclidean algorithm.",
     "formulaLatex": "\\gcd(a,b) \\cdot \\text{lcm}(a,b) = a \\cdot b",
     "hasDemo": false,
-    "keywords": ["gcd", "lcm", "greatest common divisor", "least common multiple", "euclidean"],
+    "keywords": [
+      "gcd",
+      "lcm",
+      "greatest common divisor",
+      "least common multiple",
+      "euclidean"
+    ],
     "href": "lessons/gcd-lcm.html"
   },
   {
@@ -433,12 +794,23 @@
     "title": "Fermat's Little Theorem",
     "slug": "fermat-little",
     "subject": "Number Theory",
-    "topics": ["primes", "modular arithmetic", "cryptography", "congruence"],
+    "topics": [
+      "primes",
+      "modular arithmetic",
+      "cryptography",
+      "congruence"
+    ],
     "level": "advanced",
     "summary": "If p is prime and gcd(a, p) = 1, then a^(p-1) is congruent to 1 modulo p. Powers RSA cryptography.",
     "formulaLatex": "a^{p-1} \\equiv 1 \\pmod p",
     "hasDemo": false,
-    "keywords": ["fermat", "primes", "modular inverse", "cryptography", "rsa"],
+    "keywords": [
+      "fermat",
+      "primes",
+      "modular inverse",
+      "cryptography",
+      "rsa"
+    ],
     "href": "lessons/gcd-lcm.html"
   },
   {
@@ -446,12 +818,23 @@
     "title": "Modular Congruence & Arithmetic",
     "slug": "modular-arithmetic",
     "subject": "Number Theory",
-    "topics": ["modular", "remainder", "clock arithmetic", "integers"],
+    "topics": [
+      "modular",
+      "remainder",
+      "clock arithmetic",
+      "integers"
+    ],
     "level": "intermediate",
     "summary": "Multiplication and addition preserve modular congruences, enabling efficient large-number computations.",
     "formulaLatex": "(a \\cdot b) \\bmod m = ((a \\bmod m) \\cdot (b \\bmod m)) \\bmod m",
     "hasDemo": false,
-    "keywords": ["modulo", "remainder", "mod", "modular arithmetic", "congruence"],
+    "keywords": [
+      "modulo",
+      "remainder",
+      "mod",
+      "modular arithmetic",
+      "congruence"
+    ],
     "href": "lessons/gcd-lcm.html"
   },
   {
@@ -459,12 +842,24 @@
     "title": "Percentages & Ratios",
     "slug": "percentages-ratios",
     "subject": "Foundations",
-    "topics": ["percentage", "ratio", "proportion", "fraction"],
+    "topics": [
+      "percentage",
+      "ratio",
+      "proportion",
+      "fraction"
+    ],
     "level": "beginner",
     "summary": "Percentage expresses a quantity as parts per hundred. Ratios compare two quantities of the same kind.",
     "formulaLatex": "P = \\dfrac{\\text{Part}}{\\text{Whole}} \\times 100,\\quad \\Delta\\% = \\dfrac{x_{\\text{new}} - x_{\\text{old}}}{x_{\\text{old}}} \\times 100",
     "hasDemo": false,
-    "keywords": ["percent", "percentage", "ratio", "proportion", "fraction", "parts per hundred"],
+    "keywords": [
+      "percent",
+      "percentage",
+      "ratio",
+      "proportion",
+      "fraction",
+      "parts per hundred"
+    ],
     "href": "lessons/percentages-ratios.html"
   },
   {
@@ -472,12 +867,25 @@
     "title": "Exponents & Logarithms",
     "slug": "exponents-logarithms",
     "subject": "Foundations",
-    "topics": ["exponents", "logarithms", "power", "base"],
+    "topics": [
+      "exponents",
+      "logarithms",
+      "power",
+      "base"
+    ],
     "level": "intermediate",
     "summary": "Exponents express repeated multiplication; logarithms are their inverse, asking what power produces a value.",
     "formulaLatex": "\\log_b(x) = y \\iff b^y = x",
     "hasDemo": false,
-    "keywords": ["exponent", "logarithm", "log", "power", "base", "natural log", "ln"],
+    "keywords": [
+      "exponent",
+      "logarithm",
+      "log",
+      "power",
+      "base",
+      "natural log",
+      "ln"
+    ],
     "href": "lessons/exponents-logarithms.html"
   },
   {
@@ -485,12 +893,23 @@
     "title": "Compound Interest Formula",
     "slug": "compound-interest",
     "subject": "Foundations",
-    "topics": ["interest", "finance", "exponential growth", "percentage"],
+    "topics": [
+      "interest",
+      "finance",
+      "exponential growth",
+      "percentage"
+    ],
     "level": "beginner",
     "summary": "Calculates future investment value with compounding interest over time periods.",
     "formulaLatex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}",
     "hasDemo": false,
-    "keywords": ["compound interest", "principal", "finance", "growth", "interest rate"],
+    "keywords": [
+      "compound interest",
+      "principal",
+      "finance",
+      "growth",
+      "interest rate"
+    ],
     "href": "lessons/exponents-logarithms.html"
   },
   {
@@ -498,12 +917,23 @@
     "title": "Arithmetic Sequence & Sum",
     "slug": "arithmetic-sequence",
     "subject": "Foundations",
-    "topics": ["sequence", "series", "progression", "summation"],
+    "topics": [
+      "sequence",
+      "series",
+      "progression",
+      "summation"
+    ],
     "level": "beginner",
     "summary": "Finds the nth term and sum of numbers with a constant difference between consecutive terms.",
     "formulaLatex": "a_n = a_1 + (n-1)d,\\quad S_n = \\frac{n}{2}(a_1 + a_n)",
     "hasDemo": false,
-    "keywords": ["arithmetic sequence", "ap", "progression", "sum of series", "gauss sum"],
+    "keywords": [
+      "arithmetic sequence",
+      "ap",
+      "progression",
+      "sum of series",
+      "gauss sum"
+    ],
     "href": "learn.html#foundations"
   },
   {
@@ -511,12 +941,23 @@
     "title": "Geometric Sequence & Series",
     "slug": "geometric-sequence",
     "subject": "Foundations",
-    "topics": ["sequence", "series", "geometric", "infinite series"],
+    "topics": [
+      "sequence",
+      "series",
+      "geometric",
+      "infinite series"
+    ],
     "level": "intermediate",
     "summary": "Calculates finite and infinite sums where each consecutive term is multiplied by a common ratio r.",
     "formulaLatex": "S_n = \\frac{a(1-r^n)}{1-r},\\quad S_\\infty = \\frac{a}{1-r}\\;(|r|<1)",
     "hasDemo": false,
-    "keywords": ["geometric sequence", "gp", "common ratio", "infinite series", "convergence"],
+    "keywords": [
+      "geometric sequence",
+      "gp",
+      "common ratio",
+      "infinite series",
+      "convergence"
+    ],
     "href": "learn.html#foundations"
   },
   {
@@ -524,12 +965,25 @@
     "title": "Permutations & Combinations",
     "slug": "permutations-combinations",
     "subject": "Counting & Probability",
-    "topics": ["permutation", "combination", "factorial", "counting"],
+    "topics": [
+      "permutation",
+      "combination",
+      "factorial",
+      "counting"
+    ],
     "level": "intermediate",
     "summary": "Permutations count ordered arrangements; combinations count unordered selections from a set.",
     "formulaLatex": "P(n,r) = \\dfrac{n!}{(n-r)!},\\quad C(n,r) = \\dfrac{n!}{r!(n-r)!}",
     "hasDemo": false,
-    "keywords": ["permutation", "combination", "factorial", "nPr", "nCr", "choose", "arrangements"],
+    "keywords": [
+      "permutation",
+      "combination",
+      "factorial",
+      "nPr",
+      "nCr",
+      "choose",
+      "arrangements"
+    ],
     "href": "lessons/permutations-combinations.html"
   },
   {
@@ -537,12 +991,24 @@
     "title": "Probability & Bayes' Theorem",
     "slug": "probability-bayes",
     "subject": "Counting & Probability",
-    "topics": ["probability", "Bayes", "conditional probability", "events"],
+    "topics": [
+      "probability",
+      "Bayes",
+      "conditional probability",
+      "events"
+    ],
     "level": "intermediate",
     "summary": "Bayes' theorem updates the probability of a hypothesis given new evidence.",
     "formulaLatex": "P(A|B) = \\dfrac{P(B|A)\\,P(A)}{P(B)}",
     "hasDemo": false,
-    "keywords": ["probability", "bayes", "conditional", "posterior", "prior", "likelihood"],
+    "keywords": [
+      "probability",
+      "bayes",
+      "conditional",
+      "posterior",
+      "prior",
+      "likelihood"
+    ],
     "href": "lessons/probability-bayes.html"
   },
   {
@@ -550,12 +1016,23 @@
     "title": "Inclusion-Exclusion Principle",
     "slug": "inclusion-exclusion",
     "subject": "Counting & Probability",
-    "topics": ["sets", "union", "intersection", "counting"],
+    "topics": [
+      "sets",
+      "union",
+      "intersection",
+      "counting"
+    ],
     "level": "intermediate",
     "summary": "Calculates the size of the union of overlapping sets by adding sizes and subtracting intersections.",
     "formulaLatex": "|A \\cup B| = |A| + |B| - |A \\cap B|",
     "hasDemo": false,
-    "keywords": ["inclusion exclusion", "set theory", "venn diagram", "union", "intersection"],
+    "keywords": [
+      "inclusion exclusion",
+      "set theory",
+      "venn diagram",
+      "union",
+      "intersection"
+    ],
     "href": "lessons/probability-bayes.html"
   },
   {
@@ -563,12 +1040,22 @@
     "title": "Expected Value",
     "slug": "expected-value",
     "subject": "Counting & Probability",
-    "topics": ["expected value", "random variable", "probability", "mean"],
+    "topics": [
+      "expected value",
+      "random variable",
+      "probability",
+      "mean"
+    ],
     "level": "intermediate",
     "summary": "The probability-weighted average of all possible numerical outcomes of a random phenomenon.",
     "formulaLatex": "E[X] = \\sum x_i P(X = x_i)",
     "hasDemo": false,
-    "keywords": ["expected value", "expectation", "random variable", "weighted average"],
+    "keywords": [
+      "expected value",
+      "expectation",
+      "random variable",
+      "weighted average"
+    ],
     "href": "lessons/probability-bayes.html"
   },
   {
@@ -576,12 +1063,25 @@
     "title": "Mean & Standard Deviation",
     "slug": "mean-standard-deviation",
     "subject": "Statistics",
-    "topics": ["mean", "variance", "standard deviation", "z-score"],
+    "topics": [
+      "mean",
+      "variance",
+      "standard deviation",
+      "z-score"
+    ],
     "level": "beginner",
     "summary": "The mean is the average; standard deviation measures how spread out values are around that average.",
     "formulaLatex": "\\sigma = \\sqrt{\\dfrac{\\sum(x_i - \\mu)^2}{N}},\\quad s = \\sqrt{\\dfrac{\\sum(x_i - \\bar{x})^2}{n-1}}",
     "hasDemo": false,
-    "keywords": ["mean", "average", "standard deviation", "variance", "z-score", "sigma", "mu"],
+    "keywords": [
+      "mean",
+      "average",
+      "standard deviation",
+      "variance",
+      "z-score",
+      "sigma",
+      "mu"
+    ],
     "href": "lessons/mean-standard-deviation.html"
   },
   {
@@ -589,12 +1089,22 @@
     "title": "Z-Score (Standard Score)",
     "slug": "z-score",
     "subject": "Statistics",
-    "topics": ["z score", "normal distribution", "standardization"],
+    "topics": [
+      "z score",
+      "normal distribution",
+      "standardization"
+    ],
     "level": "intermediate",
     "summary": "Measures how many standard deviations an observation falls away from the population mean.",
     "formulaLatex": "z = \\dfrac{x - \\mu}{\\sigma}",
     "hasDemo": false,
-    "keywords": ["z-score", "standard score", "normal curve", "outlier", "standardize"],
+    "keywords": [
+      "z-score",
+      "standard score",
+      "normal curve",
+      "outlier",
+      "standardize"
+    ],
     "href": "lessons/mean-standard-deviation.html"
   },
   {
@@ -602,12 +1112,21 @@
     "title": "Standard Error of the Mean",
     "slug": "standard-error",
     "subject": "Statistics",
-    "topics": ["standard error", "sampling", "confidence intervals"],
+    "topics": [
+      "standard error",
+      "sampling",
+      "confidence intervals"
+    ],
     "level": "intermediate",
     "summary": "Estimates the variability of sample means drawn repeatedly from the same population.",
     "formulaLatex": "\\text{SE} = \\dfrac{\\sigma}{\\sqrt{n}}",
     "hasDemo": false,
-    "keywords": ["standard error", "SE", "sample size", "central limit theorem"],
+    "keywords": [
+      "standard error",
+      "SE",
+      "sample size",
+      "central limit theorem"
+    ],
     "href": "lessons/mean-standard-deviation.html"
   },
   {
@@ -615,12 +1134,26 @@
     "title": "Derivatives & Tangent Slope",
     "slug": "derivatives-tangent",
     "subject": "Calculus",
-    "topics": ["derivative", "tangent", "slope", "limit", "differentiation"],
+    "topics": [
+      "derivative",
+      "tangent",
+      "slope",
+      "limit",
+      "differentiation"
+    ],
     "level": "advanced",
     "summary": "The derivative of a function at a point equals the slope of its tangent line at that point.",
     "formulaLatex": "f'(x) = \\lim_{h \\to 0} \\dfrac{f(x+h) - f(x)}{h}",
     "hasDemo": true,
-    "keywords": ["derivative", "differentiation", "tangent", "slope", "limit", "rate of change", "calculus"],
+    "keywords": [
+      "derivative",
+      "differentiation",
+      "tangent",
+      "slope",
+      "limit",
+      "rate of change",
+      "calculus"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -628,12 +1161,22 @@
     "title": "Product Rule for Differentiation",
     "slug": "product-rule",
     "subject": "Calculus",
-    "topics": ["derivative", "product rule", "differentiation"],
+    "topics": [
+      "derivative",
+      "product rule",
+      "differentiation"
+    ],
     "level": "intermediate",
     "summary": "Differentiates products of functions: the derivative of uv is u'v + uv'.",
     "formulaLatex": "(uv)' = u'v + uv'",
     "hasDemo": false,
-    "keywords": ["product rule", "derivative", "differentiation", "calculus", "multiplication rule"],
+    "keywords": [
+      "product rule",
+      "derivative",
+      "differentiation",
+      "calculus",
+      "multiplication rule"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -641,12 +1184,22 @@
     "title": "Quotient Rule for Differentiation",
     "slug": "quotient-rule",
     "subject": "Calculus",
-    "topics": ["derivative", "quotient rule", "fraction", "differentiation"],
+    "topics": [
+      "derivative",
+      "quotient rule",
+      "fraction",
+      "differentiation"
+    ],
     "level": "intermediate",
     "summary": "Calculates the derivative of a quotient of two differentiable functions.",
     "formulaLatex": "\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}",
     "hasDemo": false,
-    "keywords": ["quotient rule", "derivative", "fraction derivative", "calculus"],
+    "keywords": [
+      "quotient rule",
+      "derivative",
+      "fraction derivative",
+      "calculus"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -654,12 +1207,21 @@
     "title": "Chain Rule for Composite Functions",
     "slug": "chain-rule",
     "subject": "Calculus",
-    "topics": ["chain rule", "composite function", "derivative"],
+    "topics": [
+      "chain rule",
+      "composite function",
+      "derivative"
+    ],
     "level": "advanced",
     "summary": "Computes the derivative of composite functions by multiplying internal and external derivatives.",
     "formulaLatex": "\\dfrac{dy}{dx} = \\dfrac{dy}{du} \\cdot \\dfrac{du}{dx}",
     "hasDemo": false,
-    "keywords": ["chain rule", "composite functions", "backpropagation", "calculus"],
+    "keywords": [
+      "chain rule",
+      "composite functions",
+      "backpropagation",
+      "calculus"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -667,12 +1229,23 @@
     "title": "Fundamental Theorem of Calculus",
     "slug": "fundamental-calculus",
     "subject": "Calculus",
-    "topics": ["integration", "derivative", "antiderivative", "definite integral"],
+    "topics": [
+      "integration",
+      "derivative",
+      "antiderivative",
+      "definite integral"
+    ],
     "level": "advanced",
     "summary": "Bridges differentiation and integration: the definite integral equals the antiderivative evaluated at endpoints.",
     "formulaLatex": "\\int_a^b f(x)\\,dx = F(b) - F(a)",
     "hasDemo": false,
-    "keywords": ["fundamental theorem", "integral", "integration", "antiderivative", "area under curve"],
+    "keywords": [
+      "fundamental theorem",
+      "integral",
+      "integration",
+      "antiderivative",
+      "area under curve"
+    ],
     "href": "learn.html#calculus"
   },
   {
@@ -680,12 +1253,21 @@
     "title": "Integration by Parts",
     "slug": "integration-by-parts",
     "subject": "Calculus",
-    "topics": ["integral", "integration by parts", "calculus"],
+    "topics": [
+      "integral",
+      "integration by parts",
+      "calculus"
+    ],
     "level": "advanced",
     "summary": "Inverts the product rule to integrate products of functions: ∫ u dv = uv - ∫ v du.",
     "formulaLatex": "\\int u\\,dv = uv - \\int v\\,du",
     "hasDemo": false,
-    "keywords": ["integration by parts", "integral", "parts", "calculus technique"],
+    "keywords": [
+      "integration by parts",
+      "integral",
+      "parts",
+      "calculus technique"
+    ],
     "href": "lessons/derivatives-tangent.html"
   },
   {
@@ -693,12 +1275,29 @@
     "title": "Trigonometric Unit Circle",
     "slug": "unit-circle",
     "subject": "Trigonometry",
-    "topics": ["sine", "cosine", "tangent", "unit circle", "angles", "radians"],
+    "topics": [
+      "sine",
+      "cosine",
+      "tangent",
+      "unit circle",
+      "angles",
+      "radians"
+    ],
     "level": "intermediate",
     "summary": "The unit circle defines sin and cos as coordinates of a point on a circle of radius 1.",
     "formulaLatex": "\\sin^2\\theta + \\cos^2\\theta = 1,\\quad \\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}",
     "hasDemo": true,
-    "keywords": ["sin", "cos", "tan", "sine", "cosine", "unit circle", "radian", "degree", "angle"],
+    "keywords": [
+      "sin",
+      "cos",
+      "tan",
+      "sine",
+      "cosine",
+      "unit circle",
+      "radian",
+      "degree",
+      "angle"
+    ],
     "href": "lessons/unit-circle.html"
   },
   {
@@ -706,12 +1305,22 @@
     "title": "Law of Sines",
     "slug": "law-of-sines",
     "subject": "Trigonometry",
-    "topics": ["sine rule", "triangles", "angles", "circumradius"],
+    "topics": [
+      "sine rule",
+      "triangles",
+      "angles",
+      "circumradius"
+    ],
     "level": "intermediate",
     "summary": "States that the ratio of each side of a triangle to the sine of its opposite angle is constant.",
     "formulaLatex": "\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} = 2R",
     "hasDemo": false,
-    "keywords": ["law of sines", "sine rule", "triangle trigonometry", "circumradius"],
+    "keywords": [
+      "law of sines",
+      "sine rule",
+      "triangle trigonometry",
+      "circumradius"
+    ],
     "href": "lessons/unit-circle.html"
   },
   {
@@ -719,12 +1328,21 @@
     "title": "Law of Cosines",
     "slug": "law-of-cosines",
     "subject": "Trigonometry",
-    "topics": ["cosine rule", "triangle", "generalized pythagoras"],
+    "topics": [
+      "cosine rule",
+      "triangle",
+      "generalized pythagoras"
+    ],
     "level": "intermediate",
     "summary": "Generalizes the Pythagorean theorem to any arbitrary triangle, relating three sides and one angle.",
     "formulaLatex": "c^2 = a^2 + b^2 - 2ab\\cos(C)",
     "hasDemo": false,
-    "keywords": ["law of cosines", "cosine rule", "triangle", "non-right triangle"],
+    "keywords": [
+      "law of cosines",
+      "cosine rule",
+      "triangle",
+      "non-right triangle"
+    ],
     "href": "lessons/unit-circle.html"
   },
   {
@@ -732,12 +1350,22 @@
     "title": "Double Angle Formulas",
     "slug": "double-angle-trig",
     "subject": "Trigonometry",
-    "topics": ["double angle", "identities", "sine", "cosine"],
+    "topics": [
+      "double angle",
+      "identities",
+      "sine",
+      "cosine"
+    ],
     "level": "intermediate",
     "summary": "Key trigonometric identities expressing sin(2θ) and cos(2θ) in terms of single-angle functions.",
     "formulaLatex": "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta,\\quad \\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta",
     "hasDemo": false,
-    "keywords": ["double angle", "trig identity", "sin 2 theta", "cos 2 theta"],
+    "keywords": [
+      "double angle",
+      "trig identity",
+      "sin 2 theta",
+      "cos 2 theta"
+    ],
     "href": "lessons/unit-circle.html"
   },
   {
@@ -745,12 +1373,25 @@
     "title": "Time Complexity & Big O",
     "slug": "time-complexity",
     "subject": "CSE & Competitive Programming",
-    "topics": ["Big O", "complexity", "algorithm", "asymptotic"],
+    "topics": [
+      "Big O",
+      "complexity",
+      "algorithm",
+      "asymptotic"
+    ],
     "level": "intermediate",
     "summary": "Big O notation describes how an algorithm's running time scales with input size.",
     "formulaLatex": "T(n) = O(g(n))",
     "hasDemo": false,
-    "keywords": ["big o", "complexity", "algorithm", "O(n)", "O(log n)", "time complexity", "space complexity"],
+    "keywords": [
+      "big o",
+      "complexity",
+      "algorithm",
+      "O(n)",
+      "O(log n)",
+      "time complexity",
+      "space complexity"
+    ],
     "href": "lessons/time-complexity.html"
   },
   {
@@ -758,12 +1399,23 @@
     "title": "Master Theorem for Recurrences",
     "slug": "master-theorem",
     "subject": "CSE & Competitive Programming",
-    "topics": ["divide and conquer", "recurrence", "algorithms", "complexity"],
+    "topics": [
+      "divide and conquer",
+      "recurrence",
+      "algorithms",
+      "complexity"
+    ],
     "level": "advanced",
     "summary": "Solves asymptotic divide-and-conquer recurrences T(n) = aT(n/b) + f(n) across three canonical cases.",
     "formulaLatex": "T(n) = a\\,T(n/b) + \\Theta(n^d)",
     "hasDemo": false,
-    "keywords": ["master theorem", "recurrence", "divide and conquer", "merge sort", "algorithms"],
+    "keywords": [
+      "master theorem",
+      "recurrence",
+      "divide and conquer",
+      "merge sort",
+      "algorithms"
+    ],
     "href": "lessons/time-complexity.html"
   },
   {
@@ -771,12 +1423,651 @@
     "title": "Shannon Information Entropy",
     "slug": "shannon-entropy",
     "subject": "CSE & Competitive Programming",
-    "topics": ["information theory", "entropy", "data compression", "bits"],
+    "topics": [
+      "information theory",
+      "entropy",
+      "data compression",
+      "bits"
+    ],
     "level": "advanced",
     "summary": "Quantifies the expected amount of information, uncertainty, or minimum bits needed to encode a message.",
     "formulaLatex": "H(X) = -\\sum_{i=1}^n P(x_i) \\log_2 P(x_i)",
     "hasDemo": false,
-    "keywords": ["entropy", "information theory", "shannon", "bits", "compression", "uncertainty"],
+    "keywords": [
+      "entropy",
+      "information theory",
+      "shannon",
+      "bits",
+      "compression",
+      "uncertainty"
+    ],
     "href": "learn.html#cse"
+  },
+  {
+    "id": "boolean-demorgan",
+    "title": "De Morgan's Laws",
+    "slug": "boolean-demorgan",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "boolean algebra",
+      "logic gates",
+      "discrete math",
+      "computer science"
+    ],
+    "level": "beginner",
+    "summary": "Fundamental dualities in logic: the negation of a conjunction is the disjunction of negations, and vice versa.",
+    "formulaLatex": "\\overline{A \\cdot B} = \\overline{A} + \\overline{B},\\quad \\overline{A + B} = \\overline{A} \\cdot \\overline{B}",
+    "hasDemo": false,
+    "keywords": [
+      "de morgan",
+      "boolean algebra",
+      "logic",
+      "not and",
+      "not or",
+      "discrete math"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "graph-handshaking",
+    "title": "Handshaking Lemma",
+    "slug": "graph-handshaking",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "graph theory",
+      "degrees",
+      "edges",
+      "discrete math"
+    ],
+    "level": "intermediate",
+    "summary": "In every finite undirected graph, the sum of the degrees of all vertices equals exactly twice the number of edges.",
+    "formulaLatex": "\\sum_{v \\in V} \\deg(v) = 2|E|",
+    "hasDemo": false,
+    "keywords": [
+      "handshaking lemma",
+      "graph theory",
+      "degree sum",
+      "edges",
+      "vertices",
+      "discrete math"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "graph-planar-euler",
+    "title": "Euler's Planar Graph Formula",
+    "slug": "graph-planar-euler",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "planar graphs",
+      "graph theory",
+      "faces",
+      "vertices"
+    ],
+    "level": "intermediate",
+    "summary": "For any connected planar graph drawn in the plane without crossing edges, vertices minus edges plus faces equals 2.",
+    "formulaLatex": "V - E + F = 2",
+    "hasDemo": false,
+    "keywords": [
+      "euler planar",
+      "planar graph",
+      "faces",
+      "edges",
+      "vertices",
+      "graph coloring"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "catalan-number",
+    "title": "Catalan Numbers",
+    "slug": "catalan-number",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "combinatorics",
+      "trees",
+      "parentheses",
+      "algorithms"
+    ],
+    "level": "advanced",
+    "summary": "Sequence of natural numbers appearing in counting problems like binary search trees, valid dyck paths, and polygon triangulations.",
+    "formulaLatex": "C_n = \\frac{1}{n+1}\\binom{2n}{n} = \\frac{(2n)!}{(n+1)!\\,n!}",
+    "hasDemo": false,
+    "keywords": [
+      "catalan number",
+      "binary trees",
+      "dyck path",
+      "parentheses",
+      "combinatorics"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "bezout-identity",
+    "title": "Bézout's Identity & Extended GCD",
+    "slug": "bezout-identity",
+    "subject": "Number Theory",
+    "topics": [
+      "gcd",
+      "modular arithmetic",
+      "extended euclidean",
+      "cryptography"
+    ],
+    "level": "intermediate",
+    "summary": "For nonzero integers a and b, there exist integers x and y such that ax + by = gcd(a, b).",
+    "formulaLatex": "ax + by = \\gcd(a, b)",
+    "hasDemo": false,
+    "keywords": [
+      "bezout",
+      "extended euclidean",
+      "linear combination",
+      "gcd",
+      "modular inverse"
+    ],
+    "href": "lessons/gcd-lcm.html"
+  },
+  {
+    "id": "chinese-remainder",
+    "title": "Chinese Remainder Theorem (CRT)",
+    "slug": "chinese-remainder",
+    "subject": "Number Theory",
+    "topics": [
+      "modular arithmetic",
+      "congruences",
+      "cryptography",
+      "discrete math"
+    ],
+    "level": "advanced",
+    "summary": "Guarantees a unique solution modulo the product of pairwise coprime moduli for a system of simultaneous congruences.",
+    "formulaLatex": "x \\equiv \\sum_{i=1}^k a_i M_i y_i \\pmod{M},\\quad M = \\prod_{i=1}^k m_i",
+    "hasDemo": false,
+    "keywords": [
+      "chinese remainder theorem",
+      "crt",
+      "modular system",
+      "rsa",
+      "coprime"
+    ],
+    "href": "lessons/gcd-lcm.html"
+  },
+  {
+    "id": "birthday-paradox",
+    "title": "Birthday Paradox & Hash Collisions",
+    "slug": "birthday-paradox",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "hash collision",
+      "probability",
+      "cryptography",
+      "hashing"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the probability of at least two items sharing a hash value among k selections from a space of N bins.",
+    "formulaLatex": "P(\\text{collision}) \\approx 1 - e^{-\\frac{k(k-1)}{2N}} \\approx 1 - e^{-\\frac{k^2}{2N}}",
+    "hasDemo": false,
+    "keywords": [
+      "birthday paradox",
+      "hash collision",
+      "cryptography",
+      "hash function",
+      "pigeonhole"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "fast-fourier-transform",
+    "title": "Discrete Fourier Transform (DFT / FFT)",
+    "slug": "fast-fourier-transform",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "fft",
+      "dft",
+      "signal processing",
+      "polynomial multiplication"
+    ],
+    "level": "advanced",
+    "summary": "Converts a sequence of values into components of different frequencies, computable in O(n log n) using Cooley-Tukey FFT.",
+    "formulaLatex": "X_k = \\sum_{n=0}^{N-1} x_n e^{-i\\frac{2\\pi k n}{N}},\\quad k = 0, \\dots, N-1",
+    "hasDemo": false,
+    "keywords": [
+      "fft",
+      "fast fourier transform",
+      "dft",
+      "polynomial multiplication",
+      "signal processing"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "bellman-optimality",
+    "title": "Bellman Optimality Equation",
+    "slug": "bellman-optimality",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "dynamic programming",
+      "reinforcement learning",
+      "optimization",
+      "markov"
+    ],
+    "level": "advanced",
+    "summary": "Decomposes optimal value functions into immediate rewards plus discounted expected future values in MDPs.",
+    "formulaLatex": "V^*(s) = \\max_a \\left[ R(s, a) + \\gamma \\sum_{s'} P(s' \\mid s, a)\\, V^*(s') \\right]",
+    "hasDemo": false,
+    "keywords": [
+      "bellman equation",
+      "dynamic programming",
+      "reinforcement learning",
+      "mdp",
+      "q learning"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "pagerank-algorithm",
+    "title": "PageRank Link Centrality",
+    "slug": "pagerank-algorithm",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "graph centrality",
+      "markov chain",
+      "search engines",
+      "linear algebra"
+    ],
+    "level": "advanced",
+    "summary": "Measures importance of nodes based on link structure using a random surfer model with damping factor d.",
+    "formulaLatex": "\\mathbf{r} = d\\, M \\mathbf{r} + \\frac{1-d}{N}\\, \\mathbf{1}",
+    "hasDemo": false,
+    "keywords": [
+      "pagerank",
+      "random surfer",
+      "markov chain",
+      "graph centrality",
+      "google algorithm"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "hamming-distance",
+    "title": "Hamming Distance & Code Weight",
+    "slug": "hamming-distance",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "error correction",
+      "binary code",
+      "networking",
+      "information theory"
+    ],
+    "level": "intermediate",
+    "summary": "Number of positions at which the corresponding symbols of two equal-length strings differ.",
+    "formulaLatex": "d_H(\\mathbf{x}, \\mathbf{y}) = \\sum_{i=1}^n (x_i \\oplus y_i) = \\operatorname{wt}(\\mathbf{x} \\oplus \\mathbf{y})",
+    "hasDemo": false,
+    "keywords": [
+      "hamming distance",
+      "error detection",
+      "parity",
+      "xor",
+      "coding theory"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "cross-entropy-loss",
+    "title": "Categorical Cross-Entropy Loss",
+    "slug": "cross-entropy-loss",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "machine learning",
+      "loss function",
+      "deep learning",
+      "neural networks"
+    ],
+    "level": "intermediate",
+    "summary": "Quantifies the difference between true categorical probability distribution y and predicted distribution y-hat.",
+    "formulaLatex": "\\mathcal{L}_{CE} = -\\sum_{i=1}^C y_i \\log(\\hat{y}_i)",
+    "hasDemo": false,
+    "keywords": [
+      "cross entropy",
+      "loss function",
+      "log loss",
+      "neural networks",
+      "machine learning"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "softmax-function",
+    "title": "Softmax Activation Function",
+    "slug": "softmax-function",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "machine learning",
+      "activation function",
+      "deep learning",
+      "classification"
+    ],
+    "level": "intermediate",
+    "summary": "Converts arbitrary real-valued logits into a normalized probability distribution where components sum to 1.",
+    "formulaLatex": "\\sigma(\\mathbf{z})_i = \\frac{e^{z_i}}{\\sum_{j=1}^K e^{z_j}},\\quad \\sum_{i=1}^K \\sigma(\\mathbf{z})_i = 1",
+    "hasDemo": false,
+    "keywords": [
+      "softmax",
+      "activation",
+      "logits",
+      "multiclass",
+      "deep learning"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "gradient-descent",
+    "title": "Gradient Descent Update Rule",
+    "slug": "gradient-descent",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "optimization",
+      "machine learning",
+      "calculus",
+      "gradient"
+    ],
+    "level": "intermediate",
+    "summary": "Iterative optimization algorithm for finding the local minimum of a differentiable objective function.",
+    "formulaLatex": "\\theta_{t+1} = \\theta_t - \\alpha \\, \\nabla_\\theta J(\\theta_t)",
+    "hasDemo": false,
+    "keywords": [
+      "gradient descent",
+      "optimization",
+      "learning rate",
+      "loss minimization",
+      "machine learning"
+    ],
+    "href": "learn.html#cse"
+  },
+  {
+    "id": "cosine-similarity",
+    "title": "Cosine Similarity & Distance",
+    "slug": "cosine-similarity",
+    "subject": "Linear Algebra",
+    "topics": [
+      "vectors",
+      "nlp",
+      "embeddings",
+      "machine learning"
+    ],
+    "level": "intermediate",
+    "summary": "Measures orientation similarity between two nonzero vectors in an inner product space, independent of magnitude.",
+    "formulaLatex": "\\cos(\\theta) = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\| \\|\\mathbf{v}\\|} = \\frac{\\sum u_i v_i}{\\sqrt{\\sum u_i^2}\\sqrt{\\sum v_i^2}}",
+    "hasDemo": false,
+    "keywords": [
+      "cosine similarity",
+      "vector embeddings",
+      "nlp",
+      "dot product",
+      "distance metric"
+    ],
+    "href": "library.html?subject=Linear+Algebra"
+  },
+  {
+    "id": "l1-l2-norms",
+    "title": "L1 & L2 Vector Norms (Manhattan vs Euclidean)",
+    "slug": "l1-l2-norms",
+    "subject": "Linear Algebra",
+    "topics": [
+      "norms",
+      "distance",
+      "regularization",
+      "linear algebra"
+    ],
+    "level": "intermediate",
+    "summary": "L1 (Manhattan) is the sum of absolute magnitudes; L2 (Euclidean) is the square root of the sum of squared magnitudes.",
+    "formulaLatex": "\\|\\mathbf{x}\\|_1 = \\sum_{i=1}^n |x_i|,\\quad \\|\\mathbf{x}\\|_2 = \\sqrt{\\sum_{i=1}^n x_i^2}",
+    "hasDemo": false,
+    "keywords": [
+      "l1 norm",
+      "l2 norm",
+      "manhattan distance",
+      "euclidean distance",
+      "lasso",
+      "ridge"
+    ],
+    "href": "library.html?subject=Linear+Algebra"
+  },
+  {
+    "id": "logistic-sigmoid",
+    "title": "Sigmoid / Logistic Function",
+    "slug": "logistic-sigmoid",
+    "subject": "Calculus",
+    "topics": [
+      "activation function",
+      "logistic regression",
+      "derivatives",
+      "neural networks"
+    ],
+    "level": "intermediate",
+    "summary": "Smooth S-shaped curve mapping any real input into the range (0, 1), with derivative sigma(x)(1 - sigma(x)).",
+    "formulaLatex": "\\sigma(x) = \\frac{1}{1 + e^{-x}},\\quad \\sigma'(x) = \\sigma(x)(1 - \\sigma(x))",
+    "hasDemo": false,
+    "keywords": [
+      "sigmoid",
+      "logistic function",
+      "activation",
+      "binary classification",
+      "derivative"
+    ],
+    "href": "lessons/derivatives-tangent.html"
+  },
+  {
+    "id": "normal-distribution",
+    "title": "Gaussian / Normal Distribution PDF",
+    "slug": "normal-distribution",
+    "subject": "Statistics",
+    "topics": [
+      "probability density",
+      "gaussian",
+      "bell curve",
+      "continuous distribution"
+    ],
+    "level": "advanced",
+    "summary": "Bell-shaped probability density function parameterized by mean mu and variance sigma squared.",
+    "formulaLatex": "f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right)",
+    "hasDemo": false,
+    "keywords": [
+      "normal distribution",
+      "gaussian",
+      "bell curve",
+      "pdf",
+      "standard deviation"
+    ],
+    "href": "lessons/mean-standard-deviation.html"
+  },
+  {
+    "id": "poisson-distribution",
+    "title": "Poisson Distribution PMF",
+    "slug": "poisson-distribution",
+    "subject": "Statistics",
+    "topics": [
+      "discrete distribution",
+      "rate parameter",
+      "queueing",
+      "probability"
+    ],
+    "level": "intermediate",
+    "summary": "Models the probability of a given number of events occurring in a fixed interval with average rate lambda.",
+    "formulaLatex": "P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!},\\quad k = 0, 1, 2, \\dots",
+    "hasDemo": false,
+    "keywords": [
+      "poisson",
+      "distribution",
+      "lambda",
+      "event rate",
+      "queueing"
+    ],
+    "href": "lessons/probability-bayes.html"
+  },
+  {
+    "id": "central-limit-theorem",
+    "title": "Central Limit Theorem (CLT)",
+    "slug": "central-limit-theorem",
+    "subject": "Statistics",
+    "topics": [
+      "sample mean",
+      "convergence",
+      "hypothesis testing",
+      "statistics"
+    ],
+    "level": "advanced",
+    "summary": "The normalized sum of independent and identically distributed random variables tends toward a standard normal distribution.",
+    "formulaLatex": "Z = \\frac{\\bar{X}_n - \\mu}{\\sigma / \\sqrt{n}} \\xrightarrow{d} \\mathcal{N}(0, 1)",
+    "hasDemo": false,
+    "keywords": [
+      "central limit theorem",
+      "clt",
+      "sample mean",
+      "gaussian",
+      "sampling"
+    ],
+    "href": "lessons/mean-standard-deviation.html"
+  },
+  {
+    "id": "chebyshev-inequality",
+    "title": "Chebyshev's Inequality",
+    "slug": "chebyshev-inequality",
+    "subject": "Statistics",
+    "topics": [
+      "bounds",
+      "variance",
+      "probability",
+      "statistics"
+    ],
+    "level": "advanced",
+    "summary": "Guarantees that no more than 1/k² of values can be more than k standard deviations away from the mean for any distribution.",
+    "formulaLatex": "P(|X - \\mu| \\ge k\\sigma) \\le \\frac{1}{k^2},\\quad k > 0",
+    "hasDemo": false,
+    "keywords": [
+      "chebyshev",
+      "inequality",
+      "variance bound",
+      "probability tail",
+      "markov inequality"
+    ],
+    "href": "lessons/mean-standard-deviation.html"
+  },
+  {
+    "id": "covariance-correlation",
+    "title": "Covariance & Pearson Correlation",
+    "slug": "covariance-correlation",
+    "subject": "Statistics",
+    "topics": [
+      "correlation",
+      "covariance",
+      "bivariate",
+      "statistics"
+    ],
+    "level": "intermediate",
+    "summary": "Covariance measures joint variability, and Pearson r normalizes it to [-1, 1] to quantify linear relationship.",
+    "formulaLatex": "r = \\frac{\\operatorname{Cov}(X, Y)}{\\sigma_X \\sigma_Y} = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}}",
+    "hasDemo": false,
+    "keywords": [
+      "pearson correlation",
+      "covariance",
+      "linear relationship",
+      "scatter plot",
+      "r value"
+    ],
+    "href": "lessons/mean-standard-deviation.html"
+  },
+  {
+    "id": "section-formula",
+    "title": "Section Formula (Line Segment Division)",
+    "slug": "section-formula",
+    "subject": "Geometry",
+    "topics": [
+      "coordinate geometry",
+      "internal division",
+      "midpoint",
+      "line segment"
+    ],
+    "level": "beginner",
+    "summary": "Finds the coordinates of a point dividing the segment joining (x1, y1) and (x2, y2) internally in ratio m:n.",
+    "formulaLatex": "P(x, y) = \\left( \\frac{m x_2 + n x_1}{m + n}, \\; \\frac{m y_2 + n y_1}{m + n} \\right)",
+    "hasDemo": false,
+    "keywords": [
+      "section formula",
+      "internal division",
+      "ratio",
+      "coordinate geometry",
+      "ratio m:n"
+    ],
+    "href": "lessons/pythagorean-theorem.html"
+  },
+  {
+    "id": "triangle-area-coords",
+    "title": "Area of Triangle from Coordinates",
+    "slug": "triangle-area-coords",
+    "subject": "Geometry",
+    "topics": [
+      "triangle area",
+      "determinant",
+      "vertices",
+      "coordinate geometry"
+    ],
+    "level": "beginner",
+    "summary": "Computes the enclosed area of any triangle from the Cartesian coordinates of its three vertices.",
+    "formulaLatex": "A = \\frac{1}{2} |x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|",
+    "hasDemo": false,
+    "keywords": [
+      "triangle area coordinates",
+      "shoelace formula",
+      "coordinate geometry",
+      "vertices"
+    ],
+    "href": "lessons/pythagorean-theorem.html"
+  },
+  {
+    "id": "sum-of-powers",
+    "title": "Sum of First n Natural Numbers & Squares",
+    "slug": "sum-of-powers",
+    "subject": "Foundations",
+    "topics": [
+      "series",
+      "algebra",
+      "induction",
+      "sequences"
+    ],
+    "level": "beginner",
+    "summary": "Closed-form formulas for the sum of the first n positive integers and their squares.",
+    "formulaLatex": "\\sum_{k=1}^n k = \\frac{n(n+1)}{2},\\quad \\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6}",
+    "hasDemo": false,
+    "keywords": [
+      "sum of integers",
+      "sum of squares",
+      "arithmetic series",
+      "gauss sum",
+      "series"
+    ],
+    "href": "lessons/percentages-ratios.html"
+  },
+  {
+    "id": "circle-general-equation",
+    "title": "General Equation of a Circle",
+    "slug": "circle-general-equation",
+    "subject": "Geometry",
+    "topics": [
+      "circle",
+      "coordinate geometry",
+      "center",
+      "radius"
+    ],
+    "level": "intermediate",
+    "summary": "Second-degree equation representing a circle with center (-g, -f) and radius sqrt(g² + f² - c).",
+    "formulaLatex": "x^2 + y^2 + 2gx + 2fy + c = 0,\\quad r = \\sqrt{g^2 + f^2 - c}",
+    "hasDemo": false,
+    "keywords": [
+      "circle equation",
+      "general circle",
+      "center radius",
+      "coordinate geometry",
+      "conic"
+    ],
+    "href": "lessons/circle-area.html"
   }
 ]

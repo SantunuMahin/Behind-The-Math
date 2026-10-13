@@ -161,6 +161,7 @@
         <button class="filter-btn" data-topic="foundations">Foundations</button>
         <button class="filter-btn" data-topic="probability">Probability</button>
         <button class="filter-btn" data-topic="calculus">Calculus</button>
+        <button class="filter-btn" data-topic="cse">Computer Science</button>
       </div>
     </div>
 
@@ -388,7 +389,7 @@
       </div>
 
       <!-- Q12: Time Complexity -->
-      <div class="practice-question" data-answer="O(n log n)" data-topic="algebra" aria-labelledby="q12-text">
+      <div class="practice-question" data-answer="O(n log n)" data-topic="cse" aria-labelledby="q12-text">
         <div class="practice-q-number">Question 12 · Computer Science</div>
         <p class="practice-q-text" id="q12-text">What is the asymptotic time complexity of Merge Sort, governed by the recurrence T(n) = 2T(n/2) + O(n)?</p>
         <ul class="practice-choices" role="radiogroup" aria-labelledby="q12-text">
@@ -485,6 +486,86 @@
         <div class="practice-hint">Hint: Matrix inverse formula requires dividing by the determinant: A⁻¹ = (1/det(A)) adj(A).</div>
         <div class="practice-feedback" aria-live="polite"></div>
         <div class="practice-explanation">A square matrix is invertible if and only if its determinant is non-zero (det(A) ≠ 0). This is equivalent to having full rank n and linearly independent columns.</div>
+      </div>
+
+      <!-- Q17: De Morgan's Laws -->
+      <div class="practice-question" data-answer="Ā + B̄" data-topic="cse" aria-labelledby="q17-text">
+        <div class="practice-q-number">Question 17 · Computer Science & Boolean Logic</div>
+        <p class="practice-q-text" id="q17-text">According to De Morgan's Laws, what is the boolean negation of the product <strong>(A · B)</strong>?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q17-text">
+          <li class="practice-choice"><input type="radio" name="q17" value="Ā + B̄" id="q17a"><label for="q17a">Ā + B̄ (NOT A OR NOT B)</label></li>
+          <li class="practice-choice"><input type="radio" name="q17" value="Ā · B̄" id="q17b"><label for="q17b">Ā · B̄ (NOT A AND NOT B)</label></li>
+          <li class="practice-choice"><input type="radio" name="q17" value="A + B" id="q17c"><label for="q17c">A + B</label></li>
+          <li class="practice-choice"><input type="radio" name="q17" value="1" id="q17d"><label for="q17d">1</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Negating a conjunction switches AND (·) to OR (+) while inverting each term.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">De Morgan's first law states: ¬(A ∧ B) ≡ ¬A ∨ ¬B (in circuit notation: (A · B)' = A' + B').</div>
+      </div>
+
+      <!-- Q18: Handshaking Lemma -->
+      <div class="practice-question" data-answer="9" data-topic="cse" aria-labelledby="q18-text">
+        <div class="practice-q-number">Question 18 · Computer Science & Graph Theory</div>
+        <p class="practice-q-text" id="q18-text">An undirected graph has <strong>6 vertices</strong>, each with degree <strong>3</strong> (a 3-regular graph). How many edges (|E|) does this graph contain?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q18-text">
+          <li class="practice-choice"><input type="radio" name="q18" value="9" id="q18a"><label for="q18a">9 edges</label></li>
+          <li class="practice-choice"><input type="radio" name="q18" value="18" id="q18b"><label for="q18b">18 edges</label></li>
+          <li class="practice-choice"><input type="radio" name="q18" value="6" id="q18c"><label for="q18c">6 edges</label></li>
+          <li class="practice-choice"><input type="radio" name="q18" value="12" id="q18d"><label for="q18d">12 edges</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: By the Handshaking Lemma, the sum of all degrees equals twice the number of edges: Σ deg(v) = 2|E|.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">Sum of degrees = 6 × 3 = 18. By Handshaking Lemma: 2|E| = 18 ⟹ |E| = 9.</div>
+      </div>
+
+      <!-- Q19: Softmax Normalization -->
+      <div class="practice-question" data-answer="1.0" data-topic="cse" aria-labelledby="q19-text">
+        <div class="practice-q-number">Question 19 · Machine Learning & Neural Networks</div>
+        <p class="practice-q-text" id="q19-text">A neural network outputs raw logits z = [2.4, 1.1, -0.5]. After applying the Softmax activation function σ(z), what is the sum of the resulting probabilities across all 3 classes?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q19-text">
+          <li class="practice-choice"><input type="radio" name="q19" value="1.0" id="q19a"><label for="q19a">1.0</label></li>
+          <li class="practice-choice"><input type="radio" name="q19" value="3.0" id="q19b"><label for="q19b">3.0</label></li>
+          <li class="practice-choice"><input type="radio" name="q19" value="2.4" id="q19c"><label for="q19c">2.4</label></li>
+          <li class="practice-choice"><input type="radio" name="q19" value="0.0" id="q19d"><label for="q19d">0.0</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Softmax normalizes exponents by dividing each exp(z_i) by the sum of all exp(z_j).</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">By definition, σ(z)_i = e^(z_i) / Σ e^(z_j). Summing over all classes gives (Σ e^(z_i)) / (Σ e^(z_j)) = 1.0, producing a valid probability distribution.</div>
+      </div>
+
+      <!-- Q20: Section Formula -->
+      <div class="practice-question" data-answer="(3, 4)" data-topic="geometry" aria-labelledby="q20-text">
+        <div class="practice-q-number">Question 20 · Coordinate Geometry & Foundations</div>
+        <p class="practice-q-text" id="q20-text">Find the coordinates of point P that divides the segment joining A(1, 2) and B(7, 8) internally in the ratio <strong>1 : 2</strong>.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q20-text">
+          <li class="practice-choice"><input type="radio" name="q20" value="(3, 4)" id="q20a"><label for="q20a">(3, 4)</label></li>
+          <li class="practice-choice"><input type="radio" name="q20" value="(4, 5)" id="q20b"><label for="q20b">(4, 5)</label></li>
+          <li class="practice-choice"><input type="radio" name="q20" value="(2, 3)" id="q20c"><label for="q20c">(2, 3)</label></li>
+          <li class="practice-choice"><input type="radio" name="q20" value="(5, 6)" id="q20d"><label for="q20d">(5, 6)</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Use the section formula: x = (m·x₂ + n·x₁) / (m + n) and y = (m·y₂ + n·y₁) / (m + n) with m=1, n=2.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">x = (1·7 + 2·1) / (1 + 2) = 9/3 = 3; y = (1·8 + 2·2) / (1 + 2) = 12/3 = 4. Therefore, P = (3, 4).</div>
       </div>
 
     </div><!-- end practice-section -->
