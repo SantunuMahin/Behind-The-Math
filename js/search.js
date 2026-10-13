@@ -340,11 +340,30 @@
       });
     }
 
-    // Pre-fill from URL ?q=
-    const urlQ = new URLSearchParams(window.location.search).get('q');
+    // Pre-fill from URL params (?q=, ?subject=, ?level=)
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlQ = urlParams.get('q');
     if (urlQ && searchInput) {
       searchInput.value = urlQ;
       currentFilters.query = urlQ;
+    }
+    const urlSubject = urlParams.get('subject');
+    if (urlSubject) {
+      const matchBtn = Array.from(document.querySelectorAll('[data-filter-subject]')).find(b => b.dataset.filterSubject.toLowerCase() === urlSubject.toLowerCase());
+      if (matchBtn) {
+        document.querySelectorAll('[data-filter-subject]').forEach(b => b.classList.remove('active'));
+        matchBtn.classList.add('active');
+        currentFilters.subject = matchBtn.dataset.filterSubject;
+      }
+    }
+    const urlLevel = urlParams.get('level');
+    if (urlLevel) {
+      const matchLevelBtn = Array.from(document.querySelectorAll('[data-filter-level]')).find(b => b.dataset.filterLevel.toLowerCase() === urlLevel.toLowerCase());
+      if (matchLevelBtn) {
+        document.querySelectorAll('[data-filter-level]').forEach(b => b.classList.remove('active'));
+        matchLevelBtn.classList.add('active');
+        currentFilters.level = matchLevelBtn.dataset.filterLevel;
+      }
     }
 
     render();

@@ -157,6 +157,7 @@
         <button class="filter-btn active" data-topic="all">All Topics</button>
         <button class="filter-btn" data-topic="geometry">Geometry</button>
         <button class="filter-btn" data-topic="algebra">Algebra</button>
+        <button class="filter-btn" data-topic="linalg">Linear Algebra</button>
         <button class="filter-btn" data-topic="foundations">Foundations</button>
         <button class="filter-btn" data-topic="probability">Probability</button>
         <button class="filter-btn" data-topic="calculus">Calculus</button>
@@ -404,6 +405,86 @@
         <div class="practice-hint">Hint: The recurrence tree has log₂(n) levels, and each level does a total of O(n) merge work.</div>
         <div class="practice-feedback" aria-live="polite"></div>
         <div class="practice-explanation">By the Master Theorem (Case 2 with a = 2, b = 2, d = 1), or by summing O(n) work across log₂(n) recursive levels, the total running time is O(n log n).</div>
+      </div>
+
+      <!-- Q13: Vector Dot Product -->
+      <div class="practice-question" data-answer="5" data-topic="linalg" aria-labelledby="q13-text">
+        <div class="practice-q-number">Question 13 · Linear Algebra & Vectors</div>
+        <p class="practice-q-text" id="q13-text">Calculate the dot product <strong>u · v</strong> for vectors <strong>u = (2, 3)</strong> and <strong>v = (4, −1)</strong>.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q13-text">
+          <li class="practice-choice"><input type="radio" name="q13" value="5" id="q13a"><label for="q13a">5</label></li>
+          <li class="practice-choice"><input type="radio" name="q13" value="11" id="q13b"><label for="q13b">11</label></li>
+          <li class="practice-choice"><input type="radio" name="q13" value="-5" id="q13c"><label for="q13c">−5</label></li>
+          <li class="practice-choice"><input type="radio" name="q13" value="8" id="q13d"><label for="q13d">8</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Multiply corresponding coordinates and sum them: u · v = (u₁ × v₁) + (u₂ × v₂).</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">u · v = (2)(4) + (3)(−1) = 8 − 3 = 5. A positive dot product also shows the acute angle between the two vectors.</div>
+      </div>
+
+      <!-- Q14: 2x2 Determinant -->
+      <div class="practice-question" data-answer="10" data-topic="linalg" aria-labelledby="q14-text">
+        <div class="practice-q-number">Question 14 · Linear Algebra & Matrices</div>
+        <p class="practice-q-text" id="q14-text">Find the determinant of the 2×2 matrix M = [[3, 2], [1, 4]].</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q14-text">
+          <li class="practice-choice"><input type="radio" name="q14" value="10" id="q14a"><label for="q14a">10</label></li>
+          <li class="practice-choice"><input type="radio" name="q14" value="14" id="q14b"><label for="q14b">14</label></li>
+          <li class="practice-choice"><input type="radio" name="q14" value="12" id="q14c"><label for="q14c">12</label></li>
+          <li class="practice-choice"><input type="radio" name="q14" value="6" id="q14d"><label for="q14d">6</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: For matrix [[a, b], [c, d]], the determinant is ad − bc.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">det(M) = (3)(4) − (2)(1) = 12 − 2 = 10. Geometrically, this represents the signed area scaling factor of the linear transformation.</div>
+      </div>
+
+      <!-- Q15: Orthogonal Vectors -->
+      <div class="practice-question" data-answer="k = 1" data-topic="linalg" aria-labelledby="q15-text">
+        <div class="practice-q-number">Question 15 · Linear Algebra & Vectors</div>
+        <p class="practice-q-text" id="q15-text">For what value of scalar <strong>k</strong> are the vectors <strong>u = (k, 3)</strong> and <strong>v = (6, −2)</strong> orthogonal (perpendicular)?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q15-text">
+          <li class="practice-choice"><input type="radio" name="q15" value="k = 1" id="q15a"><label for="q15a">k = 1</label></li>
+          <li class="practice-choice"><input type="radio" name="q15" value="k = 0" id="q15b"><label for="q15b">k = 0</label></li>
+          <li class="practice-choice"><input type="radio" name="q15" value="k = 2" id="q15c"><label for="q15c">k = 2</label></li>
+          <li class="practice-choice"><input type="radio" name="q15" value="k = -1" id="q15d"><label for="q15d">k = −1</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Two vectors are orthogonal if and only if their dot product u · v equals 0.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">u · v = 6k + 3(−2) = 6k − 6 = 0. Solving 6k = 6 gives k = 1.</div>
+      </div>
+
+      <!-- Q16: Matrix Invertibility -->
+      <div class="practice-question" data-answer="det(A) ≠ 0" data-topic="linalg" aria-labelledby="q16-text">
+        <div class="practice-q-number">Question 16 · Linear Algebra & Matrices</div>
+        <p class="practice-q-text" id="q16-text">Under which necessary and sufficient condition is an n×n square matrix A invertible (non-singular)?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q16-text">
+          <li class="practice-choice"><input type="radio" name="q16" value="det(A) ≠ 0" id="q16a"><label for="q16a">det(A) ≠ 0</label></li>
+          <li class="practice-choice"><input type="radio" name="q16" value="det(A) = 0" id="q16b"><label for="q16b">det(A) = 0</label></li>
+          <li class="practice-choice"><input type="radio" name="q16" value="Trace(A) = 0" id="q16c"><label for="q16c">Trace(A) = 0</label></li>
+          <li class="practice-choice"><input type="radio" name="q16" value="All diagonal entries > 0" id="q16d"><label for="q16d">All diagonal entries > 0</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Matrix inverse formula requires dividing by the determinant: A⁻¹ = (1/det(A)) adj(A).</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">A square matrix is invertible if and only if its determinant is non-zero (det(A) ≠ 0). This is equivalent to having full rank n and linearly independent columns.</div>
       </div>
 
     </div><!-- end practice-section -->

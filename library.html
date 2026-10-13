@@ -19,10 +19,12 @@
       position: sticky;
       top: var(--nav-height);
       z-index: var(--z-raised);
-      background: var(--color-surface);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       padding: var(--space-4) 0;
-      box-shadow: var(--shadow-xs);
+      box-shadow: 0 4px 20px rgb(29 53 87 / 6%);
     }
     .library-toolbar .container { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
     .filter-chips { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
@@ -148,6 +150,7 @@
       <button class="filter-btn" data-filter-subject="Foundations">Foundations</button>
       <button class="filter-btn" data-filter-subject="Number Theory">Number Theory</button>
       <button class="filter-btn" data-filter-subject="Algebra">Algebra</button>
+      <button class="filter-btn" data-filter-subject="Linear Algebra">Linear Algebra</button>
       <button class="filter-btn" data-filter-subject="Geometry">Geometry</button>
       <button class="filter-btn" data-filter-subject="Trigonometry">Trigonometry</button>
       <button class="filter-btn" data-filter-subject="Counting & Probability">Probability</button>
