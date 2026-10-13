@@ -658,16 +658,28 @@
 
 .formula-panel {
   background: var(--color-surface-dark);
+  border: 1px solid rgba(168, 218, 220, 0.15);
   border-radius: var(--radius-lg);
   padding: var(--space-7) var(--space-8);
   margin-block: var(--space-7);
   text-align: center;
   position: relative;
+  box-shadow: 0 10px 30px rgba(19, 38, 61, 0.25);
+}
+
+.formula-panel ::selection {
+  background: rgba(168, 218, 220, 0.45);
+  color: #FFFFFF;
 }
 
 .formula-panel .katex-display,
 .formula-panel .formula-latex {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
+  color: var(--color-text);
+  margin: var(--space-4) 0;
+}
+
+.formula-panel .katex {
   color: var(--color-text);
 }
 
@@ -675,10 +687,29 @@
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.formula-panel .formula-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
-  .formula-panel { padding: var(--space-5) var(--space-4); }
+  .formula-panel {
+    padding: var(--space-7) var(--space-4) var(--space-5);
+  }
+  .formula-panel .katex-display {
+    font-size: 1.3rem;
+  }
 }
 
 /* ── Code Tabs ───────────────────────────────────────────── */

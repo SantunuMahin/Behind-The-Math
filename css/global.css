@@ -255,11 +255,21 @@ hr {
 
 section { position: relative; }
 
-/* ── KaTeX overrides ─────────────────────────────────────── */
+/* ── KaTeX & Text Selection overrides ──────────────────────── */
+
+::selection {
+  background: rgba(168, 218, 220, 0.4);
+  color: inherit;
+}
 
 .katex { font-size: 1.1em; }
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   padding-block: var(--space-3);
+  margin: var(--space-3) 0;
+}
+.katex-display > .katex {
+  white-space: normal;
+  text-align: center;
 }

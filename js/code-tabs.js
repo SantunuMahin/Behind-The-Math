@@ -82,10 +82,10 @@
       errorColor: '#E63946'
     });
 
-    // Also render data-latex attributes in formula cards
-    document.querySelectorAll('[data-latex]').forEach(el => {
+    // Render data-latex attributes ONLY in dedicated formula render containers (not .formula-panel)
+    document.querySelectorAll('.formula-render[data-latex], .formula-card-latex[data-latex]').forEach(el => {
       const latex = el.dataset.latex;
-      if (latex) {
+      if (latex && !el.hasChildNodes()) {
         try {
           el.innerHTML = katex.renderToString(latex, {
             throwOnError: false,
