@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Complexity & Big O — BehindTheMath</title>
+  <meta name="description" content="Understand Big O asymptotic notation, operation scaling, algorithm efficiency comparisons, and competitive programming limits with an interactive calculator.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="../index.html">🏠 Home</a></li>
+      <li><a href="../learn.html">📚 Learn</a></li>
+      <li><a href="../library.html">📖 Formula Library</a></li>
+      <li><a href="../lab.html">⚡ Visual Lab</a></li>
+      <li><a href="../practice.html">✏️ Practice</a></li>
+      <li><a href="../about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="lesson-layout">
+
+      <article class="lesson-content">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html">Learn</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html#cse">CSE &amp; Algorithms</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Time Complexity &amp; Big O</span>
+        </nav>
+
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4)">
+          <span class="badge badge-intermediate">Intermediate</span>
+          <span class="badge badge-primary">Algorithms</span>
+          <span class="badge badge-interactive">⚡ Interactive Tool</span>
+        </div>
+
+        <h1 id="lesson-title">Time Complexity &amp; Big O</h1>
+
+        <p style="font-size:var(--text-lg);color:var(--color-muted);margin-bottom:var(--space-7)">
+          How does an algorithm's run time grow when the input size $n$ explodes from 10 to 1,000,000? Big O notation discards hardware idiosyncrasies and constant factors to describe pure asymptotic growth rate.
+        </p>
+
+        <!-- Formula panel -->
+        <section aria-labelledby="formula-heading">
+          <h2 id="formula-heading">The Formal Definition</h2>
+          <div class="formula-panel" data-latex="T(n) = O(g(n)) \iff \exists\, c > 0,\, n_0 > 0 \text{ such that } T(n) \le c \cdot g(n) \; \forall n \ge n_0">
+            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-3)">Asymptotic Upper Bound</p>
+            $$T(n) = O(g(n)) \iff \exists\, c > 0,\, n_0 > 0 \quad\text{s.t.}\quad T(n) \le c \cdot g(n) \quad\forall n \ge n_0$$
+            <p style="color:rgb(241 250 238 / 60%);font-size:var(--text-sm);margin-top:var(--space-3)">Common Hierarchy: $O(1) &lt; O(\log n) &lt; O(n) &lt; O(n \log n) &lt; O(n^2) &lt; O(2^n) &lt; O(n!)$</p>
+            <button class="btn btn-sm formula-copy-btn" style="position:absolute;top:12px;right:12px;background:rgb(255 255 255/10%);color:var(--color-text);border:1px solid rgb(255 255 255/20%)">⎘ Copy LaTeX</button>
+          </div>
+        </section>
+
+        <!-- Variables -->
+        <section aria-labelledby="vars-heading">
+          <h2 id="vars-heading">Symbol Definitions</h2>
+          <div class="variable-legend">
+            <table>
+              <thead><tr><th>Symbol</th><th>Meaning</th><th>Domain / Constraint</th></tr></thead>
+              <tbody>
+                <tr><td class="variable-symbol">n</td><td>Input size (e.g. number of items in array)</td><td>Positive integer $n \ge 1$</td></tr>
+                <tr><td class="variable-symbol">T(n)</td><td>Actual number of operations / execution steps</td><td>Function of $n$</td></tr>
+                <tr><td class="variable-symbol">g(n)</td><td>Asymptotic bounding function (e.g. $n, n^2, \log n$)</td><td>Positive for sufficiently large $n$</td></tr>
+                <tr><td class="variable-symbol">c</td><td>Positive constant multiplier absorbing machine speed</td><td>$c &gt; 0$</td></tr>
+                <tr><td class="variable-symbol">n_0</td><td>Threshold input size past which the bound holds</td><td>$n_0 &gt; 0$</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Rule of Thumb -->
+        <section aria-labelledby="assumptions-heading">
+          <h2 id="assumptions-heading">Competitive Programming Rule of Thumb</h2>
+          <div class="assumption-note">
+            <strong>The 10⁸ Operations per Second Rule:</strong>
+            <p style="margin-top:var(--space-2)">
+              Modern CPUs typically execute roughly $10^8$ basic operations per second within a 1.0-second time limit:
+            </p>
+            <ul style="margin-top:var(--space-2);padding-left:var(--space-4)">
+              <li>$n \le 10^5 \implies O(n \log n)$ or $O(n)$ required ($10^5 \log_2 10^5 \approx 1.7 \times 10^6$ ops — easily passes).</li>
+              <li>$n \le 10^4 \implies O(n^2)$ will pass ($10^8$ ops max).</li>
+              <li>$n \le 25 \implies O(2^n)$ backtracking will pass ($2^{25} \approx 3.3 \times 10^7$ ops).</li>
+              <li>$n \le 11 \implies O(n!)$ permutations will pass ($11! \approx 3.9 \times 10^7$ ops).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Interactive Calculator -->
+        <section id="lab" aria-labelledby="lab-heading">
+          <h2 id="lab-heading">Interactive Complexity Scaling Calculator</h2>
+          <p>Drag the input size $n$ slider to observe the dramatic difference in estimated operation counts across complexity classes.</p>
+
+          <div class="lab-shell">
+            <div class="lab-toolbar">
+              <span class="lab-title">⚡ Complexity Growth Simulator</span>
+              <div class="lab-toolbar-actions">
+                <button id="cmp-reset" class="btn btn-sm btn-ghost">Reset (n = 100)</button>
+              </div>
+            </div>
+            <div class="lab-body">
+              <div class="lab-canvas-area" style="background:#fff;border-radius:var(--radius-md);padding:var(--space-4);min-height:220px;overflow-x:auto">
+                <table style="width:100%;font-size:var(--text-sm);border-collapse:collapse">
+                  <thead>
+                    <tr style="border-bottom:2px solid var(--color-border);text-align:left">
+                      <th style="padding:8px">Complexity</th>
+                      <th style="padding:8px">Typical Algorithm</th>
+                      <th style="padding:8px">Operations at n = <span id="n-table-label">100</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:8px;font-weight:700;color:var(--color-success)">O(1)</td><td>Hash Map Lookup</td><td id="res-o1" style="font-family:var(--font-code)">1</td></tr>
+                    <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:8px;font-weight:700;color:var(--color-success)">O(log n)</td><td>Binary Search</td><td id="res-ologn" style="font-family:var(--font-code)">7</td></tr>
+                    <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:8px;font-weight:700;color:var(--color-secondary)">O(n)</td><td>Linear Array Scan</td><td id="res-on" style="font-family:var(--font-code)">100</td></tr>
+                    <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:8px;font-weight:700;color:var(--color-secondary)">O(n log n)</td><td>Merge Sort / Quicksort</td><td id="res-onlogn" style="font-family:var(--font-code)">664</td></tr>
+                    <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:8px;font-weight:700;color:var(--color-warning)">O(n²)</td><td>Bubble Sort / Nested Loops</td><td id="res-on2" style="font-family:var(--font-code)">10,000</td></tr>
+                    <tr><td style="padding:8px;font-weight:700;color:var(--color-warning)">O(2ⁿ)</td><td>Subset Generation</td><td id="res-o2n" style="font-family:var(--font-code)">1.27 × 10³⁰</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="lab-controls">
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="slider-cmp-n">Input Size n: <span id="val-cmp-n">100</span></label>
+                  <input type="range" id="slider-cmp-n" min="2" max="1000" step="1" value="100">
+                </div>
+                <div class="lab-result-panel" aria-live="polite">
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">O(n) vs O(n²) ratio</span>
+                    <span class="lab-result-value" id="disp-cmp-ratio" style="color:var(--color-primary);font-weight:700">100× slower</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Binary search steps</span>
+                    <span class="lab-result-value" id="disp-cmp-bs">≤ 7 checks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Example -->
+        <section id="worked-example" aria-labelledby="example-heading">
+          <h2 id="example-heading">Worked Example</h2>
+          <div class="worked-example">
+            <h4>Problem</h4>
+            <p>Determine the Big O time complexity of searching a sorted array of 1,000,000 numbers using (A) Linear Search vs (B) Binary Search.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Linear Search ($O(n)$).</strong><br>In the worst case (item is at the very end or absent), it must check all $1,000,000$ elements. Execution takes $\approx 1,000,000$ steps.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Binary Search ($O(\log_2 n)$).</strong><br>Each comparison cuts the search space in half. The maximum number of checks is $\lceil \log_2(1,000,000) \rceil = 20$ comparisons.</div>
+            </div>
+            <div class="worked-answer">✓ Linear search requires 1,000,000 comparisons; binary search requires only 20 comparisons — a 50,000× speedup!</div>
+          </div>
+        </section>
+
+        <!-- Code Examples -->
+        <section id="code" aria-labelledby="code-heading">
+          <h2 id="code-heading">Code Examples</h2>
+          <div class="code-tabs">
+            <div class="code-tab-bar">
+              <button class="code-tab-btn" data-tab="c" aria-selected="true" role="tab">C (C11)</button>
+              <button class="code-tab-btn" data-tab="python" aria-selected="false" role="tab">Python 3</button>
+              <button class="code-copy-btn" aria-label="Copy code">⎘ Copy</button>
+            </div>
+            <div class="code-panel active" data-tab="c">
+<pre><code><span class="token-include">#include</span> <span class="token-string">&lt;stdio.h&gt;</span>
+
+<span class="token-comment">/* O(log n) Binary Search */</span>
+<span class="token-type">int</span> <span class="token-function">binary_search</span>(<span class="token-keyword">const</span> <span class="token-type">int</span> arr[], <span class="token-type">int</span> n, <span class="token-type">int</span> target) {
+    <span class="token-type">int</span> low = <span class="token-number">0</span>, high = n - <span class="token-number">1</span>;
+    <span class="token-keyword">while</span> (low &lt;= high) {
+        <span class="token-type">int</span> mid = low + (high - low) / <span class="token-number">2</span>;
+        <span class="token-keyword">if</span> (arr[mid] == target) <span class="token-keyword">return</span> mid;
+        <span class="token-keyword">else</span> <span class="token-keyword">if</span> (arr[mid] &lt; target) low = mid + <span class="token-number">1</span>;
+        <span class="token-keyword">else</span> high = mid - <span class="token-number">1</span>;
+    }
+    <span class="token-keyword">return</span> <span class="token-number">-1</span>;
+}
+
+<span class="token-type">int</span> <span class="token-function">main</span>(<span class="token-type">void</span>) {
+    <span class="token-type">int</span> arr[] = {<span class="token-number">2</span>, <span class="token-number">5</span>, <span class="token-number">8</span>, <span class="token-number">12</span>, <span class="token-number">16</span>, <span class="token-number">23</span>, <span class="token-number">38</span>, <span class="token-number">56</span>, <span class="token-number">72</span>, <span class="token-number">91</span>};
+    <span class="token-type">int</span> idx = <span class="token-function">binary_search</span>(arr, <span class="token-number">10</span>, <span class="token-number">23</span>);
+    <span class="token-function">printf</span>(<span class="token-string">"Target found at index: %d (O(log n))\n"</span>, idx);
+    <span class="token-keyword">return</span> <span class="token-number">0</span>;
+}</code></pre>
+            </div>
+            <div class="code-panel" data-tab="python">
+<pre><code><span class="token-keyword">def</span> <span class="token-function">binary_search</span>(arr: <span class="token-type">list</span>[<span class="token-type">int</span>], target: <span class="token-type">int</span>) -&gt; <span class="token-type">int</span>:
+    <span class="token-string">"""O(log n) search on a sorted list."""</span>
+    low, high = <span class="token-number">0</span>, len(arr) - <span class="token-number">1</span>
+    <span class="token-keyword">while</span> low &lt;= high:
+        mid = (low + high) // <span class="token-number">2</span>
+        <span class="token-keyword">if</span> arr[mid] == target:
+            <span class="token-keyword">return</span> mid
+        <span class="token-keyword">elif</span> arr[mid] &lt; target:
+            low = mid + <span class="token-number">1</span>
+        <span class="token-keyword">else</span>:
+            high = mid - <span class="token-number">1</span>
+    <span class="token-keyword">return</span> <span class="token-number">-1</span>
+
+<span class="token-keyword">if</span> __name__ == <span class="token-string">"__main__"</span>:
+    data = [<span class="token-number">2</span>, <span class="token-number">5</span>, <span class="token-number">8</span>, <span class="token-number">12</span>, <span class="token-number">16</span>, <span class="token-number">23</span>, <span class="token-number">38</span>, <span class="token-number">56</span>, <span class="token-number">72</span>, <span class="token-number">91</span>]
+    <span class="token-function">print</span>(<span class="token-string">"Index of 23:"</span>, binary_search(data, <span class="token-number">23</span>))</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Practice Questions -->
+        <section id="practice" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">Check Your Understanding</h2>
+
+          <div class="practice-question" data-question-id="cmp-1" data-answer="nlogn">
+            <p class="practice-question-text"><strong>Q1.</strong> What is the best-case and average-case time complexity of Merge Sort?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="cmp-1" value="nlogn"> O(n log n)</label>
+              <label class="practice-option"><input type="radio" name="cmp-1" value="n2"> O(n²)</label>
+              <label class="practice-option"><input type="radio" name="cmp-1" value="n"> O(n)</label>
+              <label class="practice-option"><input type="radio" name="cmp-1" value="logn"> O(log n)</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Divide into 2 halves ($\log n$ levels), merging each level in $O(n)$ steps.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">Merge Sort splits arrays logarithmically ($\log n$ levels) and merges in linear time at each level, achieving guaranteed $\Theta(n \log n)$ performance.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="cmp-2" data-answer="quadratic">
+            <p class="practice-question-text"><strong>Q2.</strong> If an algorithm with $O(n^2)$ complexity takes 1 second for $n = 10,000$, how long will it approximately take for $n = 20,000$?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="cmp-2" value="quadratic"> 4 seconds (doubling n quadruples n²)</label>
+              <label class="practice-option"><input type="radio" name="cmp-2" value="double"> 2 seconds</label>
+              <label class="practice-option"><input type="radio" name="cmp-2" value="same"> 1 second</label>
+              <label class="practice-option"><input type="radio" name="cmp-2" value="8"> 8 seconds</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">$(2n)^2 = 4n^2$. What is the scaling factor?</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">Because runtime scales with $n^2$, doubling the input size increases run time by $2^2 = 4\times$. Thus $1 \text{ s} \times 4 = 4$ seconds.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="cmp-3" data-answer="drop">
+            <p class="practice-question-text"><strong>Q3.</strong> Why does Big O drop lower-order terms (e.g. $T(n) = 3n^2 + 100n + 5 \implies O(n^2)$)?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="cmp-3" value="drop"> As n becomes extremely large, n² completely dominates 100n and constants</label>
+              <label class="practice-option"><input type="radio" name="cmp-3" value="lazy"> Because programmers prefer shorter notations</label>
+              <label class="practice-option"><input type="radio" name="cmp-3" value="approx"> Because computers cannot accurately count to 100</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Think about asymptotic dominance as $n \to \infty$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">As $n \to \infty$, the highest power $n^2$ accounts for over 99.99% of total operations, making lower-order terms asymptotically insignificant.</div>
+          </div>
+        </section>
+
+        <div class="lesson-nav">
+          <a href="unit-circle.html" class="lesson-nav-link" style="flex:none">
+            <span class="nav-direction">← Previous lesson</span>
+            <span class="nav-title">Trigonometric Unit Circle</span>
+          </a>
+          <a href="../library.html" class="lesson-nav-link">
+            <span class="nav-direction">Back to Library →</span>
+            <span class="nav-title">All Formulas</span>
+          </a>
+        </div>
+
+      </article>
+
+      <aside class="lesson-toc-col" aria-label="Page sections">
+        <nav class="toc">
+          <div class="toc-title">On this page</div>
+          <ul class="toc-list">
+            <li><a href="#formula-heading">Formal Definition</a></li>
+            <li><a href="#vars-heading">Symbol Definitions</a></li>
+            <li><a href="#assumptions-heading">Rule of Thumb</a></li>
+            <li><a href="#lab">Interactive Calculator</a></li>
+            <li><a href="#worked-example">Worked Example</a></li>
+            <li><a href="#code">Code Examples</a></li>
+            <li><a href="#practice">Practice Questions</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Learn</h4><ul class="footer-links">
+        <li><a href="../learn.html">All Subjects</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>CSE</h4><ul class="footer-links">
+        <li><a href="time-complexity.html">Time Complexity &amp; Big O</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="../js/search-index.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/code-tabs.js"></script>
+
+<script>
+(function() {
+  const slider = document.getElementById('slider-cmp-n');
+  const valLabel = document.getElementById('val-cmp-n');
+  const tableLabel = document.getElementById('n-table-label');
+  const resO1 = document.getElementById('res-o1');
+  const resOlogn = document.getElementById('res-ologn');
+  const resOn = document.getElementById('res-on');
+  const resOnlogn = document.getElementById('res-onlogn');
+  const resOn2 = document.getElementById('res-on2');
+  const resO2n = document.getElementById('res-o2n');
+  const dispRatio = document.getElementById('disp-cmp-ratio');
+  const dispBs = document.getElementById('disp-cmp-bs');
+  const resetBtn = document.getElementById('cmp-reset');
+
+  function update() {
+    const n = parseInt(slider.value, 10);
+    valLabel.textContent = n;
+    tableLabel.textContent = n;
+
+    const o1 = 1;
+    const ologn = Math.ceil(Math.log2(n));
+    const on = n;
+    const onlogn = Math.round(n * Math.log2(n));
+    const on2 = n * n;
+
+    resO1.textContent = '1';
+    resOlogn.textContent = ologn;
+    resOn.textContent = on.toLocaleString();
+    resOnlogn.textContent = onlogn.toLocaleString();
+    resOn2.textContent = on2.toLocaleString();
+
+    if (n > 60) {
+      resO2n.textContent = `2^${n} (approaching astronomical)`;
+    } else {
+      resO2n.textContent = Math.pow(2, n).toLocaleString();
+    }
+
+    dispRatio.textContent = `${n}× slower (n = ${n})`;
+    dispBs.textContent = `≤ ${ologn} checks`;
+  }
+
+  slider.addEventListener('input', update);
+  resetBtn.addEventListener('click', () => {
+    slider.value = 100;
+    update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>

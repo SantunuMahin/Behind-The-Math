@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — BehindTheMath</title>
+  <meta name="description" content="The page you were looking for could not be found. Return to BehindTheMath to explore mathematics.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <style>
+    .error-page { min-height: calc(100svh - var(--nav-height)); display: flex; align-items: center; }
+    .error-canvas { position: absolute; inset: 0; opacity: 0.06; }
+    .error-content { position: relative; z-index: 1; text-align: center; }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(80px, 20vw, 160px);
+      font-weight: var(--weight-extrabold);
+      color: var(--color-button);
+      line-height: 1;
+      opacity: 0.8;
+    }
+    .error-links { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+    .formula-404 {
+      font-family: var(--font-code);
+      font-size: var(--text-lg);
+      color: rgb(241 250 238 / 60%);
+      margin-block: var(--space-4);
+    }
+  </style>
+</head>
+<body style="background:var(--color-primary)">
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="learn.html">📚 Learn</a></li>
+      <li><a href="library.html">📖 Formula Library</a></li>
+      <li><a href="lab.html">⚡ Visual Lab</a></li>
+      <li><a href="practice.html">✏️ Practice</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<main id="main-content" class="error-page">
+  <canvas id="error-canvas" class="error-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="error-content">
+      <div class="error-code" aria-hidden="true">404</div>
+      <div class="formula-404" aria-hidden="true">lim(page → ∞) = undefined</div>
+      <h1 style="color:var(--color-text);margin-bottom:var(--space-4)">Page not found</h1>
+      <p style="color:rgb(241 250 238 / 70%);font-size:var(--text-lg);max-width:480px;margin:0 auto var(--space-8)">
+        The page you were looking for doesn't exist. But the math is still here — let's find what you need.
+      </p>
+      <div class="error-links">
+        <a href="index.html" class="btn btn-primary btn-lg">🏠 Go Home</a>
+        <a href="learn.html" class="btn btn-outline btn-lg">📚 Browse Lessons</a>
+        <a href="library.html" class="btn btn-outline btn-lg">🔍 Search Formulas</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="js/nav.js"></script>
+<script>
+// Simple floating math symbols animation for 404
+(function() {
+  const canvas = document.getElementById('error-canvas');
+  if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const ctx = canvas.getContext('2d');
+  const symbols = ['∑', 'π', '∫', '√', '∂', 'Δ', 'θ', 'λ', '∞', '≈', '≠', 'σ'];
+  let W, H;
+  function resize() {
+    W = canvas.offsetWidth; H = canvas.offsetHeight;
+    canvas.width = W; canvas.height = H;
+  }
+  resize();
+  new ResizeObserver(resize).observe(canvas);
+  function draw(t) {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = 'rgba(168,218,220,0.8)';
+    ctx.font = '24px serif';
+    symbols.forEach((s, i) => {
+      const x = ((i * 137.5 + t * 0.025) % (W + 60)) - 30;
+      const y = ((i * 73 + t * 0.02) % (H + 40)) - 20;
+      ctx.fillText(s, x, y);
+    });
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>

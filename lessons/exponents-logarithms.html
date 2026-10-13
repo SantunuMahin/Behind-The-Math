@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exponents & Logarithms — BehindTheMath</title>
+  <meta name="description" content="Master powers, logarithmic scales, change-of-base formula, exponential growth, and their inverse relationship.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="../index.html">🏠 Home</a></li>
+      <li><a href="../learn.html">📚 Learn</a></li>
+      <li><a href="../library.html">📖 Formula Library</a></li>
+      <li><a href="../lab.html">⚡ Visual Lab</a></li>
+      <li><a href="../practice.html">✏️ Practice</a></li>
+      <li><a href="../about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="lesson-layout">
+
+      <article class="lesson-content">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html">Learn</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html#foundations">Foundations</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Exponents &amp; Logarithms</span>
+        </nav>
+
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4)">
+          <span class="badge badge-intermediate">Intermediate</span>
+          <span class="badge badge-primary">Foundations</span>
+          <span class="badge badge-interactive">⚡ Interactive Tool</span>
+        </div>
+
+        <h1 id="lesson-title">Exponents &amp; Logarithms</h1>
+
+        <p style="font-size:var(--text-lg);color:var(--color-muted);margin-bottom:var(--space-7)">
+          Exponents describe compounding multiplication, whereas logarithms answer the reverse question: <em>"To what power must the base be raised to produce this number?"</em>
+        </p>
+
+        <!-- Formula panel -->
+        <section aria-labelledby="formula-heading">
+          <h2 id="formula-heading">The Fundamental Equivalence</h2>
+          <div class="formula-panel" data-latex="\log_b(x) = y \iff b^y = x">
+            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-3)">Inverse Relationship</p>
+            $$\log_b(x) = y \iff b^y = x$$
+            <p style="color:rgb(241 250 238 / 60%);font-size:var(--text-sm);margin-top:var(--space-3)">Change-of-base identity: $\log_b(x) = \dfrac{\ln(x)}{\ln(b)} = \dfrac{\log_{10}(x)}{\log_{10}(b)}$</p>
+            <button class="btn btn-sm formula-copy-btn" style="position:absolute;top:12px;right:12px;background:rgb(255 255 255/10%);color:var(--color-text);border:1px solid rgb(255 255 255/20%)">⎘ Copy LaTeX</button>
+          </div>
+        </section>
+
+        <!-- Variables -->
+        <section aria-labelledby="vars-heading">
+          <h2 id="vars-heading">Symbol Definitions</h2>
+          <div class="variable-legend">
+            <table>
+              <thead><tr><th>Symbol</th><th>Meaning</th><th>Domain / Constraint</th></tr></thead>
+              <tbody>
+                <tr><td class="variable-symbol">b</td><td>Logarithmic / Exponential Base</td><td>b &gt; 0, b ≠ 1</td></tr>
+                <tr><td class="variable-symbol">x</td><td>Argument (input quantity)</td><td>Strictly positive (x &gt; 0)</td></tr>
+                <tr><td class="variable-symbol">y</td><td>Exponent / Logarithm value</td><td>Any real number (y ∈ ℝ)</td></tr>
+                <tr><td class="variable-symbol">e</td><td>Euler's number</td><td>e ≈ 2.718281828…</td></tr>
+                <tr><td class="variable-symbol">ln(x)</td><td>Natural logarithm ($\log_e(x)$)</td><td>x &gt; 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Conditions -->
+        <section aria-labelledby="assumptions-heading">
+          <h2 id="assumptions-heading">Rules of Logarithms &amp; Constraints</h2>
+          <div class="assumption-note">
+            <strong>Key logarithmic laws:</strong>
+            <ul style="margin-top:var(--space-2);padding-left:var(--space-4)">
+              <li><strong>Product Law:</strong> $\log_b(xy) = \log_b(x) + \log_b(y)$ (turns multiplication into addition).</li>
+              <li><strong>Quotient Law:</strong> $\log_b(x/y) = \log_b(x) - \log_b(y)$.</li>
+              <li><strong>Power Law:</strong> $\log_b(x^k) = k \log_b(x)$ (brings powers down to simple multipliers).</li>
+              <li><strong>Domain requirement:</strong> $\log_b(x)$ is undefined for $x \le 0$ within the real numbers. $\log(0) \to -\infty$.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Interactive Explorer -->
+        <section id="lab" aria-labelledby="lab-heading">
+          <h2 id="lab-heading">Interactive Exponent &amp; Logarithm Converter</h2>
+          <p>Drag the base and exponent sliders to witness both views of the exact same calculation simultaneously.</p>
+
+          <div class="lab-shell">
+            <div class="lab-toolbar">
+              <span class="lab-title">🔄 Dual Representation Explorer</span>
+              <div class="lab-toolbar-actions">
+                <button id="exp-reset" class="btn btn-sm btn-ghost">↺ Reset (2³ = 8)</button>
+              </div>
+            </div>
+            <div class="lab-body">
+              <div class="lab-canvas-area" style="background:#fff;border-radius:var(--radius-md);padding:var(--space-5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+                <div style="font-size:var(--text-xl);color:var(--color-primary);font-weight:700;margin-bottom:var(--space-4)">
+                  Exponential Form: <br><span id="disp-exp-form" style="color:var(--color-secondary);font-size:28px">2³ = 8</span>
+                </div>
+                <div style="font-size:24px;color:var(--color-muted);margin-bottom:var(--space-4)">↕ is equivalent to ↕</div>
+                <div style="font-size:var(--text-xl);color:var(--color-primary);font-weight:700">
+                  Logarithmic Form: <br><span id="disp-log-form" style="color:var(--color-warning);font-size:28px">log₂(8) = 3</span>
+                </div>
+              </div>
+              <div class="lab-controls">
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="base-slider">Base (b): <span id="base-val">2</span></label>
+                  <input type="range" id="base-slider" min="2" max="10" step="1" value="2">
+                </div>
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="pow-slider">Exponent / Result (y): <span id="pow-val">3</span></label>
+                  <input type="range" id="pow-slider" min="-3" max="8" step="1" value="3">
+                </div>
+                <div class="lab-result-panel" aria-live="polite">
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Computed Value x = b^y</span>
+                    <span class="lab-result-value" id="disp-x-val" style="font-weight:700">8</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Natural Log ln(x)</span>
+                    <span class="lab-result-value" id="disp-ln-val">2.0794</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Common Log log₁₀(x)</span>
+                    <span class="lab-result-value" id="disp-log10-val">0.9031</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Example -->
+        <section id="worked-example" aria-labelledby="example-heading">
+          <h2 id="example-heading">Worked Example</h2>
+          <div class="worked-example">
+            <h4>Problem</h4>
+            <p>Solve for $x$ in the equation $5^{2x - 1} = 125$.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Express both sides using the same base.</strong><br>Notice that $125 = 5^3$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Equate the exponents (or take $\log_5$ of both sides).</strong><br>$5^{2x - 1} = 5^3 \implies 2x - 1 = 3$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Solve for $x$.</strong><br>$2x = 3 + 1 = 4 \implies x = 2$.</div>
+            </div>
+            <div class="worked-answer">✓ $x = 2$. (Verification: $5^{2(2)-1} = 5^{4-1} = 5^3 = 125$).</div>
+          </div>
+        </section>
+
+        <!-- Code Examples -->
+        <section id="code" aria-labelledby="code-heading">
+          <h2 id="code-heading">Code Examples</h2>
+          <div class="code-tabs">
+            <div class="code-tab-bar">
+              <button class="code-tab-btn" data-tab="c" aria-selected="true" role="tab">C (C11)</button>
+              <button class="code-tab-btn" data-tab="python" aria-selected="false" role="tab">Python 3</button>
+              <button class="code-copy-btn" aria-label="Copy code">⎘ Copy</button>
+            </div>
+            <div class="code-panel active" data-tab="c">
+<pre><code><span class="token-include">#include</span> <span class="token-string">&lt;stdio.h&gt;</span>
+<span class="token-include">#include</span> <span class="token-string">&lt;math.h&gt;</span>
+
+<span class="token-comment">/* Computes log base b of x using change of base: log_b(x) = ln(x) / ln(b) */</span>
+<span class="token-type">double</span> <span class="token-function">log_base</span>(<span class="token-type">double</span> x, <span class="token-type">double</span> base) {
+    <span class="token-keyword">if</span> (x &lt;= <span class="token-number">0.0</span> || base &lt;= <span class="token-number">0.0</span> || <span class="token-function">fabs</span>(base - <span class="token-number">1.0</span>) &lt; <span class="token-number">1e-9</span>) {
+        <span class="token-keyword">return</span> <span class="token-number">NAN</span>;
+    }
+    <span class="token-keyword">return</span> <span class="token-function">log</span>(x) / <span class="token-function">log</span>(base);
+}
+
+<span class="token-type">int</span> <span class="token-function">main</span>(<span class="token-type">void</span>) {
+    <span class="token-type">double</span> x = <span class="token-number">1024.0</span>;
+    <span class="token-type">double</span> base = <span class="token-number">2.0</span>;
+    <span class="token-function">printf</span>(<span class="token-string">"log_%.0f(%.0f) = %.2f\n"</span>, base, x, <span class="token-function">log_base</span>(x, base));
+    <span class="token-keyword">return</span> <span class="token-number">0</span>;
+}</code></pre>
+            </div>
+            <div class="code-panel" data-tab="python">
+<pre><code><span class="token-keyword">import</span> math
+
+<span class="token-keyword">def</span> <span class="token-function">log_arbitrary_base</span>(x: <span class="token-type">float</span>, base: <span class="token-type">float</span> = <span class="token-number">10.0</span>) -&gt; <span class="token-type">float</span>:
+    <span class="token-string">"""Computes log_b(x) with domain validation."""</span>
+    <span class="token-keyword">if</span> x &lt;= <span class="token-number">0</span>:
+        <span class="token-keyword">raise</span> <span class="token-type">ValueError</span>(<span class="token-string">"Log argument must be strictly positive."</span>)
+    <span class="token-keyword">if</span> base &lt;= <span class="token-number">0</span> <span class="token-keyword">or</span> math.isclose(base, <span class="token-number">1.0</span>):
+        <span class="token-keyword">raise</span> <span class="token-type">ValueError</span>(<span class="token-string">"Base must be positive and not equal to 1."</span>)
+    <span class="token-keyword">return</span> math.log(x, base)
+
+<span class="token-keyword">if</span> __name__ == <span class="token-string">"__main__"</span>:
+    <span class="token-function">print</span>(<span class="token-string">"log2(1024) ="</span>, log_arbitrary_base(<span class="token-number">1024</span>, <span class="token-number">2</span>))
+    <span class="token-function">print</span>(<span class="token-string">"log10(1000) ="</span>, log_arbitrary_base(<span class="token-number">1000</span>, <span class="token-number">10</span>))</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Practice Questions -->
+        <section id="practice" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">Check Your Understanding</h2>
+
+          <div class="practice-question" data-question-id="log-1" data-answer="4">
+            <p class="practice-question-text"><strong>Q1.</strong> What is the value of $\log_3(81)$?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="log-1" value="4"> 4</label>
+              <label class="practice-option"><input type="radio" name="log-1" value="3"> 3</label>
+              <label class="practice-option"><input type="radio" name="log-1" value="27"> 27</label>
+              <label class="practice-option"><input type="radio" name="log-1" value="9"> 9</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Ask: 3 raised to what power equals 81? $3^1 = 3, 3^2 = 9, 3^3 = 27, 3^4 = 81$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">$3^4 = 81 \iff \log_3(81) = 4$.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="log-2" data-answer="1">
+            <p class="practice-question-text"><strong>Q2.</strong> For any valid base $b &gt; 0$ ($b \ne 1$), what is $\log_b(b)$?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="log-2" value="1"> 1</label>
+              <label class="practice-option"><input type="radio" name="log-2" value="0"> 0</label>
+              <label class="practice-option"><input type="radio" name="log-2" value="b"> b</label>
+              <label class="practice-option"><input type="radio" name="log-2" value="undefined"> Undefined</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">What power turns $b$ into $b^1$?</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">Since $b^1 = b$, $\log_b(b) = 1$. Similarly, $b^0 = 1 \implies \log_b(1) = 0$.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="log-3" data-answer="5">
+            <p class="practice-question-text"><strong>Q3.</strong> If $\log(x) + \log(y) = \log(k)$, what is $k$?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="log-3" value="5"> x · y</label>
+              <label class="practice-option"><input type="radio" name="log-3" value="6"> x + y</label>
+              <label class="practice-option"><input type="radio" name="log-3" value="7"> x / y</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Recall the logarithm product property: adding logs multiplies the arguments.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">By the product law of logarithms: $\log(x) + \log(y) = \log(xy)$. So $k = x \cdot y$.</div>
+          </div>
+        </section>
+
+        <div class="lesson-nav">
+          <a href="percentages-ratios.html" class="lesson-nav-link" style="flex:none">
+            <span class="nav-direction">← Previous lesson</span>
+            <span class="nav-title">Percentages &amp; Ratios</span>
+          </a>
+          <a href="permutations-combinations.html" class="lesson-nav-link">
+            <span class="nav-direction">Next lesson →</span>
+            <span class="nav-title">Permutations &amp; Combinations</span>
+          </a>
+        </div>
+
+      </article>
+
+      <aside class="lesson-toc-col" aria-label="Page sections">
+        <nav class="toc">
+          <div class="toc-title">On this page</div>
+          <ul class="toc-list">
+            <li><a href="#formula-heading">The Fundamental Equivalence</a></li>
+            <li><a href="#vars-heading">Symbol Definitions</a></li>
+            <li><a href="#assumptions-heading">Rules &amp; Constraints</a></li>
+            <li><a href="#lab">Interactive Converter</a></li>
+            <li><a href="#worked-example">Worked Example</a></li>
+            <li><a href="#code">Code Examples</a></li>
+            <li><a href="#practice">Practice Questions</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Learn</h4><ul class="footer-links">
+        <li><a href="../learn.html">All Subjects</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Foundations</h4><ul class="footer-links">
+        <li><a href="percentages-ratios.html">Percentages &amp; Ratios</a></li>
+        <li><a href="exponents-logarithms.html">Exponents &amp; Logarithms</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="../js/search-index.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/code-tabs.js"></script>
+
+<script>
+(function() {
+  const baseSlider = document.getElementById('base-slider');
+  const powSlider = document.getElementById('pow-slider');
+  const baseVal = document.getElementById('base-val');
+  const powVal = document.getElementById('pow-val');
+  const dispExp = document.getElementById('disp-exp-form');
+  const dispLog = document.getElementById('disp-log-form');
+  const dispX = document.getElementById('disp-x-val');
+  const dispLn = document.getElementById('disp-ln-val');
+  const dispLog10 = document.getElementById('disp-log10-val');
+  const resetBtn = document.getElementById('exp-reset');
+
+  function update() {
+    const b = parseInt(baseSlider.value, 10);
+    const y = parseInt(powSlider.value, 10);
+    baseVal.textContent = b;
+    powVal.textContent = y;
+
+    const x = Math.pow(b, y);
+    const xFormatted = x < 1 && x > 0 ? x.toFixed(4) : x.toLocaleString();
+
+    dispExp.textContent = `${b}^(${y}) = ${xFormatted}`;
+    dispLog.textContent = `log_${b}(${xFormatted}) = ${y}`;
+    dispX.textContent = xFormatted;
+
+    if (x > 0) {
+      dispLn.textContent = Math.log(x).toFixed(4);
+      dispLog10.textContent = Math.log10(x).toFixed(4);
+    } else {
+      dispLn.textContent = 'undefined';
+      dispLog10.textContent = 'undefined';
+    }
+  }
+
+  baseSlider.addEventListener('input', update);
+  powSlider.addEventListener('input', update);
+  resetBtn.addEventListener('click', () => {
+    baseSlider.value = 2;
+    powSlider.value = 3;
+    update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>

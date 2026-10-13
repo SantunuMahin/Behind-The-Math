@@ -1,0 +1,128 @@
+/* ============================================================
+   BehindTheMath — Utilities
+   ============================================================ */
+
+/* ── Display ─────────────────────────────────────────────── */
+.d-none   { display: none !important; }
+.d-block  { display: block; }
+.d-flex   { display: flex; }
+.d-grid   { display: grid; }
+.d-inline { display: inline; }
+
+@media (max-width: 767px) {
+  .d-mobile-none  { display: none !important; }
+  .d-mobile-block { display: block !important; }
+}
+
+@media (min-width: 768px) {
+  .d-desktop-none  { display: none !important; }
+  .d-desktop-block { display: block !important; }
+}
+
+/* ── Position ────────────────────────────────────────────── */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+
+/* ── Overflow ────────────────────────────────────────────── */
+.overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
+.overflow-x-auto { overflow-x: auto; }
+
+/* ── Width & Max-width ───────────────────────────────────── */
+.w-full    { width: 100%; }
+.max-w-reading { max-width: var(--reading-width); }
+.max-w-content { max-width: var(--content-width); }
+.mx-auto   { margin-inline: auto; }
+
+/* ── Gap utilities ───────────────────────────────────────── */
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+.gap-6 { gap: var(--space-6); }
+
+/* ── Padding ─────────────────────────────────────────────── */
+.p-4  { padding: var(--space-4); }
+.p-5  { padding: var(--space-5); }
+.p-6  { padding: var(--space-6); }
+.px-4 { padding-inline: var(--space-4); }
+.py-4 { padding-block:  var(--space-4); }
+.py-6 { padding-block:  var(--space-6); }
+
+/* ── Borders ─────────────────────────────────────────────── */
+.border        { border: 1px solid var(--color-border); }
+.border-top    { border-top: 1px solid var(--color-border); }
+.border-bottom { border-bottom: 1px solid var(--color-border); }
+.rounded       { border-radius: var(--radius-md); }
+.rounded-lg    { border-radius: var(--radius-lg); }
+.rounded-full  { border-radius: var(--radius-full); }
+
+/* ── Background ──────────────────────────────────────────── */
+.bg-primary     { background: var(--color-primary); }
+.bg-surface     { background: var(--color-surface); }
+.bg-background  { background: var(--color-background); }
+.bg-dark        { background: var(--color-surface-dark); }
+
+/* ── Text ────────────────────────────────────────────────── */
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.truncate     { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Cursor ──────────────────────────────────────────────── */
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+
+/* ── Transition ──────────────────────────────────────────── */
+.transition { transition: all var(--transition-normal); }
+
+/* ── Divider ─────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin-block: var(--space-6);
+}
+
+/* ── List reset ──────────────────────────────────────────── */
+.list-none { list-style: none; padding: 0; margin: 0; }
+
+/* ── Aspect ratio ────────────────────────────────────────── */
+.aspect-video  { aspect-ratio: 16/9; }
+.aspect-square { aspect-ratio: 1/1; }
+
+/* ── Reduced-motion notice ───────────────────────────────── */
+.reduced-motion-notice {
+  display: none;
+  background: rgb(244 162 97 / 10%);
+  border: 1px solid rgb(244 162 97 / 30%);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reduced-motion-notice { display: block; }
+}
+
+/* ── Print ───────────────────────────────────────────────── */
+@media print {
+  .site-header, .site-footer, .mobile-nav, .search-modal,
+  .toc, .lab-shell, .practice-section { display: none !important; }
+  body { color: #000; background: #fff; }
+  a::after { content: " (" attr(href) ")"; }
+}

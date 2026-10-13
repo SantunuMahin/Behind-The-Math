@@ -1,0 +1,127 @@
+/* ============================================================
+   BehindTheMath — Design Tokens
+   All CSS custom properties derived from design.md
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* Brand colours */
+  --color-primary:      #1D3557;
+  --color-secondary:    #457B9D;
+  --color-button:       #A8DADC;
+  --color-text:         #F1FAEE;   /* text ON dark surfaces */
+  --color-warning:      #E63946;
+
+  /* Surface colours */
+  --color-background:   #F7FAFC;
+  --color-surface:      #FFFFFF;
+  --color-surface-dark: #13263D;
+  --color-text-dark:    #17212B;   /* text ON light surfaces */
+  --color-muted:        #64748B;
+  --color-border:       #D8E1E8;
+  --color-success:      #2A9D8F;
+  --color-focus:        #F4A261;
+  --color-code:         #0B1320;
+
+  /* Derived interactive colours */
+  --color-primary-hover:    #16294a;
+  --color-secondary-hover:  #356585;
+  --color-button-hover:     #8ECFD1;
+  --color-surface-hover:    #F0F6FA;
+  --color-border-focus:     #F4A261;
+
+  /* Border radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs:   0 1px 3px rgb(29 53 87 / 6%);
+  --shadow-card: 0 8px 28px rgb(29 53 87 / 8%);
+  --shadow-md:   0 12px 40px rgb(29 53 87 / 12%);
+  --shadow-lg:   0 24px 64px rgb(29 53 87 / 16%);
+
+  /* Layout */
+  --content-width: 1200px;
+  --reading-width:  760px;
+  --nav-height:      68px;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-code:    'JetBrains Mono', 'Fira Code', 'ui-monospace', monospace;
+
+  /* Type scale */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.125rem;  /* 18px */
+  --text-xl:   1.25rem;   /* 20px */
+  --text-2xl:  1.5rem;    /* 24px */
+  --text-3xl:  1.875rem;  /* 30px */
+  --text-4xl:  2.25rem;   /* 36px */
+  --text-5xl:  3rem;      /* 48px */
+  --text-6xl:  3.75rem;   /* 60px */
+
+  /* Font weights */
+  --weight-normal:    400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  /* Line heights */
+  --leading-tight:  1.2;
+  --leading-snug:   1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.625;
+
+  /* Spacing scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  32px;
+  --space-8:  40px;
+  --space-9:  48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+  --space-13: 128px;
+
+  /* Transitions */
+  --transition-fast:   120ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow:   350ms ease;
+
+  /* Z-index scale */
+  --z-below:   -1;
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}
+
+/* Reduced-motion preference — disable transitions site-wide */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast:   0ms;
+    --transition-normal: 0ms;
+    --transition-slow:   0ms;
+  }
+  *, *::before, *::after {
+    animation-duration:       0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+    scroll-behavior:           auto   !important;
+  }
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice — BehindTheMath</title>
+  <meta name="description" content="Test your understanding with math practice questions. Hints before answers, constructive explanations after submission.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <style>
+    .score-card {
+      background: var(--color-surface-dark);
+      color: var(--color-text);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      display: flex;
+      gap: var(--space-7);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-9);
+    }
+    .score-item { text-align: center; }
+    .score-value { font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: var(--weight-extrabold); color: var(--color-button); }
+    .score-label { font-size: var(--text-xs); color: rgb(241 250 238 / 60%); text-transform: uppercase; letter-spacing: 0.5px; }
+    .topic-selector { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-7); }
+    .progress-note { font-size: var(--text-xs); color: var(--color-muted); background: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); margin-bottom: var(--space-6); }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="learn.html">📚 Learn</a></li>
+      <li><a href="library.html">📖 Formula Library</a></li>
+      <li><a href="lab.html">⚡ Visual Lab</a></li>
+      <li><a href="practice.html">✏️ Practice</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas, subjects, symbols…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <h1>✏️ Practice</h1>
+    <p>Test your understanding with hints-first questions. Correct answers are explained, not just revealed.</p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container" style="max-width:var(--reading-width);padding-block:var(--space-9)">
+
+    <div class="progress-note">
+      📱 <strong>Local progress only.</strong> Your score is saved in this browser only and will not sync between devices or browsers.
+    </div>
+
+    <!-- Score card -->
+    <div class="score-card" aria-live="polite">
+      <div class="score-item">
+        <div class="score-value" id="score-correct">0</div>
+        <div class="score-label">Correct</div>
+      </div>
+      <div class="score-item">
+        <div class="score-value" id="score-attempted">0</div>
+        <div class="score-label">Attempted</div>
+      </div>
+      <div class="score-item">
+        <div class="score-value" id="score-pct">—</div>
+        <div class="score-label">Score</div>
+      </div>
+      <div style="margin-left:auto;align-self:center">
+        <button class="btn btn-outline" id="reset-score" style="font-size:var(--text-xs)">Reset Score</button>
+      </div>
+    </div>
+
+    <!-- Topic selector -->
+    <div>
+      <p class="text-muted text-sm" style="margin-bottom:var(--space-3)"><strong>Practice topic:</strong></p>
+      <div class="topic-selector">
+        <button class="filter-btn active" data-topic="all">All Topics</button>
+        <button class="filter-btn" data-topic="geometry">Geometry</button>
+        <button class="filter-btn" data-topic="algebra">Algebra</button>
+        <button class="filter-btn" data-topic="foundations">Foundations</button>
+        <button class="filter-btn" data-topic="probability">Probability</button>
+        <button class="filter-btn" data-topic="calculus">Calculus</button>
+      </div>
+    </div>
+
+    <div class="practice-section">
+
+      <!-- Q1: Circle Area -->
+      <div class="practice-question" data-answer="28.27" data-topic="geometry" aria-labelledby="q1-text">
+        <div class="practice-q-number">Question 1 · Geometry</div>
+        <p class="practice-q-text" id="q1-text">
+          A circle has a radius of 3 cm. What is its area to 2 decimal places?<br>
+          <small style="color:var(--color-muted)">(Use π ≈ 3.14159)</small>
+        </p>
+        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4)">
+          <input type="number" class="practice-numeric-input" step="0.01" placeholder="Answer…" aria-label="Your answer">
+          <span style="font-size:var(--text-sm);color:var(--color-muted)">cm²</span>
+        </div>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Use the formula A = πr². Substitute r = 3 and compute π × 3² = π × 9.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">A = πr² = π × 3² = π × 9 ≈ 28.27 cm². The area grows as the square of the radius — doubling the radius would multiply the area by 4.</div>
+      </div>
+
+      <!-- Q2: Pythagorean -->
+      <div class="practice-question" data-answer="5" data-topic="geometry" aria-labelledby="q2-text">
+        <div class="practice-q-number">Question 2 · Geometry</div>
+        <p class="practice-q-text" id="q2-text">A right triangle has legs of length 3 and 4. What is the length of the hypotenuse?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q2-text">
+          <li class="practice-choice"><input type="radio" name="q2" value="5" id="q2a"><label for="q2a">5</label></li>
+          <li class="practice-choice"><input type="radio" name="q2" value="7" id="q2b"><label for="q2b">7</label></li>
+          <li class="practice-choice"><input type="radio" name="q2" value="6" id="q2c"><label for="q2c">6</label></li>
+          <li class="practice-choice"><input type="radio" name="q2" value="25" id="q2d"><label for="q2d">25</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Use c = √(a² + b²). Compute √(3² + 4²) = √(9 + 16) = √25.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">c = √(a² + b²) = √(9 + 16) = √25 = 5. The 3-4-5 right triangle is one of the most useful Pythagorean triples.</div>
+      </div>
+
+      <!-- Q3: Quadratic discriminant -->
+      <div class="practice-question" data-answer="no real roots" data-topic="algebra" aria-labelledby="q3-text">
+        <div class="practice-q-number">Question 3 · Algebra</div>
+        <p class="practice-q-text" id="q3-text">For the quadratic equation x² + 2x + 5 = 0, the discriminant b²−4ac = ?<br>What does this tell you about the roots?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q3-text">
+          <li class="practice-choice"><input type="radio" name="q3" value="no real roots" id="q3a"><label for="q3a">−16, so no real roots (complex roots only)</label></li>
+          <li class="practice-choice"><input type="radio" name="q3" value="two real roots" id="q3b"><label for="q3b">16, so two distinct real roots</label></li>
+          <li class="practice-choice"><input type="radio" name="q3" value="one real root" id="q3c"><label for="q3c">0, so exactly one repeated real root</label></li>
+          <li class="practice-choice"><input type="radio" name="q3" value="error" id="q3d"><label for="q3d">The formula doesn't apply here</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Discriminant Δ = b² − 4ac. Here a=1, b=2, c=5. Compute 2² − 4(1)(5).</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">Δ = b² − 4ac = 4 − 20 = −16. Because Δ &lt; 0, there are no real roots. The roots are complex: x = (−2 ± √(−16)) / 2 = −1 ± 2i.</div>
+      </div>
+
+      <!-- Q4: GCD -->
+      <div class="practice-question" data-answer="6" data-topic="foundations" aria-labelledby="q4-text">
+        <div class="practice-q-number">Question 4 · Number Theory</div>
+        <p class="practice-q-text" id="q4-text">What is gcd(18, 24)? Use the Euclidean algorithm.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q4-text">
+          <li class="practice-choice"><input type="radio" name="q4" value="3" id="q4a"><label for="q4a">3</label></li>
+          <li class="practice-choice"><input type="radio" name="q4" value="6" id="q4b"><label for="q4b">6</label></li>
+          <li class="practice-choice"><input type="radio" name="q4" value="12" id="q4c"><label for="q4c">12</label></li>
+          <li class="practice-choice"><input type="radio" name="q4" value="18" id="q4d"><label for="q4d">18</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: gcd(24, 18) → gcd(18, 24 mod 18 = 6) → gcd(6, 18 mod 6 = 0) → answer is 6.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">Step 1: gcd(24, 18) = gcd(18, 24 mod 18) = gcd(18, 6). Step 2: gcd(18, 6) = gcd(6, 0) = 6. So gcd(18, 24) = 6.</div>
+      </div>
+
+      <!-- Q5: Probability -->
+      <div class="practice-question" data-answer="0.25" data-topic="probability" aria-labelledby="q5-text">
+        <div class="practice-q-number">Question 5 · Probability</div>
+        <p class="practice-q-text" id="q5-text">A fair coin is flipped twice. What is the probability of getting exactly two heads?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q5-text">
+          <li class="practice-choice"><input type="radio" name="q5" value="0.5" id="q5a"><label for="q5a">0.5 (50%)</label></li>
+          <li class="practice-choice"><input type="radio" name="q5" value="0.25" id="q5b"><label for="q5b">0.25 (25%)</label></li>
+          <li class="practice-choice"><input type="radio" name="q5" value="0.75" id="q5c"><label for="q5c">0.75 (75%)</label></li>
+          <li class="practice-choice"><input type="radio" name="q5" value="1" id="q5d"><label for="q5d">1 (100%)</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: The sample space is {HH, HT, TH, TT}. Count outcomes with exactly 2 heads.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">There are 4 equally likely outcomes: HH, HT, TH, TT. Only one gives two heads (HH). So P(HH) = 1/4 = 0.25. Alternatively: P(H) × P(H) = 0.5 × 0.5 = 0.25 by independence.</div>
+      </div>
+
+      <!-- Q6: Derivative -->
+      <div class="practice-question" data-answer="8" data-topic="calculus" aria-labelledby="q6-text">
+        <div class="practice-q-number">Question 6 · Calculus</div>
+        <p class="practice-q-text" id="q6-text">If f(x) = x², what is the slope of the tangent line at x = 4?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q6-text">
+          <li class="practice-choice"><input type="radio" name="q6" value="4" id="q6a"><label for="q6a">4</label></li>
+          <li class="practice-choice"><input type="radio" name="q6" value="8" id="q6b"><label for="q6b">8</label></li>
+          <li class="practice-choice"><input type="radio" name="q6" value="16" id="q6c"><label for="q6c">16</label></li>
+          <li class="practice-choice"><input type="radio" name="q6" value="2" id="q6d"><label for="q6d">2</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Find f'(x) using the power rule: f'(x) = 2x. Then evaluate at x = 4.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">For f(x) = x², the derivative is f'(x) = 2x (by the power rule). At x = 4, f'(4) = 2 × 4 = 8. The tangent line at (4, 16) has slope 8.</div>
+      </div>
+
+    </div><!-- end practice-section -->
+
+    <div class="text-center" style="margin-top:var(--space-7)">
+      <p style="font-size:var(--text-sm);color:var(--color-muted);margin-bottom:var(--space-4)">Want more practice? Visit individual lesson pages for topic-specific questions.</p>
+      <a href="learn.html" class="btn btn-outline-dark">Browse lessons →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Practice Topics</h4><ul class="footer-links">
+        <li><a href="lessons/circle-area.html#practice">Geometry</a></li>
+        <li><a href="lessons/quadratic-equation.html#practice">Algebra</a></li>
+        <li><a href="lessons/probability-bayes.html#practice">Probability</a></li>
+        <li><a href="lessons/derivatives-tangent.html#practice">Calculus</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Learn</h4><ul class="footer-links">
+        <li><a href="learn.html">All Subjects</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Info</h4><ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="js/search-index.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/search.js"></script>
+<script src="js/code-tabs.js"></script>
+<script>
+// Score tracking
+(function() {
+  const KEY = 'btm_score';
+  let data = JSON.parse(localStorage.getItem(KEY) || '{"correct":0,"attempted":0}');
+
+  function updateDisplay() {
+    document.getElementById('score-correct').textContent = data.correct;
+    document.getElementById('score-attempted').textContent = data.attempted;
+    document.getElementById('score-pct').textContent = data.attempted > 0
+      ? Math.round(data.correct / data.attempted * 100) + '%' : '—';
+    localStorage.setItem(KEY, JSON.stringify(data));
+  }
+
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('submit-btn') || e.target.classList.contains('practice-submit-btn')) {
+      const q = e.target.closest('.practice-question');
+      const correct = q && q.querySelector('.practice-feedback.correct');
+      // wait for code-tabs to process, then check
+      setTimeout(() => {
+        const fb = q && q.querySelector('.practice-feedback');
+        if (fb && fb.classList.contains('correct') && !q.dataset.counted) {
+          data.correct++;
+          data.attempted++;
+          q.dataset.counted = '1';
+          updateDisplay();
+        } else if (fb && fb.classList.contains('incorrect') && !q.dataset.counted) {
+          data.attempted++;
+          q.dataset.counted = '1';
+          updateDisplay();
+        }
+      }, 50);
+    }
+    if (e.target.classList.contains('retry-btn') || e.target.classList.contains('practice-retry-btn')) {
+      e.target.closest('.practice-question').removeAttribute('data-counted');
+    }
+  });
+
+  document.getElementById('reset-score').addEventListener('click', () => {
+    data = { correct: 0, attempted: 0 };
+    document.querySelectorAll('.practice-question').forEach(q => q.removeAttribute('data-counted'));
+    updateDisplay();
+  });
+
+  // Topic filter
+  document.querySelectorAll('[data-topic]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-topic]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const topic = btn.dataset.topic;
+      document.querySelectorAll('.practice-question').forEach(q => {
+        q.style.display = (topic === 'all' || q.dataset.topic === topic) ? '' : 'none';
+      });
+    });
+  });
+
+  updateDisplay();
+})();
+</script>
+</body>
+</html>

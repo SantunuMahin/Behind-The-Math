@@ -1,0 +1,204 @@
+// BehindTheMath — Formula Data (Search Index)
+// All 12 MVP formula lessons + additional reference entries
+
+const BTM_FORMULAS = [
+  {
+    id: "circle-area",
+    title: "Circle Area & Circumference",
+    slug: "circle-area",
+    subject: "Geometry",
+    topics: ["circles", "area", "circumference", "pi"],
+    level: "beginner",
+    summary: "The area of a circle is π times the radius squared. The circumference is 2π times the radius.",
+    formulaLatex: "A = \\pi r^2,\\quad C = 2\\pi r",
+    hasDemo: true,
+    keywords: ["area", "circle", "radius", "circumference", "pi", "A equals pi r squared"],
+    href: "lessons/circle-area.html"
+  },
+  {
+    id: "pythagorean-theorem",
+    title: "Pythagorean Theorem",
+    slug: "pythagorean-theorem",
+    subject: "Geometry",
+    topics: ["right triangle", "hypotenuse", "distance"],
+    level: "beginner",
+    summary: "In a right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
+    formulaLatex: "a^2 + b^2 = c^2",
+    hasDemo: true,
+    keywords: ["pythagoras", "right triangle", "hypotenuse", "sides", "a squared b squared"],
+    href: "lessons/pythagorean-theorem.html"
+  },
+  {
+    id: "quadratic-equation",
+    title: "Quadratic Formula",
+    slug: "quadratic-equation",
+    subject: "Algebra",
+    topics: ["quadratic", "roots", "parabola", "discriminant"],
+    level: "intermediate",
+    summary: "Finds the roots of any quadratic equation ax² + bx + c = 0 using the discriminant.",
+    formulaLatex: "x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    hasDemo: true,
+    keywords: ["quadratic", "roots", "parabola", "discriminant", "ax squared", "quadratic formula"],
+    href: "lessons/quadratic-equation.html"
+  },
+  {
+    id: "gcd-lcm",
+    title: "GCD & LCM",
+    slug: "gcd-lcm",
+    subject: "Number Theory",
+    topics: ["GCD", "LCM", "Euclidean algorithm", "divisibility"],
+    level: "beginner",
+    summary: "The greatest common divisor and least common multiple, computed using the Euclidean algorithm.",
+    formulaLatex: "\\gcd(a,b) \\cdot \\text{lcm}(a,b) = a \\cdot b",
+    hasDemo: false,
+    keywords: ["gcd", "lcm", "greatest common divisor", "least common multiple", "euclidean"],
+    href: "lessons/gcd-lcm.html"
+  },
+  {
+    id: "percentages-ratios",
+    title: "Percentages & Ratios",
+    slug: "percentages-ratios",
+    subject: "Foundations",
+    topics: ["percentage", "ratio", "proportion", "fraction"],
+    level: "beginner",
+    summary: "Percentage expresses a quantity as parts per hundred. Ratios compare two quantities of the same kind.",
+    formulaLatex: "P = \\dfrac{\\text{Part}}{\\text{Whole}} \\times 100",
+    hasDemo: false,
+    keywords: ["percent", "percentage", "ratio", "proportion", "fraction", "parts per hundred"],
+    href: "lessons/percentages-ratios.html"
+  },
+  {
+    id: "exponents-logarithms",
+    title: "Exponents & Logarithms",
+    slug: "exponents-logarithms",
+    subject: "Foundations",
+    topics: ["exponents", "logarithms", "power", "base"],
+    level: "intermediate",
+    summary: "Exponents express repeated multiplication; logarithms are their inverse, asking what power produces a value.",
+    formulaLatex: "\\log_b(x) = y \\iff b^y = x",
+    hasDemo: false,
+    keywords: ["exponent", "logarithm", "log", "power", "base", "natural log", "ln"],
+    href: "lessons/exponents-logarithms.html"
+  },
+  {
+    id: "permutations-combinations",
+    title: "Permutations & Combinations",
+    slug: "permutations-combinations",
+    subject: "Counting & Probability",
+    topics: ["permutation", "combination", "factorial", "counting"],
+    level: "intermediate",
+    summary: "Permutations count ordered arrangements; combinations count unordered selections from a set.",
+    formulaLatex: "P(n,r) = \\dfrac{n!}{(n-r)!},\\quad C(n,r) = \\dfrac{n!}{r!(n-r)!}",
+    hasDemo: false,
+    keywords: ["permutation", "combination", "factorial", "nPr", "nCr", "choose", "arrangements"],
+    href: "lessons/permutations-combinations.html"
+  },
+  {
+    id: "probability-bayes",
+    title: "Probability & Bayes' Theorem",
+    slug: "probability-bayes",
+    subject: "Counting & Probability",
+    topics: ["probability", "Bayes", "conditional probability", "events"],
+    level: "intermediate",
+    summary: "Bayes' theorem updates the probability of a hypothesis given new evidence.",
+    formulaLatex: "P(A|B) = \\dfrac{P(B|A)\\,P(A)}{P(B)}",
+    hasDemo: false,
+    keywords: ["probability", "bayes", "conditional", "posterior", "prior", "likelihood"],
+    href: "lessons/probability-bayes.html"
+  },
+  {
+    id: "mean-standard-deviation",
+    title: "Mean & Standard Deviation",
+    slug: "mean-standard-deviation",
+    subject: "Statistics",
+    topics: ["mean", "variance", "standard deviation", "z-score"],
+    level: "beginner",
+    summary: "The mean is the average; standard deviation measures how spread out values are around that average.",
+    formulaLatex: "\\sigma = \\sqrt{\\dfrac{\\sum(x_i - \\mu)^2}{N}}",
+    hasDemo: false,
+    keywords: ["mean", "average", "standard deviation", "variance", "z-score", "sigma", "mu"],
+    href: "lessons/mean-standard-deviation.html"
+  },
+  {
+    id: "derivatives-tangent",
+    title: "Derivatives & Tangent Slope",
+    slug: "derivatives-tangent",
+    subject: "Calculus",
+    topics: ["derivative", "tangent", "slope", "limit", "differentiation"],
+    level: "advanced",
+    summary: "The derivative of a function at a point equals the slope of its tangent line at that point.",
+    formulaLatex: "f'(x) = \\lim_{h \\to 0} \\dfrac{f(x+h) - f(x)}{h}",
+    hasDemo: true,
+    keywords: ["derivative", "differentiation", "tangent", "slope", "limit", "rate of change", "calculus"],
+    href: "lessons/derivatives-tangent.html"
+  },
+  {
+    id: "unit-circle",
+    title: "Trigonometric Unit Circle",
+    slug: "unit-circle",
+    subject: "Trigonometry",
+    topics: ["sine", "cosine", "tangent", "unit circle", "angles", "radians"],
+    level: "intermediate",
+    summary: "The unit circle defines sin and cos as coordinates of a point on a circle of radius 1.",
+    formulaLatex: "\\sin^2\\theta + \\cos^2\\theta = 1",
+    hasDemo: true,
+    keywords: ["sin", "cos", "tan", "sine", "cosine", "unit circle", "radian", "degree", "angle"],
+    href: "lessons/unit-circle.html"
+  },
+  {
+    id: "time-complexity",
+    title: "Time Complexity & Big O",
+    slug: "time-complexity",
+    subject: "CSE & Competitive Programming",
+    topics: ["Big O", "complexity", "algorithm", "asymptotic"],
+    level: "intermediate",
+    summary: "Big O notation describes how an algorithm's running time scales with input size.",
+    formulaLatex: "T(n) = O(g(n))",
+    hasDemo: false,
+    keywords: ["big o", "complexity", "algorithm", "O(n)", "O(log n)", "time complexity", "space complexity"],
+    href: "lessons/time-complexity.html"
+  },
+  // Additional reference entries for richer search
+  {
+    id: "arithmetic-mean",
+    title: "Arithmetic Mean",
+    slug: "mean-standard-deviation",
+    subject: "Statistics",
+    topics: ["mean", "average"],
+    level: "beginner",
+    summary: "The sum of all values divided by the count of values.",
+    formulaLatex: "\\mu = \\dfrac{\\sum x_i}{N}",
+    hasDemo: false,
+    keywords: ["mean", "average", "sum", "arithmetic"],
+    href: "lessons/mean-standard-deviation.html"
+  },
+  {
+    id: "sine-rule",
+    title: "Law of Sines",
+    slug: "unit-circle",
+    subject: "Trigonometry",
+    topics: ["sine rule", "triangle"],
+    level: "intermediate",
+    summary: "Relates the sides of a triangle to the sines of the opposite angles.",
+    formulaLatex: "\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C}",
+    hasDemo: false,
+    keywords: ["law of sines", "sine rule", "triangle", "angle"],
+    href: "lessons/unit-circle.html"
+  },
+  {
+    id: "compound-interest",
+    title: "Compound Interest",
+    slug: "exponents-logarithms",
+    subject: "Foundations",
+    topics: ["interest", "exponents", "finance"],
+    level: "beginner",
+    summary: "Interest calculated on both the principal and accumulated interest.",
+    formulaLatex: "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}",
+    hasDemo: false,
+    keywords: ["compound interest", "principal", "rate", "finance", "growth"],
+    href: "lessons/exponents-logarithms.html"
+  }
+];
+
+// Export for use in search
+if (typeof module !== 'undefined') module.exports = BTM_FORMULAS;

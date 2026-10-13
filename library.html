@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula Library — BehindTheMath</title>
+  <meta name="description" content="Search and browse all mathematical formulas. Filter by subject, difficulty, and interactive demos.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <style>
+    .library-toolbar {
+      position: sticky;
+      top: var(--nav-height);
+      z-index: var(--z-raised);
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-4) 0;
+      box-shadow: var(--shadow-xs);
+    }
+    .library-toolbar .container { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+    .filter-chips { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
+    .demo-toggle { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); cursor: pointer; }
+    .demo-toggle input { width: 16px; height: 16px; accent-color: var(--color-primary); cursor: pointer; }
+    .lib-search-wrap {
+      display: flex; align-items: center; gap: var(--space-2);
+      background: var(--color-background); border: 1px solid var(--color-border);
+      border-radius: var(--radius-md); padding: var(--space-2) var(--space-3);
+      flex: 1; min-width: 200px;
+    }
+    .lib-search-wrap input { border: none; outline: none; font-family: var(--font-body); font-size: var(--text-sm); background: none; width: 100%; color: var(--color-text-dark); }
+    .library-count { font-size: var(--text-sm); color: var(--color-muted); margin-left: auto; white-space: nowrap; }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="learn.html">📚 Learn</a></li>
+      <li><a href="library.html">📖 Formula Library</a></li>
+      <li><a href="lab.html">⚡ Visual Lab</a></li>
+      <li><a href="practice.html">✏️ Practice</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas, subjects, symbols…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Formula Library</h1>
+    <p>Search, filter, and explore the complete collection of mathematical formulas with explanations and code examples.</p>
+  </div>
+</div>
+
+<!-- Sticky filter toolbar -->
+<div class="library-toolbar" role="search" aria-label="Formula filters">
+  <div class="container">
+    <div class="lib-search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color:var(--color-muted);flex-shrink:0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" id="library-search" placeholder="Search by name, symbol, topic…" aria-label="Search formulas">
+    </div>
+
+    <div class="filter-chips" aria-label="Filter by subject">
+      <span class="filter-label">Subject:</span>
+      <button class="filter-btn active" data-filter-subject="all">All</button>
+      <button class="filter-btn" data-filter-subject="Foundations">Foundations</button>
+      <button class="filter-btn" data-filter-subject="Number Theory">Number Theory</button>
+      <button class="filter-btn" data-filter-subject="Algebra">Algebra</button>
+      <button class="filter-btn" data-filter-subject="Geometry">Geometry</button>
+      <button class="filter-btn" data-filter-subject="Trigonometry">Trigonometry</button>
+      <button class="filter-btn" data-filter-subject="Counting & Probability">Probability</button>
+      <button class="filter-btn" data-filter-subject="Statistics">Statistics</button>
+      <button class="filter-btn" data-filter-subject="Calculus">Calculus</button>
+      <button class="filter-btn" data-filter-subject="CSE & Competitive Programming">CSE</button>
+    </div>
+
+    <div class="filter-chips" aria-label="Filter by level">
+      <span class="filter-label">Level:</span>
+      <button class="filter-btn active" data-filter-level="all">All</button>
+      <button class="filter-btn" data-filter-level="beginner">Beginner</button>
+      <button class="filter-btn" data-filter-level="intermediate">Intermediate</button>
+      <button class="filter-btn" data-filter-level="advanced">Advanced</button>
+    </div>
+
+    <label class="demo-toggle">
+      <input type="checkbox" id="filter-has-demo">
+      ⚡ Interactive only
+    </label>
+
+    <span class="library-count" aria-live="polite">
+      <strong id="library-count">—</strong> formulas
+    </span>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container" style="padding-block:var(--space-9)">
+
+    <div id="library-grid" class="grid-auto" aria-live="polite" aria-label="Formula results"></div>
+
+    <div id="library-empty" class="empty-state" hidden>
+      <div class="empty-state-icon" aria-hidden="true">🔭</div>
+      <h3>No formulas found</h3>
+      <p>Try different search terms, remove filters, or browse all subjects.</p>
+      <button class="btn btn-outline-dark" onclick="document.getElementById('library-search').value='';document.querySelectorAll('[data-filter-subject]')[0].click();document.querySelectorAll('[data-filter-level]')[0].click();">Clear all filters</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Subjects</h4><ul class="footer-links">
+        <li><a href="learn.html#foundations">Foundations</a></li>
+        <li><a href="learn.html#algebra">Algebra</a></li>
+        <li><a href="learn.html#geometry">Geometry</a></li>
+        <li><a href="learn.html#calculus">Calculus</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul class="footer-links">
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Info</h4><ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="js/search-index.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/search.js"></script>
+<script src="js/code-tabs.js"></script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pythagorean Theorem — BehindTheMath</title>
+  <meta name="description" content="Master a² + b² = c² with visual geometric proof, interactive right-triangle calculator, C and Python code, and practice questions.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="../index.html">🏠 Home</a></li>
+      <li><a href="../learn.html">📚 Learn</a></li>
+      <li><a href="../library.html">📖 Formula Library</a></li>
+      <li><a href="../lab.html">⚡ Visual Lab</a></li>
+      <li><a href="../practice.html">✏️ Practice</a></li>
+      <li><a href="../about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="lesson-layout">
+
+      <article class="lesson-content">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html">Learn</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html#geometry">Geometry</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Pythagorean Theorem</span>
+        </nav>
+
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4)">
+          <span class="badge badge-beginner">Beginner</span>
+          <span class="badge badge-primary">Geometry</span>
+          <span class="badge badge-interactive">⚡ Interactive Tool</span>
+        </div>
+
+        <h1 id="lesson-title">Pythagorean Theorem</h1>
+
+        <p style="font-size:var(--text-lg);color:var(--color-muted);margin-bottom:var(--space-7)">
+          The cornerstone of Euclidean distance. In any right-angled triangle, the area of the square constructed on the hypotenuse is exactly equal to the sum of the areas of the squares on the other two legs.
+        </p>
+
+        <!-- Formula panel -->
+        <section aria-labelledby="formula-heading">
+          <h2 id="formula-heading">The Formula</h2>
+          <div class="formula-panel" data-latex="a^2 + b^2 = c^2 \implies c = \sqrt{a^2 + b^2}">
+            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-3)">Relationship between legs and hypotenuse</p>
+            $$a^2 + b^2 = c^2 \implies c = \sqrt{a^2 + b^2}$$
+            <p style="color:rgb(241 250 238 / 60%);font-size:var(--text-sm);margin-top:var(--space-3)">where a and b are perpendicular legs, and c is the hypotenuse opposite the 90° angle.</p>
+            <button class="btn btn-sm formula-copy-btn" style="position:absolute;top:12px;right:12px;background:rgb(255 255 255/10%);color:var(--color-text);border:1px solid rgb(255 255 255/20%)">⎘ Copy LaTeX</button>
+          </div>
+        </section>
+
+        <!-- Variables -->
+        <section aria-labelledby="vars-heading">
+          <h2 id="vars-heading">Symbol Definitions</h2>
+          <div class="variable-legend">
+            <table>
+              <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th><th>Constraint</th></tr></thead>
+              <tbody>
+                <tr><td class="variable-symbol">a</td><td>Length of the first perpendicular leg (base)</td><td>length</td><td>a &gt; 0</td></tr>
+                <tr><td class="variable-symbol">b</td><td>Length of second perpendicular leg (altitude)</td><td>length</td><td>b &gt; 0</td></tr>
+                <tr><td class="variable-symbol">c</td><td>Hypotenuse (side opposite right angle)</td><td>length</td><td>c = √(a² + b²) &gt; max(a, b)</td></tr>
+                <tr><td class="variable-symbol">θ</td><td>Angle between side a and hypotenuse c</td><td>degrees / radians</td><td>0° &lt; θ &lt; 90°</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Conditions -->
+        <section aria-labelledby="assumptions-heading">
+          <h2 id="assumptions-heading">Conditions &amp; Assumptions</h2>
+          <div class="assumption-note">
+            <strong>Applicability rules:</strong>
+            <ul style="margin-top:var(--space-2);padding-left:var(--space-4)">
+              <li>The triangle <strong>must contain a 90° right angle</strong>. If all angles differ from 90°, you must use the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\cos(C)$.</li>
+              <li>Valid in flat Euclidean space. On a sphere, triangles can have three 90° angles ($a^2 + b^2 &gt; c^2$).</li>
+              <li>Lengths $a, b, c$ must be positive real numbers.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Plain Language & Geometric Proof -->
+        <section>
+          <h2>Plain-Language &amp; Visual Intuition</h2>
+          <p>
+            Imagine building literal square tiles off each of the three sides of a right triangle. If you fill the square on leg $a$ (area $a^2$) and the square on leg $b$ (area $b^2$) with sand or water, their combined volume will fill the square built on hypotenuse $c$ (area $c^2$) with zero residue left over.
+          </p>
+          <div class="worked-example" style="background:rgb(29 53 87 / 5%);border-left-color:var(--color-button)">
+            <p><strong>The Euclidean Distance Formula:</strong> The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ on a 2D plane is direct Pythagoras: $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. Everything from computer graphics to GPS relies on this.</p>
+          </div>
+        </section>
+
+        <!-- Interactive Explorer -->
+        <section id="lab" aria-labelledby="lab-heading">
+          <h2 id="lab-heading">Interactive Right-Triangle Explorer</h2>
+          <p>Adjust legs $a$ and $b$ to see the hypotenuse $c$, area, and angles update live in real-time.</p>
+
+          <div class="lab-shell">
+            <div class="lab-toolbar">
+              <span class="lab-title">📐 Triangle &amp; Hypotenuse Visualizer</span>
+              <div class="lab-toolbar-actions">
+                <button id="pyth-reset" class="btn btn-sm btn-ghost">↺ Reset (3, 4, 5)</button>
+              </div>
+            </div>
+            <div class="lab-body">
+              <div class="lab-canvas-area" style="display:flex;align-items:center;justify-content:center;background:#fff;border-radius:var(--radius-md);padding:var(--space-4)">
+                <svg id="pyth-svg" width="340" height="260" viewBox="0 0 340 260" style="overflow:visible"></svg>
+              </div>
+              <div class="lab-controls">
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="leg-a-slider">Leg a (base): <span id="leg-a-val">3</span></label>
+                  <input type="range" id="leg-a-slider" min="1" max="15" step="0.5" value="3">
+                </div>
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="leg-b-slider">Leg b (height): <span id="leg-b-val">4</span></label>
+                  <input type="range" id="leg-b-slider" min="1" max="15" step="0.5" value="4">
+                </div>
+                <div class="lab-result-panel" aria-live="polite">
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Leg a²</span>
+                    <span class="lab-result-value" id="disp-a2">9.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Leg b²</span>
+                    <span class="lab-result-value" id="disp-b2">16.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Hypotenuse c = √(a² + b²)</span>
+                    <span class="lab-result-value" id="disp-c" style="color:var(--color-primary);font-weight:700">5.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Triangle Area (½ab)</span>
+                    <span class="lab-result-value" id="disp-pyth-area">6.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Base Angle θ</span>
+                    <span class="lab-result-value" id="disp-angle">53.13°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Example -->
+        <section id="worked-example" aria-labelledby="example-heading">
+          <h2 id="example-heading">Worked Example</h2>
+          <div class="worked-example">
+            <h4>Problem</h4>
+            <p>A 13-meter ladder leans against a vertical wall. The base of the ladder is 5 meters away from the wall. How high up the wall does the ladder reach?</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Identify hypotenuse and legs.</strong><br>The ladder is the hypotenuse: $c = 13$ m. The base distance is leg $a = 5$ m. The vertical wall height is leg $b$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Rearrange the Pythagorean equation for leg b.</strong><br>$b^2 = c^2 - a^2 \implies b = \sqrt{c^2 - a^2}$</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Substitute the numbers.</strong><br>$b = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12$ meters.</div>
+            </div>
+            <div class="worked-answer">✓ The ladder reaches 12 meters up the wall (a classic (5, 12, 13) Pythagorean triple).</div>
+          </div>
+        </section>
+
+        <!-- Code Examples -->
+        <section id="code" aria-labelledby="code-heading">
+          <h2 id="code-heading">Code Examples</h2>
+          <p>Implementations computing the hypotenuse and validating inputs against non-positive sides.</p>
+          <div class="code-tabs">
+            <div class="code-tab-bar">
+              <button class="code-tab-btn" data-tab="c" aria-selected="true" role="tab">C (C11)</button>
+              <button class="code-tab-btn" data-tab="python" aria-selected="false" role="tab">Python 3</button>
+              <button class="code-copy-btn" aria-label="Copy code">⎘ Copy</button>
+            </div>
+            <div class="code-panel active" data-tab="c">
+<pre><code><span class="token-include">#include</span> <span class="token-string">&lt;stdio.h&gt;</span>
+<span class="token-include">#include</span> <span class="token-string">&lt;math.h&gt;</span>
+
+<span class="token-comment">/* Computes hypotenuse c given legs a and b */</span>
+<span class="token-type">double</span> <span class="token-function">pythagoras</span>(<span class="token-type">double</span> a, <span class="token-type">double</span> b) {
+    <span class="token-keyword">if</span> (a &lt;= <span class="token-number">0.0</span> || b &lt;= <span class="token-number">0.0</span>) {
+        <span class="token-function">fprintf</span>(stderr, <span class="token-string">"Error: sides must be positive real numbers.\n"</span>);
+        <span class="token-keyword">return</span> <span class="token-number">-1.0</span>;
+    }
+    <span class="token-comment">/* hypot() handles potential intermediate overflow safely */</span>
+    <span class="token-keyword">return</span> <span class="token-function">hypot</span>(a, b);
+}
+
+<span class="token-type">int</span> <span class="token-function">main</span>(<span class="token-type">void</span>) {
+    <span class="token-type">double</span> a = <span class="token-number">3.0</span>, b = <span class="token-number">4.0</span>;
+    <span class="token-type">double</span> c = <span class="token-function">pythagoras</span>(a, b);
+    <span class="token-function">printf</span>(<span class="token-string">"Legs %.2f and %.2f -> Hypotenuse c = %.2f\n"</span>, a, b, c);
+    <span class="token-keyword">return</span> <span class="token-number">0</span>;
+}</code></pre>
+            </div>
+            <div class="code-panel" data-tab="python">
+<pre><code><span class="token-keyword">import</span> math
+
+<span class="token-keyword">def</span> <span class="token-function">hypotenuse</span>(a: <span class="token-type">float</span>, b: <span class="token-type">float</span>) -&gt; <span class="token-type">float</span>:
+    <span class="token-string">"""Calculates the hypotenuse c = sqrt(a^2 + b^2)."""</span>
+    <span class="token-keyword">if</span> a &lt;= <span class="token-number">0</span> <span class="token-keyword">or</span> b &lt;= <span class="token-number">0</span>:
+        <span class="token-keyword">raise</span> <span class="token-type">ValueError</span>(<span class="token-string">"Triangle side lengths must be strictly positive."</span>)
+    <span class="token-keyword">return</span> math.hypot(a, b)
+
+<span class="token-keyword">if</span> __name__ == <span class="token-string">"__main__"</span>:
+    leg_a, leg_b = <span class="token-number">5.0</span>, <span class="token-number">12.0</span>
+    c = hypotenuse(leg_a, leg_b)
+    <span class="token-function">print</span>(<span class="token-string">f"Legs {leg_a} and {leg_b} -&gt; Hypotenuse c = {c:.2f}"</span>)
+    <span class="token-comment"># Output: Legs 5.0 and 12.0 -> Hypotenuse c = 13.00</span></code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Practice Questions -->
+        <section id="practice" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">Check Your Understanding</h2>
+
+          <div class="practice-question" data-question-id="pyth-1" data-answer="10">
+            <p class="practice-question-text"><strong>Q1.</strong> A right triangle has legs of length $a = 6$ cm and $b = 8$ cm. What is the length of its hypotenuse $c$?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="pyth-1" value="14"> 14 cm</label>
+              <label class="practice-option"><input type="radio" name="pyth-1" value="10"> 10 cm</label>
+              <label class="practice-option"><input type="radio" name="pyth-1" value="12"> 12 cm</label>
+              <label class="practice-option"><input type="radio" name="pyth-1" value="9.2"> 9.2 cm</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Calculate $6^2 + 8^2 = 36 + 64$. Then find $\sqrt{100}$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">$\sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10$. This is double the base $(3, 4, 5)$ Pythagorean triple.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="pyth-2" data-answer="false">
+            <p class="practice-question-text"><strong>Q2.</strong> Can a triangle with side lengths 7, 10, and 12 be a right-angled triangle?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="pyth-2" value="true"> Yes, because 7 + 10 &gt; 12</label>
+              <label class="practice-option"><input type="radio" name="pyth-2" value="false"> No, because 7² + 10² ≠ 12²</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Test if $7^2 + 10^2$ equals $12^2$: $49 + 100 = 149$, whereas $12^2 = 144$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">$7^2 + 10^2 = 149 \neq 144 = 12^2$. Since $a^2 + b^2 \neq c^2$, it cannot be a right triangle (in fact, since $149 &gt; 144$, it is an acute triangle).</div>
+          </div>
+
+          <div class="practice-question" data-question-id="pyth-3" data-answer="15">
+            <p class="practice-question-text"><strong>Q3.</strong> A right triangle has hypotenuse $c = 17$ and one leg $a = 8$. What is the length of the other leg $b$?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="pyth-3" value="15"> 15</label>
+              <label class="practice-option"><input type="radio" name="pyth-3" value="9"> 9</label>
+              <label class="practice-option"><input type="radio" name="pyth-3" value="12"> 12</label>
+              <label class="practice-option"><input type="radio" name="pyth-3" value="19"> 19</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Rearrange to $b = \sqrt{c^2 - a^2} = \sqrt{17^2 - 8^2} = \sqrt{289 - 64}$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">$b = \sqrt{289 - 64} = \sqrt{225} = 15$. The set $(8, 15, 17)$ is a well-known Pythagorean triple.</div>
+          </div>
+        </section>
+
+        <!-- Navigation Links -->
+        <div class="lesson-nav">
+          <a href="circle-area.html" class="lesson-nav-link" style="flex:none">
+            <span class="nav-direction">← Previous lesson</span>
+            <span class="nav-title">Circle Area &amp; Circumference</span>
+          </a>
+          <a href="quadratic-equation.html" class="lesson-nav-link">
+            <span class="nav-direction">Next lesson →</span>
+            <span class="nav-title">Quadratic Equation</span>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- Table of Contents -->
+      <aside class="lesson-toc-col" aria-label="Page sections">
+        <nav class="toc">
+          <div class="toc-title">On this page</div>
+          <ul class="toc-list">
+            <li><a href="#formula-heading">The Formula</a></li>
+            <li><a href="#vars-heading">Symbol Definitions</a></li>
+            <li><a href="#assumptions-heading">Conditions</a></li>
+            <li><a href="#lab">Interactive Explorer</a></li>
+            <li><a href="#worked-example">Worked Example</a></li>
+            <li><a href="#code">Code Examples</a></li>
+            <li><a href="#practice">Practice Questions</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Learn</h4><ul class="footer-links">
+        <li><a href="../learn.html">All Subjects</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Geometry</h4><ul class="footer-links">
+        <li><a href="circle-area.html">Circle Area</a></li>
+        <li><a href="pythagorean-theorem.html">Pythagorean Theorem</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="../js/search-index.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/code-tabs.js"></script>
+
+<script>
+// Dynamic Pythagoras SVG visualizer
+(function() {
+  const sliderA = document.getElementById('leg-a-slider');
+  const sliderB = document.getElementById('leg-b-slider');
+  const valA = document.getElementById('leg-a-val');
+  const valB = document.getElementById('leg-b-val');
+  const dispA2 = document.getElementById('disp-a2');
+  const dispB2 = document.getElementById('disp-b2');
+  const dispC = document.getElementById('disp-c');
+  const dispArea = document.getElementById('disp-pyth-area');
+  const dispAngle = document.getElementById('disp-angle');
+  const svg = document.getElementById('pyth-svg');
+  const resetBtn = document.getElementById('pyth-reset');
+
+  function update() {
+    const a = parseFloat(sliderA.value);
+    const b = parseFloat(sliderB.value);
+    valA.textContent = a.toFixed(1);
+    valB.textContent = b.toFixed(1);
+
+    const c = Math.hypot(a, b);
+    const a2 = a * a;
+    const b2 = b * b;
+    const area = 0.5 * a * b;
+    const angleDeg = Math.atan2(b, a) * (180 / Math.PI);
+
+    dispA2.textContent = a2.toFixed(2);
+    dispB2.textContent = b2.toFixed(2);
+    dispC.textContent = c.toFixed(2);
+    dispArea.textContent = area.toFixed(2);
+    dispAngle.textContent = angleDeg.toFixed(1) + '°';
+
+    // Render SVG
+    const maxDimension = Math.max(a, b, 1);
+    const scale = 170 / Math.max(maxDimension, 5);
+    const originX = 50;
+    const originY = 220;
+    const pRightX = originX + a * scale;
+    const pRightY = originY;
+    const pTopX = originX;
+    const pTopY = originY - b * scale;
+
+    const sqSize = 14;
+    svg.innerHTML = `
+      <!-- Right angle marker -->
+      <path d="M ${originX + sqSize} ${originY} L ${originX + sqSize} ${originY - sqSize} L ${originX} ${originY - sqSize}" fill="none" stroke="#457B9D" stroke-width="2"/>
+      
+      <!-- Triangle polygon -->
+      <polygon points="${originX},${originY} ${pRightX},${pRightY} ${pTopX},${pTopY}" fill="rgba(69,123,157,0.15)" stroke="#1D3557" stroke-width="3" stroke-linejoin="round"/>
+      
+      <!-- Leg a label -->
+      <text x="${(originX + pRightX) / 2}" y="${originY + 24}" fill="#1D3557" font-weight="700" font-size="14" text-anchor="middle">a = ${a.toFixed(1)}</text>
+      
+      <!-- Leg b label -->
+      <text x="${originX - 18}" y="${(originY + pTopY) / 2}" fill="#1D3557" font-weight="700" font-size="14" text-anchor="middle">b = ${b.toFixed(1)}</text>
+      
+      <!-- Hypotenuse c label -->
+      <text x="${(pRightX + pTopX) / 2 + 16}" y="${(pRightY + pTopY) / 2 - 10}" fill="#E63946" font-weight="700" font-size="15" text-anchor="middle">c = ${c.toFixed(2)}</text>
+    `;
+  }
+
+  sliderA.addEventListener('input', update);
+  sliderB.addEventListener('input', update);
+  resetBtn.addEventListener('click', () => {
+    sliderA.value = 3;
+    sliderB.value = 4;
+    update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>

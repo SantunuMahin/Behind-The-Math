@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Area & Circumference — BehindTheMath</title>
+  <meta name="description" content="Understand A = πr² and C = 2πr with an interactive visualization, worked example, C and Python code, and practice questions.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="../index.html">🏠 Home</a></li>
+      <li><a href="../learn.html">📚 Learn</a></li>
+      <li><a href="../library.html">📖 Formula Library</a></li>
+      <li><a href="../lab.html">⚡ Visual Lab</a></li>
+      <li><a href="../practice.html">✏️ Practice</a></li>
+      <li><a href="../about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="lesson-layout">
+
+      <!-- ── Main content ── -->
+      <article class="lesson-content">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html">Learn</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html#geometry">Geometry</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Circle Area & Circumference</span>
+        </nav>
+
+        <!-- Header -->
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4)">
+          <span class="badge badge-beginner">Beginner</span>
+          <span class="badge badge-primary">Geometry</span>
+          <span class="badge badge-interactive">⚡ Interactive Lab</span>
+        </div>
+
+        <h1 id="lesson-title">Circle Area &amp; Circumference</h1>
+
+        <!-- Why this matters -->
+        <p style="font-size:var(--text-lg);color:var(--color-muted);margin-bottom:var(--space-7)">
+          Understanding why the area of a circle involves r² — and not just r — is one of the most satisfying moments in early geometry. It turns out the area grows much faster than the circumference when you increase the radius.
+        </p>
+
+        <!-- Formula panel -->
+        <section aria-labelledby="formula-heading">
+          <h2 id="formula-heading">The Formula</h2>
+          <div class="formula-panel" data-latex="A = \pi r^2 \qquad C = 2\pi r">
+            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-3)">Area and Circumference</p>
+            $$A = \pi r^2 \qquad C = 2\pi r$$
+            <p style="color:rgb(241 250 238 / 60%);font-size:var(--text-sm);margin-top:var(--space-3)">where r is the radius and π ≈ 3.14159265…</p>
+            <button class="btn btn-sm formula-copy-btn" style="position:absolute;top:12px;right:12px;background:rgb(255 255 255/10%);color:var(--color-text);border:1px solid rgb(255 255 255/20%)">⎘ Copy LaTeX</button>
+          </div>
+        </section>
+
+        <!-- Variables -->
+        <section aria-labelledby="vars-heading">
+          <h2 id="vars-heading">Symbol Definitions</h2>
+          <div class="variable-legend">
+            <table>
+              <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th><th>Constraint</th></tr></thead>
+              <tbody>
+                <tr><td class="variable-symbol">A</td><td>Area of the circle</td><td>length² (e.g. cm², m²)</td><td>A ≥ 0</td></tr>
+                <tr><td class="variable-symbol">C</td><td>Circumference (perimeter)</td><td>length (e.g. cm, m)</td><td>C ≥ 0</td></tr>
+                <tr><td class="variable-symbol">r</td><td>Radius (center to edge)</td><td>length (e.g. cm, m)</td><td>r ≥ 0</td></tr>
+                <tr><td class="variable-symbol">π</td><td>Pi — ratio of circumference to diameter</td><td>dimensionless</td><td>π ≈ 3.14159…</td></tr>
+                <tr><td class="variable-symbol">d</td><td>Diameter (d = 2r)</td><td>length</td><td>d ≥ 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Assumptions -->
+        <section aria-labelledby="assumptions-heading">
+          <h2 id="assumptions-heading">Conditions &amp; Assumptions</h2>
+          <div class="assumption-note">
+            <strong>These formulas apply when:</strong>
+            <ul style="margin-top:var(--space-2);padding-left:var(--space-4)">
+              <li>The shape is a perfect circle (all points equidistant from the center) in a flat (Euclidean) plane.</li>
+              <li>The radius is a non-negative real number (r ≥ 0). A radius of 0 gives a degenerate circle (a point) with A = 0 and C = 0.</li>
+              <li>Area units are the square of the length units: if r is in centimeters, A is in cm².</li>
+            </ul>
+          </div>
+          <p>These formulas do <strong>not</strong> apply to ellipses, spheres, or circles drawn on curved surfaces (e.g., on a globe).</p>
+        </section>
+
+        <!-- Plain-language meaning -->
+        <section>
+          <h2>Plain-Language Meaning</h2>
+          <p>The area of a circle is the amount of flat surface it covers. Because it involves r², area grows quadratically with the radius — doubling the radius <strong>quadruples</strong> the area. The circumference grows linearly: doubling the radius doubles the circumference.</p>
+          <div class="worked-example" style="background:rgb(29 53 87 / 5%);border-left-color:var(--color-button)">
+            <p><strong>Intuition:</strong> Think of the circle as made of thin concentric rings, each with circumference 2πr. Integrating from r=0 to r=R gives ∫₀ᴿ 2πr dr = πR², which is the area formula — a beautiful connection between circumference and area.</p>
+          </div>
+        </section>
+
+        <!-- Interactive Lab -->
+        <section id="lab" aria-labelledby="lab-heading">
+          <h2 id="lab-heading">Interactive Explorer</h2>
+          <p>Drag the radius slider to see how the circle and its measurements change. Notice how quickly the area grows compared to the circumference.</p>
+          <div class="reduced-motion-notice">Animations disabled (reduced motion). Values update instantly.</div>
+
+          <div class="lab-shell">
+            <div class="lab-toolbar">
+              <span class="lab-title">⭕ Circle Area Explorer</span>
+              <div class="lab-toolbar-actions">
+                <button id="lab-reset" class="btn btn-sm btn-ghost">↺ Reset</button>
+              </div>
+            </div>
+            <div class="lab-body">
+              <div class="lab-canvas-area">
+                <canvas id="circle-canvas" width="380" height="380" aria-label="Interactive circle diagram. Radius: 5 units."></canvas>
+              </div>
+              <div class="lab-controls">
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="radius-slider">Radius (r)</label>
+                  <div class="ctrl-row">
+                    <input type="range" id="radius-slider" min="0.1" max="20" step="0.1" value="5" aria-label="Radius slider">
+                    <input type="number" id="radius-input" class="ctrl-number" min="0.1" max="20" step="0.1" value="5" aria-label="Radius value">
+                  </div>
+                </div>
+                <div class="lab-result-panel" aria-live="polite" aria-label="Circle measurements">
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Radius r</span>
+                    <span class="lab-result-value" id="disp-radius">5.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Diameter d = 2r</span>
+                    <span class="lab-result-value" id="disp-diameter">10.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Circumference C = 2πr</span>
+                    <span class="lab-result-value" id="disp-circumference">31.42</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Area A = πr²</span>
+                    <span class="lab-result-value" id="disp-area">78.54</span>
+                  </div>
+                </div>
+                <p style="font-size:var(--text-xs);color:var(--color-muted)">Try doubling the radius and observe that the area becomes 4× larger, while circumference only doubles.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Example -->
+        <section id="worked-example" aria-labelledby="example-heading">
+          <h2 id="example-heading">Worked Example</h2>
+          <div class="worked-example">
+            <h4>Problem</h4>
+            <p>A circular pizza has a radius of 15 cm. Find its area and circumference.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Identify the formula and known values.</strong><br>A = πr², C = 2πr, with r = 15 cm.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Calculate the area.</strong><br>A = π × 15² = π × 225 ≈ 3.14159 × 225 ≈ 706.86 cm²</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Calculate the circumference.</strong><br>C = 2 × π × 15 = 30π ≈ 94.25 cm</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">4</div>
+              <div class="worked-step-body"><strong>Check units.</strong><br>Area has units cm² (square centimeters). Circumference has units cm (centimeters).</div>
+            </div>
+            <div class="worked-answer">✓ Area ≈ 706.86 cm² · Circumference ≈ 94.25 cm</div>
+          </div>
+        </section>
+
+        <!-- Code Examples -->
+        <section id="code" aria-labelledby="code-heading">
+          <h2 id="code-heading">Code Examples</h2>
+          <p>Both examples compute area and circumference, check for invalid input, and display results with two decimal places.</p>
+          <div class="code-tabs">
+            <div class="code-tab-bar">
+              <button class="code-tab-btn" data-tab="c" aria-selected="true" role="tab">C (C11)</button>
+              <button class="code-tab-btn" data-tab="python" aria-selected="false" role="tab">Python 3</button>
+              <button class="code-copy-btn" aria-label="Copy code">⎘ Copy</button>
+            </div>
+            <div class="code-panel active" data-tab="c">
+<pre><code><span class="token-include">#include</span> <span class="token-string">&lt;stdio.h&gt;</span>
+<span class="token-include">#include</span> <span class="token-string">&lt;math.h&gt;</span>   <span class="token-comment">/* for M_PI on POSIX; or define pi manually */</span>
+
+<span class="token-type">int</span> <span class="token-function">main</span>(<span class="token-type">void</span>) {
+    <span class="token-comment">/* Using a precise value of pi */</span>
+    <span class="token-keyword">const</span> <span class="token-type">double</span> pi = <span class="token-number">3.141592653589793</span>;
+    <span class="token-type">double</span> radius = <span class="token-number">5.0</span>;
+
+    <span class="token-keyword">if</span> (radius &lt; <span class="token-number">0.0</span>) {
+        printf(<span class="token-string">"Error: radius must be non-negative.\n"</span>);
+        <span class="token-keyword">return</span> <span class="token-number">1</span>;
+    }
+
+    <span class="token-type">double</span> area          = pi * radius * radius;
+    <span class="token-type">double</span> circumference = <span class="token-number">2.0</span> * pi * radius;
+    <span class="token-type">double</span> diameter      = <span class="token-number">2.0</span> * radius;
+
+    printf(<span class="token-string">"Radius:        %.2f\n"</span>, radius);
+    printf(<span class="token-string">"Diameter:      %.2f\n"</span>, diameter);
+    printf(<span class="token-string">"Circumference: %.2f\n"</span>, circumference);
+    printf(<span class="token-string">"Area:          %.2f\n"</span>, area);
+
+    <span class="token-keyword">return</span> <span class="token-number">0</span>;
+}
+
+<span class="token-comment">/* Sample output (radius = 5.0):
+   Radius:        5.00
+   Diameter:      10.00
+   Circumference: 31.42
+   Area:          78.54
+*/</span></code></pre>
+            </div>
+            <div class="code-panel" data-tab="python">
+<pre><code><span class="token-keyword">import</span> math
+
+radius = <span class="token-number">5.0</span>
+
+<span class="token-keyword">if</span> radius &lt; <span class="token-number">0</span>:
+    <span class="token-keyword">raise</span> ValueError(<span class="token-string">"Radius must be non-negative"</span>)
+
+area          = math.pi * radius ** <span class="token-number">2</span>
+circumference = <span class="token-number">2</span> * math.pi * radius
+diameter      = <span class="token-number">2</span> * radius
+
+<span class="token-function">print</span>(<span class="token-string">f"Radius:        {radius:.2f}"</span>)
+<span class="token-function">print</span>(<span class="token-string">f"Diameter:      {diameter:.2f}"</span>)
+<span class="token-function">print</span>(<span class="token-string">f"Circumference: {circumference:.2f}"</span>)
+<span class="token-function">print</span>(<span class="token-string">f"Area:          {area:.2f}"</span>)
+
+<span class="token-comment"># Sample output (radius = 5.0):
+# Radius:        5.00
+# Diameter:      10.00
+# Circumference: 31.42
+# Area:          78.54</span></code></pre>
+            </div>
+          </div>
+          <div class="assumption-note">
+            <strong>Notes:</strong>
+            <ul style="margin-top:var(--space-2);padding-left:var(--space-4)">
+              <li>The C example uses a hand-defined π for portability. You can also use <code>M_PI</code> from <code>&lt;math.h&gt;</code> on POSIX systems (not guaranteed by the C standard).</li>
+              <li>Python's <code>math.pi</code> provides the closest double-precision approximation to π.</li>
+              <li>Floating-point arithmetic introduces tiny rounding errors; results like 78.53981… are expected and correct.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Practice -->
+        <section id="practice" class="practice-section" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">Practice Questions</h2>
+
+          <div class="practice-question" data-answer="50.27">
+            <div class="practice-q-number">Question 1</div>
+            <p class="practice-q-text">A circle has a radius of 4 cm. What is its area to 2 decimal places? (π ≈ 3.14159)</p>
+            <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4)">
+              <input type="number" class="practice-numeric-input" step="0.01" placeholder="Answer…" aria-label="Your answer">
+              <span style="font-size:var(--text-sm);color:var(--color-muted)">cm²</span>
+            </div>
+            <div class="practice-actions">
+              <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+              <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+              <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+            </div>
+            <div class="practice-hint">Hint: A = πr² = π × 4² = 16π. Compute 16 × 3.14159.</div>
+            <div class="practice-feedback" aria-live="polite"></div>
+            <div class="practice-explanation">A = π × 4² = 16π ≈ 50.27 cm². Remember: area uses r², so a radius of 4 gives area = 16π, not 4π.</div>
+          </div>
+
+          <div class="practice-question" data-answer="3">
+            <div class="practice-q-number">Question 2</div>
+            <p class="practice-q-text">If A circle has area 28.27 cm², what is its radius to the nearest whole number? (π ≈ 3.14159)</p>
+            <ul class="practice-choices" role="radiogroup">
+              <li class="practice-choice"><input type="radio" name="q-ca2" value="2" id="ca2a"><label for="ca2a">2 cm</label></li>
+              <li class="practice-choice"><input type="radio" name="q-ca2" value="3" id="ca2b"><label for="ca2b">3 cm</label></li>
+              <li class="practice-choice"><input type="radio" name="q-ca2" value="9" id="ca2c"><label for="ca2c">9 cm</label></li>
+              <li class="practice-choice"><input type="radio" name="q-ca2" value="28" id="ca2d"><label for="ca2d">28 cm</label></li>
+            </ul>
+            <div class="practice-actions">
+              <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+              <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+              <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+            </div>
+            <div class="practice-hint">Hint: Rearrange A = πr² to r = √(A/π). Then compute √(28.27 / 3.14159).</div>
+            <div class="practice-feedback" aria-live="polite"></div>
+            <div class="practice-explanation">r = √(A/π) = √(28.27/3.14159) = √9.0 ≈ 3 cm. Rearranging the area formula gives us the inverse: square-root of A/π.</div>
+          </div>
+
+          <div class="practice-question" data-answer="4">
+            <div class="practice-q-number">Question 3</div>
+            <p class="practice-q-text">If you double the radius of a circle, the area becomes how many times larger?</p>
+            <ul class="practice-choices" role="radiogroup">
+              <li class="practice-choice"><input type="radio" name="q-ca3" value="2" id="ca3a"><label for="ca3a">2× larger</label></li>
+              <li class="practice-choice"><input type="radio" name="q-ca3" value="3" id="ca3b"><label for="ca3b">3× larger</label></li>
+              <li class="practice-choice"><input type="radio" name="q-ca3" value="4" id="ca3c"><label for="ca3c">4× larger</label></li>
+              <li class="practice-choice"><input type="radio" name="q-ca3" value="8" id="ca3d"><label for="ca3d">8× larger</label></li>
+            </ul>
+            <div class="practice-actions">
+              <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+              <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+              <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+            </div>
+            <div class="practice-hint">Hint: Compare π(2r)² with πr². What's the ratio?</div>
+            <div class="practice-feedback" aria-live="polite"></div>
+            <div class="practice-explanation">π(2r)² = π × 4r² = 4πr². The new area is 4× the original. This is the key insight: area scales as the square of the radius, so doubling r multiplies area by 2² = 4.</div>
+          </div>
+
+        </section>
+
+        <!-- Related formulas & navigation -->
+        <div class="related-lessons">
+          <h3>Related Formulas</h3>
+          <div class="grid-2" style="gap:var(--space-4)">
+            <a href="pythagorean-theorem.html" class="lesson-nav-link">
+              <span class="nav-direction">Geometry</span>
+              <span class="nav-title">Pythagorean Theorem →</span>
+            </a>
+            <a href="../library.html?q=geometry" class="lesson-nav-link">
+              <span class="nav-direction">Browse</span>
+              <span class="nav-title">All Geometry Formulas →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lesson-nav">
+          <a href="../learn.html#geometry" class="lesson-nav-link" style="flex:none">
+            <span class="nav-direction">← Back to</span>
+            <span class="nav-title">Geometry</span>
+          </a>
+          <a href="pythagorean-theorem.html" class="lesson-nav-link">
+            <span class="nav-direction">Next lesson →</span>
+            <span class="nav-title">Pythagorean Theorem</span>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- ── Table of Contents ── -->
+      <aside class="lesson-toc-col" aria-label="Page sections">
+        <nav class="toc">
+          <div class="toc-title">On this page</div>
+          <ul class="toc-list">
+            <li><a href="#formula-heading">The Formula</a></li>
+            <li><a href="#vars-heading">Symbol Definitions</a></li>
+            <li><a href="#assumptions-heading">Conditions</a></li>
+            <li><a href="#lab">Interactive Lab</a></li>
+            <li><a href="#worked-example">Worked Example</a></li>
+            <li><a href="#code">Code Examples</a></li>
+            <li><a href="#practice">Practice Questions</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div><!-- end lesson-layout -->
+  </div><!-- end container -->
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Learn</h4><ul class="footer-links">
+        <li><a href="../learn.html">All Subjects</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Geometry</h4><ul class="footer-links">
+        <li><a href="circle-area.html">Circle Area</a></li>
+        <li><a href="pythagorean-theorem.html">Pythagorean Theorem</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="../js/search-index.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/code-tabs.js"></script>
+<script src="../js/labs/circle-area.js"></script>
+</body>
+</html>

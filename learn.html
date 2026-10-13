@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn — BehindTheMath</title>
+  <meta name="description" content="Browse all mathematical subjects and topics. Filter by level and subject to find the right lesson for you.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <style>
+    .subject-section { scroll-margin-top: calc(var(--nav-height) + 16px); }
+    .topic-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+    .topic-item {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius-md); padding: var(--space-3) var(--space-5);
+      text-decoration: none; transition: all var(--transition-fast);
+      gap: var(--space-3);
+    }
+    .topic-item:hover { border-color: var(--color-secondary); background: var(--color-background); color: inherit; transform: translateX(4px); }
+    .topic-item-title { font-weight: var(--weight-semibold); color: var(--color-primary); font-size: var(--text-sm); }
+    .topic-item-desc  { font-size: var(--text-xs); color: var(--color-muted); }
+    .topic-item-meta  { display: flex; gap: var(--space-2); align-items: center; flex-shrink: 0; }
+
+    .subject-block {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: var(--space-7);
+      box-shadow: var(--shadow-card);
+    }
+    .subject-block-header {
+      display: flex; align-items: center; gap: var(--space-4);
+      padding: var(--space-5) var(--space-6);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-text);
+    }
+    .subject-block-header h2 { color: var(--color-text); margin: 0; font-size: var(--text-2xl); }
+    .subject-block-header p  { color: rgb(241 250 238 / 80%); font-size: var(--text-sm); margin: 0; margin-top: var(--space-1); }
+    .subject-block-icon { font-size: 36px; flex-shrink: 0; }
+    .subject-block-body { padding: var(--space-5) var(--space-6); }
+
+    .learning-path {
+      background: linear-gradient(135deg, var(--color-surface-dark), #1a3a5c);
+      border-radius: var(--radius-lg);
+      padding: var(--space-7) var(--space-8);
+      margin-bottom: var(--space-9);
+      color: var(--color-text);
+    }
+    .path-steps {
+      display: flex; flex-wrap: wrap; gap: var(--space-2);
+      align-items: center; margin-top: var(--space-5);
+      font-size: var(--text-sm);
+    }
+    .path-step {
+      background: rgb(255 255 255 / 10%);
+      border: 1px solid rgb(255 255 255 / 15%);
+      border-radius: var(--radius-full);
+      padding: var(--space-2) var(--space-3);
+      white-space: nowrap;
+    }
+    .path-arrow { opacity: 0.4; }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="learn.html">📚 Learn</a></li>
+      <li><a href="library.html">📖 Formula Library</a></li>
+      <li><a href="lab.html">⚡ Visual Lab</a></li>
+      <li><a href="practice.html">✏️ Practice</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas, subjects, symbols…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Learn Mathematics</h1>
+    <p>Structured lessons from foundations to advanced topics — with interactive labs and code examples at every stage.</p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container" style="padding-block:var(--space-9)">
+
+    <!-- Recommended learning path -->
+    <div class="learning-path">
+      <div class="section-eyebrow" style="color:var(--color-button)">Recommended Learning Path</div>
+      <h2 style="color:var(--color-text);margin-top:var(--space-2)">Study in this order for the best foundation</h2>
+      <div class="path-steps">
+        <span class="path-step">Foundations</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">Exponents & Algebra</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">Geometry & Trigonometry</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">Counting & Probability</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">Statistics & Linear Algebra</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">Calculus</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">Physics</span>
+        <span class="path-arrow">→</span>
+        <span class="path-step">CSE Applications</span>
+      </div>
+    </div>
+
+    <!-- Foundations -->
+    <section class="subject-section subject-block" id="foundations" aria-labelledby="h-foundations">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">🔢</span>
+        <div>
+          <h2 id="h-foundations">Foundations</h2>
+          <p>Arithmetic, fractions, percentages, ratios, exponents, logarithms, sequences</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/percentages-ratios.html" class="topic-item">
+            <div><div class="topic-item-title">Percentages & Ratios</div><div class="topic-item-desc">P = (Part/Whole) × 100 — proportional reasoning</div></div>
+            <div class="topic-item-meta"><span class="badge badge-beginner">Beginner</span></div>
+          </a></li>
+          <li><a href="lessons/exponents-logarithms.html" class="topic-item">
+            <div><div class="topic-item-title">Exponents & Logarithms</div><div class="topic-item-desc">log_b(x) = y ⟺ b^y = x — inverse operations</div></div>
+            <div class="topic-item-meta"><span class="badge badge-intermediate">Intermediate</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Number Theory -->
+    <section class="subject-section subject-block" id="number-theory" aria-labelledby="h-number-theory">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">🔑</span>
+        <div>
+          <h2 id="h-number-theory">Number Theory & Programming</h2>
+          <p>GCD, LCM, primes, modular arithmetic, binary numbers, bit manipulation</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/gcd-lcm.html" class="topic-item">
+            <div><div class="topic-item-title">GCD & LCM</div><div class="topic-item-desc">Euclidean algorithm — gcd(a,b)·lcm(a,b) = a·b</div></div>
+            <div class="topic-item-meta"><span class="badge badge-beginner">Beginner</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Algebra -->
+    <section class="subject-section subject-block" id="algebra" aria-labelledby="h-algebra">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">⚖️</span>
+        <div>
+          <h2 id="h-algebra">Algebra</h2>
+          <p>Identities, linear and quadratic equations, complex numbers</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/quadratic-equation.html" class="topic-item">
+            <div><div class="topic-item-title">Quadratic Formula</div><div class="topic-item-desc">x = (−b ± √(b²−4ac)) / 2a — roots of ax²+bx+c=0</div></div>
+            <div class="topic-item-meta"><span class="badge badge-intermediate">Intermediate</span><span class="badge badge-interactive">⚡ Lab</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Geometry -->
+    <section class="subject-section subject-block" id="geometry" aria-labelledby="h-geometry">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">📐</span>
+        <div>
+          <h2 id="h-geometry">Geometry</h2>
+          <p>2D shapes, area, perimeter, 3D shapes, coordinate geometry</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/circle-area.html" class="topic-item">
+            <div><div class="topic-item-title">Circle Area & Circumference</div><div class="topic-item-desc">A = πr², C = 2πr — why area grows as r²</div></div>
+            <div class="topic-item-meta"><span class="badge badge-beginner">Beginner</span><span class="badge badge-interactive">⚡ Lab</span></div>
+          </a></li>
+          <li><a href="lessons/pythagorean-theorem.html" class="topic-item">
+            <div><div class="topic-item-title">Pythagorean Theorem</div><div class="topic-item-desc">a² + b² = c² — right triangle side relationship</div></div>
+            <div class="topic-item-meta"><span class="badge badge-beginner">Beginner</span><span class="badge badge-interactive">⚡ Lab</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trigonometry -->
+    <section class="subject-section subject-block" id="trigonometry" aria-labelledby="h-trigonometry">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">📏</span>
+        <div>
+          <h2 id="h-trigonometry">Trigonometry</h2>
+          <p>Ratios, unit circle, identities, compound angles, triangle laws</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/unit-circle.html" class="topic-item">
+            <div><div class="topic-item-title">Trigonometric Unit Circle</div><div class="topic-item-desc">sin²θ + cos²θ = 1 — angles to coordinates</div></div>
+            <div class="topic-item-meta"><span class="badge badge-intermediate">Intermediate</span><span class="badge badge-interactive">⚡ Lab</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Probability -->
+    <section class="subject-section subject-block" id="probability" aria-labelledby="h-probability">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">🎲</span>
+        <div>
+          <h2 id="h-probability">Counting & Probability</h2>
+          <p>Factorials, permutations, combinations, probability, conditional probability</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/permutations-combinations.html" class="topic-item">
+            <div><div class="topic-item-title">Permutations & Combinations</div><div class="topic-item-desc">P(n,r) = n!/(n−r)! · C(n,r) = n!/r!(n−r)!</div></div>
+            <div class="topic-item-meta"><span class="badge badge-intermediate">Intermediate</span></div>
+          </a></li>
+          <li><a href="lessons/probability-bayes.html" class="topic-item">
+            <div><div class="topic-item-title">Probability & Bayes' Theorem</div><div class="topic-item-desc">P(A|B) = P(B|A)P(A)/P(B) — updating with evidence</div></div>
+            <div class="topic-item-meta"><span class="badge badge-intermediate">Intermediate</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="subject-section subject-block" id="statistics" aria-labelledby="h-statistics">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">📊</span>
+        <div>
+          <h2 id="h-statistics">Statistics</h2>
+          <p>Mean, variance, standard deviation, z-score, data analysis</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/mean-standard-deviation.html" class="topic-item">
+            <div><div class="topic-item-title">Mean & Standard Deviation</div><div class="topic-item-desc">σ = √(Σ(xi−μ)²/N) — measuring spread around the mean</div></div>
+            <div class="topic-item-meta"><span class="badge badge-beginner">Beginner</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Linear Algebra -->
+    <section class="subject-section subject-block" id="linear-algebra" aria-labelledby="h-linalg">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">🔲</span>
+        <div>
+          <h2 id="h-linalg">Linear Algebra</h2>
+          <p>Matrices, determinants, vectors, dot and cross products</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <p style="color:var(--color-muted);font-size:var(--text-sm);padding:var(--space-4) 0">More lessons coming soon. Browse the <a href="library.html">Formula Library</a> for quick reference.</p>
+      </div>
+    </section>
+
+    <!-- Calculus -->
+    <section class="subject-section subject-block" id="calculus" aria-labelledby="h-calculus">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">∫</span>
+        <div>
+          <h2 id="h-calculus">Calculus</h2>
+          <p>Limits, derivatives, integrals, Taylor and Maclaurin series</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/derivatives-tangent.html" class="topic-item">
+            <div><div class="topic-item-title">Derivatives & Tangent Slope</div><div class="topic-item-desc">f'(x) = lim(h→0)(f(x+h)−f(x))/h — instantaneous rate of change</div></div>
+            <div class="topic-item-meta"><span class="badge badge-advanced">Advanced</span><span class="badge badge-interactive">⚡ Lab</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Physics -->
+    <section class="subject-section subject-block" id="physics" aria-labelledby="h-physics">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">⚡</span>
+        <div>
+          <h2 id="h-physics">Physics</h2>
+          <p>Mechanics, energy, gravitation, rotation, fluids, heat, waves, optics, electricity</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <p style="color:var(--color-muted);font-size:var(--text-sm);padding:var(--space-4) 0">Physics lessons are coming soon. Browse the <a href="library.html">Formula Library</a> for quick reference.</p>
+      </div>
+    </section>
+
+    <!-- CSE -->
+    <section class="subject-section subject-block" id="cse" aria-labelledby="h-cse">
+      <div class="subject-block-header">
+        <span class="subject-block-icon" aria-hidden="true">💻</span>
+        <div>
+          <h2 id="h-cse">CSE & Competitive Programming</h2>
+          <p>Time complexity, combinatorics, graph formulas, bit manipulation</p>
+        </div>
+      </div>
+      <div class="subject-block-body">
+        <ul class="topic-list">
+          <li><a href="lessons/time-complexity.html" class="topic-item">
+            <div><div class="topic-item-title">Time Complexity & Big O</div><div class="topic-item-desc">T(n) = O(g(n)) — measuring how algorithms scale</div></div>
+            <div class="topic-item-meta"><span class="badge badge-intermediate">Intermediate</span></div>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Subjects</h4><ul class="footer-links">
+        <li><a href="#foundations">Foundations</a></li>
+        <li><a href="#algebra">Algebra</a></li>
+        <li><a href="#geometry">Geometry</a></li>
+        <li><a href="#calculus">Calculus</a></li>
+        <li><a href="#cse">CSE</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul class="footer-links">
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Info</h4><ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="js/search-index.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

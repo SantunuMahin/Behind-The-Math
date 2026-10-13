@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mean & Standard Deviation — BehindTheMath</title>
+  <meta name="description" content="Understand arithmetic mean, variance, population vs sample standard deviation (Bessel's correction n-1), and spread with an interactive data calculator.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="../index.html">🏠 Home</a></li>
+      <li><a href="../learn.html">📚 Learn</a></li>
+      <li><a href="../library.html">📖 Formula Library</a></li>
+      <li><a href="../lab.html">⚡ Visual Lab</a></li>
+      <li><a href="../practice.html">✏️ Practice</a></li>
+      <li><a href="../about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="lesson-layout">
+
+      <article class="lesson-content">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html">Learn</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../learn.html#statistics">Statistics</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Mean &amp; Standard Deviation</span>
+        </nav>
+
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4)">
+          <span class="badge badge-beginner">Beginner</span>
+          <span class="badge badge-primary">Statistics</span>
+          <span class="badge badge-interactive">⚡ Interactive Tool</span>
+        </div>
+
+        <h1 id="lesson-title">Mean &amp; Standard Deviation</h1>
+
+        <p style="font-size:var(--text-lg);color:var(--color-muted);margin-bottom:var(--space-7)">
+          Two datasets can have the exact same average yet behave completely differently. While the mean gives the center of balance, standard deviation measures how tightly or widely the values cluster around that center.
+        </p>
+
+        <!-- Formula panel -->
+        <section aria-labelledby="formula-heading">
+          <h2 id="formula-heading">The Formulas</h2>
+          <div class="formula-panel" data-latex="\mu = \dfrac{1}{N}\sum_{i=1}^N x_i \qquad \sigma = \sqrt{\dfrac{1}{N}\sum_{i=1}^N (x_i - \mu)^2} \qquad s = \sqrt{\dfrac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2}">
+            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-3)">Center &amp; Spread</p>
+            $$\mu = \dfrac{1}{N}\sum_{i=1}^N x_i \qquad \sigma = \sqrt{\dfrac{\sum(x_i - \mu)^2}{N}} \qquad s = \sqrt{\dfrac{\sum(x_i - \bar{x})^2}{n-1}}$$
+            <p style="color:rgb(241 250 238 / 60%);font-size:var(--text-sm);margin-top:var(--space-3)">Use $\sigma$ (divided by $N$) for a complete population; use $s$ (divided by $n-1$, Bessel's correction) for an estimated sample.</p>
+            <button class="btn btn-sm formula-copy-btn" style="position:absolute;top:12px;right:12px;background:rgb(255 255 255/10%);color:var(--color-text);border:1px solid rgb(255 255 255/20%)">⎘ Copy LaTeX</button>
+          </div>
+        </section>
+
+        <!-- Variables -->
+        <section aria-labelledby="vars-heading">
+          <h2 id="vars-heading">Symbol Definitions</h2>
+          <div class="variable-legend">
+            <table>
+              <thead><tr><th>Symbol</th><th>Meaning</th><th>Domain / Constraints</th></tr></thead>
+              <tbody>
+                <tr><td class="variable-symbol">x_i</td><td>Individual observation data point</td><td>Real number ($x_i \in \mathbb{R}$)</td></tr>
+                <tr><td class="variable-symbol">N (or n)</td><td>Total count of data points in dataset</td><td>Integer $\ge 1$ (for sample s, $n \ge 2$)</td></tr>
+                <tr><td class="variable-symbol">μ (or x̄)</td><td>Arithmetic Mean (average)</td><td>Same unit as $x$</td></tr>
+                <tr><td class="variable-symbol">σ² (or s²)</td><td>Variance (average squared deviation)</td><td>Units squared</td></tr>
+                <tr><td class="variable-symbol">σ (or s)</td><td>Standard Deviation (square root of variance)</td><td>Non-negative ($\ge 0$), same unit as $x$</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Conditions -->
+        <section aria-labelledby="assumptions-heading">
+          <h2 id="assumptions-heading">Why Bessel's Correction (n - 1)?</h2>
+          <div class="assumption-note">
+            <strong>Sample vs Population:</strong>
+            <p style="margin-top:var(--space-2)">
+              When computing deviations from a sample mean $\bar{x}$ instead of the true population mean $\mu$, the deviations are systematically slightly smaller because $\bar{x}$ was chosen to minimize the sum of squared distances to that specific sample. Dividing by $n-1$ instead of $n$ un-biases the estimator, preventing systematic underestimation of the true variance.
+            </p>
+          </div>
+        </section>
+
+        <!-- Interactive Calculator -->
+        <section id="lab" aria-labelledby="lab-heading">
+          <h2 id="lab-heading">Interactive Dataset Stats Calculator</h2>
+          <p>Enter any comma-separated list of numbers. See the mean, deviations, variance, and standard deviation calculated immediately.</p>
+
+          <div class="lab-shell">
+            <div class="lab-toolbar">
+              <span class="lab-title">📊 Live Data Dispersion Tool</span>
+              <div class="lab-toolbar-actions">
+                <button id="stats-sample-btn" class="btn btn-sm btn-ghost">Load [2, 4, 4, 4, 5, 5, 7, 9]</button>
+              </div>
+            </div>
+            <div class="lab-body">
+              <div class="lab-canvas-area" style="background:#fff;border-radius:var(--radius-md);padding:var(--space-4);min-height:220px;overflow-y:auto">
+                <div style="font-size:var(--text-sm);font-weight:700;color:var(--color-primary);margin-bottom:var(--space-2)">Data Points Visualization:</div>
+                <div id="stats-dots" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-4)"></div>
+                <div id="stats-calc-trace" style="font-family:var(--font-code);font-size:var(--text-xs);line-height:1.6;color:var(--color-code)"></div>
+              </div>
+              <div class="lab-controls">
+                <div class="ctrl-group">
+                  <label class="ctrl-label" for="stats-input">Comma-separated values:</label>
+                  <input type="text" id="stats-input" value="2, 4, 4, 4, 5, 5, 7, 9" style="width:100%;padding:var(--space-2);border:1px solid var(--color-border);border-radius:var(--radius-sm)">
+                </div>
+                <div class="lab-result-panel" aria-live="polite">
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Count N</span>
+                    <span class="lab-result-value" id="disp-count">8</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Mean μ</span>
+                    <span class="lab-result-value" id="disp-mean" style="color:var(--color-primary);font-weight:700">5.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Population SD σ</span>
+                    <span class="lab-result-value" id="disp-pop-sd" style="color:var(--color-secondary);font-weight:700">2.00</span>
+                  </div>
+                  <div class="lab-result-row">
+                    <span class="lab-result-label">Sample SD s (n-1)</span>
+                    <span class="lab-result-value" id="disp-sample-sd">2.14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Example -->
+        <section id="worked-example" aria-labelledby="example-heading">
+          <h2 id="example-heading">Worked Example</h2>
+          <div class="worked-example">
+            <h4>Problem</h4>
+            <p>Find the mean and population standard deviation of the numbers: 2, 4, 4, 4, 5, 5, 7, 9.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Calculate the sum and mean.</strong><br>Sum $= 2 + 4 + 4 + 4 + 5 + 5 + 7 + 9 = 40$.<br>Count $N = 8$.<br>Mean $\mu = 40 / 8 = 5.0$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Calculate squared deviations $(x_i - \mu)^2$.</strong><br>
+                $(2-5)^2 = 9$<br>
+                $(4-5)^2 = 1$ (occurs three times $\implies 3 \times 1 = 3$)<br>
+                $(5-5)^2 = 0$ (occurs twice $\implies 0$)<br>
+                $(7-5)^2 = 4$<br>
+                $(9-5)^2 = 16$.
+              </div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Sum squared deviations and divide by N.</strong><br>Sum of squares $= 9 + 3 + 0 + 4 + 16 = 32$.<br>Population Variance $\sigma^2 = 32 / 8 = 4.0$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">4</div>
+              <div class="worked-step-body"><strong>Take the square root.</strong><br>$\sigma = \sqrt{4.0} = 2.0$.</div>
+            </div>
+            <div class="worked-answer">✓ Mean $\mu = 5.0$ · Population Standard Deviation $\sigma = 2.0$.</div>
+          </div>
+        </section>
+
+        <!-- Code Examples -->
+        <section id="code" aria-labelledby="code-heading">
+          <h2 id="code-heading">Code Examples</h2>
+          <div class="code-tabs">
+            <div class="code-tab-bar">
+              <button class="code-tab-btn" data-tab="c" aria-selected="true" role="tab">C (C11)</button>
+              <button class="code-tab-btn" data-tab="python" aria-selected="false" role="tab">Python 3</button>
+              <button class="code-copy-btn" aria-label="Copy code">⎘ Copy</button>
+            </div>
+            <div class="code-panel active" data-tab="c">
+<pre><code><span class="token-include">#include</span> <span class="token-string">&lt;stdio.h&gt;</span>
+<span class="token-include">#include</span> <span class="token-string">&lt;math.h&gt;</span>
+
+<span class="token-type">void</span> <span class="token-function">calc_stats</span>(<span class="token-keyword">const</span> <span class="token-type">double</span> arr[], <span class="token-type">int</span> n) {
+    <span class="token-keyword">if</span> (n &lt;= <span class="token-number">0</span>) <span class="token-keyword">return</span>;
+    <span class="token-type">double</span> sum = <span class="token-number">0.0</span>;
+    <span class="token-keyword">for</span> (<span class="token-type">int</span> i = <span class="token-number">0</span>; i &lt; n; i++) sum += arr[i];
+    <span class="token-type">double</span> mean = sum / n;
+
+    <span class="token-type">double</span> sq_diff_sum = <span class="token-number">0.0</span>;
+    <span class="token-keyword">for</span> (<span class="token-type">int</span> i = <span class="token-number">0</span>; i &lt; n; i++) {
+        <span class="token-type">double</span> diff = arr[i] - mean;
+        sq_diff_sum += diff * diff;
+    }
+
+    <span class="token-type">double</span> pop_sd = <span class="token-function">sqrt</span>(sq_diff_sum / n);
+    <span class="token-type">double</span> sample_sd = n &gt; <span class="token-number">1</span> ? <span class="token-function">sqrt</span>(sq_diff_sum / (n - <span class="token-number">1</span>)) : <span class="token-number">0.0</span>;
+
+    <span class="token-function">printf</span>(<span class="token-string">"Mean: %.2f\n"</span>, mean);
+    <span class="token-function">printf</span>(<span class="token-string">"Population SD (N): %.2f\n"</span>, pop_sd);
+    <span class="token-function">printf</span>(<span class="token-string">"Sample SD (N-1):   %.2f\n"</span>, sample_sd);
+}
+
+<span class="token-type">int</span> <span class="token-function">main</span>(<span class="token-type">void</span>) {
+    <span class="token-type">double</span> data[] = {<span class="token-number">2</span>, <span class="token-number">4</span>, <span class="token-number">4</span>, <span class="token-number">4</span>, <span class="token-number">5</span>, <span class="token-number">5</span>, <span class="token-number">7</span>, <span class="token-number">9</span>};
+    <span class="token-function">calc_stats</span>(data, <span class="token-number">8</span>);
+    <span class="token-keyword">return</span> <span class="token-number">0</span>;
+}</code></pre>
+            </div>
+            <div class="code-panel" data-tab="python">
+<pre><code><span class="token-keyword">import</span> statistics
+
+<span class="token-keyword">def</span> <span class="token-function">analyze_data</span>(data: <span class="token-type">list</span>[<span class="token-type">float</span>]):
+    mean = statistics.mean(data)
+    pop_sd = statistics.pstdev(data)   <span class="token-comment"># N divisor</span>
+    sample_sd = statistics.stdev(data)  <span class="token-comment"># n-1 divisor (Bessel's correction)</span>
+    <span class="token-keyword">return</span> {<span class="token-string">"mean"</span>: mean, <span class="token-string">"pop_sd"</span>: pop_sd, <span class="token-string">"sample_sd"</span>: sample_sd}
+
+<span class="token-keyword">if</span> __name__ == <span class="token-string">"__main__"</span>:
+    dataset = [<span class="token-number">2</span>, <span class="token-number">4</span>, <span class="token-number">4</span>, <span class="token-number">4</span>, <span class="token-number">5</span>, <span class="token-number">5</span>, <span class="token-number">7</span>, <span class="token-number">9</span>]
+    stats = analyze_data(dataset)
+    <span class="token-function">print</span>(<span class="token-string">f"Mean: {stats['mean']:.2f}"</span>)
+    <span class="token-function">print</span>(<span class="token-string">f"Population SD: {stats['pop_sd']:.2f}"</span>)
+    <span class="token-function">print</span>(<span class="token-string">f"Sample SD (N-1): {stats['sample_sd']:.2f}"</span>)</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Practice Questions -->
+        <section id="practice" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">Check Your Understanding</h2>
+
+          <div class="practice-question" data-question-id="sd-1" data-answer="0">
+            <p class="practice-question-text"><strong>Q1.</strong> If all numbers in a dataset are identical (e.g. [5, 5, 5, 5]), what is the standard deviation?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="sd-1" value="0"> 0</label>
+              <label class="practice-option"><input type="radio" name="sd-1" value="5"> 5</label>
+              <label class="practice-option"><input type="radio" name="sd-1" value="1"> 1</label>
+              <label class="practice-option"><input type="radio" name="sd-1" value="undef"> Undefined</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Each deviation $(x_i - \mu)$ is $5 - 5 = 0$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">Since there is zero spread or dispersion around the mean, the standard deviation is exactly 0.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="sd-2" data-answer="variance">
+            <p class="practice-question-text"><strong>Q2.</strong> What is the mathematical relationship between variance and standard deviation?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="sd-2" value="variance"> Standard deviation is the square root of variance: σ = √(Var)</label>
+              <label class="practice-option"><input type="radio" name="sd-2" value="half"> Standard deviation is half the variance</label>
+              <label class="practice-option"><input type="radio" name="sd-2" value="sum"> Standard deviation is the sum of differences</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Recall that variance is $\sigma^2$ and standard deviation is $\sigma$.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">Standard deviation is $\sigma = \sqrt{\sigma^2}$. Taking the square root brings the units back to the original measurement scale.</div>
+          </div>
+
+          <div class="practice-question" data-question-id="sd-3" data-answer="n-1">
+            <p class="practice-question-text"><strong>Q3.</strong> Why do we divide by $n - 1$ instead of $n$ when calculating the sample standard deviation?</p>
+            <div class="practice-options">
+              <label class="practice-option"><input type="radio" name="sd-3" value="n-1"> Bessel's correction removes negative bias when estimating population variance</label>
+              <label class="practice-option"><input type="radio" name="sd-3" value="round"> To make the numbers round more evenly</label>
+              <label class="practice-option"><input type="radio" name="sd-3" value="drop"> Because one outlier must be dropped</label>
+            </div>
+            <div class="practice-actions">
+              <button class="btn btn-sm btn-ghost practice-hint-btn">Show Hint</button>
+              <button class="btn btn-sm btn-primary practice-submit-btn">Check Answer</button>
+              <button class="btn btn-sm btn-ghost practice-retry-btn">Try Again</button>
+            </div>
+            <div class="practice-hint">Recall Bessel's correction for sample variance estimation.</div>
+            <div class="practice-feedback"></div>
+            <div class="practice-explanation">Bessel's correction ($n-1$) accounts for the fact that sample deviations from $\bar{x}$ are slightly tighter than deviations from the true unknown population mean $\mu$.</div>
+          </div>
+        </section>
+
+        <div class="lesson-nav">
+          <a href="probability-bayes.html" class="lesson-nav-link" style="flex:none">
+            <span class="nav-direction">← Previous lesson</span>
+            <span class="nav-title">Probability &amp; Bayes</span>
+          </a>
+          <a href="derivatives-tangent.html" class="lesson-nav-link">
+            <span class="nav-direction">Next lesson →</span>
+            <span class="nav-title">Derivatives &amp; Tangent Slope</span>
+          </a>
+        </div>
+
+      </article>
+
+      <aside class="lesson-toc-col" aria-label="Page sections">
+        <nav class="toc">
+          <div class="toc-title">On this page</div>
+          <ul class="toc-list">
+            <li><a href="#formula-heading">The Formulas</a></li>
+            <li><a href="#vars-heading">Symbol Definitions</a></li>
+            <li><a href="#assumptions-heading">Bessel's Correction</a></li>
+            <li><a href="#lab">Interactive Calculator</a></li>
+            <li><a href="#worked-example">Worked Example</a></li>
+            <li><a href="#code">Code Examples</a></li>
+            <li><a href="#practice">Practice Questions</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Learn</h4><ul class="footer-links">
+        <li><a href="../learn.html">All Subjects</a></li>
+        <li><a href="../library.html">Formula Library</a></li>
+        <li><a href="../lab.html">Visual Lab</a></li>
+        <li><a href="../practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Statistics</h4><ul class="footer-links">
+        <li><a href="mean-standard-deviation.html">Mean &amp; Standard Deviation</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="../js/search-index.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/code-tabs.js"></script>
+
+<script>
+(function() {
+  const inputEl = document.getElementById('stats-input');
+  const dotsEl = document.getElementById('stats-dots');
+  const traceEl = document.getElementById('stats-calc-trace');
+  const dispCount = document.getElementById('disp-count');
+  const dispMean = document.getElementById('disp-mean');
+  const dispPopSd = document.getElementById('disp-pop-sd');
+  const dispSampleSd = document.getElementById('disp-sample-sd');
+  const sampleBtn = document.getElementById('stats-sample-btn');
+
+  function update() {
+    const raw = inputEl.value;
+    const nums = raw.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+
+    if (nums.length === 0) {
+      dotsEl.innerHTML = '<span style="color:var(--color-muted)">Enter at least one number</span>';
+      traceEl.innerHTML = '';
+      return;
+    }
+
+    const n = nums.length;
+    const sum = nums.reduce((a, b) => a + b, 0);
+    const mean = sum / n;
+
+    let ss = 0;
+    nums.forEach(x => { ss += (x - mean) * (x - mean); });
+
+    const popVar = ss / n;
+    const popSd = Math.sqrt(popVar);
+    const sampleVar = n > 1 ? ss / (n - 1) : 0;
+    const sampleSd = n > 1 ? Math.sqrt(sampleVar) : 0;
+
+    dispCount.textContent = n;
+    dispMean.textContent = mean.toFixed(2);
+    dispPopSd.textContent = popSd.toFixed(2);
+    dispSampleSd.textContent = n > 1 ? sampleSd.toFixed(2) : 'N/A (n=1)';
+
+    // Dots
+    dotsEl.innerHTML = '';
+    nums.forEach(x => {
+      const dot = document.createElement('div');
+      dot.style.cssText = `
+        padding: 4px 10px; border-radius: 12px;
+        background: var(--color-background); border: 1px solid var(--color-border);
+        font-size: 13px; font-weight: 700; color: var(--color-primary);
+      `;
+      dot.textContent = x;
+      dotsEl.appendChild(dot);
+    });
+
+    traceEl.innerHTML = `
+      Sum = ${sum.toFixed(2)}<br>
+      Mean (μ) = ${sum.toFixed(2)} / ${n} = ${mean.toFixed(2)}<br>
+      Sum of Squared Differences Σ(x - μ)² = ${ss.toFixed(2)}<br>
+      Population Variance (σ²) = ${ss.toFixed(2)} / ${n} = ${popVar.toFixed(4)}<br>
+      Population SD (σ) = √${popVar.toFixed(4)} = ${popSd.toFixed(4)}
+    `;
+  }
+
+  inputEl.addEventListener('input', update);
+  sampleBtn.addEventListener('click', () => {
+    inputEl.value = '2, 4, 4, 4, 5, 5, 7, 9';
+    update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — BehindTheMath</title>
+  <meta name="description" content="About BehindTheMath — an educational mathematics website presented by Santunu Kaysar, helped by Intellisoft Innovations.">
+  <meta name="author" content="Santunu Kaysar">
+  <meta name="theme-color" content="#1D3557">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <style>
+    .about-section { margin-bottom: var(--space-9); }
+    .about-section h2 { font-size: var(--text-2xl); margin-bottom: var(--space-5); padding-bottom: var(--space-3); border-bottom: 2px solid var(--color-border); }
+    .principle-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+    .principle-item { display: flex; gap: var(--space-4); }
+    .principle-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+    .principle-body strong { display: block; color: var(--color-primary); margin-bottom: var(--space-1); }
+    .credit-card {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      text-align: center;
+      color: var(--color-text);
+      margin-bottom: var(--space-7);
+    }
+    .credit-card .btm-logo { font-size: var(--text-4xl); font-family: var(--font-heading); font-weight: var(--weight-extrabold); color: var(--color-button); }
+    .credit-card .tagline { color: rgb(241 250 238 / 80%); font-style: italic; margin-top: var(--space-3); font-size: var(--text-lg); }
+    .accessibility-table { width: 100%; }
+    .accessibility-table td:first-child { font-weight: var(--weight-semibold); color: var(--color-secondary); width: 40%; }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="BehindTheMath Home">
+      <div class="site-logo-icon" aria-hidden="true">∑</div>
+      <span class="site-logo-text">BehindTheMath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav-search-btn" data-search-open aria-label="Search (Ctrl+K)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="nav-search-label">Search</span><kbd>Ctrl+K</kbd>
+    </button>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo-text" style="color:var(--color-text)">BehindTheMath</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav><ul class="mobile-nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="learn.html">📚 Learn</a></li>
+      <li><a href="library.html">📖 Formula Library</a></li>
+      <li><a href="lab.html">⚡ Visual Lab</a></li>
+      <li><a href="practice.html">✏️ Practice</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul></nav>
+  </div>
+</div>
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search formulas" aria-modal="true">
+  <div class="search-modal-overlay"></div>
+  <div class="search-modal-panel">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search formulas, subjects, symbols…" aria-label="Search formulas" autocomplete="off">
+    </div>
+    <div class="search-results" aria-live="polite"></div>
+    <div class="search-tip"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <h1>About BehindTheMath</h1>
+    <p>An educational mathematics website built to make formulas discoverable, not intimidating.</p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container" style="max-width:var(--reading-width);padding-block:var(--space-9)">
+
+    <!-- Credit -->
+    <div class="credit-card" id="attribution">
+      <div class="btm-logo">BehindTheMath</div>
+      <div class="tagline">"Understand the formula. Explore the relationship. See the math behind it."</div>
+      <div style="margin-top:var(--space-6);display:flex;gap:var(--space-7);justify-content:center;flex-wrap:wrap">
+        <div>
+          <div style="font-size:var(--text-xs);opacity:0.6;text-transform:uppercase;letter-spacing:1px">Presented by</div>
+          <div style="font-size:var(--text-xl);font-weight:var(--weight-bold);color:var(--color-button);margin-top:4px">Santunu Kaysar</div>
+        </div>
+        <div>
+          <div style="font-size:var(--text-xs);opacity:0.6;text-transform:uppercase;letter-spacing:1px">Helped by</div>
+          <div style="font-size:var(--text-xl);font-weight:var(--weight-bold);color:var(--color-button);margin-top:4px">Intellisoft Innovations</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <section class="about-section">
+      <h2>Our Mission</h2>
+      <p>BehindTheMath exists to make mathematical learning engaging, visual, and accessible. Most math resources show you a formula and expect you to trust it. We believe every learner deserves to understand <em>why</em> a formula works, <em>what</em> its variables mean, <em>when</em> it applies, and <em>how</em> to use it — both by hand and in code.</p>
+      <p>Every lesson on this site answers four questions:</p>
+      <ol style="margin-bottom:var(--space-4)">
+        <li><strong>What does the formula say?</strong></li>
+        <li><strong>Why does it work?</strong></li>
+        <li><strong>What changes when its variables change?</strong></li>
+        <li><strong>How can I apply it in a real problem or program?</strong></li>
+      </ol>
+      <p>The experience aims to combine the clarity of a well-edited textbook, the feedback of an interactive lab, and the speed of a modern developer reference.</p>
+    </section>
+
+    <!-- Principles -->
+    <section class="about-section">
+      <h2>Core Principles</h2>
+      <ul class="principle-list">
+        <li class="principle-item">
+          <span class="principle-icon" aria-hidden="true">🧠</span>
+          <div class="principle-body">
+            <strong>Understanding before memorization</strong>
+            We explain symbols, assumptions, units, and intuition before presenting a formula as a fact to memorize.
+          </div>
+        </li>
+        <li class="principle-item">
+          <span class="principle-icon" aria-hidden="true">🎮</span>
+          <div class="principle-body">
+            <strong>Learn by changing values</strong>
+            Sliders, number inputs, step controls, and animated diagrams make the relationship visible.
+          </div>
+        </li>
+        <li class="principle-item">
+          <span class="principle-icon" aria-hidden="true">📖</span>
+          <div class="principle-body">
+            <strong>Progressive disclosure</strong>
+            Begin with a simple explanation and reveal derivations, edge cases, and advanced notes on request.
+          </div>
+        </li>
+        <li class="principle-item">
+          <span class="principle-icon" aria-hidden="true">💻</span>
+          <div class="principle-body">
+            <strong>Code is part of the lesson</strong>
+            C (C11) and Python 3 examples side by side, with comments, sample output, and edge-case notes.
+          </div>
+        </li>
+        <li class="principle-item">
+          <span class="principle-icon" aria-hidden="true">♿</span>
+          <div class="principle-body">
+            <strong>Accessible by default</strong>
+            Keyboard navigation, sufficient contrast, reduced-motion support, semantic HTML, and readable mathematical notation.
+          </div>
+        </li>
+        <li class="principle-item">
+          <span class="principle-icon" aria-hidden="true">🏗️</span>
+          <div class="principle-body">
+            <strong>Honest static-first architecture</strong>
+            Core lessons work without a server. No account required. Progress is stored locally when used.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Audience -->
+    <section class="about-section">
+      <h2>Who is this for?</h2>
+      <ul>
+        <li>Secondary and university students building mathematical foundations</li>
+        <li>Engineering and CSE students connecting formulas to practical problems</li>
+        <li>Competitive programmers learning number theory, combinatorics, and complexity</li>
+        <li>Data Science and AI/ML learners reviewing algebra, vectors, probability, and calculus</li>
+        <li>Curious learners who want to understand the mathematics behind everyday phenomena</li>
+      </ul>
+      <p style="margin-top:var(--space-4)">The site supports beginner, intermediate, and advanced material. No prior level is assumed across all topics.</p>
+    </section>
+
+    <!-- Accessibility -->
+    <section class="about-section" id="accessibility">
+      <h2>Accessibility</h2>
+      <p>BehindTheMath targets <strong>WCAG 2.2 Level AA</strong> as a design goal. Key commitments include:</p>
+      <table class="accessibility-table">
+        <tbody>
+          <tr><td>Keyboard navigation</td><td>All interactive controls are keyboard-accessible, including tabs, sliders, and modals.</td></tr>
+          <tr><td>Focus indicators</td><td>Visible focus rings in orange (#F4A261) on all focusable elements.</td></tr>
+          <tr><td>Reduced motion</td><td>All animations respect <code>prefers-reduced-motion: reduce</code>. Labs update instantly without animation.</td></tr>
+          <tr><td>Color contrast</td><td>Text colors are chosen to meet AA contrast ratios on all backgrounds.</td></tr>
+          <tr><td>Semantic HTML</td><td>Proper landmark regions: header, nav, main, section, footer with ARIA labels.</td></tr>
+          <tr><td>Screen readers</td><td>Meaningful alt text, aria-live regions for dynamic content, aria-label on interactive controls.</td></tr>
+          <tr><td>Math rendering</td><td>KaTeX renders formulas with accessible MathML structure where possible.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Content approach -->
+    <section class="about-section">
+      <h2>Content Approach</h2>
+      <p>Lesson content is authored to be mathematically accurate, with careful attention to:</p>
+      <ul>
+        <li>Conditions and domain restrictions stated alongside each formula</li>
+        <li>Unit conventions made explicit</li>
+        <li>Common mistakes and edge cases highlighted</li>
+        <li>Code examples tested for correctness and edge-case handling</li>
+      </ul>
+      <div class="assumption-note">
+        <strong>No accreditation claim</strong>
+        BehindTheMath is an independent educational resource. It does not claim certification, formal accreditation, or endorsement by any educational institution.
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section class="about-section">
+      <h2>What is and isn't included</h2>
+      <p><strong>Included:</strong> Formula lessons, interactive visualizations, C and Python code examples, practice questions, a searchable formula library, and a visual lab.</p>
+      <p><strong>Not included (by design):</strong> User accounts, cloud-synced progress, server-side databases, arbitrary code execution, paid courses, or social features. These may be considered later as separate features.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="margin-bottom:var(--space-4)">
+          <div class="site-logo-icon">∑</div>
+          <span class="site-logo-text">BehindTheMath</span>
+        </a>
+        <p>Understand the formula. Explore the relationship. See the math behind it.</p>
+        <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:rgb(241 250 238 / 40%)">
+          Presented by <strong style="color:var(--color-button)">Santunu Kaysar</strong><br>
+          Helped by <strong style="color:var(--color-button)">Intellisoft Innovations</strong>
+        </p>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul class="footer-links">
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="library.html">Formula Library</a></li>
+        <li><a href="lab.html">Visual Lab</a></li>
+        <li><a href="practice.html">Practice</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>About</h4><ul class="footer-links">
+        <li><a href="#attribution">Attribution</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="404.html">404 Page</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BehindTheMath</span>
+      <span class="footer-attribution">Presented by Santunu Kaysar · Helped by Intellisoft Innovations</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary btn-icon" style="position:fixed;bottom:24px;right:24px;z-index:var(--z-sticky);border-radius:50%;width:44px;height:44px;justify-content:center;" aria-label="Back to top" hidden>↑</button>
+
+<script src="js/search-index.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
