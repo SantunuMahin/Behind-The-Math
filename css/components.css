@@ -1889,6 +1889,19 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   font-weight: var(--weight-medium);
 }
 
+.footer-love {
+  color: rgb(241 250 238 / 60%);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 767px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+}
+
 /* ── Accordion / Expandable ──────────────────────────────── */
 
 .accordion-item {
