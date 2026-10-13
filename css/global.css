@@ -18,6 +18,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   background:  var(--color-background);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ── Focus ───────────────────────────────────────────────── */
@@ -121,6 +123,13 @@ pre code {
 
 /* ── Tables ──────────────────────────────────────────────── */
 
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--space-6);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -139,6 +148,12 @@ th {
   background: var(--color-surface-hover, #F0F6FA);
 }
 tr:hover td { background: var(--color-surface-hover, #F0F6FA); }
+
+@media (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
 
 /* ── Layout containers ───────────────────────────────────── */
 

@@ -152,6 +152,22 @@
   .nav-search-btn .nav-search-label { display: none; }
 }
 
+@media (max-width: 767px) {
+  .nav-search-btn {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 var(--space-3);
+    justify-content: center;
+  }
+  .nav-search-btn kbd { display: none; }
+  .hamburger {
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* ── Mobile Navigation ───────────────────────────────────── */
 
 .mobile-nav {
@@ -347,6 +363,23 @@
   color: var(--color-muted);
   display: flex;
   gap: var(--space-4);
+}
+
+@media (max-width: 767px) {
+  .search-modal {
+    padding-top: var(--space-4);
+    align-items: flex-start;
+  }
+  .search-modal-panel {
+    width: calc(100vw - 24px);
+    max-height: calc(100svh - 48px);
+  }
+  .search-results {
+    max-height: calc(100svh - 150px);
+  }
+  .search-tip {
+    display: none;
+  }
 }
 
 /* ── Buttons ─────────────────────────────────────────────── */
@@ -787,6 +820,35 @@
   margin: 0;
   border-radius: 0;
   padding: var(--space-6);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .code-tab-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    padding: var(--space-2);
+  }
+  .code-tab-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .code-tab-btn {
+    white-space: nowrap;
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2);
+    flex-shrink: 0;
+  }
+  .code-copy-btn {
+    flex-shrink: 0;
+  }
+  .code-panel pre {
+    padding: var(--space-4);
+    font-size: 13px;
+    line-height: 1.45;
+  }
 }
 
 /* Syntax highlighting (basic) */
@@ -838,7 +900,8 @@
 
 @media (max-width: 767px) {
   .lab-body { grid-template-columns: 1fr; }
-  .lab-controls { border-left: none; border-top: 1px solid var(--color-border); }
+  .lab-controls { border-left: none; border-top: 1px solid var(--color-border); padding: var(--space-4); }
+  .lab-canvas-area { padding: var(--space-3); }
 }
 
 .lab-canvas-area {
@@ -849,7 +912,8 @@
   background: var(--color-background);
 }
 
-.lab-canvas-area canvas {
+.lab-canvas-area canvas,
+.lab-canvas-area svg {
   max-width: 100%;
   height: auto;
 }
@@ -920,6 +984,22 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
 }
 .ctrl-number:focus { border-color: var(--color-secondary); outline: none; }
 
+@media (max-width: 767px) {
+  input[type="range"] {
+    height: 10px;
+    margin-block: var(--space-1);
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    width: 26px;
+    height: 26px;
+  }
+  .ctrl-number {
+    width: 75px;
+    min-height: 40px;
+    font-size: 16px !important;
+  }
+}
+
 /* Result display */
 .lab-result-panel {
   background: var(--color-primary);
@@ -982,26 +1062,51 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   margin-bottom: var(--space-5);
 }
 
-.practice-choices {
+.practice-choices,
+.practice-options {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
   list-style: none;
   padding: 0;
 }
 
-.practice-choice {
+.practice-choice,
+.practice-option {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+  min-height: 48px;
 }
 
-.practice-choice input[type="radio"] {
-  width: 18px; height: 18px;
+.practice-choice:hover,
+.practice-option:hover {
+  border-color: var(--color-secondary);
+  background: rgba(69, 123, 157, 0.05);
+}
+
+.practice-choice input[type="radio"],
+.practice-option input[type="radio"] {
+  width: 20px; height: 20px;
   accent-color: var(--color-primary);
   cursor: pointer;
   flex-shrink: 0;
+}
+
+.practice-question-text {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-relaxed);
 }
 
 .practice-choice label {
@@ -1011,11 +1116,12 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
 }
 
 .practice-numeric-input {
-  width: 120px;
-  padding: var(--space-3) var(--space-4);
+  width: 140px;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  font-size: var(--text-base);
+  font-size: 16px !important;
   font-family: var(--font-body);
   transition: border-color var(--transition-fast);
 }
@@ -1025,7 +1131,13 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: var(--space-4);
+}
+
+.practice-actions .btn {
+  min-height: 42px;
+  padding: var(--space-2) var(--space-4);
 }
 
 .practice-hint {
@@ -1080,11 +1192,16 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-block: var(--space-6);
 }
 
-.variable-legend table { margin-bottom: 0; }
+.variable-legend table {
+  margin-bottom: 0;
+  width: 100%;
+  min-width: 500px;
+}
 
 .variable-symbol {
   font-family: var(--font-code);
@@ -1309,6 +1426,17 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   color: var(--color-primary);
 }
 
+@media (max-width: 767px) {
+  .lesson-nav {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .lesson-nav-link {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
 /* ── Hero Section ────────────────────────────────────────── */
 
 .hero {
@@ -1411,6 +1539,16 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   max-width: 700px;
   margin-inline: auto;
   border: 1px solid var(--color-border);
+}
+
+@media (max-width: 767px) {
+  .home-search {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+  .home-search input {
+    font-size: var(--text-base);
+  }
 }
 
 .home-search-icon { color: var(--color-muted); flex-shrink: 0; }

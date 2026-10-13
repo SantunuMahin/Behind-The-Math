@@ -68,6 +68,16 @@
       white-space: nowrap;
     }
     .path-arrow { opacity: 0.4; }
+
+    @media (max-width: 767px) {
+      .learning-path { padding: var(--space-5) var(--space-4); }
+      .path-arrow { display: none; }
+      .path-steps { gap: var(--space-2); }
+      .subject-block-header { padding: var(--space-4); }
+      .subject-block-body { padding: var(--space-4); }
+      .topic-item { flex-direction: column; align-items: flex-start; gap: var(--space-2); padding: var(--space-3) var(--space-4); }
+      .topic-item-meta { align-self: flex-start; }
+    }
   </style>
 </head>
 <body>

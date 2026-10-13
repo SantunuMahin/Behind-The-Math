@@ -36,6 +36,37 @@
     }
     .lib-search-wrap input { border: none; outline: none; font-family: var(--font-body); font-size: var(--text-sm); background: none; width: 100%; color: var(--color-text-dark); }
     .library-count { font-size: var(--text-sm); color: var(--color-muted); margin-left: auto; white-space: nowrap; }
+
+    @media (max-width: 767px) {
+      .library-toolbar {
+        padding: var(--space-3) 0;
+      }
+      .library-toolbar .container {
+        gap: var(--space-2);
+      }
+      .lib-search-wrap {
+        width: 100%;
+        min-width: 100%;
+      }
+      .lib-search-wrap input {
+        font-size: 16px !important;
+      }
+      .filter-chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+      }
+      .filter-chips::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-chips .filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+    }
   </style>
 </head>
 <body>
