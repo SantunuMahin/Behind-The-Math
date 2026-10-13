@@ -39,11 +39,21 @@
   --radius-xl: 32px;
   --radius-full: 9999px;
 
+  /* Gradients & Lighting */
+  --gradient-hero:        linear-gradient(135deg, #0d1e38 0%, #1d3557 50%, #2b547e 100%);
+  --gradient-accent:      linear-gradient(135deg, #A8DADC 0%, #457B9D 100%);
+  --gradient-accent-warm: linear-gradient(135deg, #F4A261 0%, #E63946 100%);
+  --gradient-card-top:    linear-gradient(90deg, #457B9D 0%, #A8DADC 50%, #2A9D8F 100%);
+  --gradient-text:        linear-gradient(135deg, #A8DADC 0%, #F1FAEE 100%);
+
   /* Shadows */
-  --shadow-xs:   0 1px 3px rgb(29 53 87 / 6%);
-  --shadow-card: 0 8px 28px rgb(29 53 87 / 8%);
-  --shadow-md:   0 12px 40px rgb(29 53 87 / 12%);
-  --shadow-lg:   0 24px 64px rgb(29 53 87 / 16%);
+  --shadow-xs:         0 1px 3px rgb(29 53 87 / 6%);
+  --shadow-card:       0 8px 24px rgb(29 53 87 / 6%), 0 2px 6px rgb(29 53 87 / 4%);
+  --shadow-card-hover: 0 18px 40px -8px rgb(29 53 87 / 15%), 0 4px 14px -2px rgb(29 53 87 / 8%);
+  --shadow-md:         0 12px 40px rgb(29 53 87 / 12%);
+  --shadow-lg:         0 24px 64px rgb(29 53 87 / 16%);
+  --shadow-glow:       0 0 24px -2px rgb(168 218 220 / 45%);
+  --shadow-glass:      0 16px 40px rgb(29 53 87 / 10%), inset 0 1px 0 rgb(255 255 255 / 80%);
 
   /* Layout */
   --content-width: 1200px;

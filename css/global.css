@@ -26,7 +26,11 @@ body {
   font-size:   var(--text-base);
   line-height: var(--leading-relaxed);
   color:       var(--color-text-dark);
-  background:  var(--color-background);
+  background-color: var(--color-background);
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(168, 218, 220, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(69, 123, 157, 0.07) 0%, transparent 50%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -48,6 +52,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:  var(--weight-bold);
   line-height:  var(--leading-tight);
   color:        var(--color-primary);
+  letter-spacing: -0.015em;
+}
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gradient-text-accent {
+  background: var(--gradient-accent-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 h1 { font-size: var(--text-4xl); }
