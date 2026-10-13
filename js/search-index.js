@@ -4,7 +4,7 @@
    Total entries: 86
    ============================================================ */
 
-window.FORMULA_INDEX = [
+window.FORMULA_INDEX = window.BTM_FORMULAS = [
   {
     "id": "circle-area",
     "title": "Circle Area & Circumference",

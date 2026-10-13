@@ -33,10 +33,15 @@
     return score;
   }
 
+  // ── Access formulas dataset safely ───────────────────────
+  function getFormulas() {
+    return (typeof window !== 'undefined' && (window.BTM_FORMULAS || window.FORMULA_INDEX)) || [];
+  }
+
   // ── Search formulas ───────────────────────────────────────
   function search(query, limit = 8) {
     if (!query || !query.trim()) return [];
-    const results = BTM_FORMULAS
+    const results = getFormulas()
       .map(f => ({ formula: f, score: scoreFormula(f, query) }))
       .filter(r => r.score > 0)
       .sort((a, b) => b.score - a.score)
@@ -47,7 +52,7 @@
 
   // ── Filter formulas ───────────────────────────────────────
   function filterFormulas({ subject, level, hasDemo, query } = {}) {
-    let results = BTM_FORMULAS;
+    let results = getFormulas();
 
     // Deduplicate by id
     const seen = new Set();
@@ -247,6 +252,20 @@
 
     let currentFilters = { subject: 'all', level: 'all', hasDemo: false, query: '' };
 
+    function renderMath() {
+      if (typeof katex !== 'undefined' && katex.renderToString) {
+        grid.querySelectorAll('.formula-render').forEach(el => {
+          const latex = el.dataset.latex;
+          if (!latex) return;
+          try {
+            el.innerHTML = katex.renderToString(latex, { throwOnError: false });
+          } catch (e) {
+            el.textContent = latex;
+          }
+        });
+      }
+    }
+
     function render() {
       const results = filterFormulas(currentFilters);
       // Deduplicate
@@ -279,7 +298,7 @@
             </div>
           </div>
           <div class="formula-card-expr" aria-label="Formula: ${escHtml(f.title)}">
-            <span class="formula-render" data-latex="${escHtml(f.formulaLatex)}"></span>
+            <span class="formula-render" data-latex="${escHtml(f.formulaLatex)}">${escHtml(f.formulaLatex)}</span>
           </div>
           <p class="formula-card-summary">${escHtml(f.summary)}</p>
           <div class="formula-card-footer">
@@ -288,17 +307,23 @@
         </div>
       `).join('');
 
-      // Render KaTeX
-      if (window.renderMathInElement) {
-        grid.querySelectorAll('.formula-render').forEach(el => {
-          const latex = el.dataset.latex;
-          try {
-            el.innerHTML = katex.renderToString(latex, { throwOnError: false });
-          } catch (e) {
-            el.textContent = latex;
+      renderMath();
+    }
+
+    // If KaTeX or page finishes loading later, re-run math rendering
+    window.addEventListener('load', renderMath);
+
+    // Fallback: If dataset not loaded yet, fetch data/formulas.json asynchronously
+    if (!getFormulas().length) {
+      fetch('data/formulas.json')
+        .then(res => res.json())
+        .then(data => {
+          if (Array.isArray(data) && data.length) {
+            window.FORMULA_INDEX = window.BTM_FORMULAS = data;
+            render();
           }
-        });
-      }
+        })
+        .catch(err => console.warn('Could not load fallback formulas:', err));
     }
 
     // Filter buttons
