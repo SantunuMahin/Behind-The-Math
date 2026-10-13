@@ -76,8 +76,43 @@
     return results;
   }
 
+  // ── Resolve relative href based on current directory ─────
+  function resolveFormulaHref(href) {
+    if (!href) return '#';
+    if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('#')) {
+      return href;
+    }
+
+    // Determine if current page is inside the lessons/ subfolder
+    const isInsideLessons = (function() {
+      if (typeof window !== 'undefined' && window.location) {
+        const path = window.location.pathname || '';
+        if (path.includes('/lessons/')) return true;
+      }
+      const logo = document.querySelector('.site-logo');
+      if (logo) {
+        const h = logo.getAttribute('href') || '';
+        if (h.startsWith('../')) return true;
+      }
+      return false;
+    })();
+
+    if (isInsideLessons) {
+      if (href.startsWith('lessons/')) {
+        // E.g. 'lessons/gcd-lcm.html' -> 'gcd-lcm.html' (same directory)
+        return href.slice('lessons/'.length);
+      } else {
+        // E.g. 'learn.html#algebra' -> '../learn.html#algebra'
+        return '../' + href;
+      }
+    } else {
+      // Root level (index.html, library.html, etc.)
+      return href;
+    }
+  }
+
   // ── Expose globally ───────────────────────────────────────
-  window.BTMSearch = { search, filterFormulas };
+  window.BTMSearch = { search, filterFormulas, resolveFormulaHref };
 
   // ── Initialize search UI ──────────────────────────────────
   function initSearchModal() {
@@ -141,7 +176,7 @@
       }
 
       results.innerHTML = formulas.map(f => `
-        <a class="search-result-item" href="${escHtml(f.href)}">
+        <a class="search-result-item" href="${escHtml(resolveFormulaHref(f.href))}">
           <div style="flex:1;min-width:0">
             <div class="search-result-formula">${escHtml(f.title)}</div>
             <div class="search-result-subject">${escHtml(f.subject)} · ${capitalize(f.level)}</div>
@@ -179,7 +214,7 @@
         if (!hits.length) { suggestionsBox.hidden = true; return; }
         suggestionsBox.hidden = false;
         suggestionsBox.innerHTML = hits.map(f => `
-          <a class="search-result-item" href="${escHtml(f.href)}">
+          <a class="search-result-item" href="${escHtml(resolveFormulaHref(f.href))}">
             <div style="flex:1;min-width:0">
               <div class="search-result-formula">${escHtml(f.title)}</div>
               <div class="search-result-subject">${escHtml(f.subject)}</div>
@@ -248,7 +283,7 @@
           </div>
           <p class="formula-card-summary">${escHtml(f.summary)}</p>
           <div class="formula-card-footer">
-            <a href="${escHtml(f.href)}" class="btn btn-outline-dark btn-sm">Explore formula →</a>
+            <a href="${escHtml(resolveFormulaHref(f.href))}" class="btn btn-outline-dark btn-sm">Explore formula →</a>
           </div>
         </div>
       `).join('');

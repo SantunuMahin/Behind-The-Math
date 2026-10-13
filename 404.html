@@ -2,6 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      var href = window.location.href;
+      // If a nested /lessons/lessons/ duplicate URL is detected, immediately redirect to the correct lesson
+      if (href.indexOf('/lessons/lessons/') !== -1) {
+        window.location.replace(href.replace('/lessons/lessons/', '/lessons/'));
+        return;
+      }
+      // Calculate repo root for 404 assets and links
+      var m = window.location.pathname.match(/^(.*\/Behind-The-Math\/)/i);
+      var root = m ? m[1] : '/';
+      var base = document.createElement('base');
+      base.href = root;
+      document.head.appendChild(base);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found — BehindTheMath</title>
   <meta name="description" content="The page you were looking for could not be found. Return to BehindTheMath to explore mathematics.">
