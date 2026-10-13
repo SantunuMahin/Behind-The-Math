@@ -48,7 +48,7 @@
   /* Layout */
   --content-width: 1200px;
   --reading-width:  760px;
-  --nav-height:      68px;
+  --nav-height:      64px;
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', 'Manrope', system-ui, sans-serif;
@@ -110,7 +110,13 @@
   --z-modal:    400;
   --z-toast:    500;
 }
-
+ 
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 58px;
+  }
+}
+ 
 /* Reduced-motion preference — disable transitions site-wide */
 @media (prefers-reduced-motion: reduce) {
   :root {
