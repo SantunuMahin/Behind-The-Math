@@ -698,6 +698,10 @@
   text-align: center;
   position: relative;
   box-shadow: 0 10px 30px rgba(19, 38, 61, 0.25);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .formula-panel ::selection {
@@ -710,6 +714,9 @@
   font-size: 1.65rem;
   color: var(--color-text);
   margin: var(--space-4) 0;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .formula-panel .katex {
@@ -738,10 +745,23 @@
 
 @media (max-width: 767px) {
   .formula-panel {
-    padding: var(--space-7) var(--space-4) var(--space-5);
+    padding: var(--space-8) var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
   }
-  .formula-panel .katex-display {
-    font-size: 1.3rem;
+  .formula-panel .katex-display,
+  .formula-panel .formula-latex {
+    font-size: 1.15rem;
+    margin: var(--space-2) 0;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-2);
+  }
+  .formula-panel .formula-copy-btn {
+    top: 8px;
+    right: 8px;
+    font-size: 11px;
+    padding: 3px 8px;
   }
 }
 
@@ -1361,17 +1381,28 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
 
 .lesson-layout {
   display: grid;
-  grid-template-columns: 1fr 240px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: var(--space-10);
   align-items: start;
   padding-block: var(--space-7);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 @media (max-width: 1023px) {
   .lesson-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
   }
   .lesson-toc-col { display: none; }
+}
+
+.lesson-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
 }
 
 .lesson-content h2 { margin-top: var(--space-9); margin-bottom: var(--space-4); }
@@ -1972,3 +2003,35 @@ input[type="range"]:focus-visible { outline: 3px solid var(--color-focus); outli
   font-size: var(--text-lg);
   max-width: 560px;
 }
+
+/* ── Back to Top Button ──────────────────────────────────── */
+
+#back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: var(--z-sticky);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+#back-to-top:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+  #back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-sm);
+  }
+}
+

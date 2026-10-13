@@ -104,10 +104,11 @@
         <section aria-labelledby="formula-heading">
           <h2 id="formula-heading">The Formulas</h2>
           <div class="formula-panel" data-latex="P(n,r) = \dfrac{n!}{(n-r)!} \qquad C(n,r) = \binom{n}{r} = \dfrac{n!}{r!(n-r)!}">
-            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-3)">Order Matters vs Order Does Not Matter</p>
-            $$P(n,r) = \dfrac{n!}{(n-r)!} \qquad C(n,r) = \binom{n}{r} = \dfrac{n!}{r!(n-r)!} = \dfrac{P(n,r)}{r!}$$
-            <p style="color:rgb(241 250 238 / 60%);font-size:var(--text-sm);margin-top:var(--space-3)">Notice that $C(n,r)$ simply divides $P(n,r)$ by $r!$, collapsing all $r!$ internal permutations of the selected items into 1 unique group.</p>
-            <button class="btn btn-sm formula-copy-btn" style="position:absolute;top:12px;right:12px;background:rgb(255 255 255/10%);color:var(--color-text);border:1px solid rgb(255 255 255/20%)">⎘ Copy LaTeX</button>
+            <p style="color:var(--color-button);font-size:var(--text-sm);margin-bottom:var(--space-2);font-weight:var(--weight-semibold)">Order Matters vs. Order Does Not Matter</p>
+            $$P(n,r) = \dfrac{n!}{(n-r)!}$$
+            $$C(n,r) = \binom{n}{r} = \dfrac{n!}{r!(n-r)!} = \dfrac{P(n,r)}{r!}$$
+            <p style="color:rgb(241 250 238 / 75%);font-size:var(--text-sm);margin-top:var(--space-3)">Notice that $C(n,r)$ simply divides $P(n,r)$ by $r!$, collapsing all $r!$ internal orderings into 1 unique group.</p>
+            <button class="btn btn-sm formula-copy-btn">⎘ Copy LaTeX</button>
           </div>
         </section>
 

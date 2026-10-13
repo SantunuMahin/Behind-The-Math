@@ -286,6 +286,126 @@
         <div class="practice-explanation">For f(x) = x², the derivative is f'(x) = 2x (by the power rule). At x = 4, f'(4) = 2 × 4 = 8. The tangent line at (4, 16) has slope 8.</div>
       </div>
 
+      <!-- Q7: Combinatorics -->
+      <div class="practice-question" data-answer="10" data-topic="probability" aria-labelledby="q7-text">
+        <div class="practice-q-number">Question 7 · Counting &amp; Probability</div>
+        <p class="practice-q-text" id="q7-text">How many ways can you choose a committee of 2 people from a group of 5 candidates? Compute C(5, 2).</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q7-text">
+          <li class="practice-choice"><input type="radio" name="q7" value="20" id="q7a"><label for="q7a">20</label></li>
+          <li class="practice-choice"><input type="radio" name="q7" value="10" id="q7b"><label for="q7b">10</label></li>
+          <li class="practice-choice"><input type="radio" name="q7" value="25" id="q7c"><label for="q7c">25</label></li>
+          <li class="practice-choice"><input type="radio" name="q7" value="7" id="q7d"><label for="q7d">7</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Use C(n, r) = n! / (r!(n-r)!). Here C(5, 2) = (5 × 4) / (2 × 1).</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">C(5, 2) = 5! / (2! × 3!) = (5 × 4) / 2 = 10. Order does not matter, so each pair is counted exactly once.</div>
+      </div>
+
+      <!-- Q8: Logarithms -->
+      <div class="practice-question" data-answer="6" data-topic="foundations" aria-labelledby="q8-text">
+        <div class="practice-q-number">Question 8 · Foundations</div>
+        <p class="practice-q-text" id="q8-text">Evaluate the expression: log₂(64).</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q8-text">
+          <li class="practice-choice"><input type="radio" name="q8" value="32" id="q8a"><label for="q8a">32</label></li>
+          <li class="practice-choice"><input type="radio" name="q8" value="8" id="q8b"><label for="q8b">8</label></li>
+          <li class="practice-choice"><input type="radio" name="q8" value="6" id="q8c"><label for="q8c">6</label></li>
+          <li class="practice-choice"><input type="radio" name="q8" value="12" id="q8d"><label for="q8d">12</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: log_b(x) = y asks: "What power must 2 be raised to in order to produce 64?" (2^y = 64).</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">Since 2⁶ = 64 (2 × 2 × 2 × 2 × 2 × 2 = 64), by the inverse definition of logarithms, log₂(64) = 6.</div>
+      </div>
+
+      <!-- Q9: Percentage Change -->
+      <div class="practice-question" data-answer="60" data-topic="foundations" aria-labelledby="q9-text">
+        <div class="practice-q-number">Question 9 · Foundations</div>
+        <p class="practice-q-text" id="q9-text">A product's price increases from $50 to $80. What is the percentage change?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q9-text">
+          <li class="practice-choice"><input type="radio" name="q9" value="30" id="q9a"><label for="q9a">+30%</label></li>
+          <li class="practice-choice"><input type="radio" name="q9" value="60" id="q9b"><label for="q9b">+60%</label></li>
+          <li class="practice-choice"><input type="radio" name="q9" value="37.5" id="q9c"><label for="q9c">+37.5%</label></li>
+          <li class="practice-choice"><input type="radio" name="q9" value="160" id="q9d"><label for="q9d">+160%</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Percentage change = ((x_new − x_old) / x_old) × 100%. Here x_new = 80 and x_old = 50.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">Δ% = ((80 − 50) / 50) × 100% = (30 / 50) × 100% = 0.60 × 100% = +60%. Notice that the baseline denominator is the old price ($50).</div>
+      </div>
+
+      <!-- Q10: Statistics Variance -->
+      <div class="practice-question" data-answer="0" data-topic="probability" aria-labelledby="q10-text">
+        <div class="practice-q-number">Question 10 · Statistics</div>
+        <p class="practice-q-text" id="q10-text">What is the standard deviation of the constant dataset: {7, 7, 7, 7}?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q10-text">
+          <li class="practice-choice"><input type="radio" name="q10" value="7" id="q10a"><label for="q10a">7</label></li>
+          <li class="practice-choice"><input type="radio" name="q10" value="0" id="q10b"><label for="q10b">0</label></li>
+          <li class="practice-choice"><input type="radio" name="q10" value="1" id="q10c"><label for="q10c">1</label></li>
+          <li class="practice-choice"><input type="radio" name="q10" value="4" id="q10d"><label for="q10d">4</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Standard deviation measures dispersion around the mean. If every item equals the mean, how much deviation is there?</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">The mean is 7. Each deviation (x_i − μ) = (7 − 7) = 0. Therefore, the variance and standard deviation are both 0. Zero spread means zero variance.</div>
+      </div>
+
+      <!-- Q11: Trigonometry -->
+      <div class="practice-question" data-answer="0.5" data-topic="geometry" aria-labelledby="q11-text">
+        <div class="practice-q-number">Question 11 · Trigonometry</div>
+        <p class="practice-q-text" id="q11-text">On the unit circle, what is the exact value of sin(30°) or sin(π/6)?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q11-text">
+          <li class="practice-choice"><input type="radio" name="q11" value="0.5" id="q11a"><label for="q11a">1/2 (0.5)</label></li>
+          <li class="practice-choice"><input type="radio" name="q11" value="0.866" id="q11b"><label for="q11b">√3/2 ≈ 0.866</label></li>
+          <li class="practice-choice"><input type="radio" name="q11" value="0.707" id="q11c"><label for="q11c">√2/2 ≈ 0.707</label></li>
+          <li class="practice-choice"><input type="radio" name="q11" value="1" id="q11d"><label for="q11d">1</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: In a 30°-60°-90° special triangle, the side opposite the 30° angle is half the hypotenuse.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">In a 30°-60°-90° right triangle on the unit circle (hypotenuse = 1), the opposite vertical side (y = sin θ) is exactly 1/2 = 0.5.</div>
+      </div>
+
+      <!-- Q12: Time Complexity -->
+      <div class="practice-question" data-answer="O(n log n)" data-topic="algebra" aria-labelledby="q12-text">
+        <div class="practice-q-number">Question 12 · Computer Science</div>
+        <p class="practice-q-text" id="q12-text">What is the asymptotic time complexity of Merge Sort, governed by the recurrence T(n) = 2T(n/2) + O(n)?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q12-text">
+          <li class="practice-choice"><input type="radio" name="q12" value="O(n)" id="q12a"><label for="q12a">O(n)</label></li>
+          <li class="practice-choice"><input type="radio" name="q12" value="O(n log n)" id="q12b"><label for="q12b">O(n log n)</label></li>
+          <li class="practice-choice"><input type="radio" name="q12" value="O(n^2)" id="q12c"><label for="q12c">O(n²)</label></li>
+          <li class="practice-choice"><input type="radio" name="q12" value="O(log n)" id="q12d"><label for="q12d">O(log n)</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: The recurrence tree has log₂(n) levels, and each level does a total of O(n) merge work.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">By the Master Theorem (Case 2 with a = 2, b = 2, d = 1), or by summing O(n) work across log₂(n) recursive levels, the total running time is O(n log n).</div>
+      </div>
+
     </div><!-- end practice-section -->
 
     <div class="text-center" style="margin-top:var(--space-7)">
