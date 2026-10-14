@@ -7,6 +7,41 @@
   <meta name="description" content="Interactive mathematical experiments. Change values and see formulas respond in real time.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
@@ -198,72 +233,109 @@
         </div>
       </div>
 
-      <!-- Coming Soon Labs -->
-      <div class="lab-card coming-soon">
-        <div class="lab-card-preview" style="background:linear-gradient(135deg,#2d3748,#4a5568)">
-          <span style="font-size:48px;opacity:0.3" aria-hidden="true">∫</span>
-        </div>
-        <div class="lab-card-body">
-          <div style="margin-bottom:var(--space-2)"><span class="badge badge-advanced">Advanced</span></div>
-          <h3>Integral as Area</h3>
-          <p>Riemann rectangles approximating definite integrals. Adjust rectangle count and endpoints.</p>
-          <span class="btn btn-outline-dark btn-sm" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
-        </div>
-      </div>
-
-      <div class="lab-card coming-soon">
-        <div class="lab-card-preview" style="background:linear-gradient(135deg,#2d3748,#4a5568)">
-          <span style="font-size:48px;opacity:0.3" aria-hidden="true">🎲</span>
-        </div>
-        <div class="lab-card-body">
-          <div style="margin-bottom:var(--space-2)"><span class="badge badge-intermediate">Intermediate</span></div>
-          <h3>Probability Simulator</h3>
-          <p>Run coin flip and dice roll trials. Compare observed frequency to theoretical probability.</p>
-          <span class="btn btn-outline-dark btn-sm" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
-        </div>
-      </div>
-
-      <div class="lab-card coming-soon">
-        <div class="lab-card-preview" style="background:linear-gradient(135deg,#2d3748,#4a5568)">
-          <span style="font-size:48px;opacity:0.3" aria-hidden="true">→</span>
-        </div>
-        <div class="lab-card-body">
-          <div style="margin-bottom:var(--space-2)"><span class="badge badge-intermediate">Intermediate</span></div>
-          <h3>Vector Explorer</h3>
-          <p>Add vector components and visualize magnitude, dot product, and angle between vectors.</p>
-          <span class="btn btn-outline-dark btn-sm" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
-        </div>
-      </div>
-
-      <div class="lab-card coming-soon">
-        <div class="lab-card-preview" style="background:linear-gradient(135deg,#2d3748,#4a5568)">
-          <span style="font-size:48px;opacity:0.3" aria-hidden="true">🔢</span>
+      <!-- Lab F: GCD / LCM -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#2A9D8F)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">🔢</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">gcd(a, b) = gcd(b, r)</div>
         </div>
         <div class="lab-card-body">
           <div style="margin-bottom:var(--space-2)"><span class="badge badge-beginner">Beginner</span></div>
-          <h3>GCD / LCM Visualizer</h3>
-          <p>Step through the Euclidean algorithm visually, watching remainders converge to the GCD.</p>
-          <span class="btn btn-outline-dark btn-sm" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
+          <h3>Euclidean Algorithm &amp; GCD</h3>
+          <p>Step through Euclid's remainder division step-by-step and see how remainders converge to the greatest common divisor.</p>
+          <a href="lessons/gcd-lcm.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
         </div>
       </div>
 
-      <div class="lab-card coming-soon">
-        <div class="lab-card-preview" style="background:linear-gradient(135deg,#2d3748,#4a5568)">
-          <span style="font-size:48px;opacity:0.3" aria-hidden="true">🚀</span>
+      <!-- Lab G: Exponents & Logarithms -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#457B9D)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">📈</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">bʸ = x ⟺ y = log_b(x)</div>
+        </div>
+        <div class="lab-card-body">
+          <div style="margin-bottom:var(--space-2)"><span class="badge badge-beginner">Beginner</span></div>
+          <h3>Logarithm &amp; Exponent Explorer</h3>
+          <p>Slide bases and exponents to see inverse curves in action and understand logarithmic scale compression.</p>
+          <a href="lessons/exponents-logarithms.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
+        </div>
+      </div>
+
+      <!-- Lab H: Percentages & Ratios -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#F4A261)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">⚖️</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">Part / Whole × 100%</div>
+        </div>
+        <div class="lab-card-body">
+          <div style="margin-bottom:var(--space-2)"><span class="badge badge-beginner">Beginner</span></div>
+          <h3>Percentages &amp; Proportions</h3>
+          <p>Adjust parts and totals interactively to visualize equivalent fractions, markups, discounts, and scaling ratios.</p>
+          <a href="lessons/percentages-ratios.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
+        </div>
+      </div>
+
+      <!-- Lab I: Permutations & Combinations -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#2A9D8F)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">🗂️</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">P(n,r) vs C(n,r)</div>
         </div>
         <div class="lab-card-body">
           <div style="margin-bottom:var(--space-2)"><span class="badge badge-intermediate">Intermediate</span></div>
-          <h3>Motion & Energy Lab</h3>
-          <p>Set initial velocity and acceleration. Plot displacement, velocity, and kinetic energy curves.</p>
-          <span class="btn btn-outline-dark btn-sm" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
+          <h3>Combinatorics Explorer</h3>
+          <p>Compare ordered permutations versus unordered combinations with real-time factorial and subset calculations.</p>
+          <a href="lessons/permutations-combinations.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
+        </div>
+      </div>
+
+      <!-- Lab J: Bayes' Theorem & Probability -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#E63946)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">🎲</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">P(A|B) = P(B|A)P(A)/P(B)</div>
+        </div>
+        <div class="lab-card-body">
+          <div style="margin-bottom:var(--space-2)"><span class="badge badge-intermediate">Intermediate</span></div>
+          <h3>Bayes' Theorem &amp; Probability Space</h3>
+          <p>Adjust prior beliefs, true positives, and false alarm rates to visualize 2D area probability updating and the base rate fallacy.</p>
+          <a href="lessons/probability-bayes.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
+        </div>
+      </div>
+
+      <!-- Lab K: Mean & Standard Deviation -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#457B9D)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">📊</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">σ = √(Σ(x - μ)² / N)</div>
+        </div>
+        <div class="lab-card-body">
+          <div style="margin-bottom:var(--space-2)"><span class="badge badge-beginner">Beginner</span></div>
+          <h3>Variance &amp; Standard Deviation</h3>
+          <p>Plot custom data points and watch the mean line and squared deviation bands stretch and compress live.</p>
+          <a href="lessons/mean-standard-deviation.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
+        </div>
+      </div>
+
+      <!-- Lab L: Time Complexity & Big O -->
+      <div class="lab-card">
+        <div class="lab-card-preview" style="background:linear-gradient(135deg,#1D3557,#F4A261)">
+          <span style="font-size:48px;opacity:0.4" aria-hidden="true">⚡</span>
+          <div style="position:absolute;bottom:12px;font-family:var(--font-code);font-size:12px;color:#A8DADC">O(1) &lt; O(log n) &lt; O(n) &lt; O(n²)</div>
+        </div>
+        <div class="lab-card-body">
+          <div style="margin-bottom:var(--space-2)"><span class="badge badge-advanced">Advanced</span></div>
+          <h3>Big-O Complexity Visualizer</h3>
+          <p>Scale input size n from 1 to 1,000,000 and compare how O(1), O(log n), O(n), O(n log n), and O(n²) growth rates diverge.</p>
+          <a href="lessons/time-complexity.html#lab" class="btn btn-outline-dark btn-sm">Open Lab →</a>
         </div>
       </div>
 
     </div>
 
     <div class="assumption-note">
-      <strong>Note about coming-soon labs</strong>
-      Labs are added as each visualization is completed and mathematically verified. All four active labs are fully functional and updated in real time.
+      <strong>⚡ All 12 Interactive Visual Labs Active</strong>
+      Each experiment runs entirely in your browser with real-time mathematical simulation. Adjust sliders, inspect instantaneous readouts, and explore mathematical relationships interactively.
     </div>
 
   </div>

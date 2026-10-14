@@ -28,7 +28,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "pi",
       "A equals pi r squared"
     ],
-    "href": "lessons/circle-area.html"
+    "href": "lessons/circle-area.html",
+    "video": {
+      "youtubeId": "YokKp3pwVFc",
+      "url": "https://www.youtube.com/watch?v=YokKp3pwVFc",
+      "title": "Area of a circle, how to get the formula",
+      "channel": "Khan Academy"
+    }
   },
   {
     "id": "pythagorean-theorem",
@@ -51,7 +57,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "sides",
       "a squared b squared"
     ],
-    "href": "lessons/pythagorean-theorem.html"
+    "href": "lessons/pythagorean-theorem.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "How many ways are there to prove the Pythagorean theorem?",
+      "channel": "TED-Ed"
+    }
   },
   {
     "id": "heron-formula",
@@ -150,7 +162,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "ax squared",
       "quadratic formula"
     ],
-    "href": "lessons/quadratic-equation.html"
+    "href": "lessons/quadratic-equation.html",
+    "video": {
+      "youtubeId": "MHXO86wKeDY",
+      "url": "https://www.youtube.com/watch?v=MHXO86wKeDY",
+      "title": "The simpler quadratic formula | Ep. 1 Lockdown live math",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "binomial-theorem",
@@ -435,7 +453,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "diagonalization",
       "spectral theory"
     ],
-    "href": "learn.html#linear-algebra"
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "PFDu9oVAE-g",
+      "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g",
+      "title": "Eigenvectors and eigenvalues (Essence of linear algebra, Ch. 14)",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "rank-nullity",
@@ -508,7 +532,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "data compression",
       "matrix factorization"
     ],
-    "href": "learn.html#linear-algebra"
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "gXbThCXjZFM",
+      "url": "https://www.youtube.com/watch?v=gXbThCXjZFM",
+      "title": "Singular Value Decomposition (SVD): Overview",
+      "channel": "Steve Brunton"
+    }
   },
   {
     "id": "gradient-vector",
@@ -722,7 +752,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "orthogonal functions",
       "frequency"
     ],
-    "href": "learn.html#calculus"
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "r6sGWTCMz2k",
+      "url": "https://www.youtube.com/watch?v=r6sGWTCMz2k",
+      "title": "But what is a Fourier series? From heat flow to circle drawings",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "euler-identity",
@@ -746,7 +782,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "cis theta",
       "imaginary unit"
     ],
-    "href": "lessons/exponents-logarithms.html"
+    "href": "lessons/exponents-logarithms.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=v0YEaeIClKY",
+      "title": "What is Euler's formula actually saying?",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "cauchy-riemann",
@@ -793,7 +835,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "least common multiple",
       "euclidean"
     ],
-    "href": "lessons/gcd-lcm.html"
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "AJn843kplDw",
+      "url": "https://www.youtube.com/watch?v=AJn843kplDw",
+      "title": "The Euclidean Algorithm for finding GCD",
+      "channel": "Khan Academy"
+    }
   },
   {
     "id": "fermat-little",
@@ -817,7 +865,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "cryptography",
       "rsa"
     ],
-    "href": "lessons/gcd-lcm.html"
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "w0ZQvZLx2KA",
+      "url": "https://www.youtube.com/watch?v=w0ZQvZLx2KA",
+      "title": "Fermat's Little Theorem",
+      "channel": "Numberphile"
+    }
   },
   {
     "id": "modular-arithmetic",
@@ -866,7 +920,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "fraction",
       "parts per hundred"
     ],
-    "href": "lessons/percentages-ratios.html"
+    "href": "lessons/percentages-ratios.html",
+    "video": {
+      "youtubeId": "RQ2nYUBVvqI",
+      "url": "https://www.youtube.com/watch?v=RQ2nYUBVvqI",
+      "title": "Ratios And Rates",
+      "channel": "Math Antics"
+    }
   },
   {
     "id": "exponents-logarithms",
@@ -892,7 +952,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "natural log",
       "ln"
     ],
-    "href": "lessons/exponents-logarithms.html"
+    "href": "lessons/exponents-logarithms.html",
+    "video": {
+      "youtubeId": "Z5myJ8dg_rM",
+      "url": "https://www.youtube.com/watch?v=Z5myJ8dg_rM",
+      "title": "Introduction to Logarithms",
+      "channel": "Khan Academy"
+    }
   },
   {
     "id": "compound-interest",
@@ -990,7 +1056,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "choose",
       "arrangements"
     ],
-    "href": "lessons/permutations-combinations.html"
+    "href": "lessons/permutations-combinations.html",
+    "video": {
+      "youtubeId": "XqQTXW7XfYA",
+      "url": "https://www.youtube.com/watch?v=XqQTXW7XfYA",
+      "title": "Permutations and Combinations (Part 1)",
+      "channel": "Eddie Woo"
+    }
   },
   {
     "id": "probability-bayes",
@@ -1015,7 +1087,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "prior",
       "likelihood"
     ],
-    "href": "lessons/probability-bayes.html"
+    "href": "lessons/probability-bayes.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=HZGCoVF3YvM",
+      "title": "Bayes theorem, the geometry of changing beliefs",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "inclusion-exclusion",
@@ -1088,7 +1166,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "sigma",
       "mu"
     ],
-    "href": "lessons/mean-standard-deviation.html"
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "SzZ6GpcfoQY",
+      "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY",
+      "title": "Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!!",
+      "channel": "StatQuest with Josh Starmer"
+    }
   },
   {
     "id": "z-score",
@@ -1160,7 +1244,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "rate of change",
       "calculus"
     ],
-    "href": "lessons/derivatives-tangent.html"
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "9vKqVkMQHKk",
+      "url": "https://www.youtube.com/watch?v=9vKqVkMQHKk",
+      "title": "The Paradox of the Derivative (Essence of Calculus, Ch. 2)",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "product-rule",
@@ -1228,7 +1318,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "backpropagation",
       "calculus"
     ],
-    "href": "lessons/derivatives-tangent.html"
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "YG15m2VwSjA",
+      "url": "https://www.youtube.com/watch?v=YG15m2VwSjA",
+      "title": "Visualizing the chain rule and product rule",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "fundamental-calculus",
@@ -1304,7 +1400,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "degree",
       "angle"
     ],
-    "href": "lessons/unit-circle.html"
+    "href": "lessons/unit-circle.html",
+    "video": {
+      "youtubeId": "57VrEiEPD1I",
+      "url": "https://www.youtube.com/watch?v=57VrEiEPD1I",
+      "title": "The Unit Circle, Basic Introduction, Trigonometry",
+      "channel": "The Organic Chemistry Tutor"
+    }
   },
   {
     "id": "law-of-sines",
@@ -1398,7 +1500,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "time complexity",
       "space complexity"
     ],
-    "href": "lessons/time-complexity.html"
+    "href": "lessons/time-complexity.html",
+    "video": {
+      "youtubeId": "__vX2sjlpXU",
+      "url": "https://www.youtube.com/watch?v=__vX2sjlpXU",
+      "title": "Introduction to Big O Notation and Time Complexity",
+      "channel": "Reducible"
+    }
   },
   {
     "id": "master-theorem",
@@ -1618,7 +1726,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "hash function",
       "pigeonhole"
     ],
-    "href": "learn.html#cse"
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "ofTb57aZHZs",
+      "url": "https://www.youtube.com/watch?v=ofTb57aZHZs",
+      "title": "The Birthday Paradox",
+      "channel": "Numberphile"
+    }
   },
   {
     "id": "fast-fourier-transform",
@@ -1642,7 +1756,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "polynomial multiplication",
       "signal processing"
     ],
-    "href": "learn.html#cse"
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "h7apO7q16V0",
+      "url": "https://www.youtube.com/watch?v=h7apO7q16V0",
+      "title": "The Fast Fourier Transform (FFT): Most Ingenious Algorithm?",
+      "channel": "Veritasium"
+    }
   },
   {
     "id": "bellman-optimality",
@@ -1738,7 +1858,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "neural networks",
       "machine learning"
     ],
-    "href": "learn.html#cse"
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "6ArSys5qHAU",
+      "url": "https://www.youtube.com/watch?v=6ArSys5qHAU",
+      "title": "Cross Entropy, Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
   },
   {
     "id": "softmax-function",
@@ -1762,7 +1888,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "multiclass",
       "deep learning"
     ],
-    "href": "learn.html#cse"
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "KpKog-L9veg",
+      "url": "https://www.youtube.com/watch?v=KpKog-L9veg",
+      "title": "The Softmax Function, Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
   },
   {
     "id": "gradient-descent",
@@ -1786,7 +1918,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "loss minimization",
       "machine learning"
     ],
-    "href": "learn.html#cse"
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "IHZwWFHWa-w",
+      "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+      "title": "Gradient descent, how neural networks learn (Chapter 2)",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "cosine-similarity",
@@ -1931,7 +2069,13 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
       "gaussian",
       "sampling"
     ],
-    "href": "lessons/mean-standard-deviation.html"
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "zeJD6dqJ5lo",
+      "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo",
+      "title": "Why the Central Limit Theorem works",
+      "channel": "3Blue1Brown"
+    }
   },
   {
     "id": "chebyshev-inequality",
@@ -2076,4 +2220,5 @@ window.FORMULA_INDEX = window.BTM_FORMULAS = [
     ],
     "href": "lessons/circle-area.html"
   }
-];
+]
+;

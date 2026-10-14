@@ -134,7 +134,23 @@
             return;
           }
 
-          const isCorrect = String(userAns).toLowerCase() === String(correctAns).toLowerCase();
+          let isCorrect = false;
+          const cleanUser = String(userAns).trim().toLowerCase();
+          const cleanCorrect = String(correctAns).trim().toLowerCase();
+
+          if (cleanUser === cleanCorrect) {
+            isCorrect = true;
+          } else {
+            const numUser = parseFloat(cleanUser);
+            const numCorrect = parseFloat(cleanCorrect);
+            if (!isNaN(numUser) && !isNaN(numCorrect)) {
+              // Tolerance of 0.05 or within 1.5% relative error for rounding
+              const diff = Math.abs(numUser - numCorrect);
+              if (diff <= 0.05 || (Math.abs(numCorrect) > 0 && diff / Math.abs(numCorrect) <= 0.015)) {
+                isCorrect = true;
+              }
+            }
+          }
 
           feedbackEl.className = `practice-feedback visible ${isCorrect ? 'correct' : 'incorrect'}`;
           feedbackEl.innerHTML = isCorrect
@@ -145,6 +161,17 @@
           submitBtn.disabled = true;
           if (retryBtn) retryBtn.style.display = 'inline-flex';
         });
+
+        // Enter key support on numeric inputs
+        const numInput = qEl.querySelector('.practice-numeric-input');
+        if (numInput) {
+          numInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              submitBtn.click();
+            }
+          });
+        }
       }
 
       // Retry

@@ -7,6 +7,41 @@
   <meta name="description" content="Test your understanding with math practice questions. Hints before answers, constructive explanations after submission.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
@@ -18,11 +53,14 @@
     .score-card {
       background: var(--color-surface-dark);
       color: var(--color-text);
+      border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
       padding: var(--space-6);
       display: flex;
       gap: var(--space-7);
       flex-wrap: wrap;
+      box-shadow: var(--shadow-card);
+    }
       margin-bottom: var(--space-9);
     }
     .score-item { text-align: center; }
@@ -568,6 +606,206 @@
         <div class="practice-explanation">x = (1·7 + 2·1) / (1 + 2) = 9/3 = 3; y = (1·8 + 2·2) / (1 + 2) = 12/3 = 4. Therefore, P = (3, 4).</div>
       </div>
 
+      <!-- Q21: Compound Interest -->
+      <div class="practice-question" data-answer="$1,210" data-topic="foundations" aria-labelledby="q21-text">
+        <div class="practice-q-number">Question 21 · Financial Foundations & Exponents</div>
+        <p class="practice-q-text" id="q21-text">An investor deposits $1,000 into an account earning 10% annual interest compounded annually ($n = 1$). Using the compound interest formula $A = P(1 + r/n)^{nt}$, what is the total balance after $t = 2$ years?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q21-text">
+          <li class="practice-choice"><input type="radio" name="q21" value="$1,200" id="q21a"><label for="q21a">$1,200</label></li>
+          <li class="practice-choice"><input type="radio" name="q21" value="$1,210" id="q21b"><label for="q21b">$1,210</label></li>
+          <li class="practice-choice"><input type="radio" name="q21" value="$1,221" id="q21c"><label for="q21c">$1,221</label></li>
+          <li class="practice-choice"><input type="radio" name="q21" value="$1,100" id="q21d"><label for="q21d">$1,100</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Substitute into $A = 1000(1 + 0.10)^2 = 1000 \times (1.10)^2$. Notice $(1.10)^2 = 1.21$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$A = 1000(1 + 0.1)^2 = 1000 \times 1.21 = \$1,210$. The extra $10 beyond simple interest ($200) represents interest earned upon year 1's interest (exponential compounding).</div>
+      </div>
+
+      <!-- Q22: Logarithmic Equations -->
+      <div class="practice-question" data-answer="4" data-topic="algebra" aria-labelledby="q22-text">
+        <div class="practice-q-number">Question 22 · Algebra & Logarithms</div>
+        <p class="practice-q-text" id="q22-text">Solve for $x$ in the equation: $\log_3(x) + \log_3(x - 1) = \log_3(12)$.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q22-text">
+          <li class="practice-choice"><input type="radio" name="q22" value="4" id="q22a"><label for="q22a">x = 4</label></li>
+          <li class="practice-choice"><input type="radio" name="q22" value="3" id="q22b"><label for="q22b">x = 3</label></li>
+          <li class="practice-choice"><input type="radio" name="q22" value="-3" id="q22c"><label for="q22c">x = -3</label></li>
+          <li class="practice-choice"><input type="radio" name="q22" value="6" id="q22d"><label for="q22d">x = 6</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: By the logarithm product property, $\log_3(x) + \log_3(x-1) = \log_3(x(x-1))$. Set $x(x-1) = 12$ and discard extraneous negative roots.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$\log_3(x(x-1)) = \log_3(12) \implies x^2 - x - 12 = 0 \implies (x - 4)(x + 3) = 0$. Since the domain of $\log_3(x)$ requires $x > 0$, we discard $x = -3$. The valid solution is $x = 4$.</div>
+      </div>
+
+      <!-- Q23: Heron's Formula -->
+      <div class="practice-question" data-answer="84" data-topic="geometry" aria-labelledby="q23-text">
+        <div class="practice-q-number">Question 23 · Geometry & Triangle Area</div>
+        <p class="practice-q-text" id="q23-text">A triangle has sides $a = 13$, $b = 14$, and $c = 15$. Using Heron's formula $A = \sqrt{s(s-a)(s-b)(s-c)}$, calculate its exact area.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q23-text">
+          <li class="practice-choice"><input type="radio" name="q23" value="84" id="q23a"><label for="q23a">84</label></li>
+          <li class="practice-choice"><input type="radio" name="q23" value="90" id="q23b"><label for="q23b">90</label></li>
+          <li class="practice-choice"><input type="radio" name="q23" value="78" id="q23c"><label for="q23c">78</label></li>
+          <li class="practice-choice"><input type="radio" name="q23" value="105" id="q23d"><label for="q23d">105</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: First find the semi-perimeter $s = (13 + 14 + 15)/2 = 21$. Then calculate $\sqrt{21 \times (21-13) \times (21-14) \times (21-15)}$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$s = 42/2 = 21$. Differences are $s-a = 8$, $s-b = 7$, $s-c = 6$. Then $\text{Area} = \sqrt{21 \times 8 \times 7 \times 6} = \sqrt{(7 \times 3) \times 8 \times 7 \times (2 \times 3)} = \sqrt{7^2 \times 3^2 \times 16} = 7 \times 3 \times 4 = 84$.</div>
+      </div>
+
+      <!-- Q24: Sphere Scaling -->
+      <div class="practice-question" data-answer="8" data-topic="geometry" aria-labelledby="q24-text">
+        <div class="practice-q-number">Question 24 · Geometry & Dimensional Scaling</div>
+        <p class="practice-q-text" id="q24-text">The radius of a sphere is doubled from $r$ to $2r$. By what factor does the volume of the sphere increase? ($V = \frac{4}{3}\pi r^3$)</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q24-text">
+          <li class="practice-choice"><input type="radio" name="q24" value="2" id="q24a"><label for="q24a">2×</label></li>
+          <li class="practice-choice"><input type="radio" name="q24" value="4" id="q24b"><label for="q24b">4×</label></li>
+          <li class="practice-choice"><input type="radio" name="q24" value="8" id="q24c"><label for="q24c">8×</label></li>
+          <li class="practice-choice"><input type="radio" name="q24" value="16" id="q24d"><label for="q24d">16×</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Volume depends on the cube of the radius ($r^3$). Compute $(2r)^3 / r^3$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$V(2r) = \frac{4}{3}\pi (2r)^3 = \frac{4}{3}\pi (8r^3) = 8 \times \left(\frac{4}{3}\pi r^3\right) = 8V$. While surface area scales quadratically ($2^2 = 4\times$), volume scales cubically ($2^3 = 8\times$).</div>
+      </div>
+
+      <!-- Q25: Trigonometric Identity in Quadrant II -->
+      <div class="practice-question" data-answer="-0.8" data-topic="geometry" aria-labelledby="q25-text">
+        <div class="practice-q-number">Question 25 · Trigonometry & Unit Circle</div>
+        <p class="practice-q-text" id="q25-text">An angle $\theta$ lies in <strong>Quadrant II</strong> with $\sin\theta = 0.6$. What is the exact value of $\cos\theta$?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q25-text">
+          <li class="practice-choice"><input type="radio" name="q25" value="0.8" id="q25a"><label for="q25a">0.8</label></li>
+          <li class="practice-choice"><input type="radio" name="q25" value="-0.8" id="q25b"><label for="q25b">-0.8</label></li>
+          <li class="practice-choice"><input type="radio" name="q25" value="-0.6" id="q25c"><label for="q25c">-0.6</label></li>
+          <li class="practice-choice"><input type="radio" name="q25" value="-0.36" id="q25d"><label for="q25d">-0.36</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Apply the Pythagorean identity $\cos^2\theta = 1 - \sin^2\theta$. Remember in Quadrant II, $x = \cos\theta &lt; 0$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$\cos^2\theta = 1 - (0.6)^2 = 1 - 0.36 = 0.64$. Taking the square root gives $|\cos\theta| = 0.8$. In Quadrant II, cosine is negative, so $\cos\theta = -0.8$.</div>
+      </div>
+
+      <!-- Q26: Combinations in Cards -->
+      <div class="practice-question" data-answer="2,598,960" data-topic="probability" aria-labelledby="q26-text">
+        <div class="practice-q-number">Question 26 · Counting & Probability</div>
+        <p class="practice-q-text" id="q26-text">In poker, how many distinct 5-card hands can be dealt from a standard 52-card deck without replacement? Evaluate $C(52, 5)$.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q26-text">
+          <li class="practice-choice"><input type="radio" name="q26" value="311,875,200" id="q26a"><label for="q26a">311,875,200</label></li>
+          <li class="practice-choice"><input type="radio" name="q26" value="2,598,960" id="q26b"><label for="q26b">2,598,960</label></li>
+          <li class="practice-choice"><input type="radio" name="q26" value="1,048,576" id="q26c"><label for="q26c">1,048,576</label></li>
+          <li class="practice-choice"><input type="radio" name="q26" value="52,000" id="q26d"><label for="q26d">52,000</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Order does not matter in a hand of cards, so divide the permutation $P(52, 5) = 52 \times 51 \times 50 \times 49 \times 48$ by $5! = 120$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$C(52, 5) = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} = \frac{311,875,200}{120} = 2,598,960$ distinct combinations.</div>
+      </div>
+
+      <!-- Q27: Bayes' Theorem & Diagnostic Testing -->
+      <div class="practice-question" data-answer="9%" data-topic="probability" aria-labelledby="q27-text">
+        <div class="practice-q-number">Question 27 · Bayes' Theorem & Base Rate Fallacy</div>
+        <p class="practice-q-text" id="q27-text">A medical condition affects 1 in 1,000 individuals ($P(D) = 0.001$). A diagnostic test has a 99% true positive rate ($P(T|D) = 0.99$) and a 1% false positive rate ($P(T|D^c) = 0.01$). If a patient tests positive, what is the approximate posterior probability $P(D|T)$ that they actually have the condition?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q27-text">
+          <li class="practice-choice"><input type="radio" name="q27" value="99%" id="q27a"><label for="q27a">99%</label></li>
+          <li class="practice-choice"><input type="radio" name="q27" value="90%" id="q27b"><label for="q27b">90%</label></li>
+          <li class="practice-choice"><input type="radio" name="q27" value="9%" id="q27c"><label for="q27c">~9%</label></li>
+          <li class="practice-choice"><input type="radio" name="q27" value="50%" id="q27d"><label for="q27d">50%</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Out of 100,000 people, 100 have the condition (99 test positive) and 99,900 do not (~999 false positives). Calculate $99 / (99 + 999)$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">By Bayes' Theorem: $P(D|T) = \frac{P(T|D)P(D)}{P(T|D)P(D) + P(T|D^c)P(D^c)} = \frac{0.99 \times 0.001}{0.00099 + (0.01 \times 0.999)} = \frac{0.00099}{0.01098} \approx 9.01\%$. The extreme rarity of the condition causes false positives to outnumber true positives by roughly 10 to 1.</div>
+      </div>
+
+      <!-- Q28: Calculus Product Rule -->
+      <div class="practice-question" data-answer="3x² sin(x) + x³ cos(x)" data-topic="calculus" aria-labelledby="q28-text">
+        <div class="practice-q-number">Question 28 · Calculus & Product Rule</div>
+        <p class="practice-q-text" id="q28-text">Differentiate the function $f(x) = x^3 \sin(x)$ with respect to $x$.</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q28-text">
+          <li class="practice-choice"><input type="radio" name="q28" value="3x² cos(x)" id="q28a"><label for="q28a">3x² cos(x)</label></li>
+          <li class="practice-choice"><input type="radio" name="q28" value="3x² sin(x) + x³ cos(x)" id="q28b"><label for="q28b">3x² sin(x) + x³ cos(x)</label></li>
+          <li class="practice-choice"><input type="radio" name="q28" value="3x² sin(x) - x³ cos(x)" id="q28c"><label for="q28c">3x² sin(x) - x³ cos(x)</label></li>
+          <li class="practice-choice"><input type="radio" name="q28" value="x³ cos(x) + sin(x)" id="q28d"><label for="q28d">x³ cos(x) + sin(x)</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Product Rule states $(uv)' = u'v + uv'$. Let $u = x^3$ and $v = \sin(x)$. Recall $\frac{d}{dx}[\sin(x)] = \cos(x)$ and $\frac{d}{dx}[x^3] = 3x^2$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$u = x^3 \implies u' = 3x^2$; $v = \sin(x) \implies v' = \cos(x)$. Applying $(uv)' = u'v + uv'$ yields $3x^2\sin(x) + x^3\cos(x)$.</div>
+      </div>
+
+      <!-- Q29: Linear Algebra Determinant Scaling -->
+      <div class="practice-question" data-answer="20" data-topic="linalg" aria-labelledby="q29-text">
+        <div class="practice-q-number">Question 29 · Linear Algebra & Matrix Transformations</div>
+        <p class="practice-q-text" id="q29-text">A 2D linear transformation is defined by matrix $M = \begin{pmatrix} 6 & 2 \\ 2 & 4 \end{pmatrix}$. If a shape in the plane has an initial area of 1 unit², what is its area after transformation?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q29-text">
+          <li class="practice-choice"><input type="radio" name="q29" value="20" id="q29a"><label for="q29a">20 units²</label></li>
+          <li class="practice-choice"><input type="radio" name="q29" value="24" id="q29b"><label for="q29b">24 units²</label></li>
+          <li class="practice-choice"><input type="radio" name="q29" value="10" id="q29c"><label for="q29c">10 units²</label></li>
+          <li class="practice-choice"><input type="radio" name="q29" value="28" id="q29d"><label for="q29d">28 units²</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: The area scaling factor of a 2D linear map is given by the determinant: $\det(M) = ad - bc$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">$\det(M) = (6)(4) - (2)(2) = 24 - 4 = 20$. In linear algebra, the determinant measures how much areas are stretched or squished by the matrix operator. The transformed area is $1 \times 20 = 20\text{ units}^2$.</div>
+      </div>
+
+      <!-- Q30: Computer Science & Binary Search -->
+      <div class="practice-question" data-answer="10" data-topic="cse" aria-labelledby="q30-text">
+        <div class="practice-q-number">Question 30 · Computer Science & Search Complexity</div>
+        <p class="practice-q-text" id="q30-text">You perform a Binary Search on a sorted array of <strong>1,000 items</strong>. In the worst case, what is the maximum number of comparisons required to locate an element or conclude it does not exist?</p>
+        <ul class="practice-choices" role="radiogroup" aria-labelledby="q30-text">
+          <li class="practice-choice"><input type="radio" name="q30" value="10" id="q30a"><label for="q30a">10 comparisons</label></li>
+          <li class="practice-choice"><input type="radio" name="q30" value="9" id="q30b"><label for="q30b">9 comparisons</label></li>
+          <li class="practice-choice"><input type="radio" name="q30" value="100" id="q30c"><label for="q30c">100 comparisons</label></li>
+          <li class="practice-choice"><input type="radio" name="q30" value="500" id="q30d"><label for="q30d">500 comparisons</label></li>
+        </ul>
+        <div class="practice-actions">
+          <button class="hint-btn btn btn-ghost btn-sm">💡 Show Hint</button>
+          <button class="submit-btn btn btn-primary btn-sm">Check Answer</button>
+          <button class="retry-btn btn btn-outline-dark btn-sm">↺ Try Again</button>
+        </div>
+        <div class="practice-hint">Hint: Binary search cuts the problem in half each step: worst-case comparisons = $\lfloor\log_2 n\rfloor + 1$. Note $2^9 = 512$ and $2^{10} = 1024$.</div>
+        <div class="practice-feedback" aria-live="polite"></div>
+        <div class="practice-explanation">Because $2^9 = 512 &lt; 1000 \le 1024 = 2^{10}$, the maximum number of iterations is $\lfloor\log_2(1000)\rfloor + 1 = 9 + 1 = 10$. Each comparison eliminates half of the remaining interval.</div>
+      </div>
+
     </div><!-- end practice-section -->
 
     <div class="text-center" style="margin-top:var(--space-7)">
@@ -625,22 +863,42 @@
 <script>
 // Score tracking
 (function() {
-  const KEY = 'btm_score';
-  let data = JSON.parse(localStorage.getItem(KEY) || '{"correct":0,"attempted":0}');
+  const PRACTICE_KEY = 'btm_practice_score';
+  const FALLBACK_KEY = 'btm_score';
+
+  function loadScoreData() {
+    try {
+      const raw = localStorage.getItem(PRACTICE_KEY) || localStorage.getItem(FALLBACK_KEY);
+      return raw ? JSON.parse(raw) : { correct: 0, attempted: 0 };
+    } catch (e) {
+      return { correct: 0, attempted: 0 };
+    }
+  }
+
+  let data = loadScoreData();
 
   function updateDisplay() {
-    document.getElementById('score-correct').textContent = data.correct;
-    document.getElementById('score-attempted').textContent = data.attempted;
-    document.getElementById('score-pct').textContent = data.attempted > 0
-      ? Math.round(data.correct / data.attempted * 100) + '%' : '—';
-    localStorage.setItem(KEY, JSON.stringify(data));
+    const elCorrect = document.getElementById('score-correct');
+    const elAttempted = document.getElementById('score-attempted');
+    const elPct = document.getElementById('score-pct');
+
+    if (elCorrect) elCorrect.textContent = data.correct;
+    if (elAttempted) elAttempted.textContent = data.attempted;
+    if (elPct) {
+      elPct.textContent = data.attempted > 0
+        ? Math.round(data.correct / data.attempted * 100) + '%' : '—';
+    }
+
+    try {
+      const payload = JSON.stringify(data);
+      localStorage.setItem(PRACTICE_KEY, payload);
+      localStorage.setItem(FALLBACK_KEY, payload);
+    } catch (e) {}
   }
 
   document.addEventListener('click', e => {
     if (e.target.classList.contains('submit-btn') || e.target.classList.contains('practice-submit-btn')) {
       const q = e.target.closest('.practice-question');
-      const correct = q && q.querySelector('.practice-feedback.correct');
-      // wait for code-tabs to process, then check
       setTimeout(() => {
         const fb = q && q.querySelector('.practice-feedback');
         if (fb && fb.classList.contains('correct') && !q.dataset.counted) {
@@ -656,15 +914,19 @@
       }, 50);
     }
     if (e.target.classList.contains('retry-btn') || e.target.classList.contains('practice-retry-btn')) {
-      e.target.closest('.practice-question').removeAttribute('data-counted');
+      const q = e.target.closest('.practice-question');
+      if (q) q.removeAttribute('data-counted');
     }
   });
 
-  document.getElementById('reset-score').addEventListener('click', () => {
-    data = { correct: 0, attempted: 0 };
-    document.querySelectorAll('.practice-question').forEach(q => q.removeAttribute('data-counted'));
-    updateDisplay();
-  });
+  const resetBtn = document.getElementById('reset-score');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      data = { correct: 0, attempted: 0 };
+      document.querySelectorAll('.practice-question').forEach(q => q.removeAttribute('data-counted'));
+      updateDisplay();
+    });
+  }
 
   // Topic filter
   document.querySelectorAll('[data-topic]').forEach(btn => {

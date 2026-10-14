@@ -14,6 +14,40 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#1D3557">
 
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
@@ -44,7 +78,8 @@
     }
 
     .workflow-section {
-      background: linear-gradient(135deg, #f0f6ff 0%, #e8f5f5 100%);
+      background: var(--gradient-workflow);
+      transition: background var(--transition-normal);
     }
 
     .highlight-grid {
@@ -262,8 +297,40 @@
               <div class="hero-stat-label">Formula lessons</div>
             </div>
             <div>
-              <div class="hero-stat-value">4</div>
+              <div class="hero-stat-value">12</div>
               <div class="hero-stat-label">Interactive labs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Study Progress Dashboard ── -->
+    <section class="section-sm" id="progress-dashboard-section" style="padding-top:var(--space-6);padding-bottom:var(--space-2)">
+      <div class="container">
+        <div class="progress-card">
+          <div class="progress-header">
+            <h3><span>📊</span> Your Learning Journey</h3>
+            <span class="progress-badge" id="dash-streak-badge">Active Explorer 🚀</span>
+          </div>
+          <p style="color:var(--color-muted);font-size:var(--text-sm);margin:0 0 var(--space-3) 0">
+            Real-time tracking across 12 formula lessons, interactive labs, saved flashcards, and practice quiz scores.
+          </p>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="dash-progress-fill" style="width: 0%"></div>
+          </div>
+          <div class="progress-stats-grid">
+            <div class="progress-stat-box">
+              <div class="progress-stat-num" id="dash-lessons-visited">0 / 12</div>
+              <div class="progress-stat-title">Lessons Explored</div>
+            </div>
+            <div class="progress-stat-box">
+              <div class="progress-stat-num" id="dash-formulas-saved">0</div>
+              <div class="progress-stat-title">Formulas Saved</div>
+            </div>
+            <div class="progress-stat-box">
+              <div class="progress-stat-num" id="dash-practice-score">0%</div>
+              <div class="progress-stat-title">Practice Mastery</div>
             </div>
           </div>
         </div>

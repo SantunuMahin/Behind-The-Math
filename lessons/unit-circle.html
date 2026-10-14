@@ -7,6 +7,39 @@
   <meta name="description" content="Master sine, cosine, tangent, the Pythagorean trig identity sin²θ + cos²θ = 1, and angle radians with an animated canvas unit circle.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+    <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -193,11 +226,41 @@
           </div>
         </section>
 
+        
+        <!-- Video Explanation -->
+        <section id="video" class="video-lesson-section" aria-labelledby="video-heading">
+          <h2 id="video-heading">Visual Video Explanation</h2>
+          <p>Understand how the unit circle extends trigonometry beyond static triangles into continuous circular coordinates, angles, and periodic functions.</p>
+          <div class="video-card">
+            <div class="video-container">
+              <iframe src="https://www.youtube-nocookie.com/embed/57VrEiEPD1I" title="The Unit Circle, Basic Introduction, Trigonometry — The Organic Chemistry Tutor" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card-body">
+              <div class="video-card-info">
+                <span class="video-card-title">The Unit Circle, Basic Introduction, Trigonometry</span>
+                <div class="video-card-meta">
+                  <span class="video-badge-channel">The Organic Chemistry Tutor</span>
+                  <span>Coordinates, exact angles, special triangles &amp; radians</span>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=57VrEiEPD1I" target="_blank" rel="noopener noreferrer" class="video-yt-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch on YouTube ↗
+              </a>
+            </div>
+            <div style="padding: 10px 16px 14px; font-size: 0.8125rem; color: var(--color-text-secondary); background: rgba(0,0,0,0.02); border-top: 1px solid var(--color-border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <span>💡 If the YouTube player is blocked by your browser network or privacy extensions, use the direct link above to watch in YouTube.</span>
+              <a href="https://www.youtube.com/watch?v=57VrEiEPD1I" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Open in New Tab →</a>
+            </div>
+          </div>
+        </section>
+
         <!-- Worked Example -->
         <section id="worked-example" aria-labelledby="example-heading">
-          <h2 id="example-heading">Worked Example</h2>
-          <div class="worked-example">
-            <h4>Problem</h4>
+          <h2 id="example-heading">Worked Examples</h2>
+          
+          <div class="worked-example" style="margin-bottom: var(--space-5);">
+            <h4>Example 1: Reference Angle in Quadrant II</h4>
             <p>Find $\sin(150^\circ)$, $\cos(150^\circ)$, and $\tan(150^\circ)$ without a calculator.</p>
             <div class="worked-step">
               <div class="worked-step-num" aria-hidden="true">1</div>
@@ -212,6 +275,28 @@
               <div class="worked-step-body"><strong>Apply Quadrant II signs (only Sine is positive).</strong><br>$\sin(150^\circ) = +1/2 = +0.5$.<br>$\cos(150^\circ) = -\sqrt{3}/2 \approx -0.866$.<br>$\tan(150^\circ) = -1/\sqrt{3} \approx -0.577$.</div>
             </div>
             <div class="worked-answer">✓ $\sin(150^\circ) = 0.5$, $\cos(150^\circ) = -\sqrt{3}/2$, $\tan(150^\circ) = -1/\sqrt{3}$. Notice: $(0.5)^2 + (-\sqrt{3}/2)^2 = 0.25 + 0.75 = 1$.</div>
+          </div>
+
+          <div class="worked-example">
+            <h4>Example 2: Radian Coordinates &amp; Coterminal Angles $\left(\theta = \frac{11\pi}{6}\right)$</h4>
+            <p>Determine the exact coordinates $(x, y)$ on the unit circle for the angle $\theta = \frac{11\pi}{6}$ radians, and evaluate $\sec\theta$ and $\csc\theta$.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Convert or locate on circle:</strong><br>$\theta = \frac{11\pi}{6} = 2\pi - \frac{\pi}{6} = 360^\circ - 30^\circ = 330^\circ$. This lies in <strong>Quadrant IV</strong>.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Find reference angle and quadrant signs:</strong><br>The reference angle is $\alpha = 2\pi - \frac{11\pi}{6} = \frac{\pi}{6}$ ($30^\circ$). In Quadrant IV, $x &gt; 0$ (cosine positive) and $y &lt; 0$ (sine negative).</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Compute Coordinates &amp; Reciprocal Functions:</strong><br>
+                $$x = \cos\left(\frac{11\pi}{6}\right) = +\cos\left(\frac{\pi}{6}\right) = \frac{\sqrt{3}}{2}$$
+                $$y = \sin\left(\frac{11\pi}{6}\right) = -\sin\left(\frac{\pi}{6}\right) = -\frac{1}{2}$$
+                $$\sec\left(\frac{11\pi}{6}\right) = \frac{1}{\cos(11\pi/6)} = \frac{2}{\sqrt{3}} = \frac{2\sqrt{3}}{3}, \quad \csc\left(\frac{11\pi}{6}\right) = \frac{1}{\sin(11\pi/6)} = -2$$
+              </div>
+            </div>
+            <div class="worked-answer">✓ Circle coordinates: $\left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$. Pythagorean check: $\left(\frac{\sqrt{3}}{2}\right)^2 + \left(-\frac{1}{2}\right)^2 = \frac{3}{4} + \frac{1}{4} = 1$.</div>
           </div>
         </section>
 
@@ -342,6 +427,7 @@
             <li><a href="#vars-heading">Symbol Definitions</a></li>
             <li><a href="#assumptions-heading">Quadrant Signs</a></li>
             <li><a href="#lab">Interactive Explorer</a></li>
+            <li><a href="#video">Video Explanation</a></li>
             <li><a href="#worked-example">Worked Example</a></li>
             <li><a href="#code">Code Examples</a></li>
             <li><a href="#practice">Practice Questions</a></li>

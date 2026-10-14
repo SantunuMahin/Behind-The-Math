@@ -141,8 +141,10 @@
   function initBackToTop() {
     const btn = document.getElementById('back-to-top');
     if (!btn) return;
+    btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>`;
+    btn.title = 'Back to top of page';
     window.addEventListener('scroll', () => {
-      btn.hidden = window.scrollY < 400;
+      btn.hidden = window.scrollY < 350;
     }, { passive: true });
     btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -231,8 +233,225 @@
     }, duration);
   };
 
+  // ── Theme Manager (Dark / Light Mode) ────────────────────
+  function initThemeManager() {
+    const STORAGE_KEY = 'btm_theme';
+    const html = document.documentElement;
+
+    function getPreferredTheme() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'dark' || saved === 'light') return saved;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function updateButtons(theme) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        btn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        btn.innerHTML = theme === 'dark'
+          ? `<svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
+          : `<svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+      });
+    }
+
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem(STORAGE_KEY, theme);
+      updateButtons(theme);
+    }
+
+    // Apply saved or system theme immediately
+    const initialTheme = getPreferredTheme();
+    applyTheme(initialTheme);
+
+    // Inject toggle button into header if not present
+    const headerContainer = document.querySelector('.site-header .container');
+    if (headerContainer && !document.querySelector('.site-header .theme-toggle-btn')) {
+      const toggleBtn = document.createElement('button');
+      toggleBtn.type = 'button';
+      toggleBtn.className = 'theme-toggle-btn';
+      toggleBtn.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme') || initialTheme;
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        if (window.BTMToast) {
+          window.BTMToast(next === 'dark' ? 'Dark mode enabled 🌙' : 'Light mode enabled ☀️', 'success', 1500);
+        }
+      });
+
+      const searchBtn = headerContainer.querySelector('.nav-search-btn');
+      const hamburger = headerContainer.querySelector('.hamburger');
+      if (searchBtn && searchBtn.nextSibling) {
+        headerContainer.insertBefore(toggleBtn, searchBtn.nextSibling);
+      } else if (hamburger) {
+        headerContainer.insertBefore(toggleBtn, hamburger);
+      } else {
+        headerContainer.appendChild(toggleBtn);
+      }
+      updateButtons(initialTheme);
+    }
+
+    // Also add toggle in mobile drawer header if drawer exists
+    const mobileHeader = document.querySelector('.mobile-nav-header');
+    if (mobileHeader && !mobileHeader.querySelector('.theme-toggle-btn')) {
+      const mobileToggle = document.createElement('button');
+      mobileToggle.type = 'button';
+      mobileToggle.className = 'theme-toggle-btn';
+      mobileToggle.style.marginRight = '8px';
+      mobileToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme') || initialTheme;
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+      });
+      const closeBtn = mobileHeader.querySelector('.mobile-nav-close');
+      if (closeBtn) {
+        mobileHeader.insertBefore(mobileToggle, closeBtn);
+      } else {
+        mobileHeader.appendChild(mobileToggle);
+      }
+      updateButtons(initialTheme);
+    }
+
+    // Listen for system theme changes if user has no saved preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!localStorage.getItem(STORAGE_KEY)) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
+  // ── Learning Progress Tracker ─────────────────────────────
+  function initLearningProgress() {
+    const STORAGE_KEY = 'btm_progress';
+    const BOOKMARKS_KEY = 'btm_bookmarks';
+    const PRACTICE_KEY = 'btm_practice_score';
+
+    function getVisitedLessons() {
+      try {
+        const data = localStorage.getItem(STORAGE_KEY);
+        return data ? JSON.parse(data) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function recordCurrentLesson() {
+      const path = window.location.pathname || '';
+      const match = path.match(/\/lessons\/([a-zA-Z0-9_-]+)\.html/);
+      if (match && match[1]) {
+        const slug = match[1];
+        const visited = getVisitedLessons();
+        if (!visited.includes(slug)) {
+          visited.push(slug);
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(visited));
+          } catch (e) {}
+        }
+      }
+    }
+
+    function getBookmarksCount() {
+      try {
+        const data = localStorage.getItem(BOOKMARKS_KEY);
+        return data ? JSON.parse(data).length : 0;
+      } catch (e) {
+        return 0;
+      }
+    }
+
+    function getPracticeScore() {
+      try {
+        const raw = localStorage.getItem(PRACTICE_KEY) || localStorage.getItem('btm_score');
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (parsed.attempted > 0) {
+          return Math.round((parsed.correct / parsed.attempted) * 100);
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    // Record if currently in a lesson
+    recordCurrentLesson();
+
+    // Update Homepage Dashboard if present
+    const visited = getVisitedLessons();
+    const count = visited.length;
+    const total = 12;
+    const pct = Math.min(100, Math.round((count / total) * 100));
+
+    const dashVisitedEl = document.getElementById('dash-lessons-visited');
+    const dashProgressFill = document.getElementById('dash-progress-fill');
+    const dashFormulasSaved = document.getElementById('dash-formulas-saved');
+    const dashPracticeScore = document.getElementById('dash-practice-score');
+    const dashStreakBadge = document.getElementById('dash-streak-badge');
+
+    if (dashVisitedEl) {
+      dashVisitedEl.textContent = `${count} / ${total}`;
+    }
+    if (dashProgressFill) {
+      dashProgressFill.style.width = `${pct}%`;
+    }
+    if (dashFormulasSaved) {
+      dashFormulasSaved.textContent = String(getBookmarksCount());
+    }
+    if (dashPracticeScore) {
+      const score = getPracticeScore();
+      dashPracticeScore.textContent = score !== null ? `${score}%` : 'Not Started';
+    }
+    if (dashStreakBadge) {
+      if (count === 0) dashStreakBadge.textContent = 'Getting Started 🌱';
+      else if (count < 4) dashStreakBadge.textContent = 'Curious Learner 🔍';
+      else if (count < 8) dashStreakBadge.textContent = 'Math Explorer ⚡';
+      else if (count < 12) dashStreakBadge.textContent = 'Advanced Scholar 📚';
+      else dashStreakBadge.textContent = 'Grand Master 🏆';
+    }
+
+    // Update Learn.html progress tracker and visited checkmarks if present
+    const learnProgressBadge = document.getElementById('learn-progress-badge');
+    const learnProgressFill = document.getElementById('learn-progress-fill');
+    if (learnProgressBadge) {
+      learnProgressBadge.textContent = `${count} of ${total} Lessons Explored (${pct}%)`;
+    }
+    if (learnProgressFill) {
+      learnProgressFill.style.width = `${pct}%`;
+    }
+
+    // Highlight visited lessons on Learn page
+    visited.forEach(slug => {
+      document.querySelectorAll(`a[href*="${slug}.html"]`).forEach(link => {
+        const topicItem = link.closest('.topic-item');
+        if (topicItem) {
+          topicItem.classList.add('visited');
+        }
+      });
+    });
+  }
+
+  // ── Entrance & Scroll Micro-animations ────────────────────
+  function initScrollAnimations() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+
+    const cards = document.querySelectorAll('.subject-card, .feat-card, .highlight-card, .lab-card, .subject-block, .score-card');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    cards.forEach(card => observer.observe(card));
+  }
+
   // ── Init ──────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
+    initThemeManager();
     initStickyHeader();
     initMobileNav();
     highlightActiveNav();
@@ -241,6 +460,9 @@
     initAccordions();
     initBackToTop();
     initHeroCanvas();
+    initLearningProgress();
+    initScrollAnimations();
   });
 
 })();
+

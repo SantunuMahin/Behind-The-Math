@@ -23,6 +23,41 @@
   <meta name="description" content="The page you were looking for could not be found. Return to BehindTheMath to explore mathematics.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#1D3557">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">

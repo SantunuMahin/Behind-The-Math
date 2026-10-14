@@ -7,6 +7,41 @@
   <meta name="description" content="Browse all mathematical subjects and topics. Filter by level and subject to find the right lesson for you.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
@@ -15,6 +50,14 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
   <style>
+    .topic-item.visited {
+      border-left: 3px solid var(--color-success);
+    }
+    .topic-item.visited .topic-item-title::after {
+      content: ' ✓';
+      color: var(--color-success);
+      font-weight: bold;
+    }
     .subject-section { scroll-margin-top: calc(var(--nav-height) + 16px); }
     .topic-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
     .topic-item {
@@ -148,6 +191,20 @@
 <main id="main-content">
   <div class="container" style="padding-block:var(--space-9)">
 
+    <!-- Learning Progress Tracker -->
+    <div class="progress-card" style="margin-bottom:var(--space-8)">
+      <div class="progress-header">
+        <h3><span>🎓</span> Your Learning Completion</h3>
+        <span class="progress-badge" id="learn-progress-badge">0 / 12 Lessons Explored</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="learn-progress-fill" style="width: 0%"></div>
+      </div>
+      <p style="font-size:var(--text-xs);color:var(--color-muted);margin:0">
+        Completed lessons are marked with a green checkmark ✓. Open any lesson to add it to your progress!
+      </p>
+    </div>
+
     <!-- Recommended learning path -->
     <div class="learning-path">
       <div class="section-eyebrow" style="color:var(--color-button)">Recommended Learning Path</div>
@@ -276,6 +333,7 @@
 
     <!-- Probability -->
     <section class="subject-section subject-block" id="probability" aria-labelledby="h-probability">
+      <span id="counting" style="position:absolute;visibility:hidden" aria-hidden="true"></span>
       <div class="subject-block-header">
         <span class="subject-block-icon" aria-hidden="true">🎲</span>
         <div>

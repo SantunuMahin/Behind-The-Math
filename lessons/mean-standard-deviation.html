@@ -7,6 +7,39 @@
   <meta name="description" content="Understand arithmetic mean, variance, population vs sample standard deviation (Bessel's correction n-1), and spread with an interactive data calculator.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+    <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -186,11 +219,42 @@
           </div>
         </section>
 
-        <!-- Worked Example -->
+        
+        <!-- Video Explanation -->
+        <section id="video" class="video-lesson-section" aria-labelledby="video-heading">
+          <h2 id="video-heading">Visual Video Explanation</h2>
+          <p>Josh Starmer (StatQuest) breaks down mean, variance, and standard deviation step by step, illustrating why differences are squared and what dispersion measures visually.</p>
+          <div class="video-card">
+            <div class="video-container">
+              <iframe src="https://www.youtube-nocookie.com/embed/SzZ6GpcfoQY" title="Calculating the Mean, Variance and Standard Deviation — StatQuest" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card-body">
+              <div class="video-card-info">
+                <span class="video-card-title">Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!!</span>
+                <div class="video-card-meta">
+                  <span class="video-badge-channel">StatQuest with Josh Starmer</span>
+                  <span>Variance, spread & squared deviations</span>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=SzZ6GpcfoQY" target="_blank" rel="noopener noreferrer" class="video-yt-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch on YouTube ↗
+              </a>
+            </div>
+            <div style="padding: 10px 16px 14px; font-size: 0.8125rem; color: var(--color-text-secondary); background: rgba(0,0,0,0.02); border-top: 1px solid var(--color-border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <span>💡 If the YouTube player is blocked by your browser network or privacy extensions, use the direct link above to watch in YouTube.</span>
+              <a href="https://www.youtube.com/watch?v=SzZ6GpcfoQY" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Open in New Tab →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Examples & Practical Scenarios -->
         <section id="worked-example" aria-labelledby="example-heading">
-          <h2 id="example-heading">Worked Example</h2>
-          <div class="worked-example">
-            <h4>Problem</h4>
+          <h2 id="example-heading">Worked Examples &amp; Real-World Math</h2>
+          
+          <!-- Example 1: Population Standard Deviation -->
+          <div class="worked-example" style="margin-bottom:var(--space-6)">
+            <h4>Example 1 · Population Standard Deviation ($\sigma$)</h4>
             <p>Find the mean and population standard deviation of the numbers: 2, 4, 4, 4, 5, 5, 7, 9.</p>
             <div class="worked-step">
               <div class="worked-step-num" aria-hidden="true">1</div>
@@ -215,6 +279,37 @@
               <div class="worked-step-body"><strong>Take the square root.</strong><br>$\sigma = \sqrt{4.0} = 2.0$.</div>
             </div>
             <div class="worked-answer">✓ Mean $\mu = 5.0$ · Population Standard Deviation $\sigma = 2.0$.</div>
+          </div>
+
+          <!-- Example 2: Sample Standard Deviation with Bessel's Correction -->
+          <div class="worked-example">
+            <h4>Example 2 · Sample Standard Deviation &amp; Bessel's Correction ($n - 1$)</h4>
+            <p>A quality control engineer draws a small random sample of $n = 5$ precision resistors with resistances: $98\,\Omega, 100\,\Omega, 101\,\Omega, 102\,\Omega, 104\,\Omega$. Compute the sample mean $\bar{x}$ and unbiased sample standard deviation $s$.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Calculate sample mean ($\bar{x}$).</strong><br>$\bar{x} = \dfrac{98 + 100 + 101 + 102 + 104}{5} = \dfrac{505}{5} = 101.0\,\Omega$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Compute squared deviations from sample mean.</strong><br>
+                $(98 - 101)^2 = (-3)^2 = 9$<br>
+                $(100 - 101)^2 = (-1)^2 = 1$<br>
+                $(101 - 101)^2 = 0^2 = 0$<br>
+                $(102 - 101)^2 = 1^2 = 1$<br>
+                $(104 - 101)^2 = 3^2 = 9$.<br>
+                $\sum (x_i - \bar{x})^2 = 9 + 1 + 0 + 1 + 9 = 20.0$.
+              </div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Apply Bessel's correction (divide by $n - 1 = 4$).</strong><br>Why $n-1$? Sample variance using $N$ systematically underestimates true population variance because sample data clusters around $\bar{x}$ closer than true $\mu$. Dividing by $n-1$ removes this statistical bias.<br>
+              Sample variance $s^2 = \dfrac{20.0}{5 - 1} = \dfrac{20.0}{4} = 5.0\,\Omega^2$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">4</div>
+              <div class="worked-step-body"><strong>Take the square root for sample standard deviation.</strong><br>$s = \sqrt{5.0} \approx 2.236\,\Omega$.</div>
+            </div>
+            <div class="worked-answer">✓ Unbiased Sample Mean $\bar{x} = 101.0\,\Omega$ · Sample Standard Deviation $s \approx 2.24\,\Omega$. Notice that without Bessel's correction, dividing by $5$ would yield $\sqrt{4} = 2.0$, underestimating real batch variability!</div>
           </div>
         </section>
 
@@ -354,6 +449,7 @@
             <li><a href="#vars-heading">Symbol Definitions</a></li>
             <li><a href="#assumptions-heading">Bessel's Correction</a></li>
             <li><a href="#lab">Interactive Calculator</a></li>
+            <li><a href="#video">Video Explanation</a></li>
             <li><a href="#worked-example">Worked Example</a></li>
             <li><a href="#code">Code Examples</a></li>
             <li><a href="#practice">Practice Questions</a></li>

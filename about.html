@@ -7,6 +7,41 @@
   <meta name="description" content="About BehindTheMath — an educational mathematics website presented by Santunu Kaysar, helped by Intellisoft Innovations.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
@@ -18,6 +53,7 @@
     .principle-item { display: flex; gap: var(--space-4); }
     .principle-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
     .principle-body strong { display: block; color: var(--color-primary); margin-bottom: var(--space-1); }
+    [data-theme="dark"] .principle-body strong { color: var(--color-button); }
     .credit-card {
       background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
       border-radius: var(--radius-lg);

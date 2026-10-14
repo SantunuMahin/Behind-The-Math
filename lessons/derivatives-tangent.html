@@ -7,6 +7,39 @@
   <meta name="description" content="Understand derivatives, limits, difference quotients, secant lines shrinking to tangents, and why radian angle measure is required in calculus.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+    <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -205,6 +238,31 @@
           </div>
         </section>
 
+        
+        <!-- Video Explanation -->
+        <section id="video" class="video-lesson-section" aria-labelledby="video-heading">
+          <h2 id="video-heading">Visual Video Explanation</h2>
+          <p>Watch Grant Sanderson break down the paradox of instantaneous change, stepping from secant slopes through limits to uncover the derivative.</p>
+          <div class="video-card">
+            <div class="video-container">
+              <iframe src="https://www.youtube-nocookie.com/embed/9vKqVkMQHKk" title="The Paradox of the Derivative (Essence of Calculus, Ch. 2) — 3Blue1Brown" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card-body">
+              <div class="video-card-info">
+                <span class="video-card-title">The Paradox of the Derivative (Essence of Calculus, Ch. 2)</span>
+                <div class="video-card-meta">
+                  <span class="video-badge-channel">3Blue1Brown</span>
+                  <span>Visual calculus & instantaneous rate of change</span>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=9vKqVkMQHKk" target="_blank" rel="noopener noreferrer" class="video-yt-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch on YouTube ↗
+              </a>
+            </div>
+          </div>
+        </section>
+
         <!-- Worked Example -->
         <section id="worked-example" aria-labelledby="example-heading">
           <h2 id="example-heading">Worked Example</h2>
@@ -353,6 +411,7 @@
             <li><a href="#vars-heading">Symbol Definitions</a></li>
             <li><a href="#assumptions-heading">Differentiability Conditions</a></li>
             <li><a href="#lab">Interactive Explorer</a></li>
+            <li><a href="#video">Video Explanation</a></li>
             <li><a href="#worked-example">Worked Example</a></li>
             <li><a href="#code">Code Examples</a></li>
             <li><a href="#practice">Practice Questions</a></li>

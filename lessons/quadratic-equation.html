@@ -7,6 +7,39 @@
   <meta name="description" content="Understand the quadratic formula, the discriminant b² - 4ac, the parabola shape, and roots with an interactive canvas lab and C/Python code.">
   <meta name="author" content="Santunu Kaysar">
   <meta name="theme-color" content="#1D3557">
+    <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            btm: {
+              primary: '#1D3557',
+              secondary: '#457B9D',
+              accent: '#A8DADC',
+              text: '#F1FAEE',
+              warning: '#E63946',
+              success: '#2A9D8F',
+              focus: '#F4A261',
+              dark: {
+                bg: '#091122',
+                surface: '#121D33',
+                border: '#24334E',
+                accent: '#64DFDF'
+              }
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            code: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -208,11 +241,42 @@
           </div>
         </section>
 
-        <!-- Worked Example -->
+        
+        <!-- Video Explanation -->
+        <section id="video" class="video-lesson-section" aria-labelledby="video-heading">
+          <h2 id="video-heading">Visual Video Explanation</h2>
+          <p>Watch Grant Sanderson (3Blue1Brown) demonstrate why the symmetry of parabolas makes the quadratic formula intuitive rather than mechanical.</p>
+          <div class="video-card">
+            <div class="video-container">
+              <iframe src="https://www.youtube-nocookie.com/embed/MHXO86wKeDY" title="The simpler quadratic formula — 3Blue1Brown" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-card-body">
+              <div class="video-card-info">
+                <span class="video-card-title">The Simpler Quadratic Formula | Lockdown Math</span>
+                <div class="video-card-meta">
+                  <span class="video-badge-channel">3Blue1Brown</span>
+                  <span>Visual explanation & parabolic symmetry</span>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=MHXO86wKeDY" target="_blank" rel="noopener noreferrer" class="video-yt-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch on YouTube ↗
+              </a>
+            </div>
+            <div style="padding: 10px 16px 14px; font-size: 0.8125rem; color: var(--color-text-secondary); background: rgba(0,0,0,0.02); border-top: 1px solid var(--color-border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <span>💡 If the YouTube player is blocked by your browser network or privacy extensions, use the direct link above to watch in YouTube.</span>
+              <a href="https://www.youtube.com/watch?v=MHXO86wKeDY" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Open in New Tab →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worked Examples & Practical Scenarios -->
         <section id="worked-example" aria-labelledby="example-heading">
-          <h2 id="example-heading">Worked Example</h2>
-          <div class="worked-example">
-            <h4>Problem</h4>
+          <h2 id="example-heading">Worked Examples &amp; Real-World Math</h2>
+          
+          <!-- Example 1: Standard Algebraic Solution -->
+          <div class="worked-example" style="margin-bottom:var(--space-6)">
+            <h4>Example 1 · Classical Quadratic Formula</h4>
             <p>Solve the quadratic equation $2x^2 - 4x - 6 = 0$.</p>
             <div class="worked-step">
               <div class="worked-step-num" aria-hidden="true">1</div>
@@ -224,13 +288,47 @@
             </div>
             <div class="worked-step">
               <div class="worked-step-num" aria-hidden="true">3</div>
-              <div class="worked-step-body"><strong>Take the square root.</strong><br>$\sqrt{64} = 8$. Since $\Delta &gt; 0$, there are two real roots.</div>
+              <div class="worked-step-body"><strong>Take the square root.</strong><br>$\sqrt{64} = 8$. Since $\Delta > 0$, there are two real roots.</div>
             </div>
             <div class="worked-step">
               <div class="worked-step-num" aria-hidden="true">4</div>
               <div class="worked-step-body"><strong>Apply the quadratic formula.</strong><br>$x = \dfrac{-(-4) \pm 8}{2(2)} = \dfrac{4 \pm 8}{4}$.<br>• $x_1 = (4 + 8) / 4 = 12 / 4 = 3$<br>• $x_2 = (4 - 8) / 4 = -4 / 4 = -1$.</div>
             </div>
             <div class="worked-answer">✓ The roots are $x = 3$ and $x = -1$. (Check: $2(3)^2 - 4(3) - 6 = 18 - 12 - 6 = 0$).</div>
+          </div>
+
+          <!-- Example 2: Po-Shen Loh's Symmetry Method -->
+          <div class="worked-example" style="margin-bottom:var(--space-6)">
+            <h4>Example 2 · Po-Shen Loh's Parabolic Symmetry Method</h4>
+            <p>Solve $x^2 - 10x + 21 = 0$ without blind formula memorization by finding numbers symmetric around the midpoint.</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Find the root average ($h$).</strong><br>By Vieta's formulas, the sum of roots is $-b = 10$. Thus the midpoint average is $h = \frac{-b}{2} = \frac{10}{2} = 5$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Express roots symmetrically.</strong><br>The two roots must be $r_1 = 5 - z$ and $r_2 = 5 + z$ for some distance $z$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">3</div>
+              <div class="worked-step-body"><strong>Use the root product property.</strong><br>$(5 - z)(5 + z) = 21 \implies 25 - z^2 = 21 \implies z^2 = 4 \implies z = 2$.</div>
+            </div>
+            <div class="worked-answer">✓ The roots are $5 - 2 = 3$ and $5 + 2 = 7$. Mental math verified in seconds!</div>
+          </div>
+
+          <!-- Example 3: Real-World Projectile Trajectory -->
+          <div class="worked-example">
+            <h4>Example 3 · Real-World Physics: Rocket Flight Trajectory</h4>
+            <p>A flare is launched from a $25\text{ m}$ platform with upward velocity $20\text{ m/s}$. Its height $h(t)$ in meters after $t$ seconds is modelled by $h(t) = -5t^2 + 20t + 25$. When will the flare strike the ground ($h = 0$)?</p>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">1</div>
+              <div class="worked-step-body"><strong>Set $h(t) = 0$ and simplify.</strong><br>$-5t^2 + 20t + 25 = 0$. Dividing the entire equation by $-5$ yields: $t^2 - 4t - 5 = 0$.</div>
+            </div>
+            <div class="worked-step">
+              <div class="worked-step-num" aria-hidden="true">2</div>
+              <div class="worked-step-body"><strong>Solve for time roots.</strong><br>$a = 1, b = -4, c = -5$.<br>$\Delta = (-4)^2 - 4(1)(-5) = 16 + 20 = 36$.<br>$t = \dfrac{4 \pm \sqrt{36}}{2} = \dfrac{4 \pm 6}{2}$.<br>• $t_1 = (4 + 6)/2 = 5\text{ s}$<br>• $t_2 = (4 - 6)/2 = -1\text{ s}$.</div>
+            </div>
+            <div class="worked-answer">✓ Since time $t \ge 0$, the flare hits the ground at exactly $t = 5\text{ seconds}$. The maximum height occurs at the vertex $t = -b/(2a) = 2\text{ s}$, reaching $h(2) = -5(4) + 20(2) + 25 = 45\text{ meters}$.</div>
           </div>
         </section>
 
@@ -392,6 +490,7 @@
             <li><a href="#vars-heading">Symbol Definitions</a></li>
             <li><a href="#assumptions-heading">Conditions</a></li>
             <li><a href="#lab">Interactive Explorer</a></li>
+            <li><a href="#video">Video Explanation</a></li>
             <li><a href="#worked-example">Worked Example</a></li>
             <li><a href="#code">Code Examples</a></li>
             <li><a href="#practice">Practice Questions</a></li>
