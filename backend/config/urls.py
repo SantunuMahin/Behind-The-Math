@@ -21,6 +21,25 @@ from apps.students.views import (
 from apps.solver.views import SolverListView, SolverCalculateView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import JsonResponse
+
+def api_root_view(request):
+    return JsonResponse({
+        "status": "online",
+        "service": "BehindTheMath API Engine",
+        "version": "1.0",
+        "endpoints": {
+            "api_v1": "/api/v1/",
+            "formulas": "/api/v1/formulas/",
+            "lessons": "/api/v1/lessons/",
+            "practice": "/api/v1/practice/",
+            "solver": "/api/v1/solver/",
+            "profile": "/api/v1/profile/",
+            "stats": "/api/v1/stats/",
+            "admin": "/admin/",
+        },
+        "docs": "https://github.com/SantunuMahin/Behind-The-Math",
+    })
 
 router = DefaultRouter()
 router.register(r'subjects', SubjectViewSet, basename='subject')
@@ -32,6 +51,7 @@ router.register(r'notes', FormulaNoteViewSet, basename='note')
 router.register(r'flashcards', FlashcardViewSet, basename='flashcard')
 
 urlpatterns = [
+    path('', api_root_view, name='root-status'),
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
     path('api/v1/profile/', StudentProfileView.as_view(), name='student-profile'),
