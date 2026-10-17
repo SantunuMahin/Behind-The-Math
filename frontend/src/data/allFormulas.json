@@ -1,0 +1,5124 @@
+[
+  {
+    "id": "circle-area",
+    "title": "Circle Area & Circumference",
+    "slug": "circle-area",
+    "subject": "Geometry",
+    "topics": [
+      "circles",
+      "area",
+      "circumference",
+      "pi"
+    ],
+    "level": "beginner",
+    "summary": "The area of a circle is π times the radius squared. The circumference is 2π times the radius.",
+    "formulaLatex": "A = \\pi r^2,\\quad C = 2\\pi r",
+    "hasDemo": true,
+    "keywords": [
+      "area",
+      "circle",
+      "radius",
+      "circumference",
+      "pi",
+      "A equals pi r squared"
+    ],
+    "href": "lessons/circle-area.html",
+    "video": {
+      "youtubeId": "YokKp3pwVFc",
+      "url": "https://www.youtube.com/watch?v=YokKp3pwVFc",
+      "title": "Area of a circle, how to get the formula",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "pythagorean-theorem",
+    "title": "Pythagorean Theorem",
+    "slug": "pythagorean-theorem",
+    "subject": "Geometry",
+    "topics": [
+      "right triangle",
+      "hypotenuse",
+      "distance"
+    ],
+    "level": "beginner",
+    "summary": "In a right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
+    "formulaLatex": "a^2 + b^2 = c^2",
+    "hasDemo": true,
+    "keywords": [
+      "pythagoras",
+      "right triangle",
+      "hypotenuse",
+      "sides",
+      "a squared b squared"
+    ],
+    "href": "lessons/pythagorean-theorem.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Pythagorean Theorem: Visual Proof & Geometric Intuition",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "heron-formula",
+    "title": "Heron's Formula (Triangle Area)",
+    "slug": "heron-formula",
+    "subject": "Geometry",
+    "topics": [
+      "triangle",
+      "area",
+      "semiperimeter",
+      "geometry"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the area of any triangle from the lengths of its three sides without needing the height.",
+    "formulaLatex": "A = \\sqrt{s(s-a)(s-b)(s-c)},\\quad s = \\frac{a+b+c}{2}",
+    "hasDemo": false,
+    "keywords": [
+      "heron",
+      "triangle area",
+      "sides",
+      "semiperimeter",
+      "geometry"
+    ],
+    "href": "lessons/pythagorean-theorem.html",
+    "video": {
+      "youtubeId": "AO-jEEAuJYE",
+      "url": "https://www.youtube.com/watch?v=AO-jEEAuJYE",
+      "title": "Proof of Heron's formula for area of triangle in maths #maths #science",
+      "channel": "Physics lectures of Arif "
+    }
+  },
+  {
+    "id": "sphere-volume",
+    "title": "Sphere Volume & Surface Area",
+    "slug": "sphere-volume",
+    "subject": "Geometry",
+    "topics": [
+      "sphere",
+      "volume",
+      "surface area",
+      "3D"
+    ],
+    "level": "intermediate",
+    "summary": "The volume of a sphere is (4/3)πr³ and its surface area is 4πr².",
+    "formulaLatex": "V = \\frac{4}{3}\\pi r^3,\\quad A = 4\\pi r^2",
+    "hasDemo": false,
+    "keywords": [
+      "sphere",
+      "volume",
+      "surface area",
+      "3d geometry",
+      "radius"
+    ],
+    "href": "lessons/circle-area.html",
+    "video": {
+      "youtubeId": "VDyp_oJY-5A",
+      "url": "https://www.youtube.com/watch?v=VDyp_oJY-5A",
+      "title": "Why the Volume of a Sphere is (4/3)πr³",
+      "channel": "WhyNot Science"
+    }
+  },
+  {
+    "id": "euler-polyhedron",
+    "title": "Euler's Polyhedron Formula",
+    "slug": "euler-polyhedron",
+    "subject": "Geometry",
+    "topics": [
+      "polyhedron",
+      "vertices",
+      "edges",
+      "faces",
+      "topology"
+    ],
+    "level": "advanced",
+    "summary": "For any convex polyhedron, the number of vertices minus edges plus faces always equals 2.",
+    "formulaLatex": "V - E + F = 2",
+    "hasDemo": false,
+    "keywords": [
+      "euler",
+      "polyhedron",
+      "vertices",
+      "edges",
+      "faces",
+      "convex"
+    ],
+    "href": "learn.html#geometry",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Euler's Polyhedron Formula - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "quadratic-equation",
+    "title": "Quadratic Formula",
+    "slug": "quadratic-equation",
+    "subject": "Algebra",
+    "topics": [
+      "quadratic",
+      "roots",
+      "parabola",
+      "discriminant"
+    ],
+    "level": "intermediate",
+    "summary": "Finds the roots of any quadratic equation ax² + bx + c = 0 using the discriminant.",
+    "formulaLatex": "x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "hasDemo": true,
+    "keywords": [
+      "quadratic",
+      "roots",
+      "parabola",
+      "discriminant",
+      "ax squared",
+      "quadratic formula"
+    ],
+    "href": "lessons/quadratic-equation.html",
+    "video": {
+      "youtubeId": "MHXO86wKeDY",
+      "url": "https://www.youtube.com/watch?v=MHXO86wKeDY",
+      "title": "The simpler quadratic formula | Ep. 1 Lockdown live math",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "binomial-theorem",
+    "title": "Binomial Theorem",
+    "slug": "binomial-theorem",
+    "subject": "Algebra",
+    "topics": [
+      "binomial",
+      "polynomial",
+      "expansion",
+      "combinatorics"
+    ],
+    "level": "intermediate",
+    "summary": "Expands any power of a binomial (a + b)ⁿ using combinatorial coefficients.",
+    "formulaLatex": "(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k}b^k",
+    "hasDemo": false,
+    "keywords": [
+      "binomial",
+      "expansion",
+      "pascal triangle",
+      "combinations",
+      "powers"
+    ],
+    "href": "learn.html#algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Binomial Theorem - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "difference-of-squares",
+    "title": "Difference of Squares",
+    "slug": "difference-of-squares",
+    "subject": "Algebra",
+    "topics": [
+      "factoring",
+      "algebra",
+      "identity",
+      "polynomials"
+    ],
+    "level": "beginner",
+    "summary": "Core algebraic identity stating that a² - b² factors into (a - b)(a + b).",
+    "formulaLatex": "a^2 - b^2 = (a - b)(a + b)",
+    "hasDemo": false,
+    "keywords": [
+      "difference of squares",
+      "factoring",
+      "identity",
+      "algebraic factoring"
+    ],
+    "href": "lessons/quadratic-equation.html",
+    "video": {
+      "youtubeId": "TprbVpNV1xo",
+      "url": "https://www.youtube.com/watch?v=TprbVpNV1xo",
+      "title": "Difference of Squares",
+      "channel": "Mr H Tutoring"
+    }
+  },
+  {
+    "id": "slope-intercept",
+    "title": "Slope & Linear Equation",
+    "slug": "slope-intercept",
+    "subject": "Algebra",
+    "topics": [
+      "linear equation",
+      "slope",
+      "line",
+      "coordinate geometry"
+    ],
+    "level": "beginner",
+    "summary": "Slope measures rate of change, and slope-intercept form represents any non-vertical straight line.",
+    "formulaLatex": "m = \\frac{y_2 - y_1}{x_2 - x_1},\\quad y = mx + c",
+    "hasDemo": false,
+    "keywords": [
+      "slope",
+      "gradient",
+      "linear",
+      "line equation",
+      "rate of change"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Slope & Linear Equation - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "distance-formula",
+    "title": "Euclidean Distance Formula",
+    "slug": "distance-formula",
+    "subject": "Algebra",
+    "topics": [
+      "distance",
+      "coordinates",
+      "Cartesian",
+      "geometry"
+    ],
+    "level": "beginner",
+    "summary": "Calculates the straight-line distance between two points (x₁, y₁) and (x₂, y₂) in a 2D plane.",
+    "formulaLatex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
+    "hasDemo": false,
+    "keywords": [
+      "distance formula",
+      "euclidean distance",
+      "coordinates",
+      "pythagoras"
+    ],
+    "href": "lessons/pythagorean-theorem.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Euclidean Distance Formula - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "midpoint-formula",
+    "title": "Midpoint Formula",
+    "slug": "midpoint-formula",
+    "subject": "Algebra",
+    "topics": [
+      "midpoint",
+      "coordinates",
+      "geometry",
+      "averages"
+    ],
+    "level": "beginner",
+    "summary": "Finds the exact middle point of a line segment joining two coordinate endpoints.",
+    "formulaLatex": "M = \\left(\\frac{x_1 + x_2}{2},\\; \\frac{y_1 + y_2}{2}\\right)",
+    "hasDemo": false,
+    "keywords": [
+      "midpoint",
+      "center",
+      "segment",
+      "coordinates"
+    ],
+    "href": "learn.html#algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Midpoint Formula - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "vector-dot-product",
+    "title": "Dot Product & Angle Between Vectors",
+    "slug": "vector-dot-product",
+    "subject": "Linear Algebra",
+    "topics": [
+      "vectors",
+      "dot product",
+      "inner product",
+      "orthogonality",
+      "angle"
+    ],
+    "level": "beginner",
+    "summary": "Computes the inner product of two vectors. Equals zero if and only if the vectors are orthogonal (perpendicular).",
+    "formulaLatex": "\\mathbf{u} \\cdot \\mathbf{v} = \\|\\mathbf{u}\\| \\|\\mathbf{v}\\| \\cos\\theta = \\sum_{i=1}^n u_i v_i",
+    "hasDemo": false,
+    "keywords": [
+      "dot product",
+      "inner product",
+      "vectors",
+      "orthogonal",
+      "scalar product",
+      "cosine angle"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Dot Product & Angle Between Vectors - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "vector-cross-product",
+    "title": "Vector Cross Product (3D)",
+    "slug": "vector-cross-product",
+    "subject": "Linear Algebra",
+    "topics": [
+      "cross product",
+      "3D vectors",
+      "normal vector",
+      "torque",
+      "area"
+    ],
+    "level": "intermediate",
+    "summary": "Yields a 3D vector perpendicular to both inputs with magnitude equal to the area of the spanned parallelogram.",
+    "formulaLatex": "\\mathbf{u} \\times \\mathbf{v} = \\det\\begin{pmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ u_x & u_y & u_z \\\\ v_x & v_y & v_z \\end{pmatrix}",
+    "hasDemo": false,
+    "keywords": [
+      "cross product",
+      "vector product",
+      "normal vector",
+      "right hand rule",
+      "torque"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Vector Cross Product (3D) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "vector-projection",
+    "title": "Orthogonal Vector Projection",
+    "slug": "vector-projection",
+    "subject": "Linear Algebra",
+    "topics": [
+      "projection",
+      "vectors",
+      "orthogonality",
+      "Gram-Schmidt"
+    ],
+    "level": "intermediate",
+    "summary": "Decomposes a vector into its component in the direction of another vector and its orthogonal complement.",
+    "formulaLatex": "\\operatorname{proj}_{\\mathbf{v}}\\mathbf{u} = \\dfrac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{v}\\|^2}\\mathbf{v}",
+    "hasDemo": false,
+    "keywords": [
+      "vector projection",
+      "orthogonal projection",
+      "component",
+      "shadow vector"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Orthogonal Vector Projection - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "matrix-multiplication",
+    "title": "Matrix Multiplication (AB)",
+    "slug": "matrix-multiplication",
+    "subject": "Linear Algebra",
+    "topics": [
+      "matrix",
+      "multiplication",
+      "linear transformation",
+      "composition"
+    ],
+    "level": "beginner",
+    "summary": "Composes linear transformations by taking dot products between rows of the first matrix and columns of the second.",
+    "formulaLatex": "(AB)_{ij} = \\sum_{k=1}^m a_{ik} b_{kj}",
+    "hasDemo": false,
+    "keywords": [
+      "matrix multiplication",
+      "matrix product",
+      "linear maps",
+      "composition"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "XkY2DOUCWMU",
+      "url": "https://www.youtube.com/watch?v=XkY2DOUCWMU",
+      "title": "Matrix Multiplication as Linear Transformations",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "matrix-determinant",
+    "title": "Matrix Determinant",
+    "slug": "matrix-determinant",
+    "subject": "Linear Algebra",
+    "topics": [
+      "determinant",
+      "matrix",
+      "volume scaling",
+      "invertibility"
+    ],
+    "level": "beginner",
+    "summary": "Scalar property measuring how a matrix scales area or volume. A matrix is invertible if and only if det(A) ≠ 0.",
+    "formulaLatex": "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
+    "hasDemo": false,
+    "keywords": [
+      "determinant",
+      "det",
+      "invertibility",
+      "singular matrix",
+      "area scaling"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Matrix Determinant - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "matrix-inverse",
+    "title": "Matrix Inverse (2×2)",
+    "slug": "matrix-inverse",
+    "subject": "Linear Algebra",
+    "topics": [
+      "inverse",
+      "matrix",
+      "linear systems",
+      "identity"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the unique inverse matrix A⁻¹ such that AA⁻¹ = I, enabling direct solution of linear systems Ax = b.",
+    "formulaLatex": "A^{-1} = \\dfrac{1}{ad - bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
+    "hasDemo": false,
+    "keywords": [
+      "matrix inverse",
+      "invertible",
+      "identity matrix",
+      "solve linear system"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Matrix Inverse (2×2) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "eigenvalues-eigenvectors",
+    "title": "Eigenvalues & Eigenvectors",
+    "slug": "eigenvalues-eigenvectors",
+    "subject": "Linear Algebra",
+    "topics": [
+      "eigenvalue",
+      "eigenvector",
+      "characteristic equation",
+      "diagonalization"
+    ],
+    "level": "advanced",
+    "summary": "Finds invariant directional axes where transformation A acts purely as scalar multiplication Av = λv.",
+    "formulaLatex": "A\\mathbf{v} = \\lambda\\mathbf{v} \\iff \\det(A - \\lambda I) = 0",
+    "hasDemo": false,
+    "keywords": [
+      "eigenvalue",
+      "eigenvector",
+      "characteristic equation",
+      "diagonalization",
+      "spectral theory"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "PFDu9oVAE-g",
+      "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g",
+      "title": "Eigenvectors and eigenvalues (Essence of linear algebra, Ch. 14)",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "rank-nullity",
+    "title": "Rank-Nullity Theorem",
+    "slug": "rank-nullity",
+    "subject": "Linear Algebra",
+    "topics": [
+      "rank",
+      "nullity",
+      "kernel",
+      "image",
+      "vector space"
+    ],
+    "level": "advanced",
+    "summary": "Fundamental theorem of linear transformations stating that dim(Domain) = rank(T) + nullity(T).",
+    "formulaLatex": "\\operatorname{rank}(T) + \\operatorname{nullity}(T) = \\dim(V)",
+    "hasDemo": false,
+    "keywords": [
+      "rank nullity",
+      "kernel",
+      "null space",
+      "column space",
+      "dimension theorem"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Rank-Nullity Theorem - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "gram-schmidt",
+    "title": "Gram-Schmidt Orthogonalization",
+    "slug": "gram-schmidt",
+    "subject": "Linear Algebra",
+    "topics": [
+      "Gram Schmidt",
+      "orthonormal basis",
+      "QR decomposition"
+    ],
+    "level": "advanced",
+    "summary": "Converts an arbitrary linearly independent set of vectors into an orthogonal or orthonormal basis.",
+    "formulaLatex": "\\mathbf{u}_k = \\mathbf{v}_k - \\sum_{j=1}^{k-1} \\dfrac{\\mathbf{v}_k \\cdot \\mathbf{u}_j}{\\|\\mathbf{u}_j\\|^2} \\mathbf{u}_j",
+    "hasDemo": false,
+    "keywords": [
+      "gram schmidt",
+      "orthonormal",
+      "basis",
+      "qr decomposition",
+      "projection"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Gram-Schmidt Orthogonalization - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "singular-value-decomposition",
+    "title": "Singular Value Decomposition (SVD)",
+    "slug": "singular-value-decomposition",
+    "subject": "Linear Algebra",
+    "topics": [
+      "SVD",
+      "singular values",
+      "factorization",
+      "PCA",
+      "data science"
+    ],
+    "level": "advanced",
+    "summary": "Factorizes any m×n matrix into orthogonal matrices U, V and singular values Σ. Central to modern data science & PCA.",
+    "formulaLatex": "A = U \\Sigma V^T",
+    "hasDemo": false,
+    "keywords": [
+      "svd",
+      "singular value decomposition",
+      "pca",
+      "data compression",
+      "matrix factorization"
+    ],
+    "href": "learn.html#linear-algebra",
+    "video": {
+      "youtubeId": "gXbThCXjZFM",
+      "url": "https://www.youtube.com/watch?v=gXbThCXjZFM",
+      "title": "Singular Value Decomposition (SVD): Overview",
+      "channel": "Steve Brunton"
+    }
+  },
+  {
+    "id": "gradient-vector",
+    "title": "Gradient of a Scalar Field (∇f)",
+    "slug": "gradient-vector",
+    "subject": "Calculus",
+    "topics": [
+      "gradient",
+      "multivariable",
+      "partial derivatives",
+      "directional derivative"
+    ],
+    "level": "intermediate",
+    "summary": "Vector field of partial derivatives pointing in the direction of steepest ascent of a multivariable function.",
+    "formulaLatex": "\\nabla f = \\left(\\dfrac{\\partial f}{\\partial x},\\; \\dfrac{\\partial f}{\\partial y},\\; \\dfrac{\\partial f}{\\partial z}\\right)",
+    "hasDemo": false,
+    "keywords": [
+      "gradient",
+      "nabla",
+      "partial derivative",
+      "steepest descent",
+      "multivariable calculus"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Gradient of a Scalar Field (∇f) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "divergence-vector-field",
+    "title": "Divergence of a Vector Field (∇·F)",
+    "slug": "divergence-vector-field",
+    "subject": "Calculus",
+    "topics": [
+      "divergence",
+      "vector field",
+      "flux",
+      "vector calculus"
+    ],
+    "level": "advanced",
+    "summary": "Scalar quantity measuring the net outward flux density of a vector field from an infinitesimal volume.",
+    "formulaLatex": "\\nabla \\cdot \\mathbf{F} = \\dfrac{\\partial F_x}{\\partial x} + \\dfrac{\\partial F_y}{\\partial y} + \\dfrac{\\partial F_z}{\\partial z}",
+    "hasDemo": false,
+    "keywords": [
+      "divergence",
+      "div",
+      "flux",
+      "vector calculus",
+      "fluid flow"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Divergence of a Vector Field (∇·F) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "curl-vector-field",
+    "title": "Curl of a Vector Field (∇×F)",
+    "slug": "curl-vector-field",
+    "subject": "Calculus",
+    "topics": [
+      "curl",
+      "rotation",
+      "circulation",
+      "vector field"
+    ],
+    "level": "advanced",
+    "summary": "Vector quantity describing the infinitesimal rotation and circulation of a 3D vector field.",
+    "formulaLatex": "\\nabla \\times \\mathbf{F} = \\det\\begin{pmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ F_x & F_y & F_z \\end{pmatrix}",
+    "hasDemo": false,
+    "keywords": [
+      "curl",
+      "circulation",
+      "rotation",
+      "vorticity",
+      "vector calculus"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Curl of a Vector Field (∇×F) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "greens-theorem",
+    "title": "Green's Theorem in the Plane",
+    "slug": "greens-theorem",
+    "subject": "Calculus",
+    "topics": [
+      "greens theorem",
+      "line integral",
+      "double integral",
+      "circulation"
+    ],
+    "level": "advanced",
+    "summary": "Equates the macroscopic line integral around a simple closed curve to the double integral of 2D curl over the interior.",
+    "formulaLatex": "\\oint_{\\partial D} (L\\,dx + M\\,dy) = \\iint_D \\left(\\dfrac{\\partial M}{\\partial x} - \\dfrac{\\partial L}{\\partial y}\\right) dA",
+    "hasDemo": false,
+    "keywords": [
+      "greens theorem",
+      "line integral",
+      "double integral",
+      "circulation",
+      "planar flux"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Green's Theorem in the Plane - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "stokes-theorem",
+    "title": "Stokes' Theorem",
+    "slug": "stokes-theorem",
+    "subject": "Calculus",
+    "topics": [
+      "stokes theorem",
+      "surface integral",
+      "curl",
+      "line integral"
+    ],
+    "level": "advanced",
+    "summary": "Relates the surface integral of curl over an oriented surface to the line integral of the vector field along its boundary.",
+    "formulaLatex": "\\oint_{\\partial \\Sigma} \\mathbf{F} \\cdot d\\mathbf{r} = \\iint_\\Sigma (\\nabla \\times \\mathbf{F}) \\cdot d\\mathbf{S}",
+    "hasDemo": false,
+    "keywords": [
+      "stokes theorem",
+      "surface integral",
+      "curl",
+      "vector calculus",
+      "maxwell equations"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Stokes' Theorem - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "divergence-theorem",
+    "title": "Gauss's Divergence Theorem",
+    "slug": "divergence-theorem",
+    "subject": "Calculus",
+    "topics": [
+      "divergence theorem",
+      "Gauss",
+      "flux",
+      "volume integral"
+    ],
+    "level": "advanced",
+    "summary": "States that the total outward flux of a vector field through a closed boundary surface equals the volume integral of divergence.",
+    "formulaLatex": "\\iint_{\\partial V} \\mathbf{F} \\cdot d\\mathbf{S} = \\iiint_V (\\nabla \\cdot \\mathbf{F})\\, dV",
+    "hasDemo": false,
+    "keywords": [
+      "divergence theorem",
+      "gauss theorem",
+      "flux integral",
+      "volume integral"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Gauss's Divergence Theorem - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "first-order-ode",
+    "title": "First-Order Linear ODE (Integrating Factor)",
+    "slug": "first-order-ode",
+    "subject": "Calculus",
+    "topics": [
+      "differential equations",
+      "integrating factor",
+      "ODE",
+      "calculus"
+    ],
+    "level": "intermediate",
+    "summary": "Solves y' + P(x)y = Q(x) by multiplying by the integrating factor I(x) = exp(∫ P(x)dx).",
+    "formulaLatex": "y' + P(x)y = Q(x) \\implies y(x) = \\dfrac{1}{I(x)}\\left(\\int I(x)Q(x)\\,dx + C\\right)",
+    "hasDemo": false,
+    "keywords": [
+      "ode",
+      "differential equations",
+      "integrating factor",
+      "linear ode",
+      "calculus"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "First-Order Linear ODE (Integrating Factor) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "laplace-transform",
+    "title": "Laplace Transform",
+    "slug": "laplace-transform",
+    "subject": "Calculus",
+    "topics": [
+      "Laplace transform",
+      "differential equations",
+      "frequency domain",
+      "control systems"
+    ],
+    "level": "advanced",
+    "summary": "Converts continuous time-domain differential equations into algebraic equations in complex s-space.",
+    "formulaLatex": "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^\\infty e^{-st} f(t)\\,dt",
+    "hasDemo": false,
+    "keywords": [
+      "laplace transform",
+      "differential equations",
+      "control theory",
+      "transfer function"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Laplace Transform - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "fourier-series",
+    "title": "Fourier Series Expansion",
+    "slug": "fourier-series",
+    "subject": "Calculus",
+    "topics": [
+      "Fourier series",
+      "harmonics",
+      "orthogonality",
+      "signal processing"
+    ],
+    "level": "advanced",
+    "summary": "Represents any piecewise smooth periodic function as an infinite superposition of sines and cosines.",
+    "formulaLatex": "f(x) = \\dfrac{a_0}{2} + \\sum_{n=1}^\\infty \\left(a_n\\cos\\dfrac{n\\pi x}{L} + b_n\\sin\\dfrac{n\\pi x}{L}\\right)",
+    "hasDemo": false,
+    "keywords": [
+      "fourier series",
+      "harmonic analysis",
+      "signals",
+      "orthogonal functions",
+      "frequency"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "r6sGWTCMz2k",
+      "url": "https://www.youtube.com/watch?v=r6sGWTCMz2k",
+      "title": "But what is a Fourier series? From heat flow to circle drawings",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "euler-identity",
+    "title": "Euler's Formula & Identity",
+    "slug": "euler-identity",
+    "subject": "Foundations",
+    "topics": [
+      "Euler identity",
+      "complex numbers",
+      "trigonometry",
+      "exponentials"
+    ],
+    "level": "intermediate",
+    "summary": "Unites exponential growth and circular motion in the complex plane: e^(iθ) = cos θ + i sin θ.",
+    "formulaLatex": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta,\\quad e^{i\\pi} + 1 = 0",
+    "hasDemo": false,
+    "keywords": [
+      "euler formula",
+      "euler identity",
+      "complex exponentials",
+      "cis theta",
+      "imaginary unit"
+    ],
+    "href": "lessons/exponents-logarithms.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=v0YEaeIClKY",
+      "title": "Euler's Formula with 3D Vectors & Rotation",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "cauchy-riemann",
+    "title": "Cauchy-Riemann Equations",
+    "slug": "cauchy-riemann",
+    "subject": "Calculus",
+    "topics": [
+      "complex analysis",
+      "analytic functions",
+      "holomorphic",
+      "partial derivatives"
+    ],
+    "level": "advanced",
+    "summary": "Fundamental conditions connecting real and imaginary components for a complex function to be complex differentiable.",
+    "formulaLatex": "\\dfrac{\\partial u}{\\partial x} = \\dfrac{\\partial v}{\\partial y},\\quad \\dfrac{\\partial u}{\\partial y} = -\\dfrac{\\partial v}{\\partial x}",
+    "hasDemo": false,
+    "keywords": [
+      "cauchy riemann",
+      "complex analysis",
+      "holomorphic",
+      "analytic functions"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Cauchy-Riemann Equations - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "gcd-lcm",
+    "title": "GCD & LCM",
+    "slug": "gcd-lcm",
+    "subject": "Number Theory",
+    "topics": [
+      "GCD",
+      "LCM",
+      "Euclidean algorithm",
+      "divisibility"
+    ],
+    "level": "beginner",
+    "summary": "The greatest common divisor and least common multiple, computed using the Euclidean algorithm.",
+    "formulaLatex": "\\gcd(a,b) \\cdot \\text{lcm}(a,b) = a \\cdot b",
+    "hasDemo": false,
+    "keywords": [
+      "gcd",
+      "lcm",
+      "greatest common divisor",
+      "least common multiple",
+      "euclidean"
+    ],
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "AJn843kplDw",
+      "url": "https://www.youtube.com/watch?v=AJn843kplDw",
+      "title": "The Euclidean Algorithm for finding GCD",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "fermat-little",
+    "title": "Fermat's Little Theorem",
+    "slug": "fermat-little",
+    "subject": "Number Theory",
+    "topics": [
+      "primes",
+      "modular arithmetic",
+      "cryptography",
+      "congruence"
+    ],
+    "level": "advanced",
+    "summary": "If p is prime and gcd(a, p) = 1, then a^(p-1) is congruent to 1 modulo p. Powers RSA cryptography.",
+    "formulaLatex": "a^{p-1} \\equiv 1 \\pmod p",
+    "hasDemo": false,
+    "keywords": [
+      "fermat",
+      "primes",
+      "modular inverse",
+      "cryptography",
+      "rsa"
+    ],
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "w0ZQvZLx2KA",
+      "url": "https://www.youtube.com/watch?v=w0ZQvZLx2KA",
+      "title": "Fermat's Little Theorem",
+      "channel": "Numberphile"
+    }
+  },
+  {
+    "id": "modular-arithmetic",
+    "title": "Modular Congruence & Arithmetic",
+    "slug": "modular-arithmetic",
+    "subject": "Number Theory",
+    "topics": [
+      "modular",
+      "remainder",
+      "clock arithmetic",
+      "integers"
+    ],
+    "level": "intermediate",
+    "summary": "Multiplication and addition preserve modular congruences, enabling efficient large-number computations.",
+    "formulaLatex": "(a \\cdot b) \\bmod m = ((a \\bmod m) \\cdot (b \\bmod m)) \\bmod m",
+    "hasDemo": false,
+    "keywords": [
+      "modulo",
+      "remainder",
+      "mod",
+      "modular arithmetic",
+      "congruence"
+    ],
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Modular Congruence & Arithmetic - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "percentages-ratios",
+    "title": "Percentages & Ratios",
+    "slug": "percentages-ratios",
+    "subject": "Foundations",
+    "topics": [
+      "percentage",
+      "ratio",
+      "proportion",
+      "fraction"
+    ],
+    "level": "beginner",
+    "summary": "Percentage expresses a quantity as parts per hundred. Ratios compare two quantities of the same kind.",
+    "formulaLatex": "P = \\dfrac{\\text{Part}}{\\text{Whole}} \\times 100,\\quad \\Delta\\% = \\dfrac{x_{\\text{new}} - x_{\\text{old}}}{x_{\\text{old}}} \\times 100",
+    "hasDemo": false,
+    "keywords": [
+      "percent",
+      "percentage",
+      "ratio",
+      "proportion",
+      "fraction",
+      "parts per hundred"
+    ],
+    "href": "lessons/percentages-ratios.html",
+    "video": {
+      "youtubeId": "RQ2nYUBVvqI",
+      "url": "https://www.youtube.com/watch?v=RQ2nYUBVvqI",
+      "title": "Ratios And Rates",
+      "channel": "Math Antics"
+    }
+  },
+  {
+    "id": "exponents-logarithms",
+    "title": "Exponents & Logarithms",
+    "slug": "exponents-logarithms",
+    "subject": "Foundations",
+    "topics": [
+      "exponents",
+      "logarithms",
+      "power",
+      "base"
+    ],
+    "level": "intermediate",
+    "summary": "Exponents express repeated multiplication; logarithms are their inverse, asking what power produces a value.",
+    "formulaLatex": "\\log_b(x) = y \\iff b^y = x",
+    "hasDemo": false,
+    "keywords": [
+      "exponent",
+      "logarithm",
+      "log",
+      "power",
+      "base",
+      "natural log",
+      "ln"
+    ],
+    "href": "lessons/exponents-logarithms.html",
+    "video": {
+      "youtubeId": "Z5myJ8dg_rM",
+      "url": "https://www.youtube.com/watch?v=Z5myJ8dg_rM",
+      "title": "Introduction to Logarithms",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "compound-interest",
+    "title": "Compound Interest Formula",
+    "slug": "compound-interest",
+    "subject": "Foundations",
+    "topics": [
+      "interest",
+      "finance",
+      "exponential growth",
+      "percentage"
+    ],
+    "level": "beginner",
+    "summary": "Calculates future investment value with compounding interest over time periods.",
+    "formulaLatex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}",
+    "hasDemo": false,
+    "keywords": [
+      "compound interest",
+      "principal",
+      "finance",
+      "growth",
+      "interest rate"
+    ],
+    "href": "lessons/exponents-logarithms.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Compound Interest Formula - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "arithmetic-sequence",
+    "title": "Arithmetic Sequence & Sum",
+    "slug": "arithmetic-sequence",
+    "subject": "Foundations",
+    "topics": [
+      "sequence",
+      "series",
+      "progression",
+      "summation"
+    ],
+    "level": "beginner",
+    "summary": "Finds the nth term and sum of numbers with a constant difference between consecutive terms.",
+    "formulaLatex": "a_n = a_1 + (n-1)d,\\quad S_n = \\frac{n}{2}(a_1 + a_n)",
+    "hasDemo": false,
+    "keywords": [
+      "arithmetic sequence",
+      "ap",
+      "progression",
+      "sum of series",
+      "gauss sum"
+    ],
+    "href": "learn.html#foundations",
+    "video": {
+      "youtubeId": "lj_X9JVSF8k",
+      "url": "https://www.youtube.com/watch?v=lj_X9JVSF8k",
+      "title": "Arithmetic Sequences and Series Formulas",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "geometric-sequence",
+    "title": "Geometric Sequence & Series",
+    "slug": "geometric-sequence",
+    "subject": "Foundations",
+    "topics": [
+      "sequence",
+      "series",
+      "geometric",
+      "infinite series"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates finite and infinite sums where each consecutive term is multiplied by a common ratio r.",
+    "formulaLatex": "S_n = \\frac{a(1-r^n)}{1-r},\\quad S_\\infty = \\frac{a}{1-r}\\;(|r|<1)",
+    "hasDemo": false,
+    "keywords": [
+      "geometric sequence",
+      "gp",
+      "common ratio",
+      "infinite series",
+      "convergence"
+    ],
+    "href": "learn.html#foundations",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Geometric Sequence & Series - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "permutations-combinations",
+    "title": "Permutations & Combinations",
+    "slug": "permutations-combinations",
+    "subject": "Counting & Probability",
+    "topics": [
+      "permutation",
+      "combination",
+      "factorial",
+      "counting"
+    ],
+    "level": "intermediate",
+    "summary": "Permutations count ordered arrangements; combinations count unordered selections from a set.",
+    "formulaLatex": "P(n,r) = \\dfrac{n!}{(n-r)!},\\quad C(n,r) = \\dfrac{n!}{r!(n-r)!}",
+    "hasDemo": false,
+    "keywords": [
+      "permutation",
+      "combination",
+      "factorial",
+      "nPr",
+      "nCr",
+      "choose",
+      "arrangements"
+    ],
+    "href": "lessons/permutations-combinations.html",
+    "video": {
+      "youtubeId": "XqQTXW7XfYA",
+      "url": "https://www.youtube.com/watch?v=XqQTXW7XfYA",
+      "title": "Permutations and Combinations (Part 1)",
+      "channel": "Eddie Woo"
+    }
+  },
+  {
+    "id": "probability-bayes",
+    "title": "Probability & Bayes' Theorem",
+    "slug": "probability-bayes",
+    "subject": "Counting & Probability",
+    "topics": [
+      "probability",
+      "Bayes",
+      "conditional probability",
+      "events"
+    ],
+    "level": "intermediate",
+    "summary": "Bayes' theorem updates the probability of a hypothesis given new evidence.",
+    "formulaLatex": "P(A|B) = \\dfrac{P(B|A)\\,P(A)}{P(B)}",
+    "hasDemo": false,
+    "keywords": [
+      "probability",
+      "bayes",
+      "conditional",
+      "posterior",
+      "prior",
+      "likelihood"
+    ],
+    "href": "lessons/probability-bayes.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=HZGCoVF3YvM",
+      "title": "Bayes theorem, the geometry of changing beliefs",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "inclusion-exclusion",
+    "title": "Inclusion-Exclusion Principle",
+    "slug": "inclusion-exclusion",
+    "subject": "Counting & Probability",
+    "topics": [
+      "sets",
+      "union",
+      "intersection",
+      "counting"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the size of the union of overlapping sets by adding sizes and subtracting intersections.",
+    "formulaLatex": "|A \\cup B| = |A| + |B| - |A \\cap B|",
+    "hasDemo": false,
+    "keywords": [
+      "inclusion exclusion",
+      "set theory",
+      "venn diagram",
+      "union",
+      "intersection"
+    ],
+    "href": "lessons/probability-bayes.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Inclusion-Exclusion Principle - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "expected-value",
+    "title": "Expected Value",
+    "slug": "expected-value",
+    "subject": "Counting & Probability",
+    "topics": [
+      "expected value",
+      "random variable",
+      "probability",
+      "mean"
+    ],
+    "level": "intermediate",
+    "summary": "The probability-weighted average of all possible numerical outcomes of a random phenomenon.",
+    "formulaLatex": "E[X] = \\sum x_i P(X = x_i)",
+    "hasDemo": false,
+    "keywords": [
+      "expected value",
+      "expectation",
+      "random variable",
+      "weighted average"
+    ],
+    "href": "lessons/probability-bayes.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Expected Value - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "mean-standard-deviation",
+    "title": "Mean & Standard Deviation",
+    "slug": "mean-standard-deviation",
+    "subject": "Statistics",
+    "topics": [
+      "mean",
+      "variance",
+      "standard deviation",
+      "z-score"
+    ],
+    "level": "beginner",
+    "summary": "The mean is the average; standard deviation measures how spread out values are around that average.",
+    "formulaLatex": "\\sigma = \\sqrt{\\dfrac{\\sum(x_i - \\mu)^2}{N}},\\quad s = \\sqrt{\\dfrac{\\sum(x_i - \\bar{x})^2}{n-1}}",
+    "hasDemo": false,
+    "keywords": [
+      "mean",
+      "average",
+      "standard deviation",
+      "variance",
+      "z-score",
+      "sigma",
+      "mu"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "SzZ6GpcfoQY",
+      "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY",
+      "title": "Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "z-score",
+    "title": "Z-Score (Standard Score)",
+    "slug": "z-score",
+    "subject": "Statistics",
+    "topics": [
+      "z score",
+      "normal distribution",
+      "standardization"
+    ],
+    "level": "intermediate",
+    "summary": "Measures how many standard deviations an observation falls away from the population mean.",
+    "formulaLatex": "z = \\dfrac{x - \\mu}{\\sigma}",
+    "hasDemo": false,
+    "keywords": [
+      "z-score",
+      "standard score",
+      "normal curve",
+      "outlier",
+      "standardize"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Z-Score (Standard Score) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "standard-error",
+    "title": "Standard Error of the Mean",
+    "slug": "standard-error",
+    "subject": "Statistics",
+    "topics": [
+      "standard error",
+      "sampling",
+      "confidence intervals"
+    ],
+    "level": "intermediate",
+    "summary": "Estimates the variability of sample means drawn repeatedly from the same population.",
+    "formulaLatex": "\\text{SE} = \\dfrac{\\sigma}{\\sqrt{n}}",
+    "hasDemo": false,
+    "keywords": [
+      "standard error",
+      "SE",
+      "sample size",
+      "central limit theorem"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Standard Error of the Mean - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "derivatives-tangent",
+    "title": "Derivatives & Tangent Slope",
+    "slug": "derivatives-tangent",
+    "subject": "Calculus",
+    "topics": [
+      "derivative",
+      "tangent",
+      "slope",
+      "limit",
+      "differentiation"
+    ],
+    "level": "advanced",
+    "summary": "The derivative of a function at a point equals the slope of its tangent line at that point.",
+    "formulaLatex": "f'(x) = \\lim_{h \\to 0} \\dfrac{f(x+h) - f(x)}{h}",
+    "hasDemo": true,
+    "keywords": [
+      "derivative",
+      "differentiation",
+      "tangent",
+      "slope",
+      "limit",
+      "rate of change",
+      "calculus"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "9vKqVkMQHKk",
+      "url": "https://www.youtube.com/watch?v=9vKqVkMQHKk",
+      "title": "The Paradox of the Derivative (Essence of Calculus, Ch. 2)",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "product-rule",
+    "title": "Product Rule for Differentiation",
+    "slug": "product-rule",
+    "subject": "Calculus",
+    "topics": [
+      "derivative",
+      "product rule",
+      "differentiation"
+    ],
+    "level": "intermediate",
+    "summary": "Differentiates products of functions: the derivative of uv is u'v + uv'.",
+    "formulaLatex": "(uv)' = u'v + uv'",
+    "hasDemo": false,
+    "keywords": [
+      "product rule",
+      "derivative",
+      "differentiation",
+      "calculus",
+      "multiplication rule"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Product Rule for Differentiation - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "quotient-rule",
+    "title": "Quotient Rule for Differentiation",
+    "slug": "quotient-rule",
+    "subject": "Calculus",
+    "topics": [
+      "derivative",
+      "quotient rule",
+      "fraction",
+      "differentiation"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the derivative of a quotient of two differentiable functions.",
+    "formulaLatex": "\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}",
+    "hasDemo": false,
+    "keywords": [
+      "quotient rule",
+      "derivative",
+      "fraction derivative",
+      "calculus"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Quotient Rule for Differentiation - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "chain-rule",
+    "title": "Chain Rule for Composite Functions",
+    "slug": "chain-rule",
+    "subject": "Calculus",
+    "topics": [
+      "chain rule",
+      "composite function",
+      "derivative"
+    ],
+    "level": "advanced",
+    "summary": "Computes the derivative of composite functions by multiplying internal and external derivatives.",
+    "formulaLatex": "\\dfrac{dy}{dx} = \\dfrac{dy}{du} \\cdot \\dfrac{du}{dx}",
+    "hasDemo": false,
+    "keywords": [
+      "chain rule",
+      "composite functions",
+      "backpropagation",
+      "calculus"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "YG15m2VwSjA",
+      "url": "https://www.youtube.com/watch?v=YG15m2VwSjA",
+      "title": "Visualizing the chain rule and product rule",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "fundamental-calculus",
+    "title": "Fundamental Theorem of Calculus",
+    "slug": "fundamental-calculus",
+    "subject": "Calculus",
+    "topics": [
+      "integration",
+      "derivative",
+      "antiderivative",
+      "definite integral"
+    ],
+    "level": "advanced",
+    "summary": "Bridges differentiation and integration: the definite integral equals the antiderivative evaluated at endpoints.",
+    "formulaLatex": "\\int_a^b f(x)\\,dx = F(b) - F(a)",
+    "hasDemo": false,
+    "keywords": [
+      "fundamental theorem",
+      "integral",
+      "integration",
+      "antiderivative",
+      "area under curve"
+    ],
+    "href": "learn.html#calculus",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Fundamental Theorem of Calculus - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "integration-by-parts",
+    "title": "Integration by Parts",
+    "slug": "integration-by-parts",
+    "subject": "Calculus",
+    "topics": [
+      "integral",
+      "integration by parts",
+      "calculus"
+    ],
+    "level": "advanced",
+    "summary": "Inverts the product rule to integrate products of functions: ∫ u dv = uv - ∫ v du.",
+    "formulaLatex": "\\int u\\,dv = uv - \\int v\\,du",
+    "hasDemo": false,
+    "keywords": [
+      "integration by parts",
+      "integral",
+      "parts",
+      "calculus technique"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Integration by Parts - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "unit-circle",
+    "title": "Trigonometric Unit Circle",
+    "slug": "unit-circle",
+    "subject": "Trigonometry",
+    "topics": [
+      "sine",
+      "cosine",
+      "tangent",
+      "unit circle",
+      "angles",
+      "radians"
+    ],
+    "level": "intermediate",
+    "summary": "The unit circle defines sin and cos as coordinates of a point on a circle of radius 1.",
+    "formulaLatex": "\\sin^2\\theta + \\cos^2\\theta = 1,\\quad \\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}",
+    "hasDemo": true,
+    "keywords": [
+      "sin",
+      "cos",
+      "tan",
+      "sine",
+      "cosine",
+      "unit circle",
+      "radian",
+      "degree",
+      "angle"
+    ],
+    "href": "lessons/unit-circle.html",
+    "video": {
+      "youtubeId": "57VrEiEPD1I",
+      "url": "https://www.youtube.com/watch?v=57VrEiEPD1I",
+      "title": "The Unit Circle, Basic Introduction, Trigonometry",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "law-of-sines",
+    "title": "Law of Sines",
+    "slug": "law-of-sines",
+    "subject": "Trigonometry",
+    "topics": [
+      "sine rule",
+      "triangles",
+      "angles",
+      "circumradius"
+    ],
+    "level": "intermediate",
+    "summary": "States that the ratio of each side of a triangle to the sine of its opposite angle is constant.",
+    "formulaLatex": "\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} = 2R",
+    "hasDemo": false,
+    "keywords": [
+      "law of sines",
+      "sine rule",
+      "triangle trigonometry",
+      "circumradius"
+    ],
+    "href": "lessons/unit-circle.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Law of Sines - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "law-of-cosines",
+    "title": "Law of Cosines",
+    "slug": "law-of-cosines",
+    "subject": "Trigonometry",
+    "topics": [
+      "cosine rule",
+      "triangle",
+      "generalized pythagoras"
+    ],
+    "level": "intermediate",
+    "summary": "Generalizes the Pythagorean theorem to any arbitrary triangle, relating three sides and one angle.",
+    "formulaLatex": "c^2 = a^2 + b^2 - 2ab\\cos(C)",
+    "hasDemo": false,
+    "keywords": [
+      "law of cosines",
+      "cosine rule",
+      "triangle",
+      "non-right triangle"
+    ],
+    "href": "lessons/unit-circle.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Law of Cosines - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "double-angle-trig",
+    "title": "Double Angle Formulas",
+    "slug": "double-angle-trig",
+    "subject": "Trigonometry",
+    "topics": [
+      "double angle",
+      "identities",
+      "sine",
+      "cosine"
+    ],
+    "level": "intermediate",
+    "summary": "Key trigonometric identities expressing sin(2θ) and cos(2θ) in terms of single-angle functions.",
+    "formulaLatex": "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta,\\quad \\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta",
+    "hasDemo": false,
+    "keywords": [
+      "double angle",
+      "trig identity",
+      "sin 2 theta",
+      "cos 2 theta"
+    ],
+    "href": "lessons/unit-circle.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Double Angle Formulas - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "time-complexity",
+    "title": "Time Complexity & Big O",
+    "slug": "time-complexity",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "Big O",
+      "complexity",
+      "algorithm",
+      "asymptotic"
+    ],
+    "level": "intermediate",
+    "summary": "Big O notation describes how an algorithm's running time scales with input size.",
+    "formulaLatex": "T(n) = O(g(n))",
+    "hasDemo": false,
+    "keywords": [
+      "big o",
+      "complexity",
+      "algorithm",
+      "O(n)",
+      "O(log n)",
+      "time complexity",
+      "space complexity"
+    ],
+    "href": "lessons/time-complexity.html",
+    "video": {
+      "youtubeId": "__vX2sjlpXU",
+      "url": "https://www.youtube.com/watch?v=__vX2sjlpXU",
+      "title": "Introduction to Big O Notation and Time Complexity",
+      "channel": "Reducible"
+    }
+  },
+  {
+    "id": "master-theorem",
+    "title": "Master Theorem for Recurrences",
+    "slug": "master-theorem",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "divide and conquer",
+      "recurrence",
+      "algorithms",
+      "complexity"
+    ],
+    "level": "advanced",
+    "summary": "Solves asymptotic divide-and-conquer recurrences T(n) = aT(n/b) + f(n) across three canonical cases.",
+    "formulaLatex": "T(n) = a\\,T(n/b) + \\Theta(n^d)",
+    "hasDemo": false,
+    "keywords": [
+      "master theorem",
+      "recurrence",
+      "divide and conquer",
+      "merge sort",
+      "algorithms"
+    ],
+    "href": "lessons/time-complexity.html",
+    "video": {
+      "youtubeId": "FBKjvXGGCJM",
+      "url": "https://www.youtube.com/watch?v=FBKjvXGGCJM",
+      "title": "L-2.6: Recurrence Relation [ T(n)= 8T(n/2) + n^2 ] | Master Theorem | Example#1 | Algorithm",
+      "channel": "Gate Smashers"
+    }
+  },
+  {
+    "id": "shannon-entropy",
+    "title": "Shannon Information Entropy",
+    "slug": "shannon-entropy",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "information theory",
+      "entropy",
+      "data compression",
+      "bits"
+    ],
+    "level": "advanced",
+    "summary": "Quantifies the expected amount of information, uncertainty, or minimum bits needed to encode a message.",
+    "formulaLatex": "H(X) = -\\sum_{i=1}^n P(x_i) \\log_2 P(x_i)",
+    "hasDemo": false,
+    "keywords": [
+      "entropy",
+      "information theory",
+      "shannon",
+      "bits",
+      "compression",
+      "uncertainty"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Shannon Information Entropy - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "boolean-demorgan",
+    "title": "De Morgan's Laws",
+    "slug": "boolean-demorgan",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "boolean algebra",
+      "logic gates",
+      "discrete math",
+      "computer science"
+    ],
+    "level": "beginner",
+    "summary": "Fundamental dualities in logic: the negation of a conjunction is the disjunction of negations, and vice versa.",
+    "formulaLatex": "\\overline{A \\cdot B} = \\overline{A} + \\overline{B},\\quad \\overline{A + B} = \\overline{A} \\cdot \\overline{B}",
+    "hasDemo": false,
+    "keywords": [
+      "de morgan",
+      "boolean algebra",
+      "logic",
+      "not and",
+      "not or",
+      "discrete math"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "De Morgan's Laws - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "graph-handshaking",
+    "title": "Handshaking Lemma",
+    "slug": "graph-handshaking",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "graph theory",
+      "degrees",
+      "edges",
+      "discrete math"
+    ],
+    "level": "intermediate",
+    "summary": "In every finite undirected graph, the sum of the degrees of all vertices equals exactly twice the number of edges.",
+    "formulaLatex": "\\sum_{v \\in V} \\deg(v) = 2|E|",
+    "hasDemo": false,
+    "keywords": [
+      "handshaking lemma",
+      "graph theory",
+      "degree sum",
+      "edges",
+      "vertices",
+      "discrete math"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Handshaking Lemma - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "graph-planar-euler",
+    "title": "Euler's Planar Graph Formula",
+    "slug": "graph-planar-euler",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "planar graphs",
+      "graph theory",
+      "faces",
+      "vertices"
+    ],
+    "level": "intermediate",
+    "summary": "For any connected planar graph drawn in the plane without crossing edges, vertices minus edges plus faces equals 2.",
+    "formulaLatex": "V - E + F = 2",
+    "hasDemo": false,
+    "keywords": [
+      "euler planar",
+      "planar graph",
+      "faces",
+      "edges",
+      "vertices",
+      "graph coloring"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Euler's Planar Graph Formula - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "catalan-number",
+    "title": "Catalan Numbers",
+    "slug": "catalan-number",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "combinatorics",
+      "trees",
+      "parentheses",
+      "algorithms"
+    ],
+    "level": "advanced",
+    "summary": "Sequence of natural numbers appearing in counting problems like binary search trees, valid dyck paths, and polygon triangulations.",
+    "formulaLatex": "C_n = \\frac{1}{n+1}\\binom{2n}{n} = \\frac{(2n)!}{(n+1)!\\,n!}",
+    "hasDemo": false,
+    "keywords": [
+      "catalan number",
+      "binary trees",
+      "dyck path",
+      "parentheses",
+      "combinatorics"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Catalan Numbers - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "bezout-identity",
+    "title": "Bézout's Identity & Extended GCD",
+    "slug": "bezout-identity",
+    "subject": "Number Theory",
+    "topics": [
+      "gcd",
+      "modular arithmetic",
+      "extended euclidean",
+      "cryptography"
+    ],
+    "level": "intermediate",
+    "summary": "For nonzero integers a and b, there exist integers x and y such that ax + by = gcd(a, b).",
+    "formulaLatex": "ax + by = \\gcd(a, b)",
+    "hasDemo": false,
+    "keywords": [
+      "bezout",
+      "extended euclidean",
+      "linear combination",
+      "gcd",
+      "modular inverse"
+    ],
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Bézout's Identity & Extended GCD - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "chinese-remainder",
+    "title": "Chinese Remainder Theorem (CRT)",
+    "slug": "chinese-remainder",
+    "subject": "Number Theory",
+    "topics": [
+      "modular arithmetic",
+      "congruences",
+      "cryptography",
+      "discrete math"
+    ],
+    "level": "advanced",
+    "summary": "Guarantees a unique solution modulo the product of pairwise coprime moduli for a system of simultaneous congruences.",
+    "formulaLatex": "x \\equiv \\sum_{i=1}^k a_i M_i y_i \\pmod{M},\\quad M = \\prod_{i=1}^k m_i",
+    "hasDemo": false,
+    "keywords": [
+      "chinese remainder theorem",
+      "crt",
+      "modular system",
+      "rsa",
+      "coprime"
+    ],
+    "href": "lessons/gcd-lcm.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Chinese Remainder Theorem (CRT) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "birthday-paradox",
+    "title": "Birthday Paradox & Hash Collisions",
+    "slug": "birthday-paradox",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "hash collision",
+      "probability",
+      "cryptography",
+      "hashing"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the probability of at least two items sharing a hash value among k selections from a space of N bins.",
+    "formulaLatex": "P(\\text{collision}) \\approx 1 - e^{-\\frac{k(k-1)}{2N}} \\approx 1 - e^{-\\frac{k^2}{2N}}",
+    "hasDemo": false,
+    "keywords": [
+      "birthday paradox",
+      "hash collision",
+      "cryptography",
+      "hash function",
+      "pigeonhole"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "ofTb57aZHZs",
+      "url": "https://www.youtube.com/watch?v=ofTb57aZHZs",
+      "title": "The Birthday Paradox",
+      "channel": "Numberphile"
+    }
+  },
+  {
+    "id": "fast-fourier-transform",
+    "title": "Discrete Fourier Transform (DFT / FFT)",
+    "slug": "fast-fourier-transform",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "fft",
+      "dft",
+      "signal processing",
+      "polynomial multiplication"
+    ],
+    "level": "advanced",
+    "summary": "Converts a sequence of values into components of different frequencies, computable in O(n log n) using Cooley-Tukey FFT.",
+    "formulaLatex": "X_k = \\sum_{n=0}^{N-1} x_n e^{-i\\frac{2\\pi k n}{N}},\\quad k = 0, \\dots, N-1",
+    "hasDemo": false,
+    "keywords": [
+      "fft",
+      "fast fourier transform",
+      "dft",
+      "polynomial multiplication",
+      "signal processing"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "h7apO7q16V0",
+      "url": "https://www.youtube.com/watch?v=h7apO7q16V0",
+      "title": "The Fast Fourier Transform (FFT): Most Ingenious Algorithm?",
+      "channel": "Veritasium"
+    }
+  },
+  {
+    "id": "bellman-optimality",
+    "title": "Bellman Optimality Equation",
+    "slug": "bellman-optimality",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "dynamic programming",
+      "reinforcement learning",
+      "optimization",
+      "markov"
+    ],
+    "level": "advanced",
+    "summary": "Decomposes optimal value functions into immediate rewards plus discounted expected future values in MDPs.",
+    "formulaLatex": "V^*(s) = \\max_a \\left[ R(s, a) + \\gamma \\sum_{s'} P(s' \\mid s, a)\\, V^*(s') \\right]",
+    "hasDemo": false,
+    "keywords": [
+      "bellman equation",
+      "dynamic programming",
+      "reinforcement learning",
+      "mdp",
+      "q learning"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Bellman Optimality Equation - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "pagerank-algorithm",
+    "title": "PageRank Link Centrality",
+    "slug": "pagerank-algorithm",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "graph centrality",
+      "markov chain",
+      "search engines",
+      "linear algebra"
+    ],
+    "level": "advanced",
+    "summary": "Measures importance of nodes based on link structure using a random surfer model with damping factor d.",
+    "formulaLatex": "\\mathbf{r} = d\\, M \\mathbf{r} + \\frac{1-d}{N}\\, \\mathbf{1}",
+    "hasDemo": false,
+    "keywords": [
+      "pagerank",
+      "random surfer",
+      "markov chain",
+      "graph centrality",
+      "google algorithm"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "PageRank Link Centrality - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "hamming-distance",
+    "title": "Hamming Distance & Code Weight",
+    "slug": "hamming-distance",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "error correction",
+      "binary code",
+      "networking",
+      "information theory"
+    ],
+    "level": "intermediate",
+    "summary": "Number of positions at which the corresponding symbols of two equal-length strings differ.",
+    "formulaLatex": "d_H(\\mathbf{x}, \\mathbf{y}) = \\sum_{i=1}^n (x_i \\oplus y_i) = \\operatorname{wt}(\\mathbf{x} \\oplus \\mathbf{y})",
+    "hasDemo": false,
+    "keywords": [
+      "hamming distance",
+      "error detection",
+      "parity",
+      "xor",
+      "coding theory"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Hamming Distance & Code Weight - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "cross-entropy-loss",
+    "title": "Categorical Cross-Entropy Loss",
+    "slug": "cross-entropy-loss",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "machine learning",
+      "loss function",
+      "deep learning",
+      "neural networks"
+    ],
+    "level": "intermediate",
+    "summary": "Quantifies the difference between true categorical probability distribution y and predicted distribution y-hat.",
+    "formulaLatex": "\\mathcal{L}_{CE} = -\\sum_{i=1}^C y_i \\log(\\hat{y}_i)",
+    "hasDemo": false,
+    "keywords": [
+      "cross entropy",
+      "loss function",
+      "log loss",
+      "neural networks",
+      "machine learning"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "6ArSys5qHAU",
+      "url": "https://www.youtube.com/watch?v=6ArSys5qHAU",
+      "title": "Cross Entropy, Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "softmax-function",
+    "title": "Softmax Activation Function",
+    "slug": "softmax-function",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "machine learning",
+      "activation function",
+      "deep learning",
+      "classification"
+    ],
+    "level": "intermediate",
+    "summary": "Converts arbitrary real-valued logits into a normalized probability distribution where components sum to 1.",
+    "formulaLatex": "\\sigma(\\mathbf{z})_i = \\frac{e^{z_i}}{\\sum_{j=1}^K e^{z_j}},\\quad \\sum_{i=1}^K \\sigma(\\mathbf{z})_i = 1",
+    "hasDemo": false,
+    "keywords": [
+      "softmax",
+      "activation",
+      "logits",
+      "multiclass",
+      "deep learning"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "KpKog-L9veg",
+      "url": "https://www.youtube.com/watch?v=KpKog-L9veg",
+      "title": "The Softmax Function, Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "gradient-descent",
+    "title": "Gradient Descent Update Rule",
+    "slug": "gradient-descent",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "optimization",
+      "machine learning",
+      "calculus",
+      "gradient"
+    ],
+    "level": "intermediate",
+    "summary": "Iterative optimization algorithm for finding the local minimum of a differentiable objective function.",
+    "formulaLatex": "\\theta_{t+1} = \\theta_t - \\alpha \\, \\nabla_\\theta J(\\theta_t)",
+    "hasDemo": false,
+    "keywords": [
+      "gradient descent",
+      "optimization",
+      "learning rate",
+      "loss minimization",
+      "machine learning"
+    ],
+    "href": "learn.html#cse",
+    "video": {
+      "youtubeId": "IHZwWFHWa-w",
+      "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+      "title": "Gradient descent, how neural networks learn (Chapter 2)",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "cosine-similarity",
+    "title": "Cosine Similarity & Distance",
+    "slug": "cosine-similarity",
+    "subject": "Linear Algebra",
+    "topics": [
+      "vectors",
+      "nlp",
+      "embeddings",
+      "machine learning"
+    ],
+    "level": "intermediate",
+    "summary": "Measures orientation similarity between two nonzero vectors in an inner product space, independent of magnitude.",
+    "formulaLatex": "\\cos(\\theta) = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\| \\|\\mathbf{v}\\|} = \\frac{\\sum u_i v_i}{\\sqrt{\\sum u_i^2}\\sqrt{\\sum v_i^2}}",
+    "hasDemo": false,
+    "keywords": [
+      "cosine similarity",
+      "vector embeddings",
+      "nlp",
+      "dot product",
+      "distance metric"
+    ],
+    "href": "library.html?subject=Linear+Algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Cosine Similarity & Distance - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "l1-l2-norms",
+    "title": "L1 & L2 Vector Norms (Manhattan vs Euclidean)",
+    "slug": "l1-l2-norms",
+    "subject": "Linear Algebra",
+    "topics": [
+      "norms",
+      "distance",
+      "regularization",
+      "linear algebra"
+    ],
+    "level": "intermediate",
+    "summary": "L1 (Manhattan) is the sum of absolute magnitudes; L2 (Euclidean) is the square root of the sum of squared magnitudes.",
+    "formulaLatex": "\\|\\mathbf{x}\\|_1 = \\sum_{i=1}^n |x_i|,\\quad \\|\\mathbf{x}\\|_2 = \\sqrt{\\sum_{i=1}^n x_i^2}",
+    "hasDemo": false,
+    "keywords": [
+      "l1 norm",
+      "l2 norm",
+      "manhattan distance",
+      "euclidean distance",
+      "lasso",
+      "ridge"
+    ],
+    "href": "library.html?subject=Linear+Algebra",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "L1 & L2 Vector Norms (Manhattan vs Euclidean) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "logistic-sigmoid",
+    "title": "Sigmoid / Logistic Function",
+    "slug": "logistic-sigmoid",
+    "subject": "Calculus",
+    "topics": [
+      "activation function",
+      "logistic regression",
+      "derivatives",
+      "neural networks"
+    ],
+    "level": "intermediate",
+    "summary": "Smooth S-shaped curve mapping any real input into the range (0, 1), with derivative sigma(x)(1 - sigma(x)).",
+    "formulaLatex": "\\sigma(x) = \\frac{1}{1 + e^{-x}},\\quad \\sigma'(x) = \\sigma(x)(1 - \\sigma(x))",
+    "hasDemo": false,
+    "keywords": [
+      "sigmoid",
+      "logistic function",
+      "activation",
+      "binary classification",
+      "derivative"
+    ],
+    "href": "lessons/derivatives-tangent.html",
+    "video": {
+      "youtubeId": "v0YEaeIClKY",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Sigmoid / Logistic Function - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "normal-distribution",
+    "title": "Gaussian / Normal Distribution PDF",
+    "slug": "normal-distribution",
+    "subject": "Statistics",
+    "topics": [
+      "probability density",
+      "gaussian",
+      "bell curve",
+      "continuous distribution"
+    ],
+    "level": "advanced",
+    "summary": "Bell-shaped probability density function parameterized by mean mu and variance sigma squared.",
+    "formulaLatex": "f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right)",
+    "hasDemo": false,
+    "keywords": [
+      "normal distribution",
+      "gaussian",
+      "bell curve",
+      "pdf",
+      "standard deviation"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Gaussian / Normal Distribution PDF - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "poisson-distribution",
+    "title": "Poisson Distribution PMF",
+    "slug": "poisson-distribution",
+    "subject": "Statistics",
+    "topics": [
+      "discrete distribution",
+      "rate parameter",
+      "queueing",
+      "probability"
+    ],
+    "level": "intermediate",
+    "summary": "Models the probability of a given number of events occurring in a fixed interval with average rate lambda.",
+    "formulaLatex": "P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!},\\quad k = 0, 1, 2, \\dots",
+    "hasDemo": false,
+    "keywords": [
+      "poisson",
+      "distribution",
+      "lambda",
+      "event rate",
+      "queueing"
+    ],
+    "href": "lessons/probability-bayes.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Poisson Distribution PMF - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "central-limit-theorem",
+    "title": "Central Limit Theorem (CLT)",
+    "slug": "central-limit-theorem",
+    "subject": "Statistics",
+    "topics": [
+      "sample mean",
+      "convergence",
+      "hypothesis testing",
+      "statistics"
+    ],
+    "level": "advanced",
+    "summary": "The normalized sum of independent and identically distributed random variables tends toward a standard normal distribution.",
+    "formulaLatex": "Z = \\frac{\\bar{X}_n - \\mu}{\\sigma / \\sqrt{n}} \\xrightarrow{d} \\mathcal{N}(0, 1)",
+    "hasDemo": false,
+    "keywords": [
+      "central limit theorem",
+      "clt",
+      "sample mean",
+      "gaussian",
+      "sampling"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "zeJD6dqJ5lo",
+      "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo",
+      "title": "Why the Central Limit Theorem works",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "chebyshev-inequality",
+    "title": "Chebyshev's Inequality",
+    "slug": "chebyshev-inequality",
+    "subject": "Statistics",
+    "topics": [
+      "bounds",
+      "variance",
+      "probability",
+      "statistics"
+    ],
+    "level": "advanced",
+    "summary": "Guarantees that no more than 1/k² of values can be more than k standard deviations away from the mean for any distribution.",
+    "formulaLatex": "P(|X - \\mu| \\ge k\\sigma) \\le \\frac{1}{k^2},\\quad k > 0",
+    "hasDemo": false,
+    "keywords": [
+      "chebyshev",
+      "inequality",
+      "variance bound",
+      "probability tail",
+      "markov inequality"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Chebyshev's Inequality - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "covariance-correlation",
+    "title": "Covariance & Pearson Correlation",
+    "slug": "covariance-correlation",
+    "subject": "Statistics",
+    "topics": [
+      "correlation",
+      "covariance",
+      "bivariate",
+      "statistics"
+    ],
+    "level": "intermediate",
+    "summary": "Covariance measures joint variability, and Pearson r normalizes it to [-1, 1] to quantify linear relationship.",
+    "formulaLatex": "r = \\frac{\\operatorname{Cov}(X, Y)}{\\sigma_X \\sigma_Y} = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}}",
+    "hasDemo": false,
+    "keywords": [
+      "pearson correlation",
+      "covariance",
+      "linear relationship",
+      "scatter plot",
+      "r value"
+    ],
+    "href": "lessons/mean-standard-deviation.html",
+    "video": {
+      "youtubeId": "HZGCoVF3YvM",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Covariance & Pearson Correlation - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "section-formula",
+    "title": "Section Formula (Line Segment Division)",
+    "slug": "section-formula",
+    "subject": "Geometry",
+    "topics": [
+      "coordinate geometry",
+      "internal division",
+      "midpoint",
+      "line segment"
+    ],
+    "level": "beginner",
+    "summary": "Finds the coordinates of a point dividing the segment joining (x1, y1) and (x2, y2) internally in ratio m:n.",
+    "formulaLatex": "P(x, y) = \\left( \\frac{m x_2 + n x_1}{m + n}, \\; \\frac{m y_2 + n y_1}{m + n} \\right)",
+    "hasDemo": false,
+    "keywords": [
+      "section formula",
+      "internal division",
+      "ratio",
+      "coordinate geometry",
+      "ratio m:n"
+    ],
+    "href": "lessons/pythagorean-theorem.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Section Formula (Line Segment Division) - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "triangle-area-coords",
+    "title": "Area of Triangle from Coordinates",
+    "slug": "triangle-area-coords",
+    "subject": "Geometry",
+    "topics": [
+      "triangle area",
+      "determinant",
+      "vertices",
+      "coordinate geometry"
+    ],
+    "level": "beginner",
+    "summary": "Computes the enclosed area of any triangle from the Cartesian coordinates of its three vertices.",
+    "formulaLatex": "A = \\frac{1}{2} |x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|",
+    "hasDemo": false,
+    "keywords": [
+      "triangle area coordinates",
+      "shoelace formula",
+      "coordinate geometry",
+      "vertices"
+    ],
+    "href": "lessons/pythagorean-theorem.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Area of Triangle from Coordinates - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "sum-of-powers",
+    "title": "Sum of First n Natural Numbers & Squares",
+    "slug": "sum-of-powers",
+    "subject": "Foundations",
+    "topics": [
+      "series",
+      "algebra",
+      "induction",
+      "sequences"
+    ],
+    "level": "beginner",
+    "summary": "Closed-form formulas for the sum of the first n positive integers and their squares.",
+    "formulaLatex": "\\sum_{k=1}^n k = \\frac{n(n+1)}{2},\\quad \\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6}",
+    "hasDemo": false,
+    "keywords": [
+      "sum of integers",
+      "sum of squares",
+      "arithmetic series",
+      "gauss sum",
+      "series"
+    ],
+    "href": "lessons/percentages-ratios.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "Sum of First n Natural Numbers & Squares - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "circle-general-equation",
+    "title": "General Equation of a Circle",
+    "slug": "circle-general-equation",
+    "subject": "Geometry",
+    "topics": [
+      "circle",
+      "coordinate geometry",
+      "center",
+      "radius"
+    ],
+    "level": "intermediate",
+    "summary": "Second-degree equation representing a circle with center (-g, -f) and radius sqrt(g² + f² - c).",
+    "formulaLatex": "x^2 + y^2 + 2gx + 2fy + c = 0,\\quad r = \\sqrt{g^2 + f^2 - c}",
+    "hasDemo": false,
+    "keywords": [
+      "circle equation",
+      "general circle",
+      "center radius",
+      "coordinate geometry",
+      "conic"
+    ],
+    "href": "lessons/circle-area.html",
+    "video": {
+      "youtubeId": "YompsDlEdtc",
+      "url": "https://www.youtube.com/watch?v=YompsDlEdtc",
+      "title": "General Equation of a Circle - Mathematical Breakdown",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "softmax-activation",
+    "title": "Softmax Function (Multiclass Probabilities)",
+    "slug": "softmax-activation",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "machine learning",
+      "neural networks",
+      "probability",
+      "deep learning"
+    ],
+    "level": "intermediate",
+    "summary": "Transforms raw unnormalized logits into a valid probability distribution where each value is between 0 and 1, summing to exactly 1.",
+    "formulaLatex": "\\sigma(\\mathbf{z})_i = \\frac{e^{z_i}}{\\sum_{j=1}^K e^{z_j}}",
+    "hasDemo": false,
+    "keywords": [
+      "softmax",
+      "logits",
+      "neural network",
+      "activation",
+      "probability distribution",
+      "cross entropy"
+    ],
+    "href": "lessons/softmax-activation.html",
+    "video": {
+      "youtubeId": "M0oTjf3elrI",
+      "url": "https://www.youtube.com/watch?v=M0oTjf3elrI",
+      "title": "What is Softmax? AI's Probability Function",
+      "channel": "BlackBoard AI"
+    }
+  },
+  {
+    "id": "gradient-descent-update",
+    "title": "Gradient Descent Parameter Update",
+    "slug": "gradient-descent-update",
+    "subject": "Calculus",
+    "topics": [
+      "optimization",
+      "machine learning",
+      "derivatives",
+      "gradient"
+    ],
+    "level": "intermediate",
+    "summary": "Iterative optimization rule that updates model parameters by taking small steps in the direction of steepest descent negative gradient.",
+    "formulaLatex": "\\theta_{t+1} = \\theta_t - \\alpha \\nabla J(\\theta_t)",
+    "hasDemo": false,
+    "keywords": [
+      "gradient descent",
+      "learning rate",
+      "loss minimization",
+      "optimization",
+      "backpropagation"
+    ],
+    "href": "lessons/gradient-descent-update.html",
+    "video": {
+      "youtubeId": "sDv4f4s2SB8",
+      "url": "https://www.youtube.com/watch?v=sDv4f4s2SB8",
+      "title": "Gradient Descent, Step-by-Step",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "sigmoid-activation",
+    "title": "Logistic Sigmoid Function",
+    "slug": "sigmoid-activation",
+    "subject": "Algebra",
+    "topics": [
+      "logistic regression",
+      "neural networks",
+      "activation",
+      "probability"
+    ],
+    "level": "beginner",
+    "summary": "Smooth S-shaped curve mapping any real-valued number into the bounded interval (0, 1), foundational for binary classification.",
+    "formulaLatex": "\\sigma(x) = \\frac{1}{1 + e^{-x}}",
+    "hasDemo": false,
+    "keywords": [
+      "sigmoid",
+      "logistic",
+      "activation function",
+      "binary classification",
+      "neural net"
+    ],
+    "href": "lessons/sigmoid-activation.html",
+    "video": {
+      "youtubeId": "yIYKR4sgzI8",
+      "url": "https://www.youtube.com/watch?v=yIYKR4sgzI8",
+      "title": "Logistic Regression and Sigmoid Curve",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "relu-activation",
+    "title": "ReLU (Rectified Linear Unit)",
+    "slug": "relu-activation",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "deep learning",
+      "activation function",
+      "piecewise",
+      "neural networks"
+    ],
+    "level": "beginner",
+    "summary": "Returns zero for negative inputs and passes positive inputs linearly, combating vanishing gradients in deep convolutional networks.",
+    "formulaLatex": "f(x) = \\max(0, x)",
+    "hasDemo": false,
+    "keywords": [
+      "relu",
+      "rectified linear",
+      "activation function",
+      "deep learning",
+      "sparsity"
+    ],
+    "href": "lessons/relu-activation.html",
+    "video": {
+      "youtubeId": "68BZ5f7P94E",
+      "url": "https://www.youtube.com/watch?v=68BZ5f7P94E",
+      "title": "Neural Network Activation Functions: ReLU vs Sigmoid",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "taylor-series",
+    "title": "Taylor Series Polynomial Expansion",
+    "slug": "taylor-series",
+    "subject": "Calculus",
+    "topics": [
+      "series",
+      "approximation",
+      "derivatives",
+      "polynomials"
+    ],
+    "level": "advanced",
+    "summary": "Represents any smooth function as an infinite sum of polynomial terms calculated from the function's derivatives at a single point.",
+    "formulaLatex": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x - a)^n",
+    "hasDemo": false,
+    "keywords": [
+      "taylor series",
+      "maclaurin series",
+      "polynomial approximation",
+      "calculus",
+      "infinite series"
+    ],
+    "href": "lessons/taylor-series.html",
+    "video": {
+      "youtubeId": "3d6DsjIBzJ4",
+      "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
+      "title": "Taylor Series and How They Work Visually",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "lhopitals-rule",
+    "title": "L'Hôpital's Rule for Indeterminate Limits",
+    "slug": "lhopitals-rule",
+    "subject": "Calculus",
+    "topics": [
+      "limits",
+      "derivatives",
+      "indeterminate forms",
+      "calculus"
+    ],
+    "level": "intermediate",
+    "summary": "Evaluates limits of indeterminate forms (0/0 or inf/inf) by differentiating the numerator and denominator independently.",
+    "formulaLatex": "\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}",
+    "hasDemo": false,
+    "keywords": [
+      "lhopital",
+      "limits",
+      "derivatives",
+      "indeterminate form",
+      "calculus"
+    ],
+    "href": "lessons/lhopitals-rule.html",
+    "video": {
+      "youtubeId": "Gh48aOvWcxw",
+      "url": "https://www.youtube.com/watch?v=Gh48aOvWcxw",
+      "title": "L'hopital's rule",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "multivariable-gradient",
+    "title": "Multivariable Gradient Vector",
+    "slug": "multivariable-gradient",
+    "subject": "Calculus",
+    "topics": [
+      "multivariable calculus",
+      "partial derivatives",
+      "gradient",
+      "vector fields"
+    ],
+    "level": "advanced",
+    "summary": "Vector composed of all first-order partial derivatives of a scalar field, pointing in the direction of maximum rate of increase.",
+    "formulaLatex": "\\nabla f = \\left( \\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}, \\frac{\\partial f}{\\partial z} \\right)",
+    "hasDemo": false,
+    "keywords": [
+      "gradient",
+      "del",
+      "nabla",
+      "partial derivative",
+      "multivariable calculus",
+      "steepest ascent"
+    ],
+    "href": "lessons/multivariable-gradient.html",
+    "video": {
+      "youtubeId": "H1DJjyDFalw",
+      "url": "https://www.youtube.com/watch?v=H1DJjyDFalw",
+      "title": "What Does the Gradient Vector Mean Intuitively?",
+      "channel": "The Math Sorcerer"
+    }
+  },
+  {
+    "id": "eigenvalue-equation",
+    "title": "Eigenvalue & Eigenvector Equation",
+    "slug": "eigenvalue-equation",
+    "subject": "Linear Algebra",
+    "topics": [
+      "eigenvalues",
+      "eigenvectors",
+      "linear transformations",
+      "matrices"
+    ],
+    "level": "advanced",
+    "summary": "Vectors whose direction remains invariant under a linear transformation A, scaling only by the scalar factor lambda.",
+    "formulaLatex": "A\\mathbf{v} = \\lambda \\mathbf{v},\\quad \\det(A - \\lambda I) = 0",
+    "hasDemo": false,
+    "keywords": [
+      "eigenvalue",
+      "eigenvector",
+      "characteristic polynomial",
+      "linear algebra",
+      "diagonalization"
+    ],
+    "href": "lessons/eigenvalue-equation.html",
+    "video": {
+      "youtubeId": "PFDu9oVAE-g",
+      "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g",
+      "title": "Eigenvectors and Eigenvalues: Visual Linear Algebra",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "matrix-determinant-2x2",
+    "title": "Matrix Determinant & Area Scaling",
+    "slug": "matrix-determinant-2x2",
+    "subject": "Linear Algebra",
+    "topics": [
+      "determinant",
+      "matrices",
+      "area",
+      "transformation"
+    ],
+    "level": "intermediate",
+    "summary": "Measures the factor by which linear transformation changes areas. Invertible if and only if determinant is non-zero.",
+    "formulaLatex": "\\det \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
+    "hasDemo": true,
+    "keywords": [
+      "determinant",
+      "area scaling",
+      "matrix",
+      "linear transformation",
+      "invertibility"
+    ],
+    "href": "lessons/matrix-determinant-2x2.html",
+    "video": {
+      "youtubeId": "Ip3X9LOh2dk",
+      "url": "https://www.youtube.com/watch?v=Ip3X9LOh2dk",
+      "title": "The Determinant: Essence of Linear Algebra",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "normal-distribution-pdf",
+    "title": "Normal (Gaussian) Distribution PDF",
+    "slug": "normal-distribution-pdf",
+    "subject": "Statistics",
+    "topics": [
+      "normal distribution",
+      "gaussian",
+      "probability density",
+      "bell curve"
+    ],
+    "level": "intermediate",
+    "summary": "The ubiquitous bell-shaped continuous probability distribution parameterized by mean mu and variance sigma squared.",
+    "formulaLatex": "f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x - \\mu)^2}{2\\sigma^2}}",
+    "hasDemo": true,
+    "keywords": [
+      "gaussian",
+      "normal distribution",
+      "bell curve",
+      "standard deviation",
+      "mean",
+      "z score"
+    ],
+    "href": "lessons/normal-distribution-pdf.html",
+    "video": {
+      "youtubeId": "rzFX5NWojp0",
+      "url": "https://www.youtube.com/watch?v=rzFX5NWojp0",
+      "title": "The Normal Distribution: Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "mass-energy-equivalence",
+    "title": "Einstein's Mass-Energy Equivalence",
+    "slug": "mass-energy-equivalence",
+    "subject": "Physics",
+    "topics": [
+      "special relativity",
+      "energy",
+      "mass",
+      "modern physics"
+    ],
+    "level": "beginner",
+    "summary": "Mass and energy are interchangeable manifestations of the same physical property, connected by the speed of light squared.",
+    "formulaLatex": "E = mc^2",
+    "hasDemo": false,
+    "keywords": [
+      "einstein",
+      "energy",
+      "mass",
+      "relativity",
+      "speed of light",
+      "nuclear"
+    ],
+    "href": "lessons/mass-energy-equivalence.html",
+    "video": {
+      "youtubeId": "Xo232kyTsO0",
+      "url": "https://www.youtube.com/watch?v=Xo232kyTsO0",
+      "title": "E = mc² Explained Simply",
+      "channel": "MinutePhysics"
+    }
+  },
+  {
+    "id": "heisenberg-uncertainty",
+    "title": "Heisenberg Uncertainty Principle",
+    "slug": "heisenberg-uncertainty",
+    "subject": "Physics",
+    "topics": [
+      "quantum mechanics",
+      "uncertainty",
+      "momentum",
+      "position"
+    ],
+    "level": "advanced",
+    "summary": "Fundamental quantum limit preventing simultaneous precision measurement of both the position and momentum of a particle.",
+    "formulaLatex": "\\Delta x \\cdot \\Delta p \\ge \\frac{\\hbar}{2}",
+    "hasDemo": false,
+    "keywords": [
+      "quantum",
+      "uncertainty principle",
+      "heisenberg",
+      "planck constant",
+      "wave mechanics"
+    ],
+    "href": "lessons/heisenberg-uncertainty.html",
+    "video": {
+      "youtubeId": "TQKELOE9eY4",
+      "url": "https://www.youtube.com/watch?v=TQKELOE9eY4",
+      "title": "The Quantum Harmonic Oscillator and Heisenberg Uncertainty",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "harmonic-wave-equation",
+    "title": "Harmonic Wave & Oscillation Equation",
+    "slug": "harmonic-wave-equation",
+    "subject": "Physics",
+    "topics": [
+      "waves",
+      "oscillations",
+      "harmonic motion",
+      "frequency"
+    ],
+    "level": "intermediate",
+    "summary": "Describes periodic spatial and temporal wave displacement with defined amplitude, angular frequency, and wave number.",
+    "formulaLatex": "y(x, t) = A \\sin(kx - \\omega t + \\phi)",
+    "hasDemo": true,
+    "keywords": [
+      "wave equation",
+      "amplitude",
+      "frequency",
+      "oscillation",
+      "wavelength",
+      "sine wave"
+    ],
+    "href": "lessons/harmonic-wave-equation.html",
+    "video": {
+      "youtubeId": "kLWXLbciobw",
+      "url": "https://www.youtube.com/watch?v=kLWXLbciobw",
+      "title": "Equation for simple harmonic oscillators | Physics | Khan Academy",
+      "channel": "Khan Academy Physics"
+    }
+  },
+  {
+    "id": "projectile-motion-range",
+    "title": "Projectile Motion Range & Trajectory",
+    "slug": "projectile-motion-range",
+    "subject": "Physics",
+    "topics": [
+      "kinematics",
+      "projectile motion",
+      "gravity",
+      "trajectory"
+    ],
+    "level": "beginner",
+    "summary": "Calculates horizontal distance traversed by a launched projectile assuming uniform gravity and negligible air resistance.",
+    "formulaLatex": "R = \\frac{v_0^2 \\sin(2\\theta)}{g},\\quad H = \\frac{v_0^2 \\sin^2\\theta}{2g}",
+    "hasDemo": true,
+    "keywords": [
+      "projectile motion",
+      "range",
+      "trajectory",
+      "kinematics",
+      "gravity",
+      "physics"
+    ],
+    "href": "lessons/projectile-motion-range.html",
+    "video": {
+      "youtubeId": "d_jnEkwCA6I",
+      "url": "https://www.youtube.com/watch?v=d_jnEkwCA6I",
+      "title": "From Zero to Genius: Learn Projectile Motion Visually!",
+      "channel": "Invariant Physics"
+    }
+  },
+  {
+    "id": "universal-gravitation",
+    "title": "Newton's Law of Universal Gravitation",
+    "slug": "universal-gravitation",
+    "subject": "Physics",
+    "topics": [
+      "gravity",
+      "orbital mechanics",
+      "force",
+      "astrophysics"
+    ],
+    "level": "intermediate",
+    "summary": "Every particle attracts every other particle with a force proportional to product of masses and inversely proportional to squared distance.",
+    "formulaLatex": "F = G \\frac{m_1 m_2}{r^2}",
+    "hasDemo": false,
+    "keywords": [
+      "gravity",
+      "gravitation",
+      "newton",
+      "gravitational constant",
+      "orbits"
+    ],
+    "href": "lessons/universal-gravitation.html",
+    "video": {
+      "youtubeId": "7gf6YpdvtE0",
+      "url": "https://www.youtube.com/watch?v=7gf6YpdvtE0",
+      "title": "Gravity and Gravitational Attraction",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "euler-polyhedron-formula",
+    "title": "Euler's Polyhedron Formula",
+    "slug": "euler-polyhedron-formula",
+    "subject": "Geometry",
+    "topics": [
+      "topology",
+      "polyhedra",
+      "vertices",
+      "euler characteristic"
+    ],
+    "level": "intermediate",
+    "summary": "Fundamental topological invariant connecting vertices V, edges E, and faces F of any convex polyhedron.",
+    "formulaLatex": "V - E + F = 2",
+    "hasDemo": false,
+    "keywords": [
+      "euler characteristic",
+      "polyhedron",
+      "vertices",
+      "edges",
+      "faces",
+      "topology"
+    ],
+    "href": "lessons/euler-polyhedron-formula.html",
+    "video": {
+      "youtubeId": "euSTOTvBBZQ",
+      "url": "https://www.youtube.com/watch?v=euSTOTvBBZQ",
+      "title": "How Euler’s Formula Works For Polyhedra 🤔",
+      "channel": "Zack D. Films"
+    }
+  },
+  {
+    "id": "ellipse-equation",
+    "title": "Standard Equation of an Ellipse",
+    "slug": "ellipse-equation",
+    "subject": "Geometry",
+    "topics": [
+      "conic sections",
+      "ellipse",
+      "semi-axes",
+      "orbits"
+    ],
+    "level": "intermediate",
+    "summary": "Locus of all points where sum of distances to two fixed foci is constant 2a, governing planetary Keplerian orbits.",
+    "formulaLatex": "\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1,\\quad c = \\sqrt{a^2 - b^2}",
+    "hasDemo": false,
+    "keywords": [
+      "ellipse",
+      "conic sections",
+      "semi major axis",
+      "foci",
+      "eccentricity"
+    ],
+    "href": "lessons/ellipse-equation.html",
+    "video": {
+      "youtubeId": "5TQMJ09MLWM",
+      "url": "https://www.youtube.com/watch?v=5TQMJ09MLWM",
+      "title": "The Best Explanation of the Equation of an Ellipse",
+      "channel": "mathematicsonline"
+    }
+  },
+  {
+    "id": "de-morgans-laws",
+    "title": "De Morgan's Laws (Set Theory & Logic)",
+    "slug": "de-morgans-laws",
+    "subject": "Discrete Math",
+    "topics": [
+      "logic",
+      "set theory",
+      "boolean algebra",
+      "digital logic"
+    ],
+    "level": "beginner",
+    "summary": "Fundamental transformation laws connecting logical conjunction and disjunction through negation.",
+    "formulaLatex": "\\overline{A \\cup B} = \\overline{A} \\cap \\overline{B},\\quad \\overline{A \\cap B} = \\overline{A} \\cup \\overline{B}",
+    "hasDemo": false,
+    "keywords": [
+      "de morgan",
+      "boolean algebra",
+      "logic",
+      "set theory",
+      "digital electronics"
+    ],
+    "href": "lessons/de-morgans-laws.html",
+    "video": {
+      "youtubeId": "n4jrAn_NVFc",
+      "url": "https://www.youtube.com/watch?v=n4jrAn_NVFc",
+      "title": "Prove De Morgan's Law in Set Theory Complement of Union is Intersection of Complements",
+      "channel": "Anil Kumar"
+    }
+  },
+  {
+    "id": "fourier-transform",
+    "title": "Continuous Fourier Transform",
+    "slug": "fourier-transform",
+    "subject": "Calculus",
+    "topics": [
+      "fourier",
+      "signal processing",
+      "frequency domain",
+      "harmonic analysis"
+    ],
+    "level": "advanced",
+    "summary": "Decomposes any continuous time-domain signal into its constituent sinusoidal frequency components.",
+    "formulaLatex": "\\hat{f}(\\xi) = \\int_{-\\infty}^{\\infty} f(t) e^{-2\\pi i t \\xi}\\,dt",
+    "hasDemo": false,
+    "keywords": [
+      "fourier transform",
+      "frequency domain",
+      "signals",
+      "harmonics",
+      "fft",
+      "spectrogram"
+    ],
+    "href": "lessons/fourier-transform.html",
+    "video": {
+      "youtubeId": "spUNpyF58BY",
+      "url": "https://www.youtube.com/watch?v=spUNpyF58BY",
+      "title": "The Fourier Transform: A Visual Introduction",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "riemann-zeta-function",
+    "title": "Riemann Zeta Function & Prime Distribution",
+    "slug": "riemann-zeta-function",
+    "subject": "Number Theory",
+    "topics": [
+      "number theory",
+      "prime numbers",
+      "complex analysis",
+      "zeta function"
+    ],
+    "level": "advanced",
+    "summary": "Central function of analytic number theory, whose non-trivial zeros dictate the precise statistical distribution of prime numbers.",
+    "formulaLatex": "\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s} = \\prod_{p \\text{ prime}} \\frac{1}{1 - p^{-s}}",
+    "hasDemo": false,
+    "keywords": [
+      "riemann zeta",
+      "riemann hypothesis",
+      "prime numbers",
+      "euler product",
+      "complex analysis"
+    ],
+    "href": "lessons/riemann-zeta-function.html",
+    "video": {
+      "youtubeId": "sD0NjbwqlYw",
+      "url": "https://www.youtube.com/watch?v=sD0NjbwqlYw",
+      "title": "Visualizing the Riemann Hypothesis and Analytic Continuation",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "black-scholes-formula",
+    "title": "Black-Scholes Option Pricing Formula",
+    "slug": "black-scholes-formula",
+    "subject": "Statistics",
+    "topics": [
+      "financial mathematics",
+      "stochastic calculus",
+      "options",
+      "brownian motion"
+    ],
+    "level": "advanced",
+    "summary": "Nobel prize-winning mathematical model providing the theoretical price of European-style options based on geometric Brownian motion.",
+    "formulaLatex": "C(S, t) = S_t N(d_1) - K e^{-r(T-t)} N(d_2)",
+    "hasDemo": false,
+    "keywords": [
+      "black scholes",
+      "options",
+      "quantitative finance",
+      "brownian motion",
+      "stochastic"
+    ],
+    "href": "lessons/black-scholes-formula.html",
+    "video": {
+      "youtubeId": "pr-u4LCFYEY",
+      "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY",
+      "title": "Black-Scholes Model Explained Simply",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "logistic-map-chaos",
+    "title": "Logistic Map & Chaos Theory",
+    "slug": "logistic-map-chaos",
+    "subject": "Discrete Math",
+    "topics": [
+      "chaos theory",
+      "dynamical systems",
+      "bifurcation",
+      "fractals"
+    ],
+    "level": "advanced",
+    "summary": "Simple non-linear difference equation exhibiting complex dynamical behavior, period-doubling bifurcations, and deterministic chaos.",
+    "formulaLatex": "x_{n+1} = r x_n (1 - x_n)",
+    "hasDemo": false,
+    "keywords": [
+      "logistic map",
+      "chaos theory",
+      "bifurcation",
+      "feigenbaum",
+      "fractals",
+      "attractor"
+    ],
+    "href": "lessons/logistic-map-chaos.html",
+    "video": {
+      "youtubeId": "ovJcsL7vyrk",
+      "url": "https://www.youtube.com/watch?v=ovJcsL7vyrk",
+      "title": "This equation will change how you see the world (the logistic map)",
+      "channel": "Veritasium"
+    }
+  },
+  {
+    "id": "convolution-integral",
+    "title": "Continuous Convolution Operation",
+    "slug": "convolution-integral",
+    "subject": "Calculus",
+    "topics": [
+      "convolution",
+      "signals",
+      "linear systems",
+      "machine learning"
+    ],
+    "level": "advanced",
+    "summary": "Mathematical operation on two functions producing a third function expressing how the shape of one is modified by the other.",
+    "formulaLatex": "(f * g)(t) = \\int_{-\\infty}^{\\infty} f(\\tau) g(t - \\tau)\\,d\\tau",
+    "hasDemo": false,
+    "keywords": [
+      "convolution",
+      "signal processing",
+      "impulse response",
+      "cnn",
+      "convolutional neural network"
+    ],
+    "href": "lessons/convolution-integral.html",
+    "video": {
+      "youtubeId": "KuXjwB4LzSA",
+      "url": "https://www.youtube.com/watch?v=KuXjwB4LzSA",
+      "title": "Convolution: Visualized and Explained",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "transformer-attention",
+    "title": "Scaled Dot-Product Attention (Transformers & LLMs)",
+    "slug": "transformer-attention",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "machine learning",
+      "deep learning",
+      "transformers",
+      "nlp",
+      "llm"
+    ],
+    "level": "advanced",
+    "summary": "Core mechanism behind modern Large Language Models and Vision Transformers, computing similarity between Query and Key vectors to weight Value vectors.",
+    "formulaLatex": "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{Q K^T}{\\sqrt{d_k}}\\right) V",
+    "hasDemo": false,
+    "keywords": [
+      "transformer",
+      "attention",
+      "llm",
+      "softmax",
+      "query key value",
+      "deep learning"
+    ],
+    "href": "lessons/transformer-attention.html",
+    "video": {
+      "youtubeId": "bCz4OMemCcA",
+      "url": "https://www.youtube.com/watch?v=bCz4OMemCcA",
+      "title": "Attention in Transformers, Visually Explained",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "cauchy-schwarz-inequality",
+    "title": "Cauchy-Schwarz Inequality",
+    "slug": "cauchy-schwarz-inequality",
+    "subject": "Linear Algebra",
+    "topics": [
+      "inequalities",
+      "inner product",
+      "vectors",
+      "geometry"
+    ],
+    "level": "intermediate",
+    "summary": "One of the most widely used inequalities in mathematics, stating that the inner product of two vectors cannot exceed the product of their magnitudes.",
+    "formulaLatex": "|\\langle \\mathbf{u}, \\mathbf{v} \\rangle|^2 \\le \\langle \\mathbf{u}, \\mathbf{u} \\rangle \\cdot \\langle \\mathbf{v}, \\mathbf{v} \\rangle",
+    "hasDemo": false,
+    "keywords": [
+      "cauchy schwarz",
+      "inner product",
+      "dot product",
+      "inequality",
+      "vector norms"
+    ],
+    "href": "lessons/cauchy-schwarz-inequality.html",
+    "video": {
+      "youtubeId": "lqZ7QerHriA",
+      "url": "https://www.youtube.com/watch?v=lqZ7QerHriA",
+      "title": "Cauchy Schwarz Inequality Explained",
+      "channel": "Aliou DIOUF"
+    }
+  },
+  {
+    "id": "pearson-correlation",
+    "title": "Pearson Correlation Coefficient",
+    "slug": "pearson-correlation",
+    "subject": "Statistics",
+    "topics": [
+      "correlation",
+      "statistics",
+      "covariance",
+      "linear relationship"
+    ],
+    "level": "beginner",
+    "summary": "Standardized measure of the linear strength and direction of association between two continuous random variables, bounded between -1 and +1.",
+    "formulaLatex": "r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}} = \\frac{\\text{Cov}(X, Y)}{\\sigma_X \\sigma_Y}",
+    "hasDemo": false,
+    "keywords": [
+      "correlation",
+      "pearson",
+      "r",
+      "linear association",
+      "covariance",
+      "statistics"
+    ],
+    "href": "lessons/pearson-correlation.html",
+    "video": {
+      "youtubeId": "xZ_z8KWkhXE",
+      "url": "https://www.youtube.com/watch?v=xZ_z8KWkhXE",
+      "title": "Pearson's Correlation Coefficient, Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "covariance-formula",
+    "title": "Sample & Population Covariance",
+    "slug": "covariance-formula",
+    "subject": "Statistics",
+    "topics": [
+      "covariance",
+      "joint distribution",
+      "scatter",
+      "statistics"
+    ],
+    "level": "beginner",
+    "summary": "Measures the joint variability of two random variables to identify whether greater values of one correspond to greater values of the other.",
+    "formulaLatex": "\\text{Cov}(X, Y) = \\frac{1}{n-1}\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})",
+    "hasDemo": false,
+    "keywords": [
+      "covariance",
+      "statistics",
+      "joint variation",
+      "variance",
+      "scatter"
+    ],
+    "href": "lessons/covariance-formula.html",
+    "video": {
+      "youtubeId": "qtaqvPAeEJY",
+      "url": "https://www.youtube.com/watch?v=qtaqvPAeEJY",
+      "title": "Covariance and Correlation Explained",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "logistic-growth-model",
+    "title": "Logistic Growth Differential Equation",
+    "slug": "logistic-growth-model",
+    "subject": "Calculus",
+    "topics": [
+      "population dynamics",
+      "differential equations",
+      "carrying capacity",
+      "calculus"
+    ],
+    "level": "intermediate",
+    "summary": "Models density-dependent population growth constrained by environmental carrying capacity K with initial exponential growth slowing to saturation.",
+    "formulaLatex": "\\frac{dP}{dt} = r P \\left(1 - \\frac{P}{K}\\right),\\quad P(t) = \\frac{K}{1 + A e^{-rt}}",
+    "hasDemo": false,
+    "keywords": [
+      "logistic growth",
+      "carrying capacity",
+      "population",
+      "differential equation",
+      "sigmoid"
+    ],
+    "href": "lessons/logistic-growth-model.html",
+    "video": {
+      "youtubeId": "Kas0tIxDvrg",
+      "url": "https://www.youtube.com/watch?v=Kas0tIxDvrg",
+      "title": "Logistic Growth Differential Equations",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "euler-lagrange-equation",
+    "title": "Euler-Lagrange Equation (Calculus of Variations)",
+    "slug": "euler-lagrange-equation",
+    "subject": "Physics",
+    "topics": [
+      "classical mechanics",
+      "variational calculus",
+      "lagrangian",
+      "action principle"
+    ],
+    "level": "advanced",
+    "summary": "Determines stationary paths of the action integral in classical mechanics and field theory, unifying Newtonian mechanics with conservation laws.",
+    "formulaLatex": "\\frac{d}{dt}\\left( \\frac{\\partial L}{\\partial \\dot{q}_i} \\right) - \\frac{\\partial L}{\\partial q_i} = 0,\\quad L = T - V",
+    "hasDemo": false,
+    "keywords": [
+      "euler lagrange",
+      "action principle",
+      "lagrangian mechanics",
+      "variational calculus",
+      "physics"
+    ],
+    "href": "lessons/euler-lagrange-equation.html",
+    "video": {
+      "youtubeId": "V0wx0JBEgZc",
+      "url": "https://www.youtube.com/watch?v=V0wx0JBEgZc",
+      "title": "The Calculus of Variations and the Euler-Lagrange Equation",
+      "channel": "Xander Gouws"
+    }
+  },
+  {
+    "id": "maxwell-gauss-law",
+    "title": "Gauss's Law for Electric Fields (Maxwell I)",
+    "slug": "maxwell-gauss-law",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "maxwell equations",
+      "flux",
+      "electric field"
+    ],
+    "level": "advanced",
+    "summary": "Relates the divergence of electric field to enclosed volumetric charge density: electric flux leaving a closed surface equals enclosed charge over permittivity.",
+    "formulaLatex": "\\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0},\\quad \\oint_{\\partial V} \\mathbf{E} \\cdot d\\mathbf{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}",
+    "hasDemo": false,
+    "keywords": [
+      "gauss law",
+      "maxwell equations",
+      "electric flux",
+      "divergence",
+      "electromagnetism"
+    ],
+    "href": "lessons/maxwell-gauss-law.html",
+    "video": {
+      "youtubeId": "pTMh1yyqVC8",
+      "url": "https://www.youtube.com/watch?v=pTMh1yyqVC8",
+      "title": "Maxwell's Equations: Gauss' Law Explained (ft. @Higgsinophysics ) | Physics for Beginners",
+      "channel": "Parth G"
+    }
+  },
+  {
+    "id": "maxwell-faraday-law",
+    "title": "Faraday's Law of Induction (Maxwell III)",
+    "slug": "maxwell-faraday-law",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "induction",
+      "magnetic flux",
+      "emf"
+    ],
+    "level": "advanced",
+    "summary": "A changing magnetic flux through a surface creates a circulating electric field, the physical principle behind electric generators and transformers.",
+    "formulaLatex": "\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t},\\quad \\mathcal{E} = -\\frac{d\\Phi_B}{dt}",
+    "hasDemo": false,
+    "keywords": [
+      "faraday law",
+      "induction",
+      "electromagnetism",
+      "curl",
+      "magnetic flux"
+    ],
+    "href": "lessons/maxwell-faraday-law.html",
+    "video": {
+      "youtubeId": "pWliPNtISrM",
+      "url": "https://www.youtube.com/watch?v=pWliPNtISrM",
+      "title": "faraday's law of induction",
+      "channel": "learn and share physics "
+    }
+  },
+  {
+    "id": "bayes-information-criterion",
+    "title": "Bayesian Information Criterion (BIC)",
+    "slug": "bayes-information-criterion",
+    "subject": "Statistics",
+    "topics": [
+      "model selection",
+      "information theory",
+      "likelihood",
+      "overfitting"
+    ],
+    "level": "advanced",
+    "summary": "Criterion for statistical model selection balancing goodness of fit with model complexity to prevent overfitting.",
+    "formulaLatex": "\\text{BIC} = k \\ln(n) - 2 \\ln(\\hat{L})",
+    "hasDemo": false,
+    "keywords": [
+      "bic",
+      "model selection",
+      "aic",
+      "likelihood",
+      "overfitting",
+      "statistics"
+    ],
+    "href": "lessons/bayes-information-criterion.html",
+    "video": {
+      "youtubeId": "PznyJSxrJb0",
+      "url": "https://www.youtube.com/watch?v=PznyJSxrJb0",
+      "title": "AIC VS. BIC Criteria for model selection",
+      "channel": "BiostatsKanya"
+    }
+  },
+  {
+    "id": "ideal-gas-law",
+    "title": "Ideal Gas Law",
+    "slug": "ideal-gas-law",
+    "subject": "Physics",
+    "topics": [
+      "thermodynamics",
+      "ideal gas",
+      "pressure",
+      "temperature"
+    ],
+    "level": "beginner",
+    "summary": "Equation of state of a hypothetical ideal gas relating pressure P, volume V, temperature T, and amount of substance n.",
+    "formulaLatex": "P V = n R T = N k_B T",
+    "hasDemo": false,
+    "keywords": [
+      "ideal gas law",
+      "thermodynamics",
+      "pressure",
+      "boltzmann",
+      "temperature"
+    ],
+    "href": "lessons/ideal-gas-law.html",
+    "video": {
+      "youtubeId": "BxUS1K7xu30",
+      "url": "https://www.youtube.com/watch?v=BxUS1K7xu30",
+      "title": "Ideal Gas Law: PV = nRT Explained",
+      "channel": "CrashCourse"
+    }
+  },
+  {
+    "id": "stirling-approximation",
+    "title": "Stirling's Approximation for Factorials",
+    "slug": "stirling-approximation",
+    "subject": "Counting & Probability",
+    "topics": [
+      "factorials",
+      "asymptotic analysis",
+      "combinatorics",
+      "probability"
+    ],
+    "level": "advanced",
+    "summary": "Asymptotic approximation for large factorials n!, replacing combinatorial products with exponential and power expressions.",
+    "formulaLatex": "n! \\sim \\sqrt{2\\pi n} \\left(\\frac{n}{e}\\right)^n",
+    "hasDemo": false,
+    "keywords": [
+      "stirling approximation",
+      "factorial",
+      "asymptotic",
+      "combinatorics",
+      "gamma function"
+    ],
+    "href": "lessons/stirling-approximation.html",
+    "video": {
+      "youtubeId": "36LAg5UYE_I",
+      "url": "https://www.youtube.com/watch?v=36LAg5UYE_I",
+      "title": "How Stirling's Approximation Predicts Factorials So Closely!",
+      "channel": "SciMath"
+    }
+  },
+  {
+    "id": "de-moivres-theorem",
+    "title": "De Moivre's Theorem",
+    "slug": "de-moivres-theorem",
+    "subject": "Algebra",
+    "topics": [
+      "complex-numbers",
+      "trigonometry",
+      "polar-form",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Expresses integer and rational powers of complex numbers in polar coordinates: (cos θ + i sin θ)^n = cos(nθ) + i sin(nθ).",
+    "formulaLatex": "(\\cos\\theta + i\\sin\\theta)^n = \\cos(n\\theta) + i\\sin(n\\theta)",
+    "hasDemo": false,
+    "keywords": [
+      "de moivre",
+      "complex numbers",
+      "polar form",
+      "euler",
+      "class 11",
+      "trigonometry"
+    ],
+    "href": "lessons/de-moivres-theorem.html",
+    "video": {
+      "youtubeId": "6X8Mae-5EAM",
+      "url": "https://www.youtube.com/watch?v=6X8Mae-5EAM",
+      "title": "De-moivre's Theorem | Short Trick To Find n-nth Roots Of Unity | Short Revision Of Complex Numbers",
+      "channel": "Dr.Gajendra Purohit - GATE / IIT JAM / CSIR NET"
+    }
+  },
+  {
+    "id": "trig-compound-angle-sum",
+    "title": "Trigonometric Compound Angle Identities",
+    "slug": "trig-compound-angle-sum",
+    "subject": "Trigonometry",
+    "topics": [
+      "trigonometry",
+      "angles",
+      "identities",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Decomposes the sine and cosine of angle sums and differences into products of elementary functions.",
+    "formulaLatex": "\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B,\\quad \\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B",
+    "hasDemo": false,
+    "keywords": [
+      "compound angle",
+      "addition formula",
+      "sin A+B",
+      "cos A+B",
+      "class 11",
+      "trig identity"
+    ],
+    "href": "lessons/trig-compound-angle-sum.html",
+    "video": {
+      "youtubeId": "f-kGtZlUpX4",
+      "url": "https://www.youtube.com/watch?v=f-kGtZlUpX4",
+      "title": "Trig Double Angle Formulas from Semicircle (visual proof)",
+      "channel": "Mathematical Visual Proofs"
+    }
+  },
+  {
+    "id": "parabola-standard-form",
+    "title": "Parabola Standard Conic Equation",
+    "slug": "parabola-standard-form",
+    "subject": "Geometry",
+    "topics": [
+      "conic-sections",
+      "parabola",
+      "analytic-geometry",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Defines the geometric locus equidistant from a focus point (a, 0) and the vertical directrix line x = -a.",
+    "formulaLatex": "y^2 = 4ax,\\quad \\text{Focus: }(a, 0),\\quad \\text{Directrix: } x = -a",
+    "hasDemo": false,
+    "keywords": [
+      "parabola",
+      "conics",
+      "focus",
+      "directrix",
+      "latus rectum",
+      "class 11"
+    ],
+    "href": "lessons/parabola-standard-form.html",
+    "video": {
+      "youtubeId": "KYgmOTLbuqE",
+      "url": "https://www.youtube.com/watch?v=KYgmOTLbuqE",
+      "title": "Finding The Focus and Directrix of a Parabola - Conic Sections",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "ellipse-standard-equation",
+    "title": "Ellipse Canonical Conic Equation",
+    "slug": "ellipse-standard-equation",
+    "subject": "Geometry",
+    "topics": [
+      "conic-sections",
+      "ellipse",
+      "analytic-geometry",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Describes an ellipse with semi-major axis a, semi-minor axis b, eccentricity e < 1, and focal distance c = sqrt(a^2 - b^2).",
+    "formulaLatex": "\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1,\\quad c = \\sqrt{a^2 - b^2},\\quad e = \\frac{c}{a} < 1",
+    "hasDemo": false,
+    "keywords": [
+      "ellipse",
+      "conics",
+      "eccentricity",
+      "foci",
+      "major axis",
+      "class 11"
+    ],
+    "href": "lessons/ellipse-standard-equation.html",
+    "video": {
+      "youtubeId": "OPSCKXXvWiM",
+      "url": "https://www.youtube.com/watch?v=OPSCKXXvWiM",
+      "title": "Writing Equations of Ellipses In Standard Form and Graphing Ellipses - Conic Sections",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "derivative-first-principles",
+    "title": "Derivative from First Principles",
+    "slug": "derivative-first-principles",
+    "subject": "Calculus",
+    "topics": [
+      "limits",
+      "derivatives",
+      "calculus",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "The foundational definition of a derivative as the infinitesimal limiting quotient of secant line slopes.",
+    "formulaLatex": "f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}",
+    "hasDemo": false,
+    "keywords": [
+      "derivative",
+      "first principles",
+      "difference quotient",
+      "limits",
+      "class 11"
+    ],
+    "href": "lessons/derivative-first-principles.html",
+    "video": {
+      "youtubeId": "yJD7FekLzUg",
+      "url": "https://www.youtube.com/watch?v=yJD7FekLzUg",
+      "title": "Derivative by first principle- Example 2.",
+      "channel": "Jacob Sichamba Online Math"
+    }
+  },
+  {
+    "id": "kinematic-displacement-acceleration",
+    "title": "Kinematic Displacement under Acceleration",
+    "slug": "kinematic-displacement-acceleration",
+    "subject": "Physics",
+    "topics": [
+      "mechanics",
+      "kinematics",
+      "motion",
+      "class11",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates rectilinear displacement s given initial velocity u, elapsed time t, and constant acceleration a.",
+    "formulaLatex": "s = ut + \\frac{1}{2}at^2,\\quad v^2 = u^2 + 2as",
+    "hasDemo": false,
+    "keywords": [
+      "kinematics",
+      "displacement",
+      "acceleration",
+      "motion equations",
+      "class 11 physics"
+    ],
+    "href": "lessons/kinematic-displacement-acceleration.html",
+    "video": {
+      "youtubeId": "E7ua2BCitzM",
+      "url": "https://www.youtube.com/watch?v=E7ua2BCitzM",
+      "title": "Kinematics [IB Math AA SL/HL]",
+      "channel": "Revision Village"
+    }
+  },
+  {
+    "id": "work-energy-theorem",
+    "title": "Work-Energy Theorem",
+    "slug": "work-energy-theorem",
+    "subject": "Physics",
+    "topics": [
+      "mechanics",
+      "energy",
+      "work",
+      "class11",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "States that the net mechanical work done on a particle equals the resulting change in its kinetic energy: W_net = ΔK = (1/2)m(v_f^2 - v_i^2).",
+    "formulaLatex": "W_{\\text{net}} = \\Delta K = \\frac{1}{2}m v_f^2 - \\frac{1}{2}m v_i^2",
+    "hasDemo": false,
+    "keywords": [
+      "work energy theorem",
+      "kinetic energy",
+      "joules",
+      "mechanics",
+      "class 11 physics"
+    ],
+    "href": "lessons/work-energy-theorem.html",
+    "video": {
+      "youtubeId": "w4QFJb9a8vo",
+      "url": "https://www.youtube.com/watch?v=w4QFJb9a8vo",
+      "title": "Work and Energy: Work-Energy Principle",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "escape-velocity",
+    "title": "Gravitational Escape Velocity",
+    "slug": "escape-velocity",
+    "subject": "Physics",
+    "topics": [
+      "gravity",
+      "astrophysics",
+      "mechanics",
+      "class11",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "The minimum speed required for an unpropelled ballistic body to completely break free from a gravitational sphere without further propulsion.",
+    "formulaLatex": "v_e = \\sqrt{\\frac{2GM}{R}} = \\sqrt{2gR}",
+    "hasDemo": false,
+    "keywords": [
+      "escape velocity",
+      "gravitational potential",
+      "orbital mechanics",
+      "class 11 physics"
+    ],
+    "href": "lessons/escape-velocity.html",
+    "video": {
+      "youtubeId": "NoVCtNvRtRI",
+      "url": "https://www.youtube.com/watch?v=NoVCtNvRtRI",
+      "title": "Escape Velocity",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "simple-harmonic-motion-period",
+    "title": "Simple Harmonic Motion Period",
+    "slug": "simple-harmonic-motion-period",
+    "subject": "Physics",
+    "topics": [
+      "oscillations",
+      "waves",
+      "mechanics",
+      "class11",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Computes the oscillation period T of an ideal spring-mass system executing Hooke's restorative harmonic oscillations.",
+    "formulaLatex": "T = 2\\pi \\sqrt{\\frac{m}{k}},\\quad \\omega = \\sqrt{\\frac{k}{m}} = 2\\pi f",
+    "hasDemo": false,
+    "keywords": [
+      "simple harmonic motion",
+      "shm",
+      "period",
+      "spring constant",
+      "oscillator",
+      "class 11 physics"
+    ],
+    "href": "lessons/simple-harmonic-motion-period.html",
+    "video": {
+      "youtubeId": "gZ_KnZHCn4M",
+      "url": "https://www.youtube.com/watch?v=gZ_KnZHCn4M",
+      "title": "Simple Harmonic Motion: Hooke's Law",
+      "channel": "Professor Dave Explains"
+    }
+  },
+  {
+    "id": "bernoullis-principle",
+    "title": "Bernoulli's Hydrodynamic Equation",
+    "slug": "bernoullis-principle",
+    "subject": "Physics",
+    "topics": [
+      "fluids",
+      "hydrodynamics",
+      "energy",
+      "class11",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Formulates conservation of mechanical energy for an incompressible, inviscid streamline fluid flow.",
+    "formulaLatex": "P + \\frac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}",
+    "hasDemo": false,
+    "keywords": [
+      "bernoulli",
+      "fluid dynamics",
+      "pressure",
+      "lift",
+      "streamline",
+      "class 11 physics"
+    ],
+    "href": "lessons/bernoullis-principle.html",
+    "video": {
+      "youtubeId": "DW4rItB20h4",
+      "url": "https://www.youtube.com/watch?v=DW4rItB20h4",
+      "title": "Understanding Bernoulli's Equation",
+      "channel": "The Efficient Engineer"
+    }
+  },
+  {
+    "id": "pigeonhole-principle",
+    "title": "Pigeonhole & Inclusion-Exclusion Principle",
+    "slug": "pigeonhole-principle",
+    "subject": "Discrete Math",
+    "topics": [
+      "combinatorics",
+      "set-theory",
+      "discrete-math",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Establishes that n items distributed across k containers guarantees at least one container with ceil(n/k) items, and computes joint set cardinalities.",
+    "formulaLatex": "|A \\cup B| = |A| + |B| - |A \\cap B|,\\quad \\text{Pigeonhole: } \\lceil n/k \\rceil",
+    "hasDemo": false,
+    "keywords": [
+      "pigeonhole principle",
+      "inclusion exclusion",
+      "combinatorics",
+      "discrete math",
+      "class 11"
+    ],
+    "href": "lessons/pigeonhole-principle.html",
+    "video": {
+      "youtubeId": "d8kSCxU6EAY",
+      "url": "https://www.youtube.com/watch?v=d8kSCxU6EAY",
+      "title": "Pigeonhole Principle",
+      "channel": "Joe McCann"
+    }
+  },
+  {
+    "id": "matrix-inverse-adjugate",
+    "title": "Matrix Inversion via Adjugate",
+    "slug": "matrix-inverse-adjugate",
+    "subject": "Linear Algebra",
+    "topics": [
+      "matrices",
+      "determinants",
+      "inversion",
+      "class12"
+    ],
+    "level": "intermediate",
+    "summary": "Computes the exact inverse of an invertible square matrix using the transposed cofactor adjugate matrix scaled by 1/det(A).",
+    "formulaLatex": "A^{-1} = \\frac{1}{\\det(A)}\\,\\text{adj}(A) = \\frac{1}{|A|} C^T",
+    "hasDemo": false,
+    "keywords": [
+      "matrix inverse",
+      "adjugate",
+      "cofactor",
+      "determinant",
+      "class 12 math"
+    ],
+    "href": "lessons/matrix-inverse-adjugate.html",
+    "video": {
+      "youtubeId": "JoSSSc0di90",
+      "url": "https://www.youtube.com/watch?v=JoSSSc0di90",
+      "title": "🔁 Inverse of a 3×3 Matrix with Adjugate Method | Step-by-Step #cofactors #linearalgebra #matrix",
+      "channel": "Glythify"
+    }
+  },
+  {
+    "id": "cramers-rule",
+    "title": "Cramer's Rule for Linear Systems",
+    "slug": "cramers-rule",
+    "subject": "Linear Algebra",
+    "topics": [
+      "matrices",
+      "linear-systems",
+      "determinants",
+      "class12"
+    ],
+    "level": "intermediate",
+    "summary": "Solves systems of n linear equations with n unknowns directly as the ratio of determinant substitutions.",
+    "formulaLatex": "x_i = \\frac{\\det(A_i)}{\\det(A)},\\quad \\text{where } \\det(A) \\neq 0",
+    "hasDemo": false,
+    "keywords": [
+      "cramer rule",
+      "linear systems",
+      "determinant",
+      "matrix",
+      "class 12 math"
+    ],
+    "href": "lessons/cramers-rule.html",
+    "video": {
+      "youtubeId": "vXqlIOX2itM",
+      "url": "https://www.youtube.com/watch?v=vXqlIOX2itM",
+      "title": "Cramer's Rule for 3x3 Systems",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "differential-equation-integrating-factor",
+    "title": "First-Order Linear ODE Integrating Factor",
+    "slug": "differential-equation-integrating-factor",
+    "subject": "Calculus",
+    "topics": [
+      "differential-equations",
+      "ode",
+      "calculus",
+      "class12"
+    ],
+    "level": "intermediate",
+    "summary": "Solves first-order linear differential equations dy/dx + P(x)y = Q(x) by multiplying by the integrating factor I(x) = exp(∫ P(x)dx).",
+    "formulaLatex": "I(x) = e^{\\int P(x)\\,dx},\\quad y(x) = \\frac{1}{I(x)}\\left[\\int I(x)Q(x)\\,dx + C\\right]",
+    "hasDemo": false,
+    "keywords": [
+      "differential equations",
+      "integrating factor",
+      "ode",
+      "first order",
+      "class 12"
+    ],
+    "href": "lessons/differential-equation-integrating-factor.html",
+    "video": {
+      "youtubeId": "v5C0CtRAK10",
+      "url": "https://www.youtube.com/watch?v=v5C0CtRAK10",
+      "title": "How to use the Integrating Factor Method (First Order Linear ODE)",
+      "channel": "Cowan Academy"
+    }
+  },
+  {
+    "id": "coulombs-electrostatic-law",
+    "title": "Coulomb's Law of Electrostatics",
+    "slug": "coulombs-electrostatic-law",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "electrostatics",
+      "forces",
+      "class12",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Quantifies the electrostatic force between two stationary electric charges in a vacuum inversely proportional to the square of their distance.",
+    "formulaLatex": "F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{|q_1 q_2|}{r^2},\\quad k_e = \\frac{1}{4\\pi\\varepsilon_0} \\approx 8.99 \\times 10^9\\,\\text{N}\\cdot\\text{m}^2/\\text{C}^2",
+    "hasDemo": false,
+    "keywords": [
+      "coulomb law",
+      "electrostatics",
+      "electric charge",
+      "permittivity",
+      "class 12 physics"
+    ],
+    "href": "lessons/coulombs-electrostatic-law.html",
+    "video": {
+      "youtubeId": "kCp5yYjo9zE",
+      "url": "https://www.youtube.com/watch?v=kCp5yYjo9zE",
+      "title": "Coulomb's Law - Net Electric Force & Point Charges",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "gauss-law-flux",
+    "title": "Gauss's Law for Electric Flux",
+    "slug": "gauss-law-flux",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "flux",
+      "fields",
+      "class12",
+      "physics"
+    ],
+    "level": "advanced",
+    "summary": "Relates the total electric flux passing through an arbitrary closed Gaussian surface to the net enclosed electric charge divided by vacuum permittivity.",
+    "formulaLatex": "\\Phi_E = \\oint_{S} \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}",
+    "hasDemo": false,
+    "keywords": [
+      "gauss law",
+      "electric flux",
+      "gaussian surface",
+      "enclosed charge",
+      "class 12 physics"
+    ],
+    "href": "lessons/gauss-law-flux.html",
+    "video": {
+      "youtubeId": "3RnFjMhgvrY",
+      "url": "https://www.youtube.com/watch?v=3RnFjMhgvrY",
+      "title": "Super Simple Explanation of Electric Flux and Gauss's Law",
+      "channel": "Brain Station Advanced"
+    }
+  },
+  {
+    "id": "biot-savart-law",
+    "title": "Biot-Savart Magnetic Field Law",
+    "slug": "biot-savart-law",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "magnetic-fields",
+      "class12",
+      "physics"
+    ],
+    "level": "advanced",
+    "summary": "Calculates the infinitesimal magnetic field vector dB produced by an electric current element I dl at a spatial displacement r.",
+    "formulaLatex": "d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I\\,d\\vec{\\ell} \\times \\hat{r}}{r^2}",
+    "hasDemo": false,
+    "keywords": [
+      "biot savart",
+      "magnetic field",
+      "current element",
+      "permeability",
+      "class 12 physics"
+    ],
+    "href": "lessons/biot-savart-law.html",
+    "video": {
+      "youtubeId": "puinA6_L3TA",
+      "url": "https://www.youtube.com/watch?v=puinA6_L3TA",
+      "title": "Biot Savart Law Explained | Class 12 Physics",
+      "channel": "The Physics Classroom"
+    }
+  },
+  {
+    "id": "faradays-law-induction",
+    "title": "Faraday-Lenz Law of Induction",
+    "slug": "faradays-law-induction",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "induction",
+      "magnetic-flux",
+      "class12",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Establishes that the induced electromotive force (EMF) around a closed circuit is equal to the negative rate of change of magnetic flux through it.",
+    "formulaLatex": "\\mathcal{E} = -\\frac{d\\Phi_B}{dt} = -N \\frac{d}{dt}(B A \\cos\\theta)",
+    "hasDemo": false,
+    "keywords": [
+      "faraday law",
+      "lenz law",
+      "electromagnetic induction",
+      "emf",
+      "magnetic flux",
+      "class 12 physics"
+    ],
+    "href": "lessons/faradays-law-induction.html",
+    "video": {
+      "youtubeId": "3HyORmBip-w",
+      "url": "https://www.youtube.com/watch?v=3HyORmBip-w",
+      "title": "What is Electromagnetic Induction? | Faraday's Laws and Lenz Law | iKen | iKen Edu | iKen App",
+      "channel": "Iken Edu"
+    }
+  },
+  {
+    "id": "snells-law-refraction",
+    "title": "Snell's Law of Optical Refraction",
+    "slug": "snells-law-refraction",
+    "subject": "Physics",
+    "topics": [
+      "optics",
+      "refraction",
+      "waves",
+      "class12",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Determines the angle of refraction as electromagnetic waves traverse the interface between media of differing refractive indices: n1 sin θ1 = n2 sin θ2.",
+    "formulaLatex": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2,\\quad \\theta_c = \\arcsin\\left(\\frac{n_2}{n_1}\\right)",
+    "hasDemo": true,
+    "keywords": [
+      "snell law",
+      "refraction",
+      "optics",
+      "critical angle",
+      "total internal reflection",
+      "class 12 physics"
+    ],
+    "href": "lessons/snells-law-refraction.html",
+    "video": {
+      "youtubeId": "gDA_nDXM-ck",
+      "url": "https://www.youtube.com/watch?v=gDA_nDXM-ck",
+      "title": "Snell's Law of Refraction and Total Internal Reflection",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "einstein-photoelectric",
+    "title": "Einstein Photoelectric Equation",
+    "slug": "einstein-photoelectric",
+    "subject": "Physics",
+    "topics": [
+      "quantum-physics",
+      "photons",
+      "modern-physics",
+      "class12",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Quantizes light as discrete photons of energy E = hν, where excess energy above the material work function Φ emerges as maximum photoelectron kinetic energy.",
+    "formulaLatex": "K_{\\max} = h\\nu - \\Phi = hc/\\lambda - \\Phi",
+    "hasDemo": false,
+    "keywords": [
+      "photoelectric effect",
+      "einstein",
+      "work function",
+      "photons",
+      "planck constant",
+      "class 12 physics"
+    ],
+    "href": "lessons/einstein-photoelectric.html",
+    "video": {
+      "youtubeId": "H-FyOpURPXI",
+      "url": "https://www.youtube.com/watch?v=H-FyOpURPXI",
+      "title": "Photoelectric Effect Explained in Simple Words for Beginners",
+      "channel": "Science ABC"
+    }
+  },
+  {
+    "id": "radioactive-decay-law",
+    "title": "Radioactive Decay & Half-Life",
+    "slug": "radioactive-decay-law",
+    "subject": "Physics",
+    "topics": [
+      "nuclear-physics",
+      "decay",
+      "half-life",
+      "class12",
+      "physics"
+    ],
+    "level": "intermediate",
+    "summary": "Models the exponential statistical decay of unstable radioisotopes over time: N(t) = N0 e^(-λt), with half-life T_1/2 = ln(2)/λ.",
+    "formulaLatex": "N(t) = N_0 e^{-\\lambda t},\\quad T_{1/2} = \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda}",
+    "hasDemo": false,
+    "keywords": [
+      "radioactive decay",
+      "half life",
+      "nuclear physics",
+      "exponential decay",
+      "class 12 physics"
+    ],
+    "href": "lessons/radioactive-decay-law.html",
+    "video": {
+      "youtubeId": "wvgT52mwM3Y",
+      "url": "https://www.youtube.com/watch?v=wvgT52mwM3Y",
+      "title": "GCSE Physics - Radioactive Decay & Half-life | How to Calculate Activity & Half-life (2027/28 exams)",
+      "channel": "Cognito"
+    }
+  },
+  {
+    "id": "lagrange-multipliers",
+    "title": "Lagrange Multipliers Constrained Optimization",
+    "slug": "lagrange-multipliers",
+    "subject": "Calculus",
+    "topics": [
+      "optimization",
+      "multivariable-calculus",
+      "calculus",
+      "university",
+      "ml"
+    ],
+    "level": "advanced",
+    "summary": "Finds the extrema of a multivariable function f(x, y) subject to equality constraint g(x, y) = c where their gradient vectors become collinear: ∇f = λ∇g.",
+    "formulaLatex": "\\nabla f(x, y) = \\lambda \\nabla g(x, y),\\quad g(x, y) = c",
+    "hasDemo": true,
+    "keywords": [
+      "lagrange multipliers",
+      "constrained optimization",
+      "gradients",
+      "tangency",
+      "university",
+      "ml"
+    ],
+    "href": "lessons/lagrange-multipliers.html",
+    "video": {
+      "youtubeId": "8mjcnxGMwFo",
+      "url": "https://www.youtube.com/watch?v=8mjcnxGMwFo",
+      "title": "Lagrange Multipliers | Geometric Meaning & Full Example",
+      "channel": "Dr. Trefor Bazett"
+    }
+  },
+  {
+    "id": "lorentz-transformation-dilation",
+    "title": "Relativistic Lorentz Transformation & Time Dilation",
+    "slug": "lorentz-transformation-dilation",
+    "subject": "Physics",
+    "topics": [
+      "relativity",
+      "spacetime",
+      "physics",
+      "university"
+    ],
+    "level": "advanced",
+    "summary": "Formulates spacetime coordinate transformations between inertial reference frames moving at relativistic velocity v, proving time dilation Δt = γ Δt0.",
+    "formulaLatex": "t' = \\gamma\\left(t - \\frac{vx}{c^2}\\right),\\quad \\Delta t = \\gamma \\Delta t_0,\\quad \\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}",
+    "hasDemo": true,
+    "keywords": [
+      "lorentz transformation",
+      "time dilation",
+      "special relativity",
+      "spacetime",
+      "gamma factor",
+      "university physics"
+    ],
+    "href": "lessons/lorentz-transformation-dilation.html",
+    "video": {
+      "youtubeId": "FGQseB-pvIg",
+      "url": "https://www.youtube.com/watch?v=FGQseB-pvIg",
+      "title": "Easy Way to Understand Special Relativity | Lorentz Transformation | Time dilation",
+      "channel": "Klonusk"
+    }
+  },
+  {
+    "id": "schrodinger-wave-equation",
+    "title": "Time-Dependent Schrödinger Wave Equation",
+    "slug": "schrodinger-wave-equation",
+    "subject": "Physics",
+    "topics": [
+      "quantum-mechanics",
+      "wave-equation",
+      "physics",
+      "university"
+    ],
+    "level": "advanced",
+    "summary": "The fundamental dynamical law of quantum mechanics predicting the temporal evolution of the probability wave function Ψ(r, t).",
+    "formulaLatex": "i\\hbar \\frac{\\partial}{\\partial t} \\Psi(\\vec{r}, t) = \\hat{H} \\Psi(\\vec{r}, t) = \\left[ -\\frac{\\hbar^2}{2m} \\nabla^2 + V(\\vec{r}, t) \\right] \\Psi",
+    "hasDemo": false,
+    "keywords": [
+      "schrodinger equation",
+      "quantum mechanics",
+      "wave function",
+      "hamiltonian",
+      "university physics"
+    ],
+    "href": "lessons/schrodinger-wave-equation.html",
+    "video": {
+      "youtubeId": "x4Nr93ALNjo",
+      "url": "https://www.youtube.com/watch?v=x4Nr93ALNjo",
+      "title": "Schrodinger's Time Dependent Wave Equation (STDE)",
+      "channel": "Physics with Atul Singh"
+    }
+  },
+  {
+    "id": "maxwells-equations-differential",
+    "title": "Maxwell's Electromagnetic Field Equations",
+    "slug": "maxwells-equations-differential",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "differential-equations",
+      "physics",
+      "university"
+    ],
+    "level": "advanced",
+    "summary": "The four partial differential equations synthesizing electricity, magnetism, and optics into a single unified electromagnetic field theory.",
+    "formulaLatex": "\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0},\\quad \\nabla \\cdot \\vec{B} = 0,\\quad \\nabla \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t},\\quad \\nabla \\times \\vec{B} = \\mu_0\\vec{J} + \\mu_0\\varepsilon_0\\frac{\\partial\\vec{E}}{\\partial t}",
+    "hasDemo": false,
+    "keywords": [
+      "maxwell equations",
+      "electrodynamics",
+      "gauss",
+      "faraday",
+      "ampere",
+      "curl",
+      "divergence",
+      "university"
+    ],
+    "href": "lessons/maxwells-equations-differential.html",
+    "video": {
+      "youtubeId": "0jW74lrpeM0",
+      "url": "https://www.youtube.com/watch?v=0jW74lrpeM0",
+      "title": "Let There Be Light: Maxwell's Equation EXPLAINED for BEGINNERS",
+      "channel": "Parth G"
+    }
+  },
+  {
+    "id": "demorgans-laws-logic",
+    "title": "De Morgan's Laws for Logic & Sets",
+    "slug": "demorgans-laws-logic",
+    "subject": "Discrete Math",
+    "topics": [
+      "logic",
+      "boolean-algebra",
+      "sets",
+      "discrete-math"
+    ],
+    "level": "intermediate",
+    "summary": "Establishes duality relationships between conjunctions and disjunctions: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q, and (A ∩ B)' = A' ∪ B'.",
+    "formulaLatex": "\\neg(P \\land Q) \\iff \\neg P \\lor \\neg Q,\\quad (A \\cap B)^c = A^c \\cup B^c",
+    "hasDemo": false,
+    "keywords": [
+      "de morgan",
+      "boolean algebra",
+      "propositional logic",
+      "set theory",
+      "discrete math"
+    ],
+    "href": "lessons/demorgans-laws-logic.html",
+    "video": {
+      "youtubeId": "n4jrAn_NVFc",
+      "url": "https://www.youtube.com/watch?v=n4jrAn_NVFc",
+      "title": "Prove De Morgan's Law in Set Theory Complement of Union is Intersection of Complements",
+      "channel": "Anil Kumar"
+    }
+  },
+  {
+    "id": "eulers-planar-graph-formula",
+    "title": "Euler's Planar Polyhedron Formula",
+    "slug": "eulers-planar-graph-formula",
+    "subject": "Discrete Math",
+    "topics": [
+      "graph-theory",
+      "topology",
+      "discrete-math"
+    ],
+    "level": "intermediate",
+    "summary": "A fundamental topological invariant proving that for every connected planar graph and convex polyhedron, Vertices - Edges + Faces = 2.",
+    "formulaLatex": "V - E + F = 2,\\quad \\chi = 2",
+    "hasDemo": false,
+    "keywords": [
+      "euler planar formula",
+      "polyhedron",
+      "vertices edges faces",
+      "graph theory",
+      "topology"
+    ],
+    "href": "lessons/eulers-planar-graph-formula.html",
+    "video": {
+      "youtubeId": "-9OUyo8NFZg",
+      "url": "https://www.youtube.com/watch?v=-9OUyo8NFZg",
+      "title": "Euler's Formula: V - E + F = 2 and Planar Graphs",
+      "channel": "3Blue1Brown"
+    }
+  },
+  {
+    "id": "handshaking-lemma",
+    "title": "Handshaking Lemma for Graphs",
+    "slug": "handshaking-lemma",
+    "subject": "Discrete Math",
+    "topics": [
+      "graph-theory",
+      "combinatorics",
+      "discrete-math"
+    ],
+    "level": "intermediate",
+    "summary": "States that every undirected graph has vertex degree sum equal to twice its edge count: Σ deg(v) = 2|E|, proving odd-degree vertices must be even in number.",
+    "formulaLatex": "\\sum_{v \\in V} \\deg(v) = 2|E|",
+    "hasDemo": false,
+    "keywords": [
+      "handshaking lemma",
+      "graph degree",
+      "undirected graph",
+      "discrete math",
+      "combinatorics"
+    ],
+    "href": "lessons/handshaking-lemma.html",
+    "video": {
+      "youtubeId": "Led6YwVxko0",
+      "url": "https://www.youtube.com/watch?v=Led6YwVxko0",
+      "title": "Handshaking Theorem in Graph Theory | Imp for UGC NET and GATE",
+      "channel": "Gate Smashers"
+    }
+  },
+  {
+    "id": "fermats-little-theorem",
+    "title": "Fermat's Little Theorem",
+    "slug": "fermats-little-theorem",
+    "subject": "Number Theory",
+    "topics": [
+      "modular-arithmetic",
+      "primes",
+      "cryptography",
+      "discrete-math"
+    ],
+    "level": "intermediate",
+    "summary": "Proves that if p is a prime number and gcd(a, p) = 1, then a^(p-1) is congruent to 1 modulo p: a^(p-1) ≡ 1 (mod p).",
+    "formulaLatex": "a^{p-1} \\equiv 1 \\pmod p,\\quad a^p \\equiv a \\pmod p",
+    "hasDemo": false,
+    "keywords": [
+      "fermat little theorem",
+      "modular arithmetic",
+      "prime numbers",
+      "cryptography",
+      "discrete math"
+    ],
+    "href": "lessons/fermats-little-theorem.html",
+    "video": {
+      "youtubeId": "3Cb0ys-jppU",
+      "url": "https://www.youtube.com/watch?v=3Cb0ys-jppU",
+      "title": "Fermat's Little Theorem",
+      "channel": "Neso Academy"
+    }
+  },
+  {
+    "id": "rsa-cryptosystem-key-relation",
+    "title": "RSA Cryptosystem Modular Key Identity",
+    "slug": "rsa-cryptosystem-key-relation",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "cryptography",
+      "number-theory",
+      "discrete-math",
+      "cse"
+    ],
+    "level": "advanced",
+    "summary": "The mathematical foundation of asymmetric public key cryptography relying on Euler's totient function φ(n) and modular inverse e·d ≡ 1 (mod φ(n)).",
+    "formulaLatex": "e \\cdot d \\equiv 1 \\pmod{\\phi(n)},\\quad c = m^e \\bmod n,\\quad m = c^d \\bmod n",
+    "hasDemo": false,
+    "keywords": [
+      "rsa encryption",
+      "asymmetric cryptography",
+      "modular inverse",
+      "eulers totient",
+      "cse"
+    ],
+    "href": "lessons/rsa-cryptosystem-key-relation.html",
+    "video": {
+      "youtubeId": "JD72Ry60eP4",
+      "url": "https://www.youtube.com/watch?v=JD72Ry60eP4",
+      "title": "How RSA Works With Numbers - Computerphile",
+      "channel": "Computerphile"
+    }
+  },
+  {
+    "id": "catalan-numbers",
+    "title": "Catalan Number Sequence",
+    "slug": "catalan-numbers",
+    "subject": "Discrete Math",
+    "topics": [
+      "combinatorics",
+      "sequences",
+      "discrete-math"
+    ],
+    "level": "intermediate",
+    "summary": "Enumerates valid balanced parentheses expressions, binary search trees with n nodes, polygon triangulations, and non-crossing Dyck paths: Cn = (1/(n+1)) * (2n choose n).",
+    "formulaLatex": "C_n = \\frac{1}{n+1} \\binom{2n}{n} = \\frac{(2n)!}{(n+1)!\\,n!}",
+    "hasDemo": false,
+    "keywords": [
+      "catalan numbers",
+      "combinatorics",
+      "dyck paths",
+      "binary trees",
+      "discrete math"
+    ],
+    "href": "lessons/catalan-numbers.html",
+    "video": {
+      "youtubeId": "a5uW-ShmCIY",
+      "url": "https://www.youtube.com/watch?v=a5uW-ShmCIY",
+      "title": "Catalan Number#maths #mathematics #math",
+      "channel": "Dr. Chen Math"
+    }
+  },
+  {
+    "id": "dijkstra-shortest-path-relaxation",
+    "title": "Dijkstra Edge Relaxation Recurrence",
+    "slug": "dijkstra-shortest-path-relaxation",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "graph-algorithms",
+      "greedy",
+      "cse",
+      "discrete-math"
+    ],
+    "level": "intermediate",
+    "summary": "The greedy relaxation condition updating tentative distances in single-source shortest path graph algorithms: if d[u] + w(u, v) < d[v], then d[v] = d[u] + w(u, v).",
+    "formulaLatex": "d(v) = \\min\\big(d(v),\\, d(u) + w(u, v)\\big)",
+    "hasDemo": false,
+    "keywords": [
+      "dijkstra",
+      "shortest path",
+      "edge relaxation",
+      "graph algorithm",
+      "priority queue"
+    ],
+    "href": "lessons/dijkstra-shortest-path-relaxation.html",
+    "video": {
+      "youtubeId": "bZkzH5x0SKU",
+      "url": "https://www.youtube.com/watch?v=bZkzH5x0SKU",
+      "title": "Dijkstras Shortest Path Algorithm Explained | With Example | Graph Theory",
+      "channel": "FelixTechTips"
+    }
+  },
+  {
+    "id": "floyd-warshall-all-pairs",
+    "title": "Floyd-Warshall All-Pairs Recurrence",
+    "slug": "floyd-warshall-all-pairs",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "dynamic-programming",
+      "graph-algorithms",
+      "cse"
+    ],
+    "level": "advanced",
+    "summary": "Dynamic programming recurrence computing all-pairs shortest paths in O(V^3) time by allowing intermediate vertices {1, ..., k}.",
+    "formulaLatex": "d_{i,j}^{(k)} = \\min\\left( d_{i,j}^{(k-1)},\\, d_{i,k}^{(k-1)} + d_{k,j}^{(k-1)} \\right)",
+    "hasDemo": false,
+    "keywords": [
+      "floyd warshall",
+      "all pairs shortest paths",
+      "dynamic programming",
+      "graph matrix",
+      "cse"
+    ],
+    "href": "lessons/floyd-warshall-all-pairs.html",
+    "video": {
+      "youtubeId": "4OQeCuLYj-4",
+      "url": "https://www.youtube.com/watch?v=4OQeCuLYj-4",
+      "title": "Floyd Warshall Algorithm (All Pairs Shortest Path)",
+      "channel": "Abdul Bari"
+    }
+  },
+  {
+    "id": "gradient-descent-adam",
+    "title": "Adam Optimizer Adaptive Update",
+    "slug": "gradient-descent-adam",
+    "subject": "Calculus",
+    "topics": [
+      "machine-learning",
+      "optimization",
+      "deep-learning",
+      "ml"
+    ],
+    "level": "advanced",
+    "summary": "Combines momentum and RMSProp second-moment estimates to update neural network weights with adaptive step sizes: θ_(t+1) = θ_t - (α / (sqrt(v_hat) + ε)) * m_hat.",
+    "formulaLatex": "\\theta_{t+1} = \\theta_t - \\frac{\\alpha}{\\sqrt{\\hat{v}_t} + \\epsilon} \\hat{m}_t,\\quad \\hat{m}_t = \\frac{m_t}{1 - \\beta_1^t},\\quad \\hat{v}_t = \\frac{v_t}{1 - \\beta_2^t}",
+    "hasDemo": false,
+    "keywords": [
+      "adam optimizer",
+      "gradient descent",
+      "deep learning",
+      "momentum",
+      "rmsprop",
+      "machine learning"
+    ],
+    "href": "lessons/gradient-descent-adam.html",
+    "video": {
+      "youtubeId": "_sx6bEthRyE",
+      "url": "https://www.youtube.com/watch?v=_sx6bEthRyE",
+      "title": "Adam Optimizer, Step by Step: Every Formula Explained (and the Flaw in Its Proof)",
+      "channel": "Ctrl + Wonder"
+    }
+  },
+  {
+    "id": "binary-cross-entropy-loss",
+    "title": "Binary Cross-Entropy Loss",
+    "slug": "binary-cross-entropy-loss",
+    "subject": "Statistics",
+    "topics": [
+      "loss-functions",
+      "machine-learning",
+      "statistics",
+      "ml"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the information-theoretic logarithmic loss for binary probabilistic classification models: L = -(1/N) Σ [y log(y_hat) + (1 - y) log(1 - y_hat)].",
+    "formulaLatex": "\\mathcal{L}_{\\text{BCE}} = -\\frac{1}{N} \\sum_{i=1}^{N} \\left[ y_i \\ln(\\hat{y}_i) + (1 - y_i) \\ln(1 - \\hat{y}_i) \\right]",
+    "hasDemo": false,
+    "keywords": [
+      "cross entropy",
+      "binary cross entropy",
+      "log loss",
+      "classification",
+      "machine learning"
+    ],
+    "href": "lessons/binary-cross-entropy-loss.html",
+    "video": {
+      "youtubeId": "6ArSys5qHAU",
+      "url": "https://www.youtube.com/watch?v=6ArSys5qHAU",
+      "title": "Cross Entropy Loss Demystified",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "mean-squared-error",
+    "title": "Mean Squared Error & RMSE",
+    "slug": "mean-squared-error",
+    "subject": "Statistics",
+    "topics": [
+      "regression",
+      "loss-functions",
+      "datascience",
+      "ml"
+    ],
+    "level": "beginner",
+    "summary": "Measures the average squared discrepancy between true continuous targets y and predicted values y_hat: MSE = (1/N) Σ (y_i - y_hat_i)^2.",
+    "formulaLatex": "\\text{MSE} = \\frac{1}{N} \\sum_{i=1}^{N} (y_i - \\hat{y}_i)^2,\\quad \\text{RMSE} = \\sqrt{\\text{MSE}}",
+    "hasDemo": false,
+    "keywords": [
+      "mean squared error",
+      "mse",
+      "rmse",
+      "regression",
+      "data science",
+      "loss function"
+    ],
+    "href": "lessons/mean-squared-error.html",
+    "video": {
+      "youtubeId": "PaFPbb66DxQ",
+      "url": "https://www.youtube.com/watch?v=PaFPbb66DxQ",
+      "title": "Mean Squared Error, R-squared and Root Mean Squared Error",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "cosine-similarity-embeddings",
+    "title": "Cosine Similarity & Vector Space Metric",
+    "slug": "cosine-similarity-embeddings",
+    "subject": "Linear Algebra",
+    "topics": [
+      "nlp",
+      "embeddings",
+      "linear-algebra",
+      "ml",
+      "datascience"
+    ],
+    "level": "intermediate",
+    "summary": "Evaluates semantic similarity between high-dimensional vector embeddings based purely on their cosine angle: cos(θ) = (u · v) / (||u|| ||v||).",
+    "formulaLatex": "\\cos(\\theta) = \\frac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\|_2 \\|\\vec{v}\\|_2} = \\frac{\\sum_{i=1}^{n} u_i v_i}{\\sqrt{\\sum u_i^2} \\sqrt{\\sum v_i^2}}",
+    "hasDemo": true,
+    "keywords": [
+      "cosine similarity",
+      "dot product",
+      "vector embeddings",
+      "word2vec",
+      "semantic search",
+      "machine learning"
+    ],
+    "href": "lessons/cosine-similarity-embeddings.html",
+    "video": {
+      "youtubeId": "e9U0QAFbfLI",
+      "url": "https://www.youtube.com/watch?v=e9U0QAFbfLI",
+      "title": "Cosine Similarity, Clearly Explained!!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "transformer-scaled-dot-product-attention",
+    "title": "Transformer Scaled Dot-Product Attention",
+    "slug": "transformer-scaled-dot-product-attention",
+    "subject": "Linear Algebra",
+    "topics": [
+      "deep-learning",
+      "transformers",
+      "llm",
+      "ml"
+    ],
+    "level": "advanced",
+    "summary": "The computational engine behind modern Large Language Models (LLMs) routing token contexts: Attention(Q, K, V) = softmax(Q K^T / sqrt(d_k)) V.",
+    "formulaLatex": "\\text{Attention}(Q, K, V) = \\text{softmax}\\left( \\frac{Q K^T}{\\sqrt{d_k}} \\right) V",
+    "hasDemo": false,
+    "keywords": [
+      "transformer",
+      "attention mechanism",
+      "self attention",
+      "query key value",
+      "softmax",
+      "llm"
+    ],
+    "href": "lessons/transformer-scaled-dot-product-attention.html",
+    "video": {
+      "youtubeId": "qK-WHymZdy4",
+      "url": "https://www.youtube.com/watch?v=qK-WHymZdy4",
+      "title": "Scaled Dot Product Attention Explained – The Core of Transformers!",
+      "channel": "DecodedByAmrish"
+    }
+  },
+  {
+    "id": "principal-component-analysis",
+    "title": "Principal Component Analysis (PCA)",
+    "slug": "principal-component-analysis",
+    "subject": "Linear Algebra",
+    "topics": [
+      "dimensionality-reduction",
+      "linear-algebra",
+      "datascience",
+      "ml"
+    ],
+    "level": "advanced",
+    "summary": "Performs unsupervised dimensionality reduction by finding orthogonal eigenvectors of the sample covariance matrix maximizing explained variance.",
+    "formulaLatex": "\\Sigma = \\frac{1}{N} X^T X,\\quad \\Sigma \\vec{v} = \\lambda \\vec{v},\\quad \\text{Var Ratio} = \\frac{\\lambda_i}{\\sum \\lambda_j}",
+    "hasDemo": false,
+    "keywords": [
+      "pca",
+      "principal component analysis",
+      "covariance matrix",
+      "eigenvalues",
+      "dimensionality reduction"
+    ],
+    "href": "lessons/principal-component-analysis.html",
+    "video": {
+      "youtubeId": "FgakZw6K1QQ",
+      "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ",
+      "title": "Principal Component Analysis (PCA), Step-by-Step",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "f1-score-precision-recall",
+    "title": "Precision, Recall, and F1-Score",
+    "slug": "f1-score-precision-recall",
+    "subject": "Statistics",
+    "topics": [
+      "evaluation-metrics",
+      "classification",
+      "datascience",
+      "ml"
+    ],
+    "level": "intermediate",
+    "summary": "Computes the harmonic mean of precision and recall to evaluate model performance on imbalanced classification datasets.",
+    "formulaLatex": "F_1 = 2 \\cdot \\frac{\\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}} = \\frac{2\\text{TP}}{2\\text{TP} + \\text{FP} + \\text{FN}}",
+    "hasDemo": false,
+    "keywords": [
+      "f1 score",
+      "precision",
+      "recall",
+      "confusion matrix",
+      "evaluation metric",
+      "data science"
+    ],
+    "href": "lessons/f1-score-precision-recall.html",
+    "video": {
+      "youtubeId": "4jRBRDbJemM",
+      "url": "https://www.youtube.com/watch?v=4jRBRDbJemM",
+      "title": "Precision, Recall, and F1-Score Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "ridge-lasso-regularization",
+    "title": "Ridge (L2) & Lasso (L1) Regularized Loss",
+    "slug": "ridge-lasso-regularization",
+    "subject": "Calculus",
+    "topics": [
+      "regularization",
+      "linear-regression",
+      "ml",
+      "datascience"
+    ],
+    "level": "intermediate",
+    "summary": "Penalizes model complexity by adding L1 absolute weight penalties (Lasso, promoting sparsity) or L2 squared weight penalties (Ridge, shrinking weights).",
+    "formulaLatex": "J(\\theta) = \\text{MSE} + \\lambda_1 \\sum_{j=1}^{p} |\\theta_j| + \\lambda_2 \\sum_{j=1}^{p} \\theta_j^2",
+    "hasDemo": false,
+    "keywords": [
+      "ridge regression",
+      "lasso regression",
+      "l1 l2 regularization",
+      "elasticnet",
+      "overfitting"
+    ],
+    "href": "lessons/ridge-lasso-regularization.html",
+    "video": {
+      "youtubeId": "Q81RR3yKn30",
+      "url": "https://www.youtube.com/watch?v=Q81RR3yKn30",
+      "title": "Ridge Regression and Lasso (L1 and L2 Regularization)",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "hyperbola-standard-equation",
+    "title": "Hyperbola Canonical Conic Equation",
+    "slug": "hyperbola-standard-equation",
+    "subject": "Geometry",
+    "topics": [
+      "conic-sections",
+      "hyperbola",
+      "analytic-geometry",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Describes an open two-branch conic section with asymptotes y = ±(b/a)x and eccentricity e = sqrt(1 + b^2/a^2) > 1.",
+    "formulaLatex": "\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1,\\quad c = \\sqrt{a^2 + b^2},\\quad e = \\frac{c}{a} > 1",
+    "hasDemo": false,
+    "keywords": [
+      "hyperbola",
+      "conics",
+      "asymptotes",
+      "eccentricity",
+      "foci",
+      "class 11"
+    ],
+    "href": "lessons/hyperbola-standard-equation.html",
+    "video": {
+      "youtubeId": "Iu-4-fizlD4",
+      "url": "https://www.youtube.com/watch?v=Iu-4-fizlD4",
+      "title": "Hyperbolas - Conic Sections",
+      "channel": "The Organic Chemistry Tutor"
+    }
+  },
+  {
+    "id": "combination-permutation-formula",
+    "title": "Permutations and Combinations Formulas",
+    "slug": "combination-permutation-formula",
+    "subject": "Counting & Probability",
+    "topics": [
+      "combinatorics",
+      "counting",
+      "probability",
+      "class11"
+    ],
+    "level": "intermediate",
+    "summary": "Calculates the number of ordered arrangements (permutations) and unordered selections (combinations) of r items chosen from n distinct elements.",
+    "formulaLatex": "{}^nP_r = \\frac{n!}{(n - r)!},\\quad {}^nC_r = \\binom{n}{r} = \\frac{n!}{r!\\,(n - r)!}",
+    "hasDemo": false,
+    "keywords": [
+      "permutations",
+      "combinations",
+      "factorials",
+      "nCr",
+      "nPr",
+      "class 11"
+    ],
+    "href": "lessons/combination-permutation-formula.html",
+    "video": {
+      "youtubeId": "XqQTXW7XfYA",
+      "url": "https://www.youtube.com/watch?v=XqQTXW7XfYA",
+      "title": "Permutations and Combinations Tutorial",
+      "channel": "Khan Academy"
+    }
+  },
+  {
+    "id": "mean-value-theorem",
+    "title": "Lagrange's Mean Value Theorem",
+    "slug": "mean-value-theorem",
+    "subject": "Calculus",
+    "topics": [
+      "derivatives",
+      "theorems",
+      "calculus",
+      "class12"
+    ],
+    "level": "intermediate",
+    "summary": "Guarantees that for a function continuous on [a, b] and differentiable on (a, b), there exists at least one point c where the instantaneous tangent slope equals the secant slope.",
+    "formulaLatex": "f'(c) = \\frac{f(b) - f(a)}{b - a},\\quad c \\in (a, b)",
+    "hasDemo": false,
+    "keywords": [
+      "mean value theorem",
+      "mvt",
+      "rolles theorem",
+      "derivatives",
+      "class 12"
+    ],
+    "href": "lessons/mean-value-theorem.html",
+    "video": {
+      "youtubeId": "_rLizW7giT4",
+      "url": "https://www.youtube.com/watch?v=_rLizW7giT4",
+      "title": "Real Analysis | Mean Value Theorem | Lagrange's Mean Value Theorem - Proof & Examples",
+      "channel": "Dr.Gajendra Purohit"
+    }
+  },
+  {
+    "id": "amperes-circuital-law",
+    "title": "Ampère's Circuital Law",
+    "slug": "amperes-circuital-law",
+    "subject": "Physics",
+    "topics": [
+      "electromagnetism",
+      "magnetic-fields",
+      "class12",
+      "physics"
+    ],
+    "level": "advanced",
+    "summary": "Relates the line integral of magnetic field B around an arbitrary closed Amperian loop to the total enclosed electric current divided by permeability.",
+    "formulaLatex": "\\oint_{C} \\vec{B} \\cdot d\\vec{\\ell} = \\mu_0 I_{\\text{enc}}",
+    "hasDemo": false,
+    "keywords": [
+      "ampere law",
+      "circuital law",
+      "magnetic field",
+      "enclosed current",
+      "class 12 physics"
+    ],
+    "href": "lessons/amperes-circuital-law.html",
+    "video": {
+      "youtubeId": "yr0RkoUHgf0",
+      "url": "https://www.youtube.com/watch?v=yr0RkoUHgf0",
+      "title": "Ampere's circuital law (with examples) | Moving charges & magnetism | Physics | Khan Academy",
+      "channel": "Khan Academy India - English"
+    }
+  },
+  {
+    "id": "relu-activation-derivative",
+    "title": "Rectified Linear Unit (ReLU) & Leaky ReLU",
+    "slug": "relu-activation-derivative",
+    "subject": "CSE & Competitive Programming",
+    "topics": [
+      "neural-networks",
+      "activation-functions",
+      "deep-learning",
+      "ml"
+    ],
+    "level": "intermediate",
+    "summary": "The standard non-linear activation function in deep neural networks avoiding vanishing gradients: ReLU(z) = max(0, z), and Leaky ReLU(z) = max(αz, z).",
+    "formulaLatex": "\\text{ReLU}(z) = \\max(0, z),\\quad \\text{LeakyReLU}(z) = \\begin{cases} z & \\text{if } z > 0 \\\\ \\alpha z & \\text{if } z \\le 0 \\end{cases}",
+    "hasDemo": false,
+    "keywords": [
+      "relu",
+      "leaky relu",
+      "activation function",
+      "neural networks",
+      "deep learning",
+      "machine learning"
+    ],
+    "href": "lessons/relu-activation-derivative.html",
+    "video": {
+      "youtubeId": "68BZ5f7P94E",
+      "url": "https://www.youtube.com/watch?v=68BZ5f7P94E",
+      "title": "Neural Networks Part 4: ReLU and Activation Functions",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "confusion-matrix-roc-auc",
+    "title": "ROC-AUC & True/False Positive Rates",
+    "slug": "confusion-matrix-roc-auc",
+    "subject": "Statistics",
+    "topics": [
+      "evaluation-metrics",
+      "classification",
+      "datascience",
+      "ml"
+    ],
+    "level": "intermediate",
+    "summary": "Quantifies binary classification diagnostic power across all decision thresholds by plotting True Positive Rate vs False Positive Rate: TPR = TP/P, FPR = FP/N.",
+    "formulaLatex": "\\text{TPR} = \\frac{\\text{TP}}{\\text{TP} + \\text{FN}},\\quad \\text{FPR} = \\frac{\\text{FP}}{\\text{FP} + \\text{TN}},\\quad \\text{AUC} = \\int_{0}^{1} \\text{TPR}(\\tau)\\,d(\\text{FPR}(\\tau))",
+    "hasDemo": false,
+    "keywords": [
+      "roc auc",
+      "receiver operating characteristic",
+      "tpr fpr",
+      "classification metric",
+      "data science"
+    ],
+    "href": "lessons/confusion-matrix-roc-auc.html",
+    "video": {
+      "youtubeId": "4jRBRDbJemM",
+      "url": "https://www.youtube.com/watch?v=4jRBRDbJemM",
+      "title": "ROC and AUC, Clearly Explained!",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  },
+  {
+    "id": "markov-chain-steady-state",
+    "title": "Markov Chain Stationary Distribution",
+    "slug": "markov-chain-steady-state",
+    "subject": "Discrete Math",
+    "topics": [
+      "stochastic-processes",
+      "probability",
+      "discrete-math",
+      "university"
+    ],
+    "level": "advanced",
+    "summary": "Defines the long-term equilibrium probability state vector π of an ergodic discrete-time Markov chain: π P = π with Σ π_i = 1.",
+    "formulaLatex": "\\vec{\\pi} P = \\vec{\\pi},\\quad \\sum_{i=1}^{n} \\pi_i = 1,\\quad \\pi_j = \\sum_{i} \\pi_i P_{ij}",
+    "hasDemo": false,
+    "keywords": [
+      "markov chain",
+      "stationary distribution",
+      "transition matrix",
+      "stochastic process",
+      "discrete math"
+    ],
+    "href": "lessons/markov-chain-steady-state.html",
+    "video": {
+      "youtubeId": "i3AkTO9HLXo",
+      "url": "https://www.youtube.com/watch?v=i3AkTO9HLXo",
+      "title": "Markov Chains Clearly Explained! Part 1",
+      "channel": "Normalized Nerd"
+    }
+  },
+  {
+    "id": "gradient-boosted-trees-loss",
+    "title": "Gradient Boosted Trees Pseudo-Residuals",
+    "slug": "gradient-boosted-trees-loss",
+    "subject": "Calculus",
+    "topics": [
+      "machine-learning",
+      "ensemble",
+      "loss-functions",
+      "ml",
+      "datascience"
+    ],
+    "level": "advanced",
+    "summary": "Fits subsequent decision trees to the negative gradient of the arbitrary loss function L(y, F(x)) evaluated at current ensemble predictions.",
+    "formulaLatex": "r_{im} = -\\left[ \\frac{\\partial L(y_i, F(x_i))}{\\partial F(x_i)} \\right]_{F(x) = F_{m-1}(x)}",
+    "hasDemo": false,
+    "keywords": [
+      "gradient boosting",
+      "xgboost",
+      "pseudo residuals",
+      "decision trees",
+      "data science",
+      "machine learning"
+    ],
+    "href": "lessons/gradient-boosted-trees-loss.html",
+    "video": {
+      "youtubeId": "3CC4N4z3GJc",
+      "url": "https://www.youtube.com/watch?v=3CC4N4z3GJc",
+      "title": "Gradient Boost Part 1 (of 4): Regression Main Ideas",
+      "channel": "StatQuest with Josh Starmer"
+    }
+  }
+]

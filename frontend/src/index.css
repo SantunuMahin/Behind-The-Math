@@ -1,0 +1,322 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+@layer base {
+  :root {
+    --btm-primary: #FFFFFF;
+    --btm-secondary: #000000;
+    --btm-accent: #18181B;
+    --btm-text-light: #FFFFFF;
+    --btm-warning: #EF4444;
+    --btm-success: #10B981;
+    --btm-focus: #F59E0B;
+
+    --bg-page: #FFFFFF;
+    --bg-surface: #FAFAFA;
+    --border-color: #E4E4E7;
+    --text-primary: #000000;
+    --text-muted: #71717A;
+  }
+
+  [data-theme="dark"] {
+    --bg-page: #000000;
+    --bg-surface: #09090B;
+    --border-color: #27272A;
+    --text-primary: #FFFFFF;
+    --text-muted: #A1A1AA;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 9999px;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #27272A;
+}
+
+/* KaTeX custom sizing & high contrast rendering */
+.katex-display {
+  margin: 0.75rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+}
+
+.katex,
+.katex-html {
+  color: inherit;
+}
+
+.dark .katex,
+[data-theme="dark"] .katex {
+  color: inherit;
+}
+
+.dark .katex-html,
+[data-theme="dark"] .katex-html {
+  color: inherit;
+}
+
+/* ============================================================ */
+/* UNIVERSAL HIGH-FIDELITY PRINT & PDF ENGINE                   */
+/* ============================================================ */
+@page {
+  size: portrait;
+  margin: 10mm 10mm 10mm 10mm;
+}
+
+@media print {
+  /* 1. Global Reset to Pure White and Crisp Black */
+  html, body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    box-shadow: none !important;
+  }
+
+  /* 2. Hide Screen-Only Navigation, Overlays, and Toolbars */
+  nav,
+  header:not(.print-include),
+  footer,
+  aside,
+  button:not(.print-include),
+  .print\:hidden,
+  .print-hidden,
+  #nprogress,
+  .toast,
+  [role="tooltip"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* 3. KaTeX Vector Proofs & Equations */
+  .katex,
+  .katex-html,
+  .dark .katex,
+  [data-theme="dark"] .katex {
+    color: #000000 !important;
+    background: transparent !important;
+  }
+
+  .hero-equation-stage {
+    font-size: clamp(13px, 1.8vw, 18px) !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    padding: 4px 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .katex-display {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 0.35rem 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    font-size: 1.05em !important;
+  }
+
+  .katex-display::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .katex {
+    font-size: 1em !important;
+    white-space: normal !important;
+  }
+
+  /* 4. Page Break Controls */
+  .print-break-inside-avoid,
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .print-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .print-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  /* 5. Invert Cards and Containers */
+  .rounded-2xl, .rounded-3xl {
+    box-shadow: none !important;
+  }
+
+  /* 6. Robust Modal Print Isolation for Scholar Card & Focus Certificate */
+  body.printing-modal * {
+    visibility: hidden !important;
+  }
+
+  body.printing-modal #printable-scholar-card,
+  body.printing-modal #printable-scholar-card *,
+  body.printing-modal #printable-focus-certificate,
+  body.printing-modal #printable-focus-certificate *,
+  body.printing-modal .scholar-card-print-guide,
+  body.printing-modal .scholar-card-print-guide * {
+    visibility: visible !important;
+  }
+
+  body.printing-modal .fixed.inset-0 {
+    position: static !important;
+    background: transparent !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  body.printing-modal .fixed.inset-0 > div {
+    max-height: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 540px !important;
+    margin: 10mm auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  body.printing-modal #printable-scholar-card {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 15mm auto !important;
+    border: 2px solid #000000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  body.printing-modal #printable-focus-certificate {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    margin: 15mm auto !important;
+    border: 2px solid #000000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 7. Clean High-Contrast Borders & Tables */
+  .border, .border-zinc-200, .border-zinc-800, .border-slate-200, .border-slate-800 {
+    border-color: #000000 !important;
+  }
+
+  .print-table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+  .print-table th,
+  .print-table td {
+    border: 1px solid #000000 !important;
+    padding: 5px 8px !important;
+  }
+  .print-table th {
+    background-color: #f8fafc !important;
+    font-weight: bold !important;
+  }
+
+  /* 8. Total Scrollbar Suppression in Print */
+  *, *::before, *::after {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .overflow-x-auto,
+  .overflow-y-auto,
+  .overflow-auto,
+  .overflow-x-scroll,
+  .overflow-y-scroll,
+  .scrollbar-thin,
+  .scrollbar-none {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
+  /* 9. Section & Lab Avoid Breaking Across Pages */
+  section,
+  #interactive-lab,
+  figure,
+  table,
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 10. Hide Interactive Screen Controls & Button Bars on Printed Paper */
+  #interactive-lab button,
+  #interactive-lab input,
+  #interactive-lab select,
+  #interactive-lab .grid:has(button),
+  #interactive-lab div:has(> button),
+  #interactive-lab .lab-action-buttons,
+  #interactive-lab .interactive-controls,
+  input[type="range"],
+  select {
+    display: none !important;
+  }
+
+  /* 11. Canvas Print Fit & Publication-Grade Framing */
+  #interactive-lab canvas,
+  canvas {
+    max-width: 280px !important;
+    max-height: 280px !important;
+    object-fit: contain !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 4px auto !important;
+    display: block !important;
+    border: 1px solid #000000 !important;
+    border-radius: 8px !important;
+  }
+}
+
+
