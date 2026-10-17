@@ -1,4 +1,4 @@
-import { apiRequest } from './client';
+import { apiRequest, API_BASE } from './client';
 
 export const formulasApi = {
   getSubjects: () => apiRequest('/subjects/'),
@@ -73,7 +73,7 @@ export const studentApi = {
     const formData = new FormData();
     formData.append('avatar', fileOrData);
     const token = typeof window !== 'undefined' ? localStorage.getItem('btm_auth_token') : null;
-    const response = await fetch('/api/v1/profile/avatar/', {
+    const response = await fetch(`${API_BASE}/profile/avatar/`, {
       method: 'POST',
       headers: {
         ...(token ? { 'Authorization': `Token ${token}` } : {}),
